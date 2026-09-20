@@ -1,0 +1,14 @@
+**/node_modules
+**/dist
+**/__pycache__
+**/*.pyc
+.venv
+.git
+.pytest_cache
+.ruff_cache
+.mypy_cache
+backend/.env
+backend/framework/_cache
+backend/evals/results
+docs/screenshots
+*.sqlite3

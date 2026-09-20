@@ -1,0 +1,23 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+backend/.env
+# Editor swap and backup files: a swap file of .env contains the key in plain text.
+.env.*
+!.env.example
+*.swp
+*.swo
+*~
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+node_modules/
+dist/
+build/
+frontend/dist/
+*.sqlite3
+backend/framework/_cache/
