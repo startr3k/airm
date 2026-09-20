@@ -1,0 +1,352 @@
+{
+  "extractor": "oversight_modes",
+  "model": "claude-opus-5",
+  "extracted_at": "2026-09-20T09:17:51+00:00",
+  "pdf_pages": "75-78, 99-114",
+  "printed_pages": "68-71, 92-107",
+  "requests": 1,
+  "attempts": 1,
+  "attempt_log": [
+    {
+      "attempt": 1,
+      "problems": [],
+      "output_tokens": 6534,
+      "latency_ms": 74342
+    }
+  ],
+  "validation_problems": [],
+  "warnings": [],
+  "usage": {
+    "input_tokens": 446,
+    "output_tokens": 6534,
+    "cache_creation_input_tokens": 102368,
+    "cache_read_input_tokens": 0,
+    "calls": 2,
+    "latency_ms": 74342,
+    "estimated_cost_usd": 0.8054
+  },
+  "data": {
+    "modes": [
+      {
+        "mode": "human_in_the_loop",
+        "printed_name": "Human in the Loop",
+        "definition": "Where an employee retains full control of the use case and either approves or executes actions at crucial points in operation. This may take the form of an employee reviewing AI-generated customer service emails before approving them for sending, or an AI advisor that suggests actions to a relationship manager.",
+        "when_appropriate": "The handbook does not specify a distinct risk trigger for this mode; it indicates the choice of oversight form is decided at the use case design stage based on the use case's inherent risk materiality, its intended modality, and the feasibility of human oversight. Examples given are review of AI-generated customer service emails before sending and an AI advisor suggesting actions to a relationship manager.",
+        "source": {
+          "page": 70,
+          "section": "3.1",
+          "quote": "Human in the Loop: Where an employee retains full control of the use case and either approves or executes actions at crucial points in operation"
+        }
+      },
+      {
+        "mode": "human_over_the_loop",
+        "printed_name": "Human over the Loop",
+        "definition": "The AI use case produces outputs or actions where an employee has the option to modify or overrule its outputs or intervene in its operations but is not required to take any action in the course of normal operation. This includes situations where an AI use case escalates errors or anomalies to an employee for review, or where an employee reviews some or all outputs after the fact.",
+        "when_appropriate": "Suitable where errors or anomalies are escalated to an employee for review or where outputs are reviewed after the fact; post-event monitoring or exception handling may be used where real-time oversight is infeasible (e.g. high-volume/high-throughput AI such as autonomous chatbots or fraud detection engines). Where designed in, it is operationalised post-deployment via sampling methodologies (targeted high-frequency review for higher-risk use cases, lower-frequency review for lower-risk use cases, and threshold-based review suitable for all use cases), proportionate to risk materiality and operational feasibility.",
+        "source": {
+          "page": 70,
+          "section": "3.1",
+          "quote": "Human over the Loop: The AI use case produces outputs or actions where an employee has the option to modify or overrule its outputs"
+        }
+      },
+      {
+        "mode": "human_out_of_the_loop",
+        "printed_name": "Human out of the Loop",
+        "definition": "The AI use case produces outputs without direct involvement from an employee, such as in an autonomous chatbot. While this means that the AI can take actions autonomously, it does not imply the absence of other forms of oversight, such as post-deployment testing, monitoring, and review.",
+        "when_appropriate": "Appropriate where human oversight may not be suitable or feasible, such as AI handling high volumes of tasks or high throughput (e.g. autonomous chatbots or fraud detection engines), where real-time human oversight may not be feasible; other forms of oversight such as post-deployment testing, monitoring, and review still apply.",
+        "source": {
+          "page": 71,
+          "section": "3.1",
+          "quote": "Human out of the Loop: The AI use case produces outputs without direct involvement from an employee"
+        }
+      }
+    ],
+    "selection_guidance": "The handbook (Subsection 3.1, Consideration 7, Practice 4, printed page 70) says FIs typically decide at the use case design stage how best to integrate human oversight, basing the decision on the use case's inherent risk materiality, its intended modality, and the feasibility of human oversight. Human oversight complements monitoring by integrating human judgement, but may not be suitable for all use cases: for AI handling high volumes of tasks or high throughput (e.g. autonomous chatbots, fraud detection engines), real-time oversight may not be feasible and may instead take the form of post-event monitoring or exception handling. FIs can make an informed decision during design, and revisit it throughout the lifecycle, balancing operational considerations with risk. The three forms are drawn from the IMDA/PDPC Model AI Governance Framework. It is important to clearly define and document roles, responsibilities and escalations, and to ensure the employees involved have sufficient competencies and authority; FIs may have risk-related controls specifying the conditions under which human oversight of AI is expected. Subsection 3.5, Practice 5 (printed page 102) adds that the appropriate degree of oversight is defined at the design stage and reaffirmed throughout the lifecycle based on technical and operational feasibility and risk materiality, and that human-over-the-loop review should be operationalised with an appropriate sampling methodology (see Table 3.5.1, printed page 103).",
+    "unreadable_items": [],
+    "sampling_methodologies": [
+      {
+        "name": "Targeted High-Frequency Review",
+        "description": "High-frequency reviews are conducted more frequently, using a representative sample of outputs. This ensures that outputs meet required standards and allows the use case team to take remediation action quickly if issues occur.",
+        "when_to_use": "Higher-risk use cases (e.g. AI-generated customer interactions for financial advice).",
+        "source": {
+          "page": 103,
+          "section": "3.5",
+          "quote": "High-frequency reviews are conducted more frequently, using a representative sample of outputs."
+        }
+      },
+      {
+        "name": "Lower-Frequency Review",
+        "description": "Human reviews can be done less frequently on a representative sample of the AI's output if the use-case has a lower risk materiality. This helps to reduce unnecessary governance effort.",
+        "when_to_use": "Lower-risk use cases (e.g. internal knowledge assistants).",
+        "source": {
+          "page": 103,
+          "section": "3.5",
+          "quote": "Human reviews can be done less frequently on a representative sample of the AI's output"
+        }
+      },
+      {
+        "name": "Threshold-Based Review",
+        "description": "Threshold-based reviews do not involve human oversight in the course of normal operation, but may trigger a human review when certain conditions are met (such as a breach of risk metric thresholds).",
+        "when_to_use": "Suitable for all use cases regardless of risk materiality.",
+        "source": {
+          "page": 103,
+          "section": "3.5",
+          "quote": "Threshold-based reviews do not involve human oversight in the course of normal operation"
+        }
+      }
+    ],
+    "sampling_table_label": "Table 3.5.1",
+    "monitoring_practices": [
+      {
+        "control": "Post-deployment monitoring plan (metrics and thresholds)",
+        "description": "A plan defined before deployment documenting key AI risk-related performance metrics and thresholds, how they will be tracked, the frequency of monitoring (calibrated to risk materiality), and the escalation process if thresholds are exceeded.",
+        "source": {
+          "page": 93,
+          "section": "3.4",
+          "quote": "Define a post-deployment monitoring plan performance metrics and thresholds to be tracked as part of the monitoring process"
+        }
+      },
+      {
+        "control": "Near miss / early warning tracking",
+        "description": "For higher risk materiality use cases, tracking near misses, early warnings and cases where metrics approach but do not surpass thresholds, using lower thresholds to activate \"near miss\" indications so issues are rectified before becoming serious.",
+        "source": {
+          "page": 93,
+          "section": "3.4",
+          "quote": "FIs can consider tracking near misses, early warnings, and other cases where metrics approach thresholds"
+        }
+      },
+      {
+        "control": "Designated monitoring accountabilities and operational ownership",
+        "description": "Assignment of accountability to individuals and teams to execute post-deployment monitoring, with the necessary skills, knowledge and authority to request information and execute contingencies.",
+        "source": {
+          "page": 93,
+          "section": "3.4",
+          "quote": "Designate accountabilities to individuals and teams to carry out post-deployment monitoring activities."
+        }
+      },
+      {
+        "control": "ITSM Incident and Problem Management integration",
+        "description": "Incorporating AI risk and incident monitoring and response into existing IT Service Management processes, with the incident management team trained in AI-specific monitoring and response skills, and customer notification of AI-related incidents where applicable.",
+        "source": {
+          "page": 93,
+          "section": "3.4",
+          "quote": "incorporating risk and incident monitoring and response into existing IT Service Management (ITSM) processes"
+        }
+      },
+      {
+        "control": "Ongoing monitoring and reporting of AI risk, performance and guardrail metrics",
+        "description": "Correct implementation of the use case's monitoring plan after deployment, monitoring performance and risk-related metrics and guardrail effectiveness against thresholds, plus uptake, cost and ROI metrics; applies equally to in-house and third-party AI.",
+        "source": {
+          "page": 99,
+          "section": "3.5",
+          "quote": "Ensure the correct implementation of the use case's monitoring plan as defined prior to deployment."
+        }
+      },
+      {
+        "control": "Red/amber/green (traffic light) monitoring dashboard",
+        "description": "A common visualisation technique for ongoing AI monitoring results, especially for executive audiences, communicating breaches, near misses and performance within tolerances.",
+        "source": {
+          "page": 99,
+          "section": "3.5",
+          "quote": "a \"red/amber/green\" dashboard. This \"traffic light\" approach can straightforwardly communicate when a use case has had a breach"
+        }
+      },
+      {
+        "control": "Logging of monitoring results, incidents and escalations",
+        "description": "Thorough logging of monitoring results and tracking of incidents and escalations to support root cause analysis, remediation and post-hoc auditability; may include logging AI inputs and outputs.",
+        "source": {
+          "page": 100,
+          "section": "3.5",
+          "quote": "It is important to thoroughly log the results of monitoring and to track both incidents and escalations"
+        }
+      },
+      {
+        "control": "Data quality, drift and third-party data monitoring",
+        "description": "Ongoing monitoring of input and training data quality, drift and risk indicators at a frequency and depth proportionate to risk materiality, including third-party dataset characteristics such as consent validity, usage requirements and statistical properties, with mitigation (e.g. retraining) when indicators fall outside thresholds.",
+        "source": {
+          "page": 100,
+          "section": "3.5",
+          "quote": "Monitor data quality, drift, and risk indicators at a frequency and depth proportionate to the use case's risk materiality."
+        }
+      },
+      {
+        "control": "Use case team periodic self-checks",
+        "description": "Periodic self-checks by the use case team for changes in risk materiality, scope of usage and key risks, calibrated in depth and frequency to risk materiality; may include simulation testing, adversarial testing, or calculation of metrics/benchmarks for material use cases.",
+        "source": {
+          "page": 101,
+          "section": "3.5",
+          "quote": "Ensure that the use case team periodically performs self-checks to monitor for changes to key aspects of the use case"
+        }
+      },
+      {
+        "control": "Periodic post-deployment AI-specific reviews",
+        "description": "Periodic and proportionate repetition of AI-specific reviews after deployment to assess emerging risks such as data drift or repurposing for unapproved uses, triggered by risk materiality, major model/system changes, KPI breaches, stakeholder feedback or external risk factors.",
+        "source": {
+          "page": 101,
+          "section": "3.5",
+          "quote": "Conduct periodic AI-specific reviews on the use case after deployment, with the frequency and intensity of reviews based on key risk-related factors."
+        }
+      },
+      {
+        "control": "Human oversight operationalisation (human-over-the-loop review)",
+        "description": "Implementing a proportionate degree of human oversight post-deployment, with overseers enabled with tools, training, transparency and explainability measures, and documentation of issues identified or interventions taken; sampling methodology per Table 3.5.1.",
+        "source": {
+          "page": 102,
+          "section": "3.5",
+          "quote": "Implement an appropriate and proportionate degree of human oversight as part of the use case's post-deployment usage and monitoring."
+        }
+      },
+      {
+        "control": "End user feedback, enquiry and review channels",
+        "description": "Avenues such as feedback or contact forms, online portals, hotlines or in-branch support for users to seek support, raise concerns, contest outcomes and request human review; simple ratings (thumbs up/down) quantified as metrics triggering alerts when negative feedback exceeds a threshold or trend.",
+        "source": {
+          "page": 103,
+          "section": "3.5",
+          "quote": "provide avenues, such as a feedback or contact form for end users to seek support, raise concerns, contest outcomes"
+        }
+      },
+      {
+        "control": "Security monitoring of unstructured inputs/outputs (input and output filtering)",
+        "description": "Risk-based ongoing monitoring of Gen AI or Agentic AI prompts and outputs to detect manipulation, prompt injection and adversarial attacks, using input and output filters, logging and analysing prompts for suspicious patterns, and validating outputs for format deviations, leakage or safety violations.",
+        "source": {
+          "page": 104,
+          "section": "3.5",
+          "quote": "Adopt a risk-based approach for the ongoing monitoring of unstructured inputs to or outputs from Gen AI"
+        }
+      },
+      {
+        "control": "Enhanced monitoring for dynamic AI",
+        "description": "Enhanced risk management for frequently retrained (dynamic) AI, including justifications for automatic updates, enhanced data quality checks, drift detection and more stringent performance monitoring with tighter notification thresholds.",
+        "source": {
+          "page": 105,
+          "section": "3.5",
+          "quote": "enhanced data quality checks, drift detection, and more stringent performance monitoring with tighter notification thresholds"
+        }
+      },
+      {
+        "control": "Compensating monitoring where third-party change notification is absent",
+        "description": "Where a use case containing third-party AI is deployed without assurance of sufficient change notification, controls such as increased frequency of reviews or an enhanced level of post-deployment monitoring are considered.",
+        "source": {
+          "page": 106,
+          "section": "3.5",
+          "quote": "an increased frequency of reviews or an enhanced level of post-deployment monitoring, to mitigate the risks"
+        }
+      }
+    ],
+    "interruption_controls": [
+      {
+        "control": "Kill switch (deactivation)",
+        "description": "A safeguard to deactivate the AI use case where it breaches risk thresholds or exhibits undesirable behaviour, ensuring no further harm while the issue is investigated; FIs can consider testing it prior to deployment.",
+        "source": {
+          "page": 93,
+          "section": "3.4",
+          "quote": "a kill switch to deactivate the use case, ensuring that further harm will not take place while an issue is investigated"
+        }
+      },
+      {
+        "control": "Rollback to a previous stable version",
+        "description": "Contingency measure to revert the model to a previous, stable version when thresholds are breached or undesirable behaviour occurs.",
+        "source": {
+          "page": 93,
+          "section": "3.4",
+          "quote": "such as rollback options to revert to a previous, stable version of the model"
+        }
+      },
+      {
+        "control": "Third-party contingency planning",
+        "description": "Applying existing contingency planning measures for third party software, proportionately planning for service interruptions, performance degradations, or support discontinuation of third party AI products/services.",
+        "source": {
+          "page": 93,
+          "section": "3.4",
+          "quote": "planning for service interruptions, performance degradations, or support discontinuation"
+        }
+      },
+      {
+        "control": "Escalation process on threshold breach",
+        "description": "The monitoring plan specifies the escalation process if metric thresholds are exceeded, with employees/functions having sufficient authority to execute the contingencies defined in the monitoring plan.",
+        "source": {
+          "page": 93,
+          "section": "3.4",
+          "quote": "the frequency of monitoring, and the escalation process if thresholds are exceeded"
+        }
+      },
+      {
+        "control": "Phased rollout failure criteria triggering deactivation",
+        "description": "Clear success and failure criteria for each phase of a phased rollout, where failure criteria could trigger deactivation; scope, features, user numbers and phase duration are strictly limited with additional monitoring in place.",
+        "source": {
+          "page": 94,
+          "section": "3.4",
+          "quote": "Clear success and failure criteria (the latter of which could trigger deactivation) for each phase"
+        }
+      },
+      {
+        "control": "Incident response mechanisms (roll-backs and kill switches)",
+        "description": "Following the incident and problem management plan and implementing response mechanisms such as model retraining, adjustments, redevelopment, rolling back to a previous version of the model, or activating a kill switch when incidents or guardrail failures are identified.",
+        "source": {
+          "page": 99,
+          "section": "3.5",
+          "quote": "implement response mechanisms (such as roll-backs to previous versions or kill switches) when necessary"
+        }
+      },
+      {
+        "control": "Escalation of changes by the use case team",
+        "description": "Where periodic self-checks reveal changes to key aspects of the use case, the team takes steps to address the risks or escalates the issue to a relevant party.",
+        "source": {
+          "page": 101,
+          "section": "3.5",
+          "quote": "take the necessary steps to address the risks of those changes or may escalate the issue to a relevant party"
+        }
+      },
+      {
+        "control": "Threshold-triggered human review",
+        "description": "Automated monitoring that detects a potential breach can trigger human review to determine the seriousness of the issue and remediate it; threshold-based review triggers human oversight when conditions such as risk metric threshold breaches are met.",
+        "source": {
+          "page": 102,
+          "section": "3.5",
+          "quote": "when automated monitoring detects a potential breach, human review can be triggered to determine the seriousness"
+        }
+      },
+      {
+        "control": "Escalation to a human agent / human recourse",
+        "description": "End users can be connected to a human agent where the AI (e.g. a chatbot) cannot address their needs, and impacted parties are given human recourse, remediation, appeal, or human review of a decision.",
+        "source": {
+          "page": 103,
+          "section": "3.5",
+          "quote": "a chatbot may provide an option to connect the user to a human agent if it is unable to address the user's needs"
+        }
+      },
+      {
+        "control": "Input/output filtering safeguards (flagging and blocking)",
+        "description": "Safeguards that flag and block inappropriate, confidential, or adversarial inputs or outputs to mitigate detected security threats such as prompt injection during system usage.",
+        "source": {
+          "page": 104,
+          "section": "3.5",
+          "quote": "flagging and blocking inappropriate, confidential, or adversarial inputs or outputs"
+        }
+      },
+      {
+        "control": "Feedback-triggered alerts and review processes",
+        "description": "Negative user feedback tracked as a metric triggers alerts when it exceeds a threshold or trend; substantiated feedback or escalations are treated as AI risk events, issues or incidents that trigger review processes and changes to the use case.",
+        "source": {
+          "page": 104,
+          "section": "3.5",
+          "quote": "triggering alerts when the proportion of negative feedback increases beyond a threshold or trend"
+        }
+      },
+      {
+        "control": "Go/no-go checkpoint and use case rejection (tollgates)",
+        "description": "A preliminary go/no-go checkpoint to stop misaligned use cases, and Julius Baer's two-stage tollgate process where risk type owners may recommend mitigations or reject a use case before production deployment.",
+        "source": {
+          "page": 71,
+          "section": "3.1",
+          "quote": "individual risk type owners evaluate AI-relevant risks within their areas, recommend mitigation strategies as needed, or reject a given use case"
+        }
+      }
+    ],
+    "total_sampling_rows_counted": 3,
+    "_passes": [
+      "modes",
+      "monitoring"
+    ]
+  }
+}

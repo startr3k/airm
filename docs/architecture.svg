@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 640" width="980" height="640" font-family="Inter, ui-sans-serif, system-ui, sans-serif" role="img" aria-labelledby="title desc">
+  <title id="title">MindForge Risk Assessor architecture</title>
+  <desc id="desc">Offline ingestion reads the handbook PDF with Claude and produces a versioned framework pack. At request time the API reads only the pack; the PDF is opened solely to render a cited page for display.</desc>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#6b7280"/>
+    </marker>
+    <marker id="arrowAccent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4338ca"/>
+    </marker>
+    <style>
+      .box   { fill:#ffffff; stroke:#d9dce3; stroke-width:1.5; rx:10; }
+      .band  { fill:#f8f9fb; stroke:#e5e7eb; stroke-width:1.5; rx:14; }
+      .accent{ fill:#eef0ff; stroke:#c7cbf5; stroke-width:1.5; rx:10; }
+      .pack  { fill:#ecfdf5; stroke:#a7d9c4; stroke-width:1.5; rx:10; }
+      .h     { font-size:13px; font-weight:600; fill:#16181d; }
+      .s     { font-size:11px; fill:#5b6170; }
+      .lbl   { font-size:11px; fill:#6b7280; }
+      .band-title { font-size:11px; font-weight:600; fill:#8b90a0; letter-spacing:0.06em; }
+      .line  { stroke:#9aa0ae; stroke-width:1.5; fill:none; marker-end:url(#arrow); }
+      .line-accent { stroke:#4338ca; stroke-width:1.8; fill:none; marker-end:url(#arrowAccent); }
+      .dash  { stroke-dasharray:4 3; }
+    </style>
+  </defs>
+
+  <rect width="980" height="640" fill="#ffffff"/>
+
+  <!-- ============ offline ingestion ============ -->
+  <rect class="band" x="24" y="24" width="932" height="196"/>
+  <text class="band-title" x="44" y="50">OFFLINE — make ingest, runs once, never at request time</text>
+
+  <rect class="box" x="44" y="66" width="150" height="62"/>
+  <text class="h" x="60" y="92">Handbook PDF</text>
+  <text class="s" x="60" y="110">166 printed pages</text>
+
+  <rect class="accent" x="230" y="66" width="168" height="62"/>
+  <text class="h" x="246" y="92">Claude (Opus 5)</text>
+  <text class="s" x="246" y="110">Files API · reads the PDF</text>
+
+  <rect class="box" x="434" y="66" width="150" height="62"/>
+  <text class="h" x="450" y="92">9 extractors</text>
+  <text class="s" x="450" y="110">every item + quote</text>
+
+  <rect class="box" x="620" y="66" width="150" height="62"/>
+  <text class="h" x="636" y="92">Verifier</text>
+  <text class="s" x="636" y="110">2nd pass, re-reads</text>
+
+  <rect class="pack" x="806" y="66" width="130" height="62"/>
+  <text class="h" x="822" y="92">pack.v1.json</text>
+  <text class="s" x="822" y="110">versioned + signed</text>
+
+  <path class="line" d="M 194 97 H 226"/>
+  <path class="line" d="M 398 97 H 430"/>
+  <path class="line" d="M 584 97 H 616"/>
+  <path class="line" d="M 770 97 H 802"/>
+
+  <rect class="box" x="44" y="146" width="354" height="52"/>
+  <text class="h" x="60" y="168">Page map: printed ↔ PDF calibration</text>
+  <text class="s" x="60" y="185">constant +7, confirmed against anchors. Citations are PRINTED pages.</text>
+
+  <rect class="box" x="434" y="146" width="502" height="52"/>
+  <text class="h" x="450" y="168">Ingestion fails if a table came back shorter than the verifier counted</text>
+  <text class="s" x="450" y="185">No local parsing anywhere: no pdftotext, no PyMuPDF, no OCR.</text>
+
+  <!-- ============ request path ============ -->
+  <rect class="band" x="24" y="244" width="932" height="248"/>
+  <text class="band-title" x="44" y="270">AT REQUEST TIME — the PDF is never read</text>
+
+  <rect class="box" x="44" y="290" width="170" height="74"/>
+  <text class="h" x="60" y="316">Browser</text>
+  <text class="s" x="60" y="334">React 18 · Vite</text>
+  <text class="s" x="60" y="350">SSE stepper</text>
+
+  <rect class="box" x="254" y="290" width="184" height="74"/>
+  <text class="h" x="270" y="316">FastAPI</text>
+  <text class="s" x="270" y="334">/api/assess · /stream</text>
+  <text class="s" x="270" y="350">/framework · /evals</text>
+
+  <rect class="accent" x="478" y="290" width="200" height="74"/>
+  <text class="h" x="494" y="316">Claude (Sonnet 5)</text>
+  <text class="s" x="494" y="334">forced tool call, strict schema</text>
+  <text class="s" x="494" y="350">cached 6k system prompt</text>
+
+  <rect class="box" x="718" y="290" width="218" height="74"/>
+  <text class="h" x="734" y="316">Policy layer (in code)</text>
+  <text class="s" x="734" y="334">domain floors · agentic controls</text>
+  <text class="s" x="734" y="350">out-of-scope short circuit</text>
+
+  <path class="line" d="M 214 320 H 250"/>
+  <path class="line" d="M 438 320 H 474"/>
+  <path class="line" d="M 678 320 H 714"/>
+  <path class="line" d="M 827 364 V 386 H 129 V 364" />
+
+  <text class="lbl" x="560" y="398">every adjustment returned as “model said X → policy said Y”</text>
+
+  <rect class="pack" x="254" y="424" width="184" height="50"/>
+  <text class="h" x="270" y="446">pack.v1.json</text>
+  <text class="s" x="270" y="463">the only source of framework truth</text>
+
+  <rect class="box" x="478" y="424" width="200" height="50"/>
+  <text class="h" x="494" y="446">SQLite</text>
+  <text class="s" x="494" y="463">assessment history</text>
+
+  <rect class="box" x="718" y="424" width="218" height="50"/>
+  <text class="h" x="734" y="446">Gold set · 10 cases × 3 runs</text>
+  <text class="s" x="734" y="463">accuracy and consistency, apart</text>
+
+  <path class="line dash" d="M 346 424 V 368"/>
+  <path class="line dash" d="M 578 424 V 412 H 400 V 368"/>
+
+  <!-- ============ display-only rendering ============ -->
+  <rect class="band" x="24" y="516" width="932" height="100"/>
+  <text class="band-title" x="44" y="542">DISPLAY ONLY — the one place the PDF is opened at request time</text>
+
+  <rect class="box" x="44" y="556" width="200" height="46"/>
+  <text class="h" x="60" y="576">Source chip</text>
+  <text class="s" x="60" y="592">“p.159” beside a citation</text>
+
+  <rect class="box" x="284" y="556" width="252" height="46"/>
+  <text class="h" x="300" y="576">/api/framework/source/{item_id}</text>
+  <text class="s" x="300" y="592">printed page · section · verbatim quote</text>
+
+  <rect class="box" x="576" y="556" width="360" height="46"/>
+  <text class="h" x="592" y="576">pypdfium2 → PNG of that page</text>
+  <text class="s" x="592" y="592">rendered, never read. No text is extracted here.</text>
+
+  <path class="line" d="M 244 579 H 280"/>
+  <path class="line" d="M 536 579 H 572"/>
+</svg>

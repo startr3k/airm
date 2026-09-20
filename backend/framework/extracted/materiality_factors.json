@@ -1,0 +1,372 @@
+{
+  "extractor": "materiality_factors",
+  "model": "claude-opus-5",
+  "extracted_at": "2026-09-20T08:45:22+00:00",
+  "pdf_pages": "52-66",
+  "printed_pages": "45-59",
+  "requests": 1,
+  "attempts": 1,
+  "attempt_log": [
+    {
+      "attempt": 1,
+      "problems": [],
+      "output_tokens": 6557,
+      "latency_ms": 101541
+    }
+  ],
+  "validation_problems": [],
+  "warnings": [],
+  "usage": {
+    "input_tokens": 785,
+    "output_tokens": 6557,
+    "cache_creation_input_tokens": 79660,
+    "cache_read_input_tokens": 0,
+    "calls": 2,
+    "latency_ms": 101541,
+    "estimated_cost_usd": 0.6657
+  },
+  "data": {
+    "inherent_risk_factors": [
+      {
+        "factor": "Monetary and financial impact",
+        "description": "The quantitative potential for an AI to impact an FI by causing losses, incurring costs, or resulting in foregone revenue (such as through lost trust or damaged relationships). Sits under the broader criterion 'Impact of the AI use case on the FI, its customers, or its stakeholders'.",
+        "sub_criteria": [
+          "losses",
+          "costs incurred",
+          "foregone revenue (e.g. through lost trust or damaged relationships)"
+        ],
+        "low_guidance": null,
+        "medium_guidance": null,
+        "high_guidance": null,
+        "source": {
+          "page": 47,
+          "section": "2.4",
+          "quote": "Monetary and financial impact. The quantitative potential for an AI to impact an FI by causing losses, incurring costs"
+        }
+      },
+      {
+        "factor": "Severity and probability of impact on different stakeholders, including individuals",
+        "description": "The potential for the use case to impact stakeholders – whether internal or external – in significant ways. Impact can also be affected by the volume and scope of usage, such as the number of people that interact with it or its outputs.",
+        "sub_criteria": [
+          "severity of impact",
+          "probability of impact",
+          "internal vs external stakeholders",
+          "volume and scope of usage",
+          "number of people that interact with it or its outputs"
+        ],
+        "low_guidance": null,
+        "medium_guidance": null,
+        "high_guidance": null,
+        "source": {
+          "page": 47,
+          "section": "2.4",
+          "quote": "Severity and probability of impact on different stakeholders, including individuals."
+        }
+      },
+      {
+        "factor": "Reputational risk",
+        "description": "The potential for AI use to generate controversy or negative publicity for an FI, even when it is legally compliant.",
+        "sub_criteria": [],
+        "low_guidance": null,
+        "medium_guidance": null,
+        "high_guidance": null,
+        "source": {
+          "page": 47,
+          "section": "2.4",
+          "quote": "Reputational risk. The potential for AI use to generate controversy or negative publicity for an FI"
+        }
+      },
+      {
+        "factor": "Options for recourse",
+        "description": "The extent to which people impacted by an AI can seek effective remediation or challenge the AI's decisions. A use case with fewer options for recourse can have further impacts and be riskier.",
+        "sub_criteria": [
+          "ability to seek effective remediation",
+          "ability to challenge the AI's decisions"
+        ],
+        "low_guidance": null,
+        "medium_guidance": null,
+        "high_guidance": "A use case with fewer options for recourse can have further impacts and be riskier.",
+        "source": {
+          "page": 47,
+          "section": "2.4",
+          "quote": "A use case with fewer options for recourse can have further impacts and be riskier."
+        }
+      },
+      {
+        "factor": "Regulatory impact",
+        "description": "The potential for AI use to engender compliance risk or regulatory penalties.",
+        "sub_criteria": [
+          "compliance risk",
+          "regulatory penalties"
+        ],
+        "low_guidance": null,
+        "medium_guidance": null,
+        "high_guidance": null,
+        "source": {
+          "page": 47,
+          "section": "2.4",
+          "quote": "Regulatory impact. The potential for AI use to engender compliance risk or regulatory penalties."
+        }
+      },
+      {
+        "factor": "Use of personal data",
+        "description": "The extent to which sensitive personal data is implicated by the AI use, which could potentially create opportunities for unjustified bias or for potential data loss or leakage.",
+        "sub_criteria": [
+          "sensitive personal data implicated",
+          "opportunities for unjustified bias",
+          "potential data loss or leakage"
+        ],
+        "low_guidance": null,
+        "medium_guidance": null,
+        "high_guidance": null,
+        "source": {
+          "page": 47,
+          "section": "2.4",
+          "quote": "Use of personal data. The extent to which sensitive personal data is implicated by the AI use"
+        }
+      },
+      {
+        "factor": "Complexity of the AI in use",
+        "description": "Under the criterion 'Complexity or novelty of the AI use case': the use of multiple datasets, complex architectures (e.g. LLMs), multiple models in concert (e.g. agentic AI), or other data or computational characteristics that can limit their interpretability or predictability.",
+        "sub_criteria": [
+          "multiple datasets",
+          "complex architectures (e.g. LLMs)",
+          "multiple models in concert (e.g. agentic AI)",
+          "limits on interpretability or predictability"
+        ],
+        "low_guidance": null,
+        "medium_guidance": null,
+        "high_guidance": null,
+        "source": {
+          "page": 47,
+          "section": "2.4",
+          "quote": "Complexity of the AI in use. The use of multiple datasets, complex architectures (e.g. LLMs), multiple models in concert"
+        }
+      },
+      {
+        "factor": "Extent of automation of process of AI-driven decision-making",
+        "description": "Under the criterion 'The degree of the FI's reliance on the AI use case': the dependency on an AI to supplement or substitute for human decision-making, which can increase the scope of that AI's impact. AI that is customer-facing without a human in the loop can represent a greater degree of process automation.",
+        "sub_criteria": [
+          "dependency on AI to supplement or substitute human decision-making",
+          "customer-facing without a human in the loop"
+        ],
+        "low_guidance": null,
+        "medium_guidance": null,
+        "high_guidance": "AI that is customer-facing without a human in the loop can represent a greater degree of process automation.",
+        "source": {
+          "page": 47,
+          "section": "2.4",
+          "quote": "AI that is customer-facing without a human in the loop can represent a greater degree of process automation."
+        }
+      },
+      {
+        "factor": "Control over credit or investment decisions (illustrative flowchart/scoring criterion)",
+        "description": "Illustrative criterion in Figure 2.4.2: whether the use case controls credit or investment decisions, or provides material inputs to such decisions. Scores 10 in the illustrative scoring method; a 'Yes' leads directly to High Risk in the flowchart method. The figure is simplified for illustration only.",
+        "sub_criteria": [
+          "controls credit or investment decisions",
+          "provides material inputs to such decisions"
+        ],
+        "low_guidance": null,
+        "medium_guidance": null,
+        "high_guidance": "'Yes' routes the use case to High Risk in the flowchart method, and scores 10 points (10+ = High Risk) in the scoring method.",
+        "source": {
+          "page": 49,
+          "section": "2.4 (Figure 2.4.2)",
+          "quote": "Does the use case control credit or investment decisions, or does it provide material inputs to such decisions?"
+        }
+      },
+      {
+        "factor": "Customer service support / sentiment analysis (illustrative flowchart/scoring criterion)",
+        "description": "Illustrative criterion in Figure 2.4.2: whether the use case supports customer service by providing recommended messages/actions or analysing customer sentiment. Scores 5 in the illustrative scoring method; a 'Yes' leads to Medium Risk in the flowchart method.",
+        "sub_criteria": [
+          "providing recommended messages/actions",
+          "analysing customer sentiment"
+        ],
+        "low_guidance": null,
+        "medium_guidance": "'Yes' routes the use case to Medium Risk in the flowchart method, and scores 5 points (5-9 = Medium Risk) in the scoring method.",
+        "high_guidance": null,
+        "source": {
+          "page": 49,
+          "section": "2.4 (Figure 2.4.2)",
+          "quote": "Does the use case support customer service by providing recommended messages/actions or analysing customer sentiment?"
+        }
+      },
+      {
+        "factor": "Risk-weighted materiality threshold (illustrative flowchart/scoring criterion)",
+        "description": "Illustrative criterion in Figure 2.4.2: whether the use case has a risk-weighted materiality (cumulative cost of all modes of failure multiplied by their probability of occurrence) over a monetary threshold — over $500k in the flowchart method; in the scoring method over $50k scores 1, with cumulative +3 each at $500k, $1000k and $5000k.",
+        "sub_criteria": [
+          "cumulative cost of all modes of failure",
+          "probability of occurrence",
+          "monetary thresholds ($50k, $500k, $1000k, $5000k)"
+        ],
+        "low_guidance": "In the flowchart method, 'No' (not over $500k) results in Low Risk; in the scoring method a total of 0-4 is Low Risk.",
+        "medium_guidance": "In the flowchart method, 'Yes' (over $500k) results in Medium Risk; in the scoring method a total of 5-9 is Medium Risk.",
+        "high_guidance": "In the scoring method, cumulative points across the monetary thresholds can push the total to 10+, which is High Risk.",
+        "source": {
+          "page": 49,
+          "section": "2.4 (Figure 2.4.2)",
+          "quote": "Does the use case have a risk-weighted materiality (cumulative cost of all modes of failure multiplied by"
+        }
+      }
+    ],
+    "tiers": [
+      {
+        "tier": "low",
+        "printed_name": "Low",
+        "definition": "One of the three tiers in the commonly used tiered approach ('Low', 'Medium', or 'High'). In the illustrative scoring method, a total of 0-4 points is Low Risk; in the flowchart method, a use case that is not credit/investment-related, not customer-service-related, and has risk-weighted materiality under $500k is Low Risk. An example of a use case with low residual risk materiality is an AI knowledge management chatbot interacting only with employees on an internal network on non-critical tasks.",
+        "governance_implications": "Lower-risk materiality use cases receive less depth and autonomy of AI-specific review: FIs can use simple review questionnaires and review metric calculations completed by Builders rather than conducting them again; a peer review may suffice. Human-in-the-loop moderation could be applied on a sampling basis. For Gen AI, review can focus on conceptual soundness of grounding prompts/few-shot examples and on outcomes and sensitivity analysis.",
+        "source": {
+          "page": 48,
+          "section": "2.4",
+          "quote": "Risk materiality is often measured in a tiered approach, classified as \"Low\", \"Medium\", or \"High\"."
+        }
+      },
+      {
+        "tier": "medium",
+        "printed_name": "Medium",
+        "definition": "Middle tier in the tiered approach. In the illustrative scoring method a total of 5-9 points is Medium Risk. Examples of medium residual risk materiality include automated client sentiment analysis for relationship management, personal finance tools providing spending analysis and recommendations, or claims automation with human-in-the-loop oversight that avoids direct interactions between the AI system and the end customer.",
+        "governance_implications": "Intermediate depth/autonomy of review; in the illustrative control library, some controls are applied at 'Medium - High Risk' (e.g. a Gen AI hallucination/fabrication/confabulation control).",
+        "source": {
+          "page": 46,
+          "section": "2.4",
+          "quote": "Examples of AI use cases with a medium residual risk materiality could be automated client sentiment analysis for relationship management"
+        }
+      },
+      {
+        "tier": "high",
+        "printed_name": "High",
+        "definition": "Highest tier in the tiered approach. In the illustrative scoring method a total of 10+ points is High Risk; in the flowchart method, controlling credit or investment decisions (or providing material inputs to them) yields High Risk. An example of high residual risk materiality is a credit underwriting system that, based on personal information about customers, makes key decisions about that customer's creditworthiness.",
+        "governance_implications": "Greater depth and autonomy of AI-specific review: FIs might require more detailed inputs from Builders, with reviewers rigorously verifying submissions, gathering information themselves and performing their own tests and calculations; independent reviewers such as an internal audit function or an external reviewer can be designated. Human-in-the-loop moderation may be applied more frequently or made mandatory for all outputs. Some controls apply at 'High Risk Only'. Post-deployment reviews are more frequent/deeper. For Gen AI, more extensive input/output controls (filtering, pseudonymisation) are typically in place and review focuses on their correct functioning.",
+        "source": {
+          "page": 46,
+          "section": "2.4",
+          "quote": "An example of an AI use case with high residual risk materiality could be a credit underwriting system"
+        }
+      }
+    ],
+    "tiering_method": "The handbook does not prescribe a single combination rule; each FI is responsible for determining criteria and establishing discrete tiers, with tiers explicitly defined and unambiguous so they can be consistently applied across the FI. It names two common approaches that can also be combined: the flowchart method (Use Case Owners answer straightforward, binary questions about the use case and its design in a sequence, which routes to a tier — effectively a highest-wins sequential triage) and the scoring method (developers complete a full questionnaire, with responses resulting in numerical scores corresponding to tiers, e.g. 0-4 Low, 5-9 Medium, 10+ High, with some items scoring cumulatively). The illustrative criteria in Figure 2.4.2 are simplified and not meant to represent a real assessment. Where assessments produce disagreements, FIs can designate a final authority to resolve differences or escalations.",
+    "residual_risk_logic": "Residual risk materiality is assessed after controls and guardrails have been implemented (typically at the end of build/onboarding and prior to deployment), by qualitatively and/or quantitatively assessing the use case's behaviour in a setting representative of its intended real use with all guardrails applied. FIs define a methodology for considering both the results of this assessment and the inherent risk materiality to assign a tier of residual risk materiality. Assessment results can be rated against the use case's KPIs as meeting minimal acceptance thresholds, exceeding them, or meeting a high, industry-leading standard of performance; use cases that fail to meet minimums do not proceed. Figure 2.4.3 gives a notional matrix: a low inherent risk use case stays Low Risk regardless of evaluation result; a medium inherent use case is Medium at 'Min.' and 'Exceeds Min.' but Low at 'Best Practice'; a high inherent use case remains High Risk at 'Min.' and 'Exceeds Min.' and only becomes 'Medium Risk/High Risk' at best practice (depending on the FI's risk tiers and risk tolerance, some use cases may always have a high residual risk). Achieving minimum evaluation results never elevates a low inherent-risk use case to overall 'high'. FIs may iteratively add controls and re-assess residual risk as many times as required, and residual risk materiality can be periodically re-assessed post-deployment as part of AI-specific review. The approach is notional and depends on each FI's risk tolerance, assessment methodology, and tier definitions.",
+    "agentic_or_genai_factors": [
+      "Table 2.4.1: for Gen AI, the broad range of business applications increases the importance of thoroughly assessing each context of use rather than just the model's risks; complexity is generally higher.",
+      "Table 2.4.1: for Agentic AI, the large number of broad, complex business uses and complex interactions between numerous traditional AI and Gen AI models makes it essential to consider broader use case factors when assessing risk; complexity and operational independence are both generally higher.",
+      "Complexity of the AI in use criterion explicitly cites complex architectures (e.g. LLMs) and multiple models in concert (e.g. agentic AI) as complexity drivers that limit interpretability or predictability.",
+      "Figure 2.4.5 and surrounding text: depth of AI-specific review increases with both risk materiality and the degree of operational autonomy.",
+      "Gen AI 'use case' validation focus areas: fit for purpose, Gen AI-specific risks (hallucinations, toxicity, offensive content), and risk-based guardrails (adversarial testing, output filtering, human oversight).",
+      "Gen AI review challenges: large proprietary training datasets precluding complete data quality checks, deep/complex architectures where existing explainability techniques are insufficient, and SaaS delivery limiting direct access — warranting compensatory testing (simulation, scenario, sensitivity testing, red teaming) and third-party disclosures like 'AI cards'.",
+      "Control library illustration: red-teaming is relevant to Gen AI but less so to conventional analytics models; a hallucination/fabrication/confabulation control applies to Gen AI at Medium - High Risk."
+    ],
+    "total_factors_counted": 11,
+    "unreadable_items": [],
+    "figure_2_4_3": {
+      "label": "Figure 2.4.3",
+      "caption": "Figure 2.4.3: Illustrative Approach to Residual Risk Materiality Assessment Based on Inherent Risk Materiality",
+      "read_successfully": true,
+      "axis_inherent_values": [
+        "Low Risk",
+        "Medium Risk",
+        "High Risk"
+      ],
+      "axis_evaluation_values": [
+        "Min.",
+        "Exceeds Min.",
+        "Best Practice"
+      ],
+      "cells": [
+        {
+          "inherent_tier": "low",
+          "evaluation_result": "Min.",
+          "residual_label": "Low Risk",
+          "residual_tiers": [
+            "low"
+          ],
+          "note": null
+        },
+        {
+          "inherent_tier": "medium",
+          "evaluation_result": "Min.",
+          "residual_label": "Medium Risk",
+          "residual_tiers": [
+            "medium"
+          ],
+          "note": null
+        },
+        {
+          "inherent_tier": "high",
+          "evaluation_result": "Min.",
+          "residual_label": "High Risk",
+          "residual_tiers": [
+            "high"
+          ],
+          "note": null
+        },
+        {
+          "inherent_tier": "low",
+          "evaluation_result": "Exceeds Min.",
+          "residual_label": "Low Risk",
+          "residual_tiers": [
+            "low"
+          ],
+          "note": null
+        },
+        {
+          "inherent_tier": "medium",
+          "evaluation_result": "Exceeds Min.",
+          "residual_label": "Medium Risk",
+          "residual_tiers": [
+            "medium"
+          ],
+          "note": null
+        },
+        {
+          "inherent_tier": "high",
+          "evaluation_result": "Exceeds Min.",
+          "residual_label": "High Risk",
+          "residual_tiers": [
+            "high"
+          ],
+          "note": null
+        },
+        {
+          "inherent_tier": "low",
+          "evaluation_result": "Best Practice",
+          "residual_label": "Low Risk",
+          "residual_tiers": [
+            "low"
+          ],
+          "note": null
+        },
+        {
+          "inherent_tier": "medium",
+          "evaluation_result": "Best Practice",
+          "residual_label": "Low Risk",
+          "residual_tiers": [
+            "low"
+          ],
+          "note": null
+        },
+        {
+          "inherent_tier": "high",
+          "evaluation_result": "Best Practice",
+          "residual_label": "Medium Risk/High Risk",
+          "residual_tiers": [
+            "medium",
+            "high"
+          ],
+          "note": "(Depending on the FI's risk tiers and risk tolerance, some use cases may always have a high residual risk)"
+        }
+      ],
+      "always_high_note": "(Depending on the FI's risk tiers and risk tolerance, some use cases may always have a high residual risk)",
+      "always_high_note_applies_to": "high inherent / best practice (printed beneath the 'Medium Risk/High Risk' cell in the high inherent risk materiality column)",
+      "failure_to_meet_minimum_note": "Use cases that fail to meet minimums do not proceed.",
+      "source": {
+        "page": 51,
+        "section": "2.4",
+        "quote": "Figure 2.4.3: Illustrative Approach to Residual Risk Materiality Assessment Based on Inherent Risk Materiality"
+      }
+    },
+    "_passes": [
+      "factors",
+      "matrix"
+    ]
+  }
+}

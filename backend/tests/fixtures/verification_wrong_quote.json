@@ -1,0 +1,57 @@
+{
+  "quote_checks": [
+    {
+      "item": "Unrepresentative or biased data inputs",
+      "cited_page": 133,
+      "quote": "Data is biased against, or unevenly represents, certain individuals",
+      "found_on_cited_page": true,
+      "found_on_page": null,
+      "note": null
+    },
+    {
+      "item": "Hallucination/ Fabrication/ Confabulation",
+      "cited_page": 136,
+      "quote": "the model confidently invents facts that are not present in its training data",
+      "found_on_cited_page": false,
+      "found_on_page": null,
+      "note": "This wording appears nowhere in Appendix B. The page reads 'Model generates outputs that are factually incorrect or not grounded in its inputs.'"
+    },
+    {
+      "item": "Prompt injection",
+      "cited_page": 137,
+      "quote": "Malicious instructions embedded in user input alter the model's behaviour",
+      "found_on_cited_page": false,
+      "found_on_page": 138,
+      "note": "The quote is verbatim but appears on printed page 138, not 137 as cited."
+    }
+  ],
+  "missing_rows": [
+    {
+      "table_or_section": "Main risk taxonomy table (Cyber & Data Security)",
+      "printed_page": 138,
+      "missing_items": ["Model inference attacks"],
+      "note": "The final row of the Cyber & Data Security block is present on the page but absent from the JSON."
+    }
+  ],
+  "unreadable_figures": [],
+  "verifier_counted_rows": 41,
+  "extracted_rows": 40,
+  "factual_errors": [
+    {
+      "item": "Ethics / Lack of AI risk awareness description",
+      "printed_page": 133,
+      "extracted_value": "can lead to erroneous outputs being accepted",
+      "page_value": "can lead to an erroneous, biased, or misleading outputs being accepted",
+      "severity": "wording"
+    },
+    {
+      "item": "Fairness & Bias risk count",
+      "printed_page": 133,
+      "extracted_value": "3 risks under Fairness & Bias",
+      "page_value": "The page shows 2 risks under Fairness & Bias",
+      "severity": "wrong"
+    }
+  ],
+  "verdict": "fail",
+  "summary": "One row is missing, two quotes do not match the page they cite, and the Fairness & Bias risk count contradicts the page."
+}

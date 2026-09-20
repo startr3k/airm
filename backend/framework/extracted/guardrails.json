@@ -1,0 +1,599 @@
+{
+  "extractor": "guardrails",
+  "model": "claude-opus-5",
+  "extracted_at": "2026-09-20T09:22:56+00:00",
+  "pdf_pages": "160-165",
+  "printed_pages": "153-158",
+  "requests": 1,
+  "attempts": 1,
+  "attempt_log": [
+    {
+      "attempt": 1,
+      "problems": [],
+      "output_tokens": 9228,
+      "latency_ms": 81560
+    }
+  ],
+  "validation_problems": [],
+  "warnings": [],
+  "usage": {
+    "input_tokens": 222,
+    "output_tokens": 9228,
+    "cache_creation_input_tokens": 16578,
+    "cache_read_input_tokens": 0,
+    "calls": 1,
+    "latency_ms": 81560,
+    "estimated_cost_usd": 0.3354
+  },
+  "data": {
+    "guardrails": [
+      {
+        "name": "Algorithm re-selection",
+        "description": "The practice of selecting a different training algorithm that performs better, ceteris paribus, on fairness criteria.",
+        "ai_types": [
+          "All AI"
+        ],
+        "interpretability_type": null,
+        "dimension": "Fairness and Bias",
+        "source": {
+          "page": 153,
+          "section": "Appendix G",
+          "quote": "The practice of selecting a different training algorithm that performs better, ceteris paribus, on fairness criteria."
+        }
+      },
+      {
+        "name": "Decision threshold adjustment",
+        "description": "Adjustment of the decision thresholds for different groups to ensure that each group receives fair treatment.",
+        "ai_types": [
+          "All AI"
+        ],
+        "interpretability_type": null,
+        "dimension": "Fairness and Bias",
+        "source": {
+          "page": 153,
+          "section": "Appendix G",
+          "quote": "Adjustment of the decision thresholds for different groups to ensure that each group receives fair treatment."
+        }
+      },
+      {
+        "name": "Hyperparameter tuning",
+        "description": "The practice of modifying system hyperparameters. Different types of AI have a wide variety in such parameters. In Gen AI applications that involve Large Language Models, common hyperparameters are temperature, which represents a model's \"creativity\"; k, which represents the range of possible responses; and p, which represents the likelihood of choosing less-likely responses. In applications where random fairness-violating responses are generated, these three values can each be reduced.",
+        "ai_types": [
+          "All AI"
+        ],
+        "interpretability_type": null,
+        "dimension": "Fairness and Bias",
+        "source": {
+          "page": 153,
+          "section": "Appendix G",
+          "quote": "common hyperparameters are temperature, which represents a model's \"creativity\""
+        }
+      },
+      {
+        "name": "Input/output filtering",
+        "description": "The addition of filters to a Gen AI use case to detect biased or toxic content. Input filtering involves checking prompts for toxic language (often using regex matching or agentic monitoring), checking if they are on topic, or assessing whether they can induce the model to behave inappropriately. Output filtering involves checking a model's outputs to determine whether it contains toxicity (often using a word list or sentiment measure), is unrepresentative, or otherwise contains content which meets harm thresholds (often using an agentic architecture).",
+        "ai_types": [
+          "Gen AI"
+        ],
+        "interpretability_type": null,
+        "dimension": "Fairness and Bias",
+        "source": {
+          "page": 153,
+          "section": "Appendix G",
+          "quote": "The addition of filters to a Gen AI use case to detect biased or toxic content."
+        }
+      },
+      {
+        "name": "In-processing techniques",
+        "description": "Manual adjustments to a model's loss function, the addition of variables, or the use of other algorithms that change the model or its decision-making process to prioritise fairness. These include adversarial debiasing, reductions grid search, automatic hyperparameter tuning, or the addition of fairness regularisers to a regression.",
+        "ai_types": [
+          "Traditional AI"
+        ],
+        "interpretability_type": null,
+        "dimension": "Fairness and Bias",
+        "source": {
+          "page": 153,
+          "section": "Appendix G",
+          "quote": "These include adversarial debiasing, reductions grid search, automatic hyperparameter tuning"
+        }
+      },
+      {
+        "name": "Model customisation",
+        "description": "Model customisation in pretrained models, especially Gen AI, refers to fine-tuning and reinforcement learning. Fine-tuning adds layers to the model based on data, such as additional data representing individuals or groups who may be discriminated against. Reinforcement learning uses human review to reward or punish the model for harmful outputs, modifying the model's parameters towards responses that meet fairness criteria.",
+        "ai_types": [
+          "All AI"
+        ],
+        "interpretability_type": null,
+        "dimension": "Fairness and Bias",
+        "source": {
+          "page": 153,
+          "section": "Appendix G",
+          "quote": "Model customisation in pretrained models, especially Gen AI, refers to fine-tuning and reinforcement learning."
+        }
+      },
+      {
+        "name": "Model separation",
+        "description": "The demarcation of different models for handling different types of uses, such as by splitting customers into two types and training models to address each distinctly. This is useful for cases where customer types are meaningfully distinct and a single model is less effective at fairly treating each.",
+        "ai_types": [
+          "All AI"
+        ],
+        "interpretability_type": null,
+        "dimension": "Fairness and Bias",
+        "source": {
+          "page": 154,
+          "section": "Appendix G",
+          "quote": "The demarcation of different models for handling different types of uses"
+        }
+      },
+      {
+        "name": "Post-processing techniques",
+        "description": "The modification of model outputs to improve AI performance on fairness characteristics. These include output adjustment to generate equal odds for different groups or constrained balanced accuracy for supervised learning.",
+        "ai_types": [
+          "Traditional AI"
+        ],
+        "interpretability_type": null,
+        "dimension": "Fairness and Bias",
+        "source": {
+          "page": 154,
+          "section": "Appendix G",
+          "quote": "The modification of model outputs to improve AI performance on fairness characteristics."
+        }
+      },
+      {
+        "name": "Prompt design",
+        "description": "The addition of instructions to user prompts. These can include instructions to represent groups fairly, reject requests to create discriminatory content, or instructions to include different individuals or groups in outputs.",
+        "ai_types": [
+          "Gen AI"
+        ],
+        "interpretability_type": null,
+        "dimension": "Fairness and Bias",
+        "source": {
+          "page": 154,
+          "section": "Appendix G",
+          "quote": "The addition of instructions to user prompts. These can include instructions to represent groups fairly"
+        }
+      },
+      {
+        "name": "Algorithm selection for power efficiency",
+        "description": "AI training algorithms can have significantly different power requirements for certain types of tasks. Choosing the right algorithm for a specific task – and balancing both performance and efficiency – is an important part of the build process that can have significant impacts on the power consumption and environmental impact of the training or fine-tuning process.",
+        "ai_types": [
+          "All AI"
+        ],
+        "interpretability_type": null,
+        "dimension": "Ethics",
+        "source": {
+          "page": 154,
+          "section": "Appendix G",
+          "quote": "AI training algorithms can have significantly different power requirements for certain types of tasks."
+        }
+      },
+      {
+        "name": "Conduct an ethical design assessment in onboarding",
+        "description": "When onboarding systems or models, FIs can assess the extent to which their design, functioning, and use supports enterprise values and ethical principles. Third-party vendors can provide information on the ethical principles used in the system's design, and these can be assessed against the FI's own ethics.",
+        "ai_types": [
+          "All AI"
+        ],
+        "interpretability_type": null,
+        "dimension": "Ethics",
+        "source": {
+          "page": 154,
+          "section": "Appendix G",
+          "quote": "When onboarding systems or models, FIs can assess the extent to which their design, functioning, and use supports enterprise values"
+        }
+      },
+      {
+        "name": "Test prioritisation",
+        "description": "FIs can prioritise the sequence of tests that are performed on an AI to improve the efficiency of the testing process, reduce the number of re-training runs that need to be performed, and potentially reduce the number of tests that need to be performed. Carefully sequencing, de-duplicating, and triaging tests, typically by performing the most rigorous and comprehensive tests first, can minimise the need for power-intensive re-testing and re-training of an AI.",
+        "ai_types": [
+          "All AI"
+        ],
+        "interpretability_type": null,
+        "dimension": "Ethics",
+        "source": {
+          "page": 154,
+          "section": "Appendix G",
+          "quote": "FIs can prioritise the sequence of tests that are performed on an AI to improve the efficiency"
+        }
+      },
+      {
+        "name": "Content Moderation",
+        "description": "FIs can assess the outputs of a Gen AI system for ethical compliance before sharing them with the user. This assessment can take the form of deterministic rules, but is typically implemented using an LLM (for text outputs) which assesses whether the output violates the FI's policies or principles. Outputs that fail to pass can be re-generated or can result in an error message. This approach often uses the same techniques as \"input/output filtering\", which is included under \"Fairness & Bias\".",
+        "ai_types": [
+          "Gen AI"
+        ],
+        "interpretability_type": null,
+        "dimension": "Ethics",
+        "source": {
+          "page": 154,
+          "section": "Appendix G",
+          "quote": "FIs can assess the outputs of a Gen AI system for ethical compliance before sharing them with the user."
+        }
+      },
+      {
+        "name": "Use of pre-trained models",
+        "description": "By leveraging pre-trained or pre-tuned AI models, FIs can limit or completely avoid the requirement to perform their own training or find-tuning activities, with potentially significant power savings as a consequence.",
+        "ai_types": [
+          "All AI"
+        ],
+        "interpretability_type": null,
+        "dimension": "Ethics",
+        "source": {
+          "page": 155,
+          "section": "Appendix G",
+          "quote": "By leveraging pre-trained or pre-tuned AI models, FIs can limit or completely avoid the requirement"
+        }
+      },
+      {
+        "name": "Chain-of-thought prompting",
+        "description": "LLMs can, through grounding or prompting, be induced to produce outputs in a stepwise fashion. This encourages the system to illustrate reasoning steps in generating an output and can significantly improve the explainability of those outputs by clarifying the assumptions underlying it; it has the side effect of also improving the accuracy of some kinds of outputs. Chain-of-thought prompting is an area of ongoing research and is known to have limitations.",
+        "ai_types": [
+          "Gen AI"
+        ],
+        "interpretability_type": null,
+        "dimension": "Transparency",
+        "source": {
+          "page": 155,
+          "section": "Appendix G",
+          "quote": "LLMs can, through grounding or prompting, be induced to produce outputs in a stepwise fashion."
+        }
+      },
+      {
+        "name": "Confidence scoring",
+        "description": "There are a variety of measures of the degree to which an AI is \"confident\" in its outputs. Perplexity is a common measure of confidence for NLP and is especially useful in LLMs. Confidence levels can be used by builders to assess the usefulness and effectiveness of their AI, and AI outputs with low confidence scores can trigger different behaviours.",
+        "ai_types": [
+          "All AI"
+        ],
+        "interpretability_type": null,
+        "dimension": "Transparency",
+        "source": {
+          "page": 155,
+          "section": "Appendix G",
+          "quote": "Perplexity is a common measure of confidence for NLP and is especially useful in LLMs."
+        }
+      },
+      {
+        "name": "Counterfactual explanations",
+        "description": "Counterfactual explanations test how AI might behave under different input conditions, creating a form of explainability by suggesting which features or factors may have contributed to an output. Builders can include counterfactual explainability techniques in use cases that they create, particularly in traditional AI.",
+        "ai_types": [
+          "All AI"
+        ],
+        "interpretability_type": null,
+        "dimension": "Transparency",
+        "source": {
+          "page": 155,
+          "section": "Appendix G",
+          "quote": "Counterfactual explanations test how AI might behave under different input conditions"
+        }
+      },
+      {
+        "name": "Inherent interpretability",
+        "description": "Some types of models, especially those with low dimensionality or that create outputs as a weighted sum of inputs (such as a linear regression), are inherently interpretable. Models built using decision trees, decision sets, or rule-based classifiers are also considered inherently interpretable. The selection of such a model significantly enhances explainability.",
+        "ai_types": [
+          "All AI"
+        ],
+        "interpretability_type": "Inherent interpretability",
+        "dimension": "Transparency",
+        "source": {
+          "page": 155,
+          "section": "Appendix G",
+          "quote": "Models built using decision trees, decision sets, or rule-based classifiers are also considered inherently interpretable."
+        }
+      },
+      {
+        "name": "Interpretability constraints",
+        "description": "AI with interpretability constraints are systems whose characteristics have been modified to improve their interpretability, sometimes at the cost of a penalty to performance. Interpretability constraints include rule-based reasoning or measures to sparsify neural networks.",
+        "ai_types": [
+          "Traditional AI"
+        ],
+        "interpretability_type": "Interpretability constraints",
+        "dimension": "Transparency",
+        "source": {
+          "page": 155,
+          "section": "Appendix G",
+          "quote": "AI with interpretability constraints are systems whose characteristics have been modified to improve their interpretability"
+        }
+      },
+      {
+        "name": "Post hoc interpretability techniques",
+        "description": "Post-hoc interpretability techniques support the analysis of black box models by attempting to assess how an output was created. These techniques vary in complexity and applicability to different model architectures. Such techniques consist of building surrogate models, generating Shapley values, or assessing deep learning models using gradient-based assessments.",
+        "ai_types": [
+          "All AI"
+        ],
+        "interpretability_type": "Post hoc interpretability techniques",
+        "dimension": "Transparency",
+        "source": {
+          "page": 155,
+          "section": "Appendix G",
+          "quote": "Post-hoc interpretability techniques support the analysis of black box models by attempting to assess how an output was created."
+        }
+      },
+      {
+        "name": "Retrieval-augmented generation",
+        "description": "Retrieval-augmented generation (RAG) architecture supplements an LLM with other components that provide it with sources on which to base its output. Some LLMs are capable of citing sources contextually in-line throughout an output, which provides a user with clear traceability to sources and provides an opportunity to validate the use of those sources. This can improve the explainability of use case outputs.",
+        "ai_types": [
+          "Gen AI"
+        ],
+        "interpretability_type": null,
+        "dimension": "Transparency",
+        "source": {
+          "page": 156,
+          "section": "Appendix G",
+          "quote": "Retrieval-augmented generation (RAG) architecture supplements an LLM with other components that provide it with sources"
+        }
+      },
+      {
+        "name": "System prompt design",
+        "description": "The addition of instructions to user prompts. These can include instructions to reject prompts where the system cannot produce a satisfactory answer or where source data does not match the type of output desired.",
+        "ai_types": [
+          "Gen AI"
+        ],
+        "interpretability_type": null,
+        "dimension": "Transparency",
+        "source": {
+          "page": 156,
+          "section": "Appendix G",
+          "quote": "These can include instructions to reject prompts where the system cannot produce a satisfactory answer"
+        }
+      },
+      {
+        "name": "Programmable conversation controls",
+        "description": "Rule-based frameworks can be used to define explicit boundaries for multi-turn conversations, ensuring that outputs consistently remain within approved topics and organisational policies. Such rules can support the codification of compliance requirements as transparent, enforceable rules with clear logic.",
+        "ai_types": [
+          "Gen AI"
+        ],
+        "interpretability_type": null,
+        "dimension": "Transparency",
+        "source": {
+          "page": 156,
+          "section": "Appendix G",
+          "quote": "Rule-based frameworks can be used to define explicit boundaries for multi-turn conversations"
+        }
+      },
+      {
+        "name": "AI onboarding using domain data",
+        "description": "Testing that focuses on performance on domain data, such as by testing the AI against internal data or against a finance-specific benchmark, can provide assurance in cases where training data is not transparent.",
+        "ai_types": [
+          "All AI"
+        ],
+        "interpretability_type": null,
+        "dimension": "Robustness and Stability",
+        "source": {
+          "page": 156,
+          "section": "Appendix G",
+          "quote": "Testing that focuses on performance on domain data, such as by testing the AI against internal data"
+        }
+      },
+      {
+        "name": "Fine-tuning",
+        "description": "For AI models based on neural networks, fine-tuning is the additional of neural \"layers\" based on additional data without adjusting the underlying parameters. Fine-tuning is a resource-efficient method for adjusting system performance characteristics and introducing domain-specific data without fully retraining the model. It is particularly useful for preparing models for unexpected use or introducing a wider variety of data or circumstances. Common fine-tuning datasets include: • Fact-checking datasets, which consist of pairs of prompts and correct responses. • Negative examples, which suggest outputs that a model should avoid. • Domain data, which consists of data relevant to the FI's expected usage.",
+        "ai_types": [
+          "All AI"
+        ],
+        "interpretability_type": null,
+        "dimension": "Robustness and Stability",
+        "source": {
+          "page": 156,
+          "section": "Appendix G",
+          "quote": "Fine-tuning is a resource-efficient method for adjusting system performance characteristics and introducing domain-specific data"
+        }
+      },
+      {
+        "name": "Input filtering",
+        "description": "Gen AI use cases can be vulnerable to the ingestion of low-quality or malicious data through unexpected use or prompt injection attacks, which can degrade the foundation model's performance. Input filtering, which uses a rule-based engine or another AI to assess inputs for quality before approving them for use, can filter out some low-quality, inaccurate, malicious, or poorly formatted inputs that could cause degradation.",
+        "ai_types": [
+          "Gen AI"
+        ],
+        "interpretability_type": null,
+        "dimension": "Robustness and Stability",
+        "source": {
+          "page": 156,
+          "section": "Appendix G",
+          "quote": "Gen AI use cases can be vulnerable to the ingestion of low-quality or malicious data"
+        }
+      },
+      {
+        "name": "Model calibration",
+        "description": "Calibration in Gen AI is an approach to system architecture which involves re-running the model repeatedly and sampling responses to determine whether they are sufficiently similar. Calibration may include the addition of small amounts of variability to the prompt in each run.",
+        "ai_types": [
+          "Gen AI"
+        ],
+        "interpretability_type": null,
+        "dimension": "Robustness and Stability",
+        "source": {
+          "page": 157,
+          "section": "Appendix G",
+          "quote": "Calibration in Gen AI is an approach to system architecture which involves re-running the model repeatedly"
+        }
+      },
+      {
+        "name": "Modular architecture",
+        "description": "Stability can be improved by adopting a modular architecture with discrete tasks performed by individual models and components. A modular architecture can be more robust against drift, because of the resilience of other components in the use case, and can be easier to maintain, because each component can be independently monitored and repaired.",
+        "ai_types": [
+          "All AI"
+        ],
+        "interpretability_type": null,
+        "dimension": "Robustness and Stability",
+        "source": {
+          "page": 157,
+          "section": "Appendix G",
+          "quote": "Stability can be improved by adopting a modular architecture with discrete tasks performed by individual models"
+        }
+      },
+      {
+        "name": "Reinforcement learning",
+        "description": "For AI models based on neural networks, reinforcement learning involves generating outputs and then scoring those outputs for desirability (scoring by a human is Reinforcement Learning with Human Feedback, RLHF, and scoping by a machine is Reinforcement Learning with AI Feedback, RLAIF). These scores are used to adjust model weights to favour higher-scoring behaviours. Reinforcement learning can be used to enforce desirable behaviours when encountering new data types or unfamiliar situations, or can be used to improve accuracy or soundness, such as by favouring truthful responses.",
+        "ai_types": [
+          "All AI"
+        ],
+        "interpretability_type": null,
+        "dimension": "Robustness and Stability",
+        "source": {
+          "page": 157,
+          "section": "Appendix G",
+          "quote": "scoring by a human is Reinforcement Learning with Human Feedback, RLHF"
+        }
+      },
+      {
+        "name": "Robustness testing",
+        "description": "Testing an AI against a range of input types, including by deliberately selecting noisy input data or by testing the AI against adversarial inputs. These can include assessing the AI against potential variations in its operating context, such as different market conditions than those that applied to its training data. This can be used to determine whether an AI is sufficiently robust in the face of predictable types of data drift.",
+        "ai_types": [
+          "All AI"
+        ],
+        "interpretability_type": null,
+        "dimension": "Robustness and Stability",
+        "source": {
+          "page": 157,
+          "section": "Appendix G",
+          "quote": "Testing an AI against a range of input types, including by deliberately selecting noisy input data"
+        }
+      },
+      {
+        "name": "Small model selection",
+        "description": "Smaller foundation models in Gen AI use cases have been observed to demonstrate improved stability and reliability, at the potential cost of decreased performance. Selecting a smaller model where appropriate, and where that model provides sufficient performance, can increase the stability and predictability in diverse usage contexts.",
+        "ai_types": [
+          "Gen AI"
+        ],
+        "interpretability_type": null,
+        "dimension": "Robustness and Stability",
+        "source": {
+          "page": 157,
+          "section": "Appendix G",
+          "quote": "Smaller foundation models in Gen AI use cases have been observed to demonstrate improved stability and reliability"
+        }
+      },
+      {
+        "name": "Weight regularisation and normalisation",
+        "description": "Potential causes of instability or data drift in neural network-based use cases include overfitting or low rates of convergence. These can be addressed by regularising parameters, reducing the largest weights, or by normalising the inputs between layers, which can reduce model instability and encourage a more narrow, predictable band of outputs.",
+        "ai_types": [
+          "Traditional AI"
+        ],
+        "interpretability_type": null,
+        "dimension": "Robustness and Stability",
+        "source": {
+          "page": 157,
+          "section": "Appendix G",
+          "quote": "Potential causes of instability or data drift in neural network-based use cases include overfitting or low rates of convergence."
+        }
+      },
+      {
+        "name": "Synthetic evaluation datasets",
+        "description": "Generating controlled datasets with known properties can facilitate testing and validation for AI use cases. In particular, the generation of synthetic edge cases or other rare scenarios may enable testing under conditions that are underrepresented in real data.",
+        "ai_types": [
+          "All AI"
+        ],
+        "interpretability_type": null,
+        "dimension": "Robustness and Stability",
+        "source": {
+          "page": 157,
+          "section": "Appendix G",
+          "quote": "Generating controlled datasets with known properties can facilitate testing and validation for AI use cases."
+        }
+      },
+      {
+        "name": "Jailbreak detection",
+        "description": "See \"input filtering\" under \"Robustness and Stability\".",
+        "ai_types": [
+          "Gen AI"
+        ],
+        "interpretability_type": null,
+        "dimension": "Cyber and Data Security",
+        "source": {
+          "page": 158,
+          "section": "Appendix G",
+          "quote": "See \"input filtering\" under \"Robustness and Stability\"."
+        }
+      },
+      {
+        "name": "Penetration testing",
+        "description": "Penetration testing, often referred to as \"pen testing,\" is a proactive security assessment where authorised professionals simulate a cyberattack. The primary goal of a pen test is to identify vulnerabilities, misconfigurations, or weaknesses before malicious actors can exploit them. Pen testing involves employing real-world attack techniques, including exploiting known vulnerabilities and identifying potential zero-day threats, to test the robustness of a system's security controls. The test is performed in a controlled environment to ensure that no harm is caused to the system or its users.",
+        "ai_types": [
+          "All AI"
+        ],
+        "interpretability_type": null,
+        "dimension": "Cyber and Data Security",
+        "source": {
+          "page": 158,
+          "section": "Appendix G",
+          "quote": "Penetration testing, often referred to as \"pen testing,\" is a proactive security assessment"
+        }
+      },
+      {
+        "name": "Red teaming",
+        "description": "Red Teaming is an advanced security testing process where ethical hackers simulate real-world cyberattacks to uncover vulnerabilities, assess organisational defences, and improve security operations. Unlike traditional penetration testing, it takes a holistic approach, evaluating systems, processes, and personnel. In AI, red teaming is used to identify and mitigate risks such as data leaks, biased or toxic outputs, and adversarial manipulation, ensuring models are safe, reliable, and ethical. This proactive method enhances security readiness, operational resilience, and compliance with regulatory standards while safeguarding both cybersecurity and AI system. It is particularly useful for Gen AI systems.",
+        "ai_types": [
+          "All AI"
+        ],
+        "interpretability_type": null,
+        "dimension": "Cyber and Data Security",
+        "source": {
+          "page": 158,
+          "section": "Appendix G",
+          "quote": "Red Teaming is an advanced security testing process where ethical hackers simulate real-world cyberattacks"
+        }
+      },
+      {
+        "name": "Role-based access controls",
+        "description": "These are access management mechanisms that restrict system permissions based on a user's job role within an organisation. They ensure individuals can only access the data and functions necessary for their responsibilities, reducing the risk of unauthorised actions or data breaches.",
+        "ai_types": [
+          "All AI"
+        ],
+        "interpretability_type": null,
+        "dimension": "Cyber and Data Security",
+        "source": {
+          "page": 158,
+          "section": "Appendix G",
+          "quote": "access management mechanisms that restrict system permissions based on a user's job role within an organisation"
+        }
+      },
+      {
+        "name": "Vulnerability assessment",
+        "description": "Vulnerability assessments are conducted to evaluate and prioritise security risks in software, applications, and networks. These are typically recurring, automated scans that search for known vulnerabilities in a system and flag them for review. Security teams use vulnerability assessments to quickly check for common flaws. The following methodologies are commonly applied: • System Analysis: Both dynamic and static analysis techniques are employed to examine the application. These methods uncover coding errors in systems, whether they are operational or dormant. • Dependency Vulnerability Scans: Attackers may exploit weaknesses in external code components, such as libraries and binaries. These scans help identify vulnerabilities tied to specific versions of these dependencies, enabling proactive mitigation.",
+        "ai_types": [
+          "All AI"
+        ],
+        "interpretability_type": null,
+        "dimension": "Cyber and Data Security",
+        "source": {
+          "page": 158,
+          "section": "Appendix G",
+          "quote": "Vulnerability assessments are conducted to evaluate and prioritise security risks in software, applications, and networks."
+        }
+      }
+    ],
+    "interpretability_typology": [
+      {
+        "name": "Inherent interpretability",
+        "definition": "Some types of models, especially those with low dimensionality or that create outputs as a weighted sum of inputs (such as a linear regression), are inherently interpretable. Models built using decision trees, decision sets, or rule-based classifiers are also considered inherently interpretable. The selection of such a model significantly enhances explainability.",
+        "source": {
+          "page": 155,
+          "section": "Appendix G",
+          "quote": "Some types of models, especially those with low dimensionality or that create outputs as a weighted sum of inputs"
+        }
+      },
+      {
+        "name": "Interpretability constraints",
+        "definition": "AI with interpretability constraints are systems whose characteristics have been modified to improve their interpretability, sometimes at the cost of a penalty to performance. Interpretability constraints include rule-based reasoning or measures to sparsify neural networks.",
+        "source": {
+          "page": 155,
+          "section": "Appendix G",
+          "quote": "Interpretability constraints include rule-based reasoning or measures to sparsify neural networks."
+        }
+      },
+      {
+        "name": "Post hoc interpretability techniques",
+        "definition": "Post-hoc interpretability techniques support the analysis of black box models by attempting to assess how an output was created. These techniques vary in complexity and applicability to different model architectures. Such techniques consist of building surrogate models, generating Shapley values, or assessing deep learning models using gradient-based assessments.",
+        "source": {
+          "page": 155,
+          "section": "Appendix G",
+          "quote": "Such techniques consist of building surrogate models, generating Shapley values, or assessing deep learning models"
+        }
+      }
+    ],
+    "table_columns": [
+      "Guardrail",
+      "Implementation Examples"
+    ],
+    "total_guardrails_counted": 38,
+    "unreadable_items": []
+  }
+}

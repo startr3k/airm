@@ -1,0 +1,715 @@
+{
+  "extractor": "metrics",
+  "model": "claude-opus-5",
+  "extracted_at": "2026-09-20T09:21:34+00:00",
+  "pdf_pages": "154-159",
+  "printed_pages": "147-152",
+  "requests": 1,
+  "attempts": 3,
+  "attempt_log": [
+    {
+      "attempt": 1,
+      "problems": [
+        "model counted 52 metrics but returned 53"
+      ],
+      "output_tokens": 8975,
+      "latency_ms": 76297
+    },
+    {
+      "attempt": 2,
+      "problems": [
+        "model counted 52 metrics but returned 53"
+      ],
+      "output_tokens": 8905,
+      "latency_ms": 72354
+    },
+    {
+      "attempt": 3,
+      "problems": [
+        "model counted 52 metrics but returned 53"
+      ],
+      "output_tokens": 8968,
+      "latency_ms": 73318
+    }
+  ],
+  "validation_problems": [
+    "model counted 52 metrics but returned 53"
+  ],
+  "warnings": [
+    "kept best of 3 attempts with 1 problem(s)"
+  ],
+  "usage": {
+    "input_tokens": 663,
+    "output_tokens": 26848,
+    "cache_creation_input_tokens": 15441,
+    "cache_read_input_tokens": 30882,
+    "calls": 3,
+    "latency_ms": 221969,
+    "estimated_cost_usd": 0.7865
+  },
+  "data": {
+    "metrics": [
+      {
+        "name": "Average Absolute Odds Difference (AAOD)",
+        "definition": "AAOD combines differences in false positive and true positive rates across two groups (a and b) to provide a comprehensive view of classification disparities.",
+        "formula": "0.5 x (|FPRa - FPRb| + |TPRa - TPRb|) Where FPR is False Positive Rate and TPR is True Positive Rate.",
+        "ai_types": [],
+        "dimension": "Fairness and Bias",
+        "source": {
+          "page": 147,
+          "section": "Appendix F",
+          "quote": "AAOD combines differences in false positive and true positive rates across two groups (a and b)"
+        }
+      },
+      {
+        "name": "Disparate Impact Ratio (DIR)",
+        "definition": "DIR measures the ratio of favourable outcome probabilities between groups, aligning with legal frameworks like the \"80% rule\" in US employment law (80% rule helps employers and EEOC determine if a selection process has a disproportionate negative impact on protected groups).",
+        "formula": "P(Y=1|A=0) / P(Y=1|A=1) Where Y is an outcome and A is a sensitive variable.",
+        "ai_types": [],
+        "dimension": "Fairness and Bias",
+        "source": {
+          "page": 147,
+          "section": "Appendix F",
+          "quote": "DIR measures the ratio of favourable outcome probabilities between groups, aligning with legal frameworks like the \"80% rule\""
+        }
+      },
+      {
+        "name": "Equal Opportunity Difference (EOD)",
+        "definition": "EOD focuses on equality of opportunity by measuring the ratio of differences in true positive rates across groups.",
+        "formula": "P(Y=1|Y*=1, A=0) - P(Y=1|Y*=1, A=1) Where Y is an outcome, Y* is the true outcome, and A is a sensitive variable.",
+        "ai_types": [],
+        "dimension": "Fairness and Bias",
+        "source": {
+          "page": 147,
+          "section": "Appendix F",
+          "quote": "EOD focuses on equality of opportunity by measuring the ratio of differences in true positive rates across groups."
+        }
+      },
+      {
+        "name": "LLM-as-a-judge bias scoring",
+        "definition": "LLM bias can be assessed using an LLM \"as a judge\", with frameworks provided by several open-source resources. Typically, the \"judge\" LLM is given a set of instructions for evaluating a corpus of outputs from the LLM targeted for evaluation. LLM-as-a-judge evaluation can output a score for bias (using a technique like G-Eval), but depending on the choice of judge, LLM-generated scores can display arbitrariness. Alternative approaches include QAG scores or other methods that use binary classification to rate outputs as either \"biased\" or \"not biased\", taking the proportion of biased outputs as a score.",
+        "formula": "(Biased outputs / Total outputs) x 100%",
+        "ai_types": [
+          "LLM"
+        ],
+        "dimension": "Fairness and Bias",
+        "source": {
+          "page": 147,
+          "section": "Appendix F",
+          "quote": "LLM bias can be assessed using an LLM \"as a judge\", with frameworks provided by several open-source resources."
+        }
+      },
+      {
+        "name": "Separation",
+        "definition": "Separation measures the ratio of an outcome given a sensitive attribute to the probability of that outcome overall. A separation value closer to 1 indicates that predictions are less influenced by the sensitive variable.",
+        "formula": "P(Y=1|A=1) / P(Y=1) Where Y is an outcome and A is a sensitive attribute.",
+        "ai_types": [],
+        "dimension": "Fairness and Bias",
+        "source": {
+          "page": 147,
+          "section": "Appendix F",
+          "quote": "Separation measures the ratio of an outcome given a sensitive attribute to the probability of that outcome overall."
+        }
+      },
+      {
+        "name": "Socio-cultural bias",
+        "definition": "Socio-cultural bias is when an LLM's behaviour varies in undesired ways when the context of customer interactions changes (e.g. different tone, decisions due to language/age/race/religion of customer, including indirect information through name). Though underlying data does not exhibit inherent bias, the Gen AI tooling may. It is typically measured with conversation flows with different customer context, including language, customer name, and background. Socio-cultural bias can be measured as a proportion of biased outputs over total outputs or using measures of semantic distance like cosine similarity.",
+        "formula": null,
+        "ai_types": [
+          "LLM",
+          "Gen AI"
+        ],
+        "dimension": "Fairness and Bias",
+        "source": {
+          "page": 148,
+          "section": "Appendix F",
+          "quote": "Socio-cultural bias is when an LLM's behaviour varies in undesired ways when the context of customer interactions changes"
+        }
+      },
+      {
+        "name": "Statistical Parity Difference (SPD)",
+        "definition": "SPD measures demographic parity by comparing the probability of a positive outcome between two groups.",
+        "formula": "P(Y=1|A=0) - P(Y=1|A=1) Where Y is an outcome and A is a sensitive variable.",
+        "ai_types": [],
+        "dimension": "Fairness and Bias",
+        "source": {
+          "page": 148,
+          "section": "Appendix F",
+          "quote": "SPD measures demographic parity by comparing the probability of a positive outcome between two groups."
+        }
+      },
+      {
+        "name": "Sufficiency",
+        "definition": "Sufficiency measures disparities in outcomes given a sensitive attribute. A sufficiency value closer to 1 indicates that the outcome is not likely to be influenced by the sensitive variable.",
+        "formula": "P(Y) / P(Y|A) Where Y is an outcome and A is a sensitive variable.",
+        "ai_types": [],
+        "dimension": "Fairness and Bias",
+        "source": {
+          "page": 148,
+          "section": "Appendix F",
+          "quote": "Sufficiency measures disparities in outcomes given a sensitive attribute."
+        }
+      },
+      {
+        "name": "Toxicity Score",
+        "definition": "Similar to other metrics on bias, the toxicity score is the proportion of toxic outputs. Toxicity can be quantified using an LLM as a judge, by regex matching, or by semantic scoring.",
+        "formula": "(Number of toxic opinions / Total number of opinions extracted) x 100%",
+        "ai_types": [
+          "LLM"
+        ],
+        "dimension": "Fairness and Bias",
+        "source": {
+          "page": 148,
+          "section": "Appendix F",
+          "quote": "the toxicity score is the proportion of toxic outputs. Toxicity can be quantified using an LLM as a judge"
+        }
+      },
+      {
+        "name": "Compliance Consistency Score (CCS)",
+        "definition": "A normalised score (0 to 1) reflecting the overall quality and consistency of policy adherence.",
+        "formula": null,
+        "ai_types": [],
+        "dimension": "Accountability and Governance",
+        "source": {
+          "page": 148,
+          "section": "Appendix F",
+          "quote": "A normalised score (0 to 1) reflecting the overall quality and consistency of policy adherence."
+        }
+      },
+      {
+        "name": "Policy Override Frequency (POF)",
+        "definition": "A measure of the extent to which policies are adhered to.",
+        "formula": "(Number of policy deviation instances / Total number of prompts) x 100%",
+        "ai_types": [],
+        "dimension": "Accountability and Governance",
+        "source": {
+          "page": 148,
+          "section": "Appendix F",
+          "quote": "A measure of the extent to which policies are adhered to. It is given by:"
+        }
+      },
+      {
+        "name": "Feature attribution",
+        "definition": "Measures the change in contribution of features to a model's prediction compared to a baseline. Common measures for doing so include: LIME value (Local Interpretable Model-agnostic Explanations); SHAP value (SHapley Additive exPlanations)",
+        "formula": null,
+        "ai_types": [],
+        "dimension": "Transparency",
+        "source": {
+          "page": 148,
+          "section": "Appendix F",
+          "quote": "Measures the change in contribution of features to a model's prediction compared to a baseline."
+        }
+      },
+      {
+        "name": "Accuracy",
+        "definition": "Accuracy measures the overall correctness of predictions across all classes.",
+        "formula": "(TP + TN) / (TP + TN + FP + FN) Where TP is True Positives, TN is True Negatives, FP is False Positives, and FN is False Negatives.",
+        "ai_types": [],
+        "dimension": "Robustness and Stability",
+        "source": {
+          "page": 149,
+          "section": "Appendix F",
+          "quote": "Accuracy measures the overall correctness of predictions across all classes."
+        }
+      },
+      {
+        "name": "BLEU (Bilingual Evaluation Understudy)",
+        "definition": "A longstanding metric for quantifying the similarity of translated text to a translation by a human expert; it is useful for quantifying a model or system's translation accuracy. BLEU can be calculated on a body of customised domain-specific translations or on a benchmark reference set of translated pairs. METEOR is an industry alternative to BLEU that aims to account for variances like word order.",
+        "formula": null,
+        "ai_types": [],
+        "dimension": "Robustness and Stability",
+        "source": {
+          "page": 149,
+          "section": "Appendix F",
+          "quote": "A longstanding metric for quantifying the similarity of translated text to a translation by a human expert"
+        }
+      },
+      {
+        "name": "Consistency check",
+        "definition": "Hallucinated facts in LLM-generated responses are less likely to be repeated between responses than facts that are supported by facts. With this fact in mind it is possible to perform a \"zero-resource\" check – that is, without requiring consultation of additional sources. A consistency check involves assessing each sentence of an output against several other sample outputs generated from the same prompt; assessment typically involves a similarity metric like BERTScore. A lower average similarity to sentences in the other samples indicates a higher likelihood of hallucination.",
+        "formula": null,
+        "ai_types": [
+          "LLM"
+        ],
+        "dimension": "Robustness and Stability",
+        "source": {
+          "page": 149,
+          "section": "Appendix F",
+          "quote": "Hallucinated facts in LLM-generated responses are less likely to be repeated between responses"
+        }
+      },
+      {
+        "name": "F1 Score",
+        "definition": "F1 Score is the harmonic mean of precision and recall, providing a balanced measure when classes are imbalanced.",
+        "formula": "2 x (Precision x Recall) / (Precision + Recall)",
+        "ai_types": [],
+        "dimension": "Robustness and Stability",
+        "source": {
+          "page": 149,
+          "section": "Appendix F",
+          "quote": "F1 Score is the harmonic mean of precision and recall, providing a balanced measure when classes are imbalanced."
+        }
+      },
+      {
+        "name": "Input feature data drift",
+        "definition": "Measures the distribution of input feature values compared to a baseline data distribution. Categorical: Boolean, string, L-Infinity, Jensen Shannon Divergence. Numerical: Float, integer, Jensen Shannon Divergence",
+        "formula": null,
+        "ai_types": [],
+        "dimension": "Robustness and Stability",
+        "source": {
+          "page": 149,
+          "section": "Appendix F",
+          "quote": "Measures the distribution of input feature values compared to a baseline data distribution."
+        }
+      },
+      {
+        "name": "Output prediction data drift",
+        "definition": "Measures the model's predicted data distribution compared to a baseline data distribution. Categorical: Boolean, string, L-Infinity, Jensen Shannon Divergence. Numerical: float, integer, Jensen Shannon Divergence",
+        "formula": null,
+        "ai_types": [],
+        "dimension": "Robustness and Stability",
+        "source": {
+          "page": 149,
+          "section": "Appendix F",
+          "quote": "Measures the model's predicted data distribution compared to a baseline data distribution."
+        }
+      },
+      {
+        "name": "Precision",
+        "definition": "Precision measures the proportion of positive identifications that were correct.",
+        "formula": "TP / (TP + FP) Where TP is True Positives, FP is False Positives.",
+        "ai_types": [],
+        "dimension": "Robustness and Stability",
+        "source": {
+          "page": 149,
+          "section": "Appendix F",
+          "quote": "Precision measures the proportion of positive identifications that were correct."
+        }
+      },
+      {
+        "name": "Prediction error percentage",
+        "definition": "A high error rate might indicate an issue with the model or with the requests to the model.",
+        "formula": "(Incorrect Predictions / Total Predictions) x100%",
+        "ai_types": [],
+        "dimension": "Robustness and Stability",
+        "source": {
+          "page": 149,
+          "section": "Appendix F",
+          "quote": "A high error rate might indicate an issue with the model or with the requests to the model."
+        }
+      },
+      {
+        "name": "Recall",
+        "definition": "Recall (also called sensitivity) measures the proportion of actual positives that were correctly identified.",
+        "formula": "TP / (TP + FN) Where TP is True Positives, FN is False Negatives",
+        "ai_types": [],
+        "dimension": "Robustness and Stability",
+        "source": {
+          "page": 150,
+          "section": "Appendix F",
+          "quote": "Recall (also called sensitivity) measures the proportion of actual positives that were correctly identified."
+        }
+      },
+      {
+        "name": "Relevance to prompt",
+        "definition": "The cosine distance or BERTScore of the prompt to the generated output. This gives an indication of how relevant the response is to the prompt and can be useful in detecting off-topic outputs. The number or proportion of outputs with a low relevance can also be tracked as a metric.",
+        "formula": null,
+        "ai_types": [],
+        "dimension": "Robustness and Stability",
+        "source": {
+          "page": 150,
+          "section": "Appendix F",
+          "quote": "The cosine distance or BERTScore of the prompt to the generated output."
+        }
+      },
+      {
+        "name": "SARI (System output Against References and against the Input sentence)",
+        "definition": "A longstanding metric for quantifying the similarity between a simplified/summarised output and a source text. SARI can be calculated on a body of customised domain-specific summarisations or on a benchmark reference set of texts and reference summarisations.",
+        "formula": null,
+        "ai_types": [],
+        "dimension": "Robustness and Stability",
+        "source": {
+          "page": 150,
+          "section": "Appendix F",
+          "quote": "A longstanding metric for quantifying the similarity between a simplified/summarised output and a source text."
+        }
+      },
+      {
+        "name": "Topic and task adherence",
+        "definition": "A metric for checking if an LLM system stays on topic. This risk metric can also be used to detect if corporate Gen AI tools are used for personal tasks provided that those tools are effective in refusing off-topic prompts.",
+        "formula": "(Prompts Refused / Total Prompts) x100%",
+        "ai_types": [
+          "LLM",
+          "Gen AI"
+        ],
+        "dimension": "Robustness and Stability",
+        "source": {
+          "page": 150,
+          "section": "Appendix F",
+          "quote": "A metric for checking if an LLM system stays on topic."
+        }
+      },
+      {
+        "name": "Injection Similarity",
+        "definition": "Prompt injection attempts can be detected by calculating semantic similarity measures – like cosine distance – for any given prompt against a library of templates of known prompt injection or jailbreak formats. There are several open-source resources that catalogue known prompt injection attempts; the currency of these templates is important as prompt injection formats continue to evolve. The number of prompts that are similar to a known injection format (cosine similarity >0.85 is considered likely to be harmful, and >0.5 may merit investigation) can be tracked as a metric.",
+        "formula": null,
+        "ai_types": [],
+        "dimension": "Cyber and Data Security",
+        "source": {
+          "page": 150,
+          "section": "Appendix F",
+          "quote": "Prompt injection attempts can be detected by calculating semantic similarity measures – like cosine distance"
+        }
+      },
+      {
+        "name": "Injection Success Rate (ISR)",
+        "definition": "A score indicating the success, in either a controlled environment or in production, of attempts to inject adversarial prompts into the system.",
+        "formula": "(Number of successful injection attempts / Total number of injection attempts) x 100%",
+        "ai_types": [],
+        "dimension": "Cyber and Data Security",
+        "source": {
+          "page": 150,
+          "section": "Appendix F",
+          "quote": "A score indicating the success, in either a controlled environment or in production, of attempts to inject adversarial prompts"
+        }
+      },
+      {
+        "name": "PII Detection Rate",
+        "definition": "The outputs of an LLM can be assessed for the presence of PII, with the proportion of outputs containing PII quantified in the aggregate or by PII type. A range of PII detectors, both open-source and proprietary, exist in the market today. These may either use an LLM or regex matching (or a combination of the two) to detect data resembles PII categories like names, addresses, phone numbers, password, or credentials.",
+        "formula": "(Prompts containing PII / Total number of prompts) x 100%",
+        "ai_types": [
+          "LLM"
+        ],
+        "dimension": "Cyber and Data Security",
+        "source": {
+          "page": 150,
+          "section": "Appendix F",
+          "quote": "The outputs of an LLM can be assessed for the presence of PII"
+        }
+      },
+      {
+        "name": "Prompt Refusal",
+        "definition": "The number or proportion of prompts that are rejected by a Gen AI system's guardrails can be detected by an LLM judge or regex expression and tracked as a metric. This can indicate both the effectiveness of the FI's guardrails, by tracking that they continue to reject prompts at a sustained rate, and can serve as an indicator of a potential attack on the system.",
+        "formula": "(Prompts rejected / Total number of prompts) x 100%",
+        "ai_types": [
+          "Gen AI",
+          "LLM"
+        ],
+        "dimension": "Cyber and Data Security",
+        "source": {
+          "page": 151,
+          "section": "Appendix F",
+          "quote": "The number or proportion of prompts that are rejected by a Gen AI system's guardrails"
+        }
+      },
+      {
+        "name": "Prompt Sanitisation Rate (PSR)",
+        "definition": "This metric is a complement to ISR and indicates the success rate of guardrails against prompt injection.",
+        "formula": "(Number of successfully neutralised injection attempts / Total detected injection attempts) x 100%",
+        "ai_types": [],
+        "dimension": "Cyber and Data Security",
+        "source": {
+          "page": 151,
+          "section": "Appendix F",
+          "quote": "This metric is a complement to ISR and indicates the success rate of guardrails against prompt injection."
+        }
+      },
+      {
+        "name": "Red-teaming attempts",
+        "definition": "Red-teaming attempts are intentional attempts to get LLMs to leak data, including system prompts, or output potentially harmful and embarrassing content. It is typically used with benchmark prompt injection datasets or long context prompt attacks. Specifically for our region, we can include multilingual prompts and conversations.",
+        "formula": "(Successful attacks / Total attacks) x 100%",
+        "ai_types": [
+          "LLM"
+        ],
+        "dimension": "Cyber and Data Security",
+        "source": {
+          "page": 151,
+          "section": "Appendix F",
+          "quote": "Red-teaming attempts are intentional attempts to get LLMs to leak data, including system prompts"
+        }
+      },
+      {
+        "name": "Total Injection Vulnerability Score (TIVS)",
+        "definition": "A composite metric incorporating the above (and other) measurements to provide a comprehensive view of prompt injection vulnerability. Each organisation can select the measurements for calculating TIVS in their context.",
+        "formula": null,
+        "ai_types": [],
+        "dimension": "Cyber and Data Security",
+        "source": {
+          "page": 151,
+          "section": "Appendix F",
+          "quote": "A composite metric incorporating the above (and other) measurements to provide a comprehensive view of prompt injection vulnerability."
+        }
+      },
+      {
+        "name": "Accelerator average duty cycle.",
+        "definition": "The average fraction of time over the past sample period during which one or more accelerators were actively processing.",
+        "formula": null,
+        "ai_types": [],
+        "dimension": "General",
+        "source": {
+          "page": 151,
+          "section": "Appendix F",
+          "quote": "The average fraction of time over the past sample period during which one or more accelerators were actively processing."
+        }
+      },
+      {
+        "name": "Accelerator memory usage",
+        "definition": "The amount of memory allocated by the deployed model replica.",
+        "formula": null,
+        "ai_types": [],
+        "dimension": "General",
+        "source": {
+          "page": 151,
+          "section": "Appendix F",
+          "quote": "The amount of memory allocated by the deployed model replica."
+        }
+      },
+      {
+        "name": "CPU utilisation",
+        "definition": "The fraction of CPU allocated by the feature store and currently in use by online storage. This number can exceed 100% if the online serving storage is overloaded.",
+        "formula": null,
+        "ai_types": [],
+        "dimension": "General",
+        "source": {
+          "page": 151,
+          "section": "Appendix F",
+          "quote": "The fraction of CPU allocated by the feature store and currently in use by online storage."
+        }
+      },
+      {
+        "name": "CPU utilisation – hottest node",
+        "definition": "The CPU load for the hottest node in a feature store's online storage.",
+        "formula": null,
+        "ai_types": [],
+        "dimension": "General",
+        "source": {
+          "page": 151,
+          "section": "Appendix F",
+          "quote": "The CPU load for the hottest node in a feature store's online storage."
+        }
+      },
+      {
+        "name": "Latency",
+        "definition": "The total time that an online serving or streaming ingestion request spends in the service.",
+        "formula": null,
+        "ai_types": [],
+        "dimension": "General",
+        "source": {
+          "page": 151,
+          "section": "Appendix F",
+          "quote": "The total time that an online serving or streaming ingestion request spends in the service."
+        }
+      },
+      {
+        "name": "Memory usage",
+        "definition": "The amount of memory allocated by the deployed model replica and currently in use.",
+        "formula": null,
+        "ai_types": [],
+        "dimension": "General",
+        "source": {
+          "page": 151,
+          "section": "Appendix F",
+          "quote": "The amount of memory allocated by the deployed model replica and currently in use."
+        }
+      },
+      {
+        "name": "Model latency",
+        "definition": "The time spent performing computation.",
+        "formula": null,
+        "ai_types": [],
+        "dimension": "General",
+        "source": {
+          "page": 151,
+          "section": "Appendix F",
+          "quote": "Model latency The time spent performing computation."
+        }
+      },
+      {
+        "name": "Network bytes received",
+        "definition": "The number of bytes received over the network by the deployed model replica.",
+        "formula": null,
+        "ai_types": [],
+        "dimension": "General",
+        "source": {
+          "page": 151,
+          "section": "Appendix F",
+          "quote": "The number of bytes received over the network by the deployed model replica."
+        }
+      },
+      {
+        "name": "Network bytes sent",
+        "definition": "The number of bytes sent over the network by the deployed model replica.",
+        "formula": null,
+        "ai_types": [],
+        "dimension": "General",
+        "source": {
+          "page": 151,
+          "section": "Appendix F",
+          "quote": "The number of bytes sent over the network by the deployed model replica."
+        }
+      },
+      {
+        "name": "Node count",
+        "definition": "The number of online serving nodes for a feature store.",
+        "formula": null,
+        "ai_types": [],
+        "dimension": "General",
+        "source": {
+          "page": 152,
+          "section": "Appendix F",
+          "quote": "Node count The number of online serving nodes for a feature store."
+        }
+      },
+      {
+        "name": "Offline storage write for streaming write",
+        "definition": "The number of streaming write requests processed for the offline storage.",
+        "formula": null,
+        "ai_types": [],
+        "dimension": "General",
+        "source": {
+          "page": 152,
+          "section": "Appendix F",
+          "quote": "The number of streaming write requests processed for the offline storage."
+        }
+      },
+      {
+        "name": "Online serving throughput",
+        "definition": "The throughput for online serving requests in MB/s.",
+        "formula": null,
+        "ai_types": [],
+        "dimension": "General",
+        "source": {
+          "page": 152,
+          "section": "Appendix F",
+          "quote": "The throughput for online serving requests in MB/s."
+        }
+      },
+      {
+        "name": "Overhead latency",
+        "definition": "The total time spent processing a request, outside of computation.",
+        "formula": null,
+        "ai_types": [],
+        "dimension": "General",
+        "source": {
+          "page": 152,
+          "section": "Appendix F",
+          "quote": "The total time spent processing a request, outside of computation."
+        }
+      },
+      {
+        "name": "Predictions per second",
+        "definition": "The number of predictions per second across both online and batch predictions.",
+        "formula": null,
+        "ai_types": [],
+        "dimension": "General",
+        "source": {
+          "page": 152,
+          "section": "Appendix F",
+          "quote": "The number of predictions per second across both online and batch predictions."
+        }
+      },
+      {
+        "name": "Queries per second",
+        "definition": "The number of online serving or streaming ingestion queries that a feature store handles.",
+        "formula": null,
+        "ai_types": [],
+        "dimension": "General",
+        "source": {
+          "page": 152,
+          "section": "Appendix F",
+          "quote": "The number of online serving or streaming ingestion queries that a feature store handles."
+        }
+      },
+      {
+        "name": "Replica count",
+        "definition": "The number of active replicas used by the deployed model.",
+        "formula": null,
+        "ai_types": [],
+        "dimension": "General",
+        "source": {
+          "page": 152,
+          "section": "Appendix F",
+          "quote": "The number of active replicas used by the deployed model."
+        }
+      },
+      {
+        "name": "Replica target",
+        "definition": "The number of active replicas required for the deployed model.",
+        "formula": null,
+        "ai_types": [],
+        "dimension": "General",
+        "source": {
+          "page": 152,
+          "section": "Appendix F",
+          "quote": "The number of active replicas required for the deployed model."
+        }
+      },
+      {
+        "name": "Request size",
+        "definition": "The request size by entity type in a feature store.",
+        "formula": null,
+        "ai_types": [],
+        "dimension": "General",
+        "source": {
+          "page": 152,
+          "section": "Appendix F",
+          "quote": "The request size by entity type in a feature store."
+        }
+      },
+      {
+        "name": "Streaming write to offline storage delay time",
+        "definition": "The time elapsed (in seconds) between calling the write API and writing to the offline storage.",
+        "formula": null,
+        "ai_types": [],
+        "dimension": "General",
+        "source": {
+          "page": 152,
+          "section": "Appendix F",
+          "quote": "The time elapsed (in seconds) between calling the write API and writing to the offline storage."
+        }
+      },
+      {
+        "name": "Total latency duration",
+        "definition": "The total time that a request spends in the service, which is the model latency plus the overhead latency.",
+        "formula": null,
+        "ai_types": [],
+        "dimension": "General",
+        "source": {
+          "page": 152,
+          "section": "Appendix F",
+          "quote": "The total time that a request spends in the service, which is the model latency plus the overhead latency."
+        }
+      },
+      {
+        "name": "Total offline storage",
+        "definition": "Amount of data stored in the feature store's offline storage.",
+        "formula": null,
+        "ai_types": [],
+        "dimension": "General",
+        "source": {
+          "page": 152,
+          "section": "Appendix F",
+          "quote": "Amount of data stored in the feature store's offline storage."
+        }
+      },
+      {
+        "name": "Total online storage",
+        "definition": "Amount of data stored in the feature store's online storage.",
+        "formula": null,
+        "ai_types": [],
+        "dimension": "General",
+        "source": {
+          "page": 152,
+          "section": "Appendix F",
+          "quote": "Amount of data stored in the feature store's online storage."
+        }
+      }
+    ],
+    "table_columns": [
+      "Metric",
+      "Description"
+    ],
+    "total_metrics_counted": 52,
+    "unreadable_items": []
+  }
+}

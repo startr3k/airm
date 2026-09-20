@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+/* Calm, regulatory-grade. Neutral slate with one accent (deep indigo); tier colours
+   are reserved for semantics and never used as large fills. */
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --color-canvas: oklch(99% 0.002 264);
+  --color-surface: oklch(100% 0 0);
+  --color-raised: oklch(98.2% 0.003 264);
+  --color-line: oklch(92.5% 0.005 264);
+  --color-line-strong: oklch(87% 0.007 264);
+  --color-ink: oklch(21% 0.012 264);
+  /* Both muted tones clear WCAG AA (4.5:1) against canvas AND surface: 6.6:1 and
+     4.5:1. ink-subtle was 63% and measured 3.4:1, which Lighthouse caught. */
+  --color-ink-muted: oklch(47% 0.014 264);
+  --color-ink-subtle: oklch(56% 0.013 264);
+
+  --color-accent: oklch(46% 0.17 274);
+  --color-accent-hover: oklch(41% 0.17 274);
+  --color-accent-soft: oklch(96% 0.02 274);
+  --color-accent-ring: oklch(62% 0.15 274);
+
+  --color-low: oklch(56% 0.13 162);
+  --color-low-soft: oklch(96.5% 0.03 162);
+  --color-low-line: oklch(84% 0.08 162);
+
+  --color-medium: oklch(66% 0.14 75);
+  --color-medium-soft: oklch(97% 0.04 85);
+  --color-medium-line: oklch(85% 0.09 80);
+
+  --color-high: oklch(58% 0.19 18);
+  --color-high-soft: oklch(96.5% 0.03 18);
+  --color-high-line: oklch(85% 0.08 18);
+
+  --radius-card: 0.75rem;
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  .dark {
+    color-scheme: dark;
+
+    --color-canvas: oklch(17% 0.01 264);
+    --color-surface: oklch(20.5% 0.012 264);
+    --color-raised: oklch(24% 0.013 264);
+    --color-line: oklch(29% 0.014 264);
+    --color-line-strong: oklch(36% 0.016 264);
+    --color-ink: oklch(96% 0.004 264);
+    --color-ink-muted: oklch(72% 0.012 264);
+    /* 58% measured 4.2:1 on surface; 64% gives 5.3:1. */
+    --color-ink-subtle: oklch(64% 0.012 264);
+
+    --color-accent: oklch(70% 0.14 274);
+    --color-accent-hover: oklch(77% 0.13 274);
+    --color-accent-soft: oklch(28% 0.05 274);
+    --color-accent-ring: oklch(62% 0.15 274);
+
+    --color-low: oklch(72% 0.14 162);
+    --color-low-soft: oklch(26% 0.05 162);
+    --color-low-line: oklch(38% 0.07 162);
+
+    --color-medium: oklch(78% 0.13 80);
+    --color-medium-soft: oklch(28% 0.05 80);
+    --color-medium-line: oklch(40% 0.07 80);
+
+    --color-high: oklch(70% 0.16 18);
+    --color-high-soft: oklch(27% 0.06 18);
+    --color-high-line: oklch(40% 0.09 18);
+  }
+
+  * {
+    border-color: var(--color-line);
+  }
+
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Colour is never the only signal, but focus must always be visible. */
+  :focus-visible {
+    outline: 2px solid var(--color-accent-ring);
+    outline-offset: 2px;
+  }
+}
+
+/* An assessment is a document someone files, so it must print as one. The browser's
+   own "Save as PDF" is the export: it keeps live text, links and selectable content,
+   which a canvas-rasterising library would throw away. What is hidden here is the
+   app's chrome -- navigation, the input form, buttons -- none of which belongs in the
+   record of an assessment. */
+@media print {
+  :root {
+    color-scheme: light;
+  }
+
+  /* Print in the light palette whatever the screen theme was. */
+  .dark {
+    --color-canvas: #fff;
+    --color-surface: #fff;
+    --color-raised: #f6f7f9;
+    --color-line: #d9dce3;
+    --color-line-strong: #b9bec9;
+    --color-ink: #16181d;
+    --color-ink-muted: #474c57;
+    --color-ink-subtle: #656b78;
+  }
+
+  body {
+    background: #fff;
+  }
+
+  /* The shell owns the viewport on screen; on paper it must not. */
+  .h-dvh,
+  .overflow-hidden,
+  .overflow-y-auto {
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  /* Keep a card from being split across a page break. */
+  [data-print-block] {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: "";
+  }
+}

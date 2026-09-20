@@ -1,0 +1,366 @@
+{
+  "extractor": "definitions",
+  "model": "claude-opus-5",
+  "extracted_at": "2026-09-20T09:16:36+00:00",
+  "pdf_pages": "15-23",
+  "printed_pages": "8-16",
+  "requests": 1,
+  "attempts": 1,
+  "attempt_log": [
+    {
+      "attempt": 1,
+      "problems": [],
+      "output_tokens": 5238,
+      "latency_ms": 54444
+    }
+  ],
+  "validation_problems": [],
+  "warnings": [],
+  "usage": {
+    "input_tokens": 292,
+    "output_tokens": 5238,
+    "cache_creation_input_tokens": 24103,
+    "cache_read_input_tokens": 0,
+    "calls": 1,
+    "latency_ms": 54444,
+    "estimated_cost_usd": 0.2831
+  },
+  "data": {
+    "ai_definition": {
+      "definition": "For the purposes of this Handbook, the MindForge consortium focuses on two key characteristics to help practitioners consistently identify and manage AI: (1) AI learns and/or infers from inputs to generate output such as estimates, predictions, content, summaries, recommendations, or decisions; (2) AI excludes calculators or tools whose outputs are solely based on predefined programming or rules. These characteristics generalise MAS' proposed Guidelines definition: \"AI includes use cases involving models or systems that learn and/or infer from inputs to generate outputs such as estimates, predictions, content, summaries, recommendations, or decisions that may influence physical or virtual environments, and vary in their levels of autonomy and adaptiveness after deployment. Calculators or tools whose outputs are solely based on predefined programming logic or rules would not be regarded as AI for the purpose of these Guidelines.\"",
+      "source": {
+        "page": 13,
+        "section": "1.1",
+        "quote": "AI learns and/or infers from inputs to generate output such as estimates, predictions, content, summaries, recommendations, or decisions."
+      }
+    },
+    "in_scope_examples": [
+      {
+        "example": "Linear or logistic regression models.",
+        "why": "Listed as a technology included in this scope of AI (learns/infers from inputs to generate outputs).",
+        "source": {
+          "page": 13,
+          "section": "1.1",
+          "quote": "A non-exhaustive list of examples of technologies that are included in this scope of AI are: Linear or logistic regression models."
+        }
+      },
+      {
+        "example": "Models using machine learning and its derivative techniques such as deep learning, transformers (LLMs), and diffusion models.",
+        "why": "Listed as included in the scope of AI; the proposed Guidelines' definition generally includes machine learning, deep learning, reinforcement learning, Generative AI and AI agents.",
+        "source": {
+          "page": 13,
+          "section": "1.1",
+          "quote": "Models using machine learning and its derivative techniques such as deep learning, transformers (LLMs), and diffusion models."
+        }
+      },
+      {
+        "example": "Computer vision models, including optical character recognition features that use computer vision models.",
+        "why": "Listed as included in the scope of AI.",
+        "source": {
+          "page": 13,
+          "section": "1.1",
+          "quote": "Computer vision models, including optical character recognition features that use computer vision models."
+        }
+      },
+      {
+        "example": "Virtual assistants based on language models.",
+        "why": "Listed as included in the scope of AI (contrast with menu- or rules-based chatbots, which are excluded).",
+        "source": {
+          "page": 13,
+          "section": "1.1",
+          "quote": "Virtual assistants based on language models."
+        }
+      },
+      {
+        "example": "Agent and agentic systems that use language models and other AI tools.",
+        "why": "Listed as included in the scope of AI.",
+        "source": {
+          "page": 13,
+          "section": "1.1",
+          "quote": "Agent and agentic systems that use language models and other AI tools."
+        }
+      }
+    ],
+    "out_of_scope_examples": [
+      {
+        "example": "Traditional rule-based software.",
+        "why": "Outputs are solely based on predefined programming or rules, so it does not meet the AI definition.",
+        "source": {
+          "page": 13,
+          "section": "1.1",
+          "quote": "A non-exhaustive list of examples of technologies that would not be included are: Traditional rule-based software."
+        }
+      },
+      {
+        "example": "Macros and other deterministic automations, including some types of Robotic Process Automation (RPA).",
+        "why": "Deterministic automation whose outputs follow predefined logic rather than learning or inference.",
+        "source": {
+          "page": 13,
+          "section": "1.1",
+          "quote": "Macros and other deterministic automations, including some types of Robotic Process Automation (RPA)."
+        }
+      },
+      {
+        "example": "Chatbots that are menu-based or rules-based, such as those using keyword identification.",
+        "why": "Rules-based rather than learning/inferring from inputs.",
+        "source": {
+          "page": 13,
+          "section": "1.1",
+          "quote": "Chatbots that are menu-based or rules-based, such as those using keyword identification."
+        }
+      },
+      {
+        "example": "Pre-defined data processing logic.",
+        "why": "Outputs are solely based on predefined programming logic or rules.",
+        "source": {
+          "page": 13,
+          "section": "1.1",
+          "quote": "Pre-defined data processing logic."
+        }
+      },
+      {
+        "example": "Calculators or tools whose outputs are solely based on predefined programming logic or rules.",
+        "why": "Expressly excluded by the MAS definition adopted by the Handbook.",
+        "source": {
+          "page": 13,
+          "section": "1.1",
+          "quote": "Calculators or tools whose outputs are solely based on predefined programming logic or rules would not be regarded as AI"
+        }
+      },
+      {
+        "example": "Non-AI functionalities of a larger software system (e.g. a customer relationship management system where only a Gen AI note/email summarisation feature is AI-supported)",
+        "why": "AI governance and risk management applies only to those outputs or behaviours of the system affected or influenced by its AI components or functionalities.",
+        "source": {
+          "page": 15,
+          "section": "1.1",
+          "quote": "would apply only to those outputs or behaviours of the system which are affected or influenced by its AI components"
+        }
+      }
+    ],
+    "terms": [
+      {
+        "term": "Model",
+        "definition": "An AI model, which is a mathematical or logical representation mapping inputs to outputs, is the foundation of modern AI technology. An AI model is any model which meets the definition of AI. Models output estimates, forecasts, or projections related to real-world phenomena. E.g. A function predicting the likelihood of a borrower to default based on their credit history is a model. E.g. A Large Language Model (LLM) that predicts word tokens is a model.",
+        "source": {
+          "page": 15,
+          "section": "1.1",
+          "quote": "An AI model, which is a mathematical or logical representation mapping inputs to outputs, is the foundation of modern AI technology."
+        }
+      },
+      {
+        "term": "System",
+        "definition": "An AI system includes an AI model as well as other software components that allow models to be used in real-world applications. A system can contain many software features, and potentially many models that interact via software. E.g. a spreadsheet with user data plus a statistical model saved as a JSON file accessed through an IDE; an AI chatbot using an AI search engine to retrieve files based on user prompts; an agentic workflow of multiple orchestrated AI 'agents'.",
+        "source": {
+          "page": 15,
+          "section": "1.1",
+          "quote": "An AI system includes an AI model as well as other software components that allow models to be used in real-world applications."
+        }
+      },
+      {
+        "term": "Use Case",
+        "definition": "An AI use case is the specific, real-world context in which an AI system is intentionally used. Use cases are crucial for understanding the impact, risks, and functioning of systems. E.g. Using AI to consider several data points about a customer to underwrite loan risk is a use case.",
+        "source": {
+          "page": 15,
+          "section": "1.1",
+          "quote": "An AI use case is the specific, real-world context in which an AI system is intentionally used."
+        }
+      },
+      {
+        "term": "AI governance and risk management",
+        "definition": "Together, a set of interdisciplinary activities for: (1) managing AI-specific risks posed to the enterprise, its stakeholders, and society; (2) ensuring that the use of AI adheres to an FI's principles, especially Fairness, Ethics, Accountability, and Transparency; and (3) ensuring that the use of AI conforms to relevant laws and regulations. They supplement, and do not replace, existing domains of enterprise management.",
+        "source": {
+          "page": 14,
+          "section": "1.1",
+          "quote": "AI governance and risk management are, together, a set of interdisciplinary activities for: Managing AI-specific risks posed to the enterprise"
+        }
+      },
+      {
+        "term": "AI-specific risks",
+        "definition": "New or enhanced risks arising from AI use that go beyond those of traditional software use in the context of an FI.",
+        "source": {
+          "page": 8,
+          "section": "1.1",
+          "quote": "AI-specific risks – new or enhanced risks arising from AI use that go beyond those of traditional software use"
+        }
+      },
+      {
+        "term": "Considerations",
+        "definition": "The operative unit of the Handbook (17 in total); each Consideration is a thematic recommendation that will support an FI in operationalising AI governance and risk management, grouped thematically into Subsections.",
+        "source": {
+          "page": 9,
+          "section": "1.1",
+          "quote": "The Handbook is made up of 17 Considerations. These are the operative unit of the Handbook"
+        }
+      },
+      {
+        "term": "Practices",
+        "definition": "Specific actions under each Consideration that, when taken collectively and appropriately to the FI's context, can implement the Consideration; each is accompanied by long-form 'Operationalisation Guidelines' text.",
+        "source": {
+          "page": 9,
+          "section": "1.1",
+          "quote": "Under each Consideration are one or more Practices. These are specific actions"
+        }
+      },
+      {
+        "term": "Executives",
+        "definition": "Decision-makers and leaders (an intended audience within an FI).",
+        "source": {
+          "page": 9,
+          "section": "1.1",
+          "quote": "Executives: Decision-makers and leaders."
+        }
+      },
+      {
+        "term": "Builders",
+        "definition": "Software developers, data engineers, data scientists, AI practitioners, systems integrators, and other technical specialists involved in the development, deployment, and use of AI.",
+        "source": {
+          "page": 9,
+          "section": "1.1",
+          "quote": "Builders: Software developers, data engineers, data scientists, AI practitioners, systems integrators, and other technical specialists"
+        }
+      },
+      {
+        "term": "Custodians",
+        "definition": "Employees in oversight, governance, enablement, and risk management roles in an FI who apply AI governance and risk management policies and procedures and manage AI risks, either directly or in an enabling capacity such as talent, legal, or technology.",
+        "source": {
+          "page": 9,
+          "section": "1.1",
+          "quote": "Custodians: Employees in oversight, governance, enablement, and risk management roles in an FI"
+        }
+      },
+      {
+        "term": "Use Case Owners",
+        "definition": "Employees who are accountable for an AI use case.",
+        "source": {
+          "page": 9,
+          "section": "1.1",
+          "quote": "Use Case Owners: Employees who are accountable for an AI use case."
+        }
+      },
+      {
+        "term": "Business Users",
+        "definition": "Employees who use or apply AI use cases in the course of their business responsibilities.",
+        "source": {
+          "page": 9,
+          "section": "1.1",
+          "quote": "Business Users: Employees who use or apply AI use cases in the course of their business responsibilities."
+        }
+      },
+      {
+        "term": "MindForge AI Lifecycle",
+        "definition": "Five stages: Use Case Context and Design; Data Acquisition and Processing; Onboarding, Build & Validation; Deployment; Usage, Monitoring & Change Management. These stages do not always proceed in a linear fashion and progression between them is frequently iterative.",
+        "source": {
+          "page": 16,
+          "section": "1.1",
+          "quote": "The AI lifecycle consists of five stages: Use Case Context and Design. Data Acquisition and Processing."
+        }
+      }
+    ],
+    "abs_top_risks": [
+      {
+        "risk": "Unrepresentative or biased data inputs.",
+        "description": null,
+        "source": {
+          "page": 8,
+          "section": "1.1",
+          "quote": "highlighted ten \"top risks\", which were a particular focus: Unrepresentative or biased data inputs."
+        }
+      },
+      {
+        "risk": "Toxic and offensive outputs.",
+        "description": null,
+        "source": {
+          "page": 8,
+          "section": "1.1",
+          "quote": "Toxic and offensive outputs."
+        }
+      },
+      {
+        "risk": "Lack of AI risk awareness.",
+        "description": null,
+        "source": {
+          "page": 8,
+          "section": "1.1",
+          "quote": "Lack of AI risk awareness."
+        }
+      },
+      {
+        "risk": "Lack of use case, data and model governance.",
+        "description": null,
+        "source": {
+          "page": 8,
+          "section": "1.1",
+          "quote": "Lack of use case, data and model governance."
+        }
+      },
+      {
+        "risk": "Inadequate human oversight.",
+        "description": null,
+        "source": {
+          "page": 8,
+          "section": "1.1",
+          "quote": "Inadequate human oversight."
+        }
+      },
+      {
+        "risk": "Inadequate feedback and recourse mechanisms.",
+        "description": null,
+        "source": {
+          "page": 8,
+          "section": "1.1",
+          "quote": "Inadequate feedback and recourse mechanisms."
+        }
+      },
+      {
+        "risk": "Hallucination/ Fabrication/ Confabulation.",
+        "description": null,
+        "source": {
+          "page": 8,
+          "section": "1.1",
+          "quote": "Hallucination/ Fabrication/ Confabulation."
+        }
+      },
+      {
+        "risk": "Overconfidence.",
+        "description": null,
+        "source": {
+          "page": 8,
+          "section": "1.1",
+          "quote": "Overconfidence."
+        }
+      },
+      {
+        "risk": "Insufficient model accuracy/ soundness.",
+        "description": null,
+        "source": {
+          "page": 8,
+          "section": "1.1",
+          "quote": "Insufficient model accuracy/ soundness."
+        }
+      },
+      {
+        "risk": "Model degradation from unexpected use.",
+        "description": null,
+        "source": {
+          "page": 8,
+          "section": "1.1",
+          "quote": "Model degradation from unexpected use."
+        }
+      }
+    ],
+    "scope_notes": [
+      "The Handbook is addressed to all Financial Institutions (FIs) of all sizes that use AI in their businesses, and is intended to be relevant to all functions within those organisations; although it references Singapore's context, it aims to be globally relevant (p.8).",
+      "It addresses risks posed to FIs by the use of AI in their value chain – their business, vendors, and service providers such as contractors or consultants – and does NOT consider risks posed by the use of AI by unrelated parties or external malicious actors (p.8).",
+      "It covers all types of AI, including traditional AI, Gen AI, and Agentic AI (p.8).",
+      "It supplements and functions in tandem with existing non-AI-specific risk management practices (technology risk, cybersecurity, risk management); these are referred to where relevant but not replicated (p.8).",
+      "It describes only considerations unique or additional to AI governance and risk management, and does not duplicate or replace existing industry frameworks and good practices that are not AI-specific (p.11).",
+      "Based on principles of proportionality to risk and of relevance: not all practices will be feasible for all AI use cases, and FIs determine in context how to apply them (p.11).",
+      "The ten ABS 'top risks' were drawn from the MindForge Phase 1 AI risk taxonomy (updated version in Appendix B of the Operationalisation Handbook) via the ABS Handbook on Generative AI Guardrails in Banking; FIs should also continue to consider new, emerging, or diminished AI-specific risks (pp.8-9).",
+      "The Handbook builds on the FEAT Principles (2018) and the Veritas methodology, going beyond them by addressing enterprise governance, viewing AI use cases holistically rather than at model level, and considering a wider range of risks (seven risk dimensions in Appendix B) (p.12).",
+      "It is intended to accompany and support implementation of the proposed MAS Guidelines on Artificial Intelligence Risk Management; mapping in Appendix D (p.12).",
+      "'AI use cases' is the basic unit of AI governance and risk management, understood to include associated AI systems and models; FIs may choose their own basic unit so long as they effectively consider the relationship between models, systems, and use cases (p.16).",
+      "Terms such as Responsible AI, Trustworthy AI, and AI Safety are treated as referring to a broadly similar set of considerations and activities as 'AI governance and risk management' (p.14)."
+    ],
+    "unreadable_items": []
+  }
+}

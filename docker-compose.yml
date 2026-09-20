@@ -1,0 +1,23 @@
+services:
+  mindforge:
+    build: .
+    image: mindforge-risk-assessor
+    ports:
+      - "8000:8000"
+    # The key is never baked into the image. Copy backend/.env.example to backend/.env.
+    env_file:
+      - backend/.env
+    environment:
+      # The handbook is only needed to render a cited page in the source sheet; the
+      # citations themselves come from the committed pack, so this is optional.
+      HANDBOOK_PDF: "/handbook/MindForge AI Risk Management Operationalisation Handbook.pdf"
+      MINDFORGE_DB: /data/assessments.sqlite3
+    volumes:
+      # Assessment history survives a rebuild.
+      - mindforge-data:/data
+      # Mount the handbook read-only to enable the "show me the page" sheet.
+      - ./docs:/handbook:ro
+    restart: unless-stopped
+
+volumes:
+  mindforge-data:

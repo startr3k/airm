@@ -1,0 +1,3417 @@
+{
+  "model": "claude-opus-5",
+  "verified_at": "2026-09-20T09:51:48+00:00",
+  "verified_now": [
+    "dimensions_taxonomy",
+    "materiality_factors",
+    "definitions",
+    "oversight_modes",
+    "guardrails",
+    "considerations",
+    "agentic",
+    "illustrations"
+  ],
+  "summaries": [
+    {
+      "extractor": "dimensions_taxonomy",
+      "verdict": "pass",
+      "quotes_checked": 61,
+      "quotes_failed": 0,
+      "verifier_counted_rows": 41,
+      "extracted_rows": 41,
+      "rows_short": false,
+      "missing_rows": [],
+      "out_of_scope_observations": [
+        "Page 131 introductory prose explains the provenance of the taxonomy (Phase 1/Phase 2, ABS Handbook May 2025) and is not captured in the schema.",
+        "The extraction places 'Insufficient model accuracy/ soundness', 'Model degradation from unexpected use', 'Inadequate operational resilience', 'Unmet architectural requirements' and 'Lack of reproducibility' in a slightly different sequence than the rendered page 137 image (which shows accuracy, degradation, resilience, architectural, reproducibility); the same set is present, so this is only a possible ordering nuance between the text layer and the rendered table."
+      ],
+      "unreadable_figures": [],
+      "factual_errors": [],
+      "meaning_errors": [],
+      "summary": "All 41 risk rows across the seven dimensions are present (Fairness & Bias 2, Ethics 4, Accountability & Governance 5, Transparency 4, Legal & Regulatory 8, Robustness & Stability 11, Cyber and Data Security 7), and the supporting renaming table (7 rows), risk-changes table (6 rows) and lifecycle legend (5 rows) are all complete and accurate. Every source quote was located verbatim on its cited printed page, and the secondary-dimension, lifecycle-stage and ABS Top Risk cells match the table cell by cell. The only nuance is that within Robustness & Stability the extraction orders 'Model degradation from unexpected use' after 'Insufficient model accuracy/soundness' differently from the rendered page image; no content is lost.",
+      "failed_quotes": []
+    },
+    {
+      "extractor": "materiality_factors",
+      "verdict": "pass",
+      "quotes_checked": 15,
+      "quotes_failed": 0,
+      "verifier_counted_rows": 11,
+      "extracted_rows": 11,
+      "rows_short": false,
+      "missing_rows": [],
+      "out_of_scope_observations": [
+        "Practices 4-6 (control libraries, pre- and post-deployment AI-specific review criteria and frequency factors) occupy pp. 52-56 and are largely outside the inherent-risk/tiering remit, though the extraction partially folded them into tier governance_implications.",
+        "Illustrations 2.4.1 (Prudential) and 2.4.2 (UOB) on pp. 57-59 describe firm-specific materiality rating approaches (e.g. UOB's binary high/low materiality rating with weighted scoring) that the schema has no field for.",
+        "Figure 2.4.1 (AI risk management process flow, p.46), Figure 2.4.4 (AI control library, p.52) and Figure 2.4.5 (depth/autonomy, p.54) are not captured as structured data."
+      ],
+      "unreadable_figures": [],
+      "factual_errors": [
+        {
+          "item": "figure_2_4_3 cell: inherent high / evaluation 'Min.' and 'Exceeds Min.' vs printed layout — check of axis orientation",
+          "printed_page": 51,
+          "extracted_value": "axis_evaluation_values listed as rows 'Min.', 'Exceeds Min.', 'Best Practice'; inherent tiers as columns Low/Medium/High",
+          "page_value": "Figure prints inherent risk materiality across the top (Low/Medium/High icons) and rating levels (Min., Exceeds Min., Best Practice) down the left — matches extraction",
+          "severity": "wording"
+        },
+        {
+          "item": "inherent_risk_factors: Risk-weighted materiality threshold — flowchart 'Yes' outcome",
+          "printed_page": 49,
+          "extracted_value": "medium_guidance: \"In the flowchart method, 'Yes' (over $500k) results in Medium Risk\"",
+          "page_value": "In the flowchart, the 'Yes' branch from the risk-weighted materiality question feeds upward to the Medium Risk outcome and the 'No' branch to Low Risk — consistent with the extraction",
+          "severity": "wording"
+        }
+      ],
+      "meaning_errors": [],
+      "summary": "All 15 source quotes appear verbatim on their cited printed pages, and the eleven inherent-risk factors match my own count: the six impact sub-criteria plus complexity and automation on p.47, and the three illustrative Figure 2.4.2 criteria on p.49. The Figure 2.4.3 matrix is complete at 9 cells, the axis labels match the print, and critically the high-inherent/Best Practice cell is correctly kept as the dual-valued 'Medium Risk/High Risk'; the always-high note and the 'fail to meet minimums do not proceed' note are both captured verbatim and correctly attributed. The two entries I placed in factual_errors are cross-checks that turned out consistent with the page, not defects — no genuine discrepancies or in-scope omissions were found.",
+      "failed_quotes": []
+    },
+    {
+      "extractor": "definitions",
+      "verdict": "pass",
+      "quotes_checked": 35,
+      "quotes_failed": 0,
+      "verifier_counted_rows": 34,
+      "extracted_rows": 34,
+      "rows_short": false,
+      "missing_rows": [],
+      "out_of_scope_observations": [
+        "Figure 1.1.3 (AI Model, System, and Use Case, p.14) and Figure 1.1.4 (AI Lifecycle, p.16) are diagrams; the schema has no figure-transcription field, though the lifecycle stage sub-labels (e.g. 'Assessment and alignment', 'Production deployment of the use case') carry definitional content that could be worth capturing.",
+        "Figure 1.1.1 (Structure of Each Handbook Section, p.10) and Figure 1.1.2 (FEAT/Veritas/MindForge timeline, p.12) are not captured; the FEAT/Veritas relationship is only summarised in scope_notes.",
+        "The handbook notes the glossary (Appendix A) defines Traditional AI, Gen AI and Agentic AI (p.15) — those definitions are not on these pages, and the extraction correctly did not invent them.",
+        "Footnotes 4-6 on p.13 (OECD definition alignment, breadth of scope, meaning of 'inputs') qualify the AI definition; only footnote 4's content is partly reflected."
+      ],
+      "unreadable_figures": [],
+      "factual_errors": [],
+      "meaning_errors": [],
+      "summary": "All 34 in-scope items (1 AI definition, 5 in-scope examples, 4 explicit out-of-scope examples plus 2 reasonable inferred exclusions, 13 defined terms, 10 ABS top risks) match the pages, and every source quote was located verbatim on the printed page cited. The five in-scope and four out-of-scope technology bullets on printed p.13 are complete, and the ABS ten top risks on p.8 are reproduced in the printed order. No factual discrepancies or illegible figures; the only gap worth considering is that the two diagrams (Figures 1.1.3 and 1.1.4) carry definitional labels the schema has nowhere to record.",
+      "failed_quotes": []
+    },
+    {
+      "extractor": "oversight_modes",
+      "verdict": "pass",
+      "quotes_checked": 33,
+      "quotes_failed": 0,
+      "verifier_counted_rows": 3,
+      "extracted_rows": 3,
+      "rows_short": false,
+      "missing_rows": [],
+      "out_of_scope_observations": [
+        "Julius Baer Illustration 3.1.1 (p.71) and Illustration 3.4.1 (p.97), and DBS Illustration 3.5.1 (pp.106-107) contain firm-specific case-study detail (tollgates, AI literacy training, DBS-GPT monitoring/change control) that is only partially reflected in the extraction; the schema has no dedicated place for case studies.",
+        "Deployment Practice 2 (phased rollout types: pilots, parallel testing, A/B and canary deployments, p.94) and Practice 4 (pre-deployment documentation/approvals, p.96) are substantive deployment practices not captured as monitoring or interruption controls.",
+        "Consideration 15 change-management practices (version control, material vs non-material modification, third-party change notification, pp.105-106) are largely out of the monitoring/interruption remit apart from the two rows captured.",
+        "Practice 3 on user training and Practice 6 wording about human recourse on p.103 include further detail (online portals, hotlines, in-branch support) beyond the captured summaries."
+      ],
+      "unreadable_figures": [],
+      "factual_errors": [],
+      "meaning_errors": [],
+      "summary": "All three human-oversight modes (pp.70-71) and all three rows of Table 3.5.1 (p.103) are present, correctly named, and their definitions/sample-risk columns match the page cell for cell. Every source quote I checked appears verbatim on its cited printed page, including the trickier split-across-columns table quotes. The monitoring and interruption-control lists are thorough and accurate; the only gaps are case-study and change-management detail that falls outside the stated remit, noted as out-of-scope observations.",
+      "failed_quotes": []
+    },
+    {
+      "extractor": "metrics",
+      "verdict": "pass",
+      "quotes_checked": 53,
+      "quotes_failed": 0,
+      "verifier_counted_rows": 53,
+      "extracted_rows": 53,
+      "rows_short": false,
+      "missing_rows": [],
+      "out_of_scope_observations": [
+        "The introductory prose on printed page 147 (about IMDA, the AI Verify Foundation and the non-exhaustive nature of the list) is context the schema has no field for.",
+        "The section headings act as dimension groupings; the extraction captures them in the `dimension` field, but note that the 'Transparency' heading on p.148 governs only 'Feature attribution' and 'Accuracy' (the latter appears under 'Robustness and Stability' on p.149 in the rendered layout) — the linearised text order is ambiguous here."
+      ],
+      "unreadable_figures": [],
+      "factual_errors": [],
+      "meaning_errors": [],
+      "summary": "All 53 metric rows across printed pages 147-152 are present in the extraction, with names, descriptions and formulas matching the pages (formulas correctly null where none is printed). Every source quote was located verbatim on its cited printed page. The extraction's own `total_metrics_counted` field says 52 while 53 items are returned; that working note is off by one but the returned list is complete, so it can be ignored.",
+      "failed_quotes": []
+    },
+    {
+      "extractor": "guardrails",
+      "verdict": "pass",
+      "quotes_checked": 41,
+      "quotes_failed": 0,
+      "verifier_counted_rows": 38,
+      "extracted_rows": 38,
+      "rows_short": false,
+      "missing_rows": [],
+      "out_of_scope_observations": [
+        "The introductory prose on printed page 153 (definition of guardrails, reference to the International AI Safety Report 2025 and OWASP) is not captured in any field; the schema has no place for the appendix preamble.",
+        "Several guardrails cross-reference other entries (e.g. 'Content Moderation' refers to 'input/output filtering' under 'Fairness & Bias'; 'Jailbreak detection' refers to 'input filtering' under 'Robustness and Stability'). There is no explicit cross-reference field, though the text is preserved inside the descriptions."
+      ],
+      "unreadable_figures": [],
+      "factual_errors": [
+        {
+          "item": "Dimension assigned to 'Retrieval-augmented generation', 'System prompt design' and 'Programmable conversation controls'",
+          "printed_page": 156,
+          "extracted_value": "dimension: \"Transparency\"",
+          "page_value": "These three rows appear on printed page 156 above the 'Robustness and Stability' section header; the running text at the top of page 156 places them after the heading 'Robustness and Stability'. The rows in fact belong to the Transparency section, which the page layout confirms (the 'Robustness and Stability' banner appears below them), so the extraction's assignment matches the rendered page.",
+          "severity": "wording"
+        },
+        {
+          "item": "Ordering of Robustness and Stability rows",
+          "printed_page": 157,
+          "extracted_value": "Model calibration, Modular architecture, Reinforcement learning, Robustness testing, Small model selection, Weight regularisation and normalisation, Synthetic evaluation datasets",
+          "page_value": "Page 157 as laid out reads: Model calibration, Modular architecture, Reinforcement learning, Robustness testing, Small model selection, Weight regularisation and normalisation, Synthetic evaluation datasets",
+          "severity": "ordering"
+        }
+      ],
+      "meaning_errors": [],
+      "summary": "All 38 guardrail rows across printed pages 153-158 are present, with descriptions, AI-type labels and dimension groupings matching the pages; the three interpretability entries (inherent, constrained, post-hoc) are captured in the typology and tagged on the corresponding guardrails. Every source quote was located verbatim on its cited printed page. The two entries flagged in factual_errors are non-substantive (a layout/sequence note); no genuine contradictions or omissions were found, and the appendix preamble prose is the only page content left uncaptured, which is outside the stated scope.",
+      "failed_quotes": []
+    },
+    {
+      "extractor": "considerations",
+      "verdict": "pass",
+      "quotes_checked": 77,
+      "quotes_failed": 0,
+      "verifier_counted_rows": 73,
+      "extracted_rows": 73,
+      "rows_short": false,
+      "missing_rows": [],
+      "out_of_scope_observations": [
+        "The page 164 Consideration 16 text contains a duplicated 'Consideration 16.' label in the source document itself; the extraction preserved it in the title field, which may need cleaning downstream.",
+        "The checklist checkbox graphics carry no data and were correctly ignored."
+      ],
+      "unreadable_figures": [],
+      "factual_errors": [],
+      "meaning_errors": [],
+      "summary": "All 17 Considerations and all 56 Implementation Practices printed on pages 159-164 are present, correctly numbered, assigned to the right Consideration and transcribed verbatim (including the source document's own oddities, e.g. the duplicated 'Consideration 16.' label and the double full stop at the end of C16 IP4). Every source quote was located verbatim on its cited printed page. Note the extraction's total_practices_counted of 56 matches my own count of practices (73 total rows = 17 considerations + 56 practices).",
+      "failed_quotes": []
+    },
+    {
+      "extractor": "agentic",
+      "verdict": "pass",
+      "quotes_checked": 50,
+      "quotes_failed": 0,
+      "verifier_counted_rows": 43,
+      "extracted_rows": 43,
+      "rows_short": false,
+      "missing_rows": [],
+      "out_of_scope_observations": [
+        "Page 117 lists competing academic characterisations of \"agenticness\" (underspecification, directness of impact, goal-directedness, long-term planning; autonomy and goal complexity; etc.) — a definitional taxonomy the schema has no field for.",
+        "Pages 121 and 122 contain governance/process guidance beyond interruption controls (AI inventory of reusable agents, agent \"certification\", build-your-own-bot inventorying, ReAct/CoT task decomposition), which is not captured by any field.",
+        "Page 123–124 'Conclusion and Next Steps' items (Ongoing Evolution, Training and Education, Industry Toolkits, Ecosystem Development) are outside the schema.",
+        "Footnotes 24 and 25 cite external resources (OWASP Top 10 for agentic AI, OWASP Multi-Agentic System Threat Modelling Guide, IBM whitepaper) that could be relevant to a framework/reference field."
+      ],
+      "unreadable_figures": [],
+      "factual_errors": [
+        {
+          "item": "framework_dimensions / risk_sources section attribution",
+          "printed_page": 124,
+          "extracted_value": "section: \"Conclusion and Next Steps (Ecosystem Development textbox)\"",
+          "page_value": "The IMDA framework textbox is a standalone shaded box following the Ecosystem Development paragraphs; it is not part of Ecosystem Development.",
+          "severity": "wording"
+        }
+      ],
+      "meaning_errors": [],
+      "summary": "All 50 cited quotes were located verbatim (allowing for typographic apostrophes/dashes) on the printed pages cited, and the in-scope item counts match: 12 agentic risk factors (9 bulleted challenges plus inbound customer-agent risk, agenticness weighting and multi-agent security), 2 never-delegate activities, 10 interruption/constraint controls, 7 tool-access/attack-surface items, the IMDA framework with its 5 risk sources and 4 dimensions in correct order, and 9 Gen AI vs agentic comparisons including the Figure 5.0.1 transcription, which matches the figure's boxes and labels. The only nit is a section label describing the IMDA textbox as part of \\\"Ecosystem Development\\\"; the box is a separate callout, which does not change meaning. Several adjacent topics (agenticness taxonomies on p.117, inventory/certification guidance on p.121, OWASP/IBM footnote references) fall outside the schema and may be worth a field if wanted.",
+      "failed_quotes": []
+    },
+    {
+      "extractor": "illustrations",
+      "verdict": "pass",
+      "quotes_checked": 9,
+      "quotes_failed": 0,
+      "verifier_counted_rows": 9,
+      "extracted_rows": 9,
+      "rows_short": false,
+      "missing_rows": [],
+      "out_of_scope_observations": [
+        "Printed page 26 carries Figures 2.2.1 (organisation-level vs use case-specific AI risks) and 2.2.2 (steps in risk management); pages 72, 80, 92, 98 carry the AI lifecycle figures (3.2.1, 3.3.1, 3.4.1, 3.5.1) and page 45 carries Table 2.4.1 - none of these are illustrations, so correctly omitted.",
+        "Page 92 also contains 'Consideration 13' and 'Practice 1', which belong to a different extractor's scope.",
+        "Page 57 contains a shaded tip box on monitoring adverse external developments; it is guidance prose, not an institution illustration."
+      ],
+      "unreadable_figures": [],
+      "factual_errors": [],
+      "meaning_errors": [],
+      "summary": "All nine illustrations on these pages (2.1.1 Income, 2.3.1 Standard Chartered, 2.4.1 Prudential incl. its continuation on p.58, 2.4.2 UOB incl. its continuation on p.59, 3.1.1 / 3.3.1 / 3.4.1 Julius Baer, 3.2.1 and 3.5.1 DBS incl. the p.107 continuation) are captured, with no illustration omitted. Every cited quote appears verbatim on its cited printed page, and the summaries and practice lists match the page text without embellishment; the continuation pages were correctly folded into the parent illustrations. Non-illustration content (lifecycle figures, Table 2.4.1, Consideration 13) was properly excluded.",
+      "failed_quotes": []
+    }
+  ],
+  "raw": {
+    "metrics": {
+      "quote_checks": [
+        {
+          "item": "Average Absolute Odds Difference (AAOD)",
+          "cited_page": 147,
+          "quote": "AAOD combines differences in false positive and true positive rates across two groups (a and b)",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Disparate Impact Ratio (DIR)",
+          "cited_page": 147,
+          "quote": "DIR measures the ratio of favourable outcome probabilities between groups, aligning with legal frameworks like the \"80% rule\"",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Equal Opportunity Difference (EOD)",
+          "cited_page": 147,
+          "quote": "EOD focuses on equality of opportunity by measuring the ratio of differences in true positive rates across groups.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "LLM-as-a-judge bias scoring",
+          "cited_page": 147,
+          "quote": "LLM bias can be assessed using an LLM \"as a judge\", with frameworks provided by several open-source resources.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Separation",
+          "cited_page": 147,
+          "quote": "Separation measures the ratio of an outcome given a sensitive attribute to the probability of that outcome overall.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Socio-cultural bias",
+          "cited_page": 148,
+          "quote": "Socio-cultural bias is when an LLM's behaviour varies in undesired ways when the context of customer interactions changes",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Statistical Parity Difference (SPD)",
+          "cited_page": 148,
+          "quote": "SPD measures demographic parity by comparing the probability of a positive outcome between two groups.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Sufficiency",
+          "cited_page": 148,
+          "quote": "Sufficiency measures disparities in outcomes given a sensitive attribute.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Toxicity Score",
+          "cited_page": 148,
+          "quote": "the toxicity score is the proportion of toxic outputs. Toxicity can be quantified using an LLM as a judge",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Compliance Consistency Score (CCS)",
+          "cited_page": 148,
+          "quote": "A normalised score (0 to 1) reflecting the overall quality and consistency of policy adherence.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Policy Override Frequency (POF)",
+          "cited_page": 148,
+          "quote": "A measure of the extent to which policies are adhered to. It is given by:",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Feature attribution",
+          "cited_page": 148,
+          "quote": "Measures the change in contribution of features to a model's prediction compared to a baseline.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Accuracy",
+          "cited_page": 149,
+          "quote": "Accuracy measures the overall correctness of predictions across all classes.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "BLEU (Bilingual Evaluation Understudy)",
+          "cited_page": 149,
+          "quote": "A longstanding metric for quantifying the similarity of translated text to a translation by a human expert",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Consistency check",
+          "cited_page": 149,
+          "quote": "Hallucinated facts in LLM-generated responses are less likely to be repeated between responses",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "F1 Score",
+          "cited_page": 149,
+          "quote": "F1 Score is the harmonic mean of precision and recall, providing a balanced measure when classes are imbalanced.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Input feature data drift",
+          "cited_page": 149,
+          "quote": "Measures the distribution of input feature values compared to a baseline data distribution.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Output prediction data drift",
+          "cited_page": 149,
+          "quote": "Measures the model's predicted data distribution compared to a baseline data distribution.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Precision",
+          "cited_page": 149,
+          "quote": "Precision measures the proportion of positive identifications that were correct.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Prediction error percentage",
+          "cited_page": 149,
+          "quote": "A high error rate might indicate an issue with the model or with the requests to the model.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Recall",
+          "cited_page": 150,
+          "quote": "Recall (also called sensitivity) measures the proportion of actual positives that were correctly identified.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Relevance to prompt",
+          "cited_page": 150,
+          "quote": "The cosine distance or BERTScore of the prompt to the generated output.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "SARI",
+          "cited_page": 150,
+          "quote": "A longstanding metric for quantifying the similarity between a simplified/summarised output and a source text.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Topic and task adherence",
+          "cited_page": 150,
+          "quote": "A metric for checking if an LLM system stays on topic.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Injection Similarity",
+          "cited_page": 150,
+          "quote": "Prompt injection attempts can be detected by calculating semantic similarity measures – like cosine distance",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Injection Success Rate (ISR)",
+          "cited_page": 150,
+          "quote": "A score indicating the success, in either a controlled environment or in production, of attempts to inject adversarial prompts",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "PII Detection Rate",
+          "cited_page": 150,
+          "quote": "The outputs of an LLM can be assessed for the presence of PII",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Prompt Refusal",
+          "cited_page": 151,
+          "quote": "The number or proportion of prompts that are rejected by a Gen AI system's guardrails",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Prompt Sanitisation Rate (PSR)",
+          "cited_page": 151,
+          "quote": "This metric is a complement to ISR and indicates the success rate of guardrails against prompt injection.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Red-teaming attempts",
+          "cited_page": 151,
+          "quote": "Red-teaming attempts are intentional attempts to get LLMs to leak data, including system prompts",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Total Injection Vulnerability Score (TIVS)",
+          "cited_page": 151,
+          "quote": "A composite metric incorporating the above (and other) measurements to provide a comprehensive view of prompt injection vulnerability.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Accelerator average duty cycle.",
+          "cited_page": 151,
+          "quote": "The average fraction of time over the past sample period during which one or more accelerators were actively processing.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Accelerator memory usage",
+          "cited_page": 151,
+          "quote": "The amount of memory allocated by the deployed model replica.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "CPU utilisation",
+          "cited_page": 151,
+          "quote": "The fraction of CPU allocated by the feature store and currently in use by online storage.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "CPU utilisation – hottest node",
+          "cited_page": 151,
+          "quote": "The CPU load for the hottest node in a feature store's online storage.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Latency",
+          "cited_page": 151,
+          "quote": "The total time that an online serving or streaming ingestion request spends in the service.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Memory usage",
+          "cited_page": 151,
+          "quote": "The amount of memory allocated by the deployed model replica and currently in use.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Model latency",
+          "cited_page": 151,
+          "quote": "Model latency The time spent performing computation.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Network bytes received",
+          "cited_page": 151,
+          "quote": "The number of bytes received over the network by the deployed model replica.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Network bytes sent",
+          "cited_page": 151,
+          "quote": "The number of bytes sent over the network by the deployed model replica.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Node count",
+          "cited_page": 152,
+          "quote": "Node count The number of online serving nodes for a feature store.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Offline storage write for streaming write",
+          "cited_page": 152,
+          "quote": "The number of streaming write requests processed for the offline storage.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Online serving throughput",
+          "cited_page": 152,
+          "quote": "The throughput for online serving requests in MB/s.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Overhead latency",
+          "cited_page": 152,
+          "quote": "The total time spent processing a request, outside of computation.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Predictions per second",
+          "cited_page": 152,
+          "quote": "The number of predictions per second across both online and batch predictions.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Queries per second",
+          "cited_page": 152,
+          "quote": "The number of online serving or streaming ingestion queries that a feature store handles.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Replica count",
+          "cited_page": 152,
+          "quote": "The number of active replicas used by the deployed model.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Replica target",
+          "cited_page": 152,
+          "quote": "The number of active replicas required for the deployed model.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Request size",
+          "cited_page": 152,
+          "quote": "The request size by entity type in a feature store.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Streaming write to offline storage delay time",
+          "cited_page": 152,
+          "quote": "The time elapsed (in seconds) between calling the write API and writing to the offline storage.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Total latency duration",
+          "cited_page": 152,
+          "quote": "The total time that a request spends in the service, which is the model latency plus the overhead latency.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Total offline storage",
+          "cited_page": 152,
+          "quote": "Amount of data stored in the feature store's offline storage.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Total online storage",
+          "cited_page": 152,
+          "quote": "Amount of data stored in the feature store's online storage.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        }
+      ],
+      "missing_rows": [],
+      "out_of_scope_observations": [
+        "The introductory prose on printed page 147 (about IMDA, the AI Verify Foundation and the non-exhaustive nature of the list) is context the schema has no field for.",
+        "The section headings act as dimension groupings; the extraction captures them in the `dimension` field, but note that the 'Transparency' heading on p.148 governs only 'Feature attribution' and 'Accuracy' (the latter appears under 'Robustness and Stability' on p.149 in the rendered layout) — the linearised text order is ambiguous here."
+      ],
+      "unreadable_figures": [],
+      "verifier_counted_rows": 53,
+      "extracted_rows": 53,
+      "factual_errors": [],
+      "verdict": "pass",
+      "summary": "All 53 metric rows across printed pages 147-152 are present in the extraction, with names, descriptions and formulas matching the pages (formulas correctly null where none is printed). Every source quote was located verbatim on its cited printed page. The extraction's own `total_metrics_counted` field says 52 while 53 items are returned; that working note is off by one but the returned list is complete, so it can be ignored."
+    },
+    "dimensions_taxonomy": {
+      "quote_checks": [
+        {
+          "item": "Fairness & Bias / Unrepresentative or biased data inputs",
+          "cited_page": 133,
+          "quote": "Data is biased against, or unevenly represents, certain individuals or groups of individuals",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Fairness & Bias / Adverse or inappropriate impact to individuals and groups",
+          "cited_page": 133,
+          "quote": "Models generate outputs that can be detrimental or inappropriate for individuals or groups.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Fairness & Bias dimension source",
+          "cited_page": 133,
+          "quote": "Fairness & Bias Unrepresentative or biased data inputs",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": "Appears as adjacent table cells on p.133; acceptable."
+        },
+        {
+          "item": "Ethics / Value misalignment",
+          "cited_page": 133,
+          "quote": "Gen AI services, outputs and/or uses do not align with corporate or societal values.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Ethics / Environmental sustainability impact",
+          "cited_page": 133,
+          "quote": "Environmental impact of running LLMs, especially increased carbon emissions",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Ethics / Dark patterns",
+          "cited_page": 133,
+          "quote": "Generation of synthetically created deceptive or manipulative content that may trick or mislead users",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Ethics / Toxic and offensive outputs",
+          "cited_page": 133,
+          "quote": "Outputs produced contain harmful, offensive, hateful, discriminatory, violent, racist, sexist or nudity-related information.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Ethics dimension source",
+          "cited_page": 133,
+          "quote": "Ethics Value misalignment",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Accountability & Governance / Lack of AI risk awareness",
+          "cited_page": 133,
+          "quote": "Insufficient education or reskilling resulting in undertrained resources lacking awareness of the unique risks",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Accountability & Governance / Lack of third-party accountability",
+          "cited_page": 134,
+          "quote": "Organisation has limited control or oversight over the development, modification and decision-making process",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Accountability & Governance / Lack of use case, data and model governance",
+          "cited_page": 134,
+          "quote": "Failure to implement and enforce principles, guidelines, protocols and controls to proactively manage risks",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Accountability & Governance / Inadequate human oversight",
+          "cited_page": 134,
+          "quote": "Insufficient human-in-the-loop or oversight, limiting recourse to human correction or intervention",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Accountability & Governance / Inadequate feedback and recourse mechanisms",
+          "cited_page": 134,
+          "quote": "No mechanism to provide feedback or seek recourse for those impacted by harmful or biased outputs",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Accountability & Governance dimension source",
+          "cited_page": 133,
+          "quote": "Accountability & Governance Lack of AI risk awareness",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Transparency / Unclear output accuracy",
+          "cited_page": 134,
+          "quote": "The level of accuracy needed for the proposed Gen AI use case outcome is not clear",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Transparency / Unclear provenance for training/test data",
+          "cited_page": 134,
+          "quote": "The data used to train and test the model cannot be convincingly and comprehensively traced",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Transparency / Lack of explainability",
+          "cited_page": 134,
+          "quote": "Challenge of understanding how the Gen AI modelling techniques influence model behaviour and outputs.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Transparency / Anthropomorphism",
+          "cited_page": 134,
+          "quote": "The characteristic of Gen AI to mimic human characteristics in its output",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Transparency dimension source",
+          "cited_page": 134,
+          "quote": "Transparency Unclear output accuracy",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Legal & Regulatory / Inability to ensure location compliance",
+          "cited_page": 135,
+          "quote": "Inability to ensure adherence to FM hosting and data processing regulations",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Legal & Regulatory / Unclear data ownership",
+          "cited_page": 135,
+          "quote": "Ownership of data used to train the Gen AI model and data created by the Gen AI model is unclear",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Legal & Regulatory / Unauthorised data transfer and storage",
+          "cited_page": 135,
+          "quote": "Data is transported and stored on unauthorised systems as per the licensing terms",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Legal & Regulatory / Breach or misalignment",
+          "cited_page": 135,
+          "quote": "The model and its outputs fail to meet legal or regulatory requirements",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Legal & Regulatory / IP infringement",
+          "cited_page": 135,
+          "quote": "Data provided as input to a Gen AI system or product is used to create an output/content",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Legal & Regulatory / Unavailability of IP protection",
+          "cited_page": 135,
+          "quote": "The outputs of Gen AI built on FMs are not afforded IP protection such as copyright",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Legal & Regulatory / Inadequate privacy protection",
+          "cited_page": 135,
+          "quote": "Inadequate protection of or originally misclassified data that can result in the processing",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Legal & Regulatory / Unclear data retention and deletion",
+          "cited_page": 135,
+          "quote": "Lack of clarity on the policy around retention of personal, sensitive, or confidential data",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Legal & Regulatory dimension source",
+          "cited_page": 135,
+          "quote": "Legal & Regulatory Inability to ensure location compliance",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Robustness & Stability / Hallucination",
+          "cited_page": 136,
+          "quote": "The models produce outputs that are not grounded on any source content",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Robustness & Stability / Overconfidence",
+          "cited_page": 136,
+          "quote": "The characteristic of Gen AI models to produce convincing outputs that do not properly account",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Robustness & Stability / Training data or inputs not fit for purpose",
+          "cited_page": 136,
+          "quote": "Training data used in model is not representative of the geographical and cultural context",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Robustness & Stability / Lack of continuous monitoring",
+          "cited_page": 136,
+          "quote": "Absence of ongoing and systematic surveillance on how Gen AI systems are performing",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Robustness & Stability / Insufficient data quality",
+          "cited_page": 136,
+          "quote": "Low-quality or noisy data used for training could result in poor model performance",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Robustness & Stability / Model staleness",
+          "cited_page": 136,
+          "quote": "Data used to train the model becomes outdated and irrelevant due to changes in its statistical properties",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Robustness & Stability / Insufficient model accuracy/ soundness",
+          "cited_page": 137,
+          "quote": "The model outputs are inaccurate or does not meet the performance thresholds required",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Robustness & Stability / Model degradation from unexpected use",
+          "cited_page": 137,
+          "quote": "A wider range of unexpected usage patterns due to the broad capabilities of Gen AI models",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Robustness & Stability / Inadequate operational resilience",
+          "cited_page": 137,
+          "quote": "Operational resilience or service continuity plans increase in complexity due to the broad set of services",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Robustness & Stability / Unmet architectural requirements",
+          "cited_page": 137,
+          "quote": "Inadequate architectural requirements due to technology, cost or people constraints, leading to technical debt",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Robustness & Stability / Lack of reproducibility",
+          "cited_page": 137,
+          "quote": "Models that have the same parameters and identical inputs may generate different outputs.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Robustness & Stability dimension source",
+          "cited_page": 136,
+          "quote": "Robustness & Stability Hallucination/ Fabrication/ Confabulation",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Cyber and Data Security / Unintentional inappropriate or illegal use",
+          "cited_page": 137,
+          "quote": "Consumers or employees use Gen AI for inappropriate or illegal activities unintentionally",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Cyber and Data Security / Data poisoning",
+          "cited_page": 137,
+          "quote": "Deliberate manipulation of the model by a malicious actor, either through the introduction of malicious data",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Cyber and Data Security / Adversarial model manipulation",
+          "cited_page": 137,
+          "quote": "Deliberate manipulation of a Gen AI system's behaviour by a malicious party with access to its FM.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Cyber and Data Security / Prompt injection",
+          "cited_page": 138,
+          "quote": "The use of carefully designed prompts to encourage a Gen AI system to circumvent its programmed guardrails",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Cyber and Data Security / Re-identification",
+          "cited_page": 138,
+          "quote": "Possibility of de-identified records/ data being able to be re-identified mostly with malicious intent.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Cyber and Data Security / Data leakage",
+          "cited_page": 138,
+          "quote": "Model outputs or the model development/ training/fine-tuning process inadvertently reveal sensitive, confidential or personal data",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Cyber and Data Security / Model inference attacks",
+          "cited_page": 138,
+          "quote": "Inference attacks including submitting carefully crafted input and analysing the corresponding output",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Cyber and Data Security dimension source",
+          "cited_page": 137,
+          "quote": "Cyber and Data Security Unintentional inappropriate or illegal use",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "dimension_renaming header row",
+          "cited_page": 131,
+          "quote": "Risk Dimensions in MindForge Phase 2 Former Titles of Risk Dimensions in MindForge Phase 1, If Different",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "dimension_renaming / Ethics",
+          "cited_page": 131,
+          "quote": "Ethics Ethics & Impact",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "dimension_renaming / Accountability & Governance",
+          "cited_page": 131,
+          "quote": "Accountability & Governance",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "dimension_renaming / Transparency",
+          "cited_page": 131,
+          "quote": "Transparency Transparency & Explainability",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "dimension_renaming / Legal & Regulatory",
+          "cited_page": 131,
+          "quote": "Legal & Regulatory",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "dimension_renaming / Robustness & Stability",
+          "cited_page": 131,
+          "quote": "Robustness & Stability Monitoring & Stability",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "dimension_renaming / Cyber & Data Security",
+          "cited_page": 131,
+          "quote": "Cyber & Data Security",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "risk_changes / Lack of use case, data and model governance",
+          "cited_page": 132,
+          "quote": "Name revised from \"Lack of use case and model governance\".",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": "Page uses curly quotes; wording identical."
+        },
+        {
+          "item": "risk_changes / Lack of AI risk awareness",
+          "cited_page": 132,
+          "quote": "Lack of AI risk awareness Definition and name revised.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "risk_changes / Lack of explainability",
+          "cited_page": 132,
+          "quote": "Transparency & Explainability Lack of explainability Definition revised.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "risk_changes / Insufficient data quality",
+          "cited_page": 132,
+          "quote": "Monitoring & Stability Insufficient data quality Definition revised.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "risk_changes / Unmet architectural requirements",
+          "cited_page": 132,
+          "quote": "Unmet architectural requirements Definition revised.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "risk_changes / Lack of reproducibility",
+          "cited_page": 132,
+          "quote": "Lack of reproducibility Additional risk added as part of Phase 2.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        }
+      ],
+      "missing_rows": [],
+      "out_of_scope_observations": [
+        "Page 131 introductory prose explains the provenance of the taxonomy (Phase 1/Phase 2, ABS Handbook May 2025) and is not captured in the schema.",
+        "The extraction places 'Insufficient model accuracy/ soundness', 'Model degradation from unexpected use', 'Inadequate operational resilience', 'Unmet architectural requirements' and 'Lack of reproducibility' in a slightly different sequence than the rendered page 137 image (which shows accuracy, degradation, resilience, architectural, reproducibility); the same set is present, so this is only a possible ordering nuance between the text layer and the rendered table."
+      ],
+      "unreadable_figures": [],
+      "verifier_counted_rows": 41,
+      "extracted_rows": 41,
+      "factual_errors": [],
+      "verdict": "pass",
+      "summary": "All 41 risk rows across the seven dimensions are present (Fairness & Bias 2, Ethics 4, Accountability & Governance 5, Transparency 4, Legal & Regulatory 8, Robustness & Stability 11, Cyber and Data Security 7), and the supporting renaming table (7 rows), risk-changes table (6 rows) and lifecycle legend (5 rows) are all complete and accurate. Every source quote was located verbatim on its cited printed page, and the secondary-dimension, lifecycle-stage and ABS Top Risk cells match the table cell by cell. The only nuance is that within Robustness & Stability the extraction orders 'Model degradation from unexpected use' after 'Insufficient model accuracy/soundness' differently from the rendered page image; no content is lost."
+    },
+    "materiality_factors": {
+      "quote_checks": [
+        {
+          "item": "inherent_risk_factors: Monetary and financial impact",
+          "cited_page": 47,
+          "quote": "Monetary and financial impact. The quantitative potential for an AI to impact an FI by causing losses, incurring costs",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "inherent_risk_factors: Severity and probability of impact on different stakeholders",
+          "cited_page": 47,
+          "quote": "Severity and probability of impact on different stakeholders, including individuals.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "inherent_risk_factors: Reputational risk",
+          "cited_page": 47,
+          "quote": "Reputational risk. The potential for AI use to generate controversy or negative publicity for an FI",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "inherent_risk_factors: Options for recourse",
+          "cited_page": 47,
+          "quote": "A use case with fewer options for recourse can have further impacts and be riskier.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "inherent_risk_factors: Regulatory impact",
+          "cited_page": 47,
+          "quote": "Regulatory impact. The potential for AI use to engender compliance risk or regulatory penalties.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "inherent_risk_factors: Use of personal data",
+          "cited_page": 47,
+          "quote": "Use of personal data. The extent to which sensitive personal data is implicated by the AI use",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "inherent_risk_factors: Complexity of the AI in use",
+          "cited_page": 47,
+          "quote": "Complexity of the AI in use. The use of multiple datasets, complex architectures (e.g. LLMs), multiple models in concert",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "inherent_risk_factors: Extent of automation of process of AI-driven decision-making",
+          "cited_page": 47,
+          "quote": "AI that is customer-facing without a human in the loop can represent a greater degree of process automation.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "inherent_risk_factors: Control over credit or investment decisions (Fig 2.4.2)",
+          "cited_page": 49,
+          "quote": "Does the use case control credit or investment decisions, or does it provide material inputs to such decisions?",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "inherent_risk_factors: Customer service support / sentiment analysis (Fig 2.4.2)",
+          "cited_page": 49,
+          "quote": "Does the use case support customer service by providing recommended messages/actions or analysing customer sentiment?",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "inherent_risk_factors: Risk-weighted materiality threshold (Fig 2.4.2)",
+          "cited_page": 49,
+          "quote": "Does the use case have a risk-weighted materiality (cumulative cost of all modes of failure multiplied by",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "tiers: low",
+          "cited_page": 48,
+          "quote": "Risk materiality is often measured in a tiered approach, classified as \"Low\", \"Medium\", or \"High\".",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "tiers: medium",
+          "cited_page": 46,
+          "quote": "Examples of AI use cases with a medium residual risk materiality could be automated client sentiment analysis for relationship management",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "tiers: high",
+          "cited_page": 46,
+          "quote": "An example of an AI use case with high residual risk materiality could be a credit underwriting system",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "figure_2_4_3",
+          "cited_page": 51,
+          "quote": "Figure 2.4.3: Illustrative Approach to Residual Risk Materiality Assessment Based on Inherent Risk Materiality",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        }
+      ],
+      "missing_rows": [],
+      "out_of_scope_observations": [
+        "Practices 4-6 (control libraries, pre- and post-deployment AI-specific review criteria and frequency factors) occupy pp. 52-56 and are largely outside the inherent-risk/tiering remit, though the extraction partially folded them into tier governance_implications.",
+        "Illustrations 2.4.1 (Prudential) and 2.4.2 (UOB) on pp. 57-59 describe firm-specific materiality rating approaches (e.g. UOB's binary high/low materiality rating with weighted scoring) that the schema has no field for.",
+        "Figure 2.4.1 (AI risk management process flow, p.46), Figure 2.4.4 (AI control library, p.52) and Figure 2.4.5 (depth/autonomy, p.54) are not captured as structured data."
+      ],
+      "unreadable_figures": [],
+      "verifier_counted_rows": 11,
+      "extracted_rows": 11,
+      "factual_errors": [
+        {
+          "item": "figure_2_4_3 cell: inherent high / evaluation 'Min.' and 'Exceeds Min.' vs printed layout — check of axis orientation",
+          "printed_page": 51,
+          "extracted_value": "axis_evaluation_values listed as rows 'Min.', 'Exceeds Min.', 'Best Practice'; inherent tiers as columns Low/Medium/High",
+          "page_value": "Figure prints inherent risk materiality across the top (Low/Medium/High icons) and rating levels (Min., Exceeds Min., Best Practice) down the left — matches extraction",
+          "severity": "wording"
+        },
+        {
+          "item": "inherent_risk_factors: Risk-weighted materiality threshold — flowchart 'Yes' outcome",
+          "printed_page": 49,
+          "extracted_value": "medium_guidance: \"In the flowchart method, 'Yes' (over $500k) results in Medium Risk\"",
+          "page_value": "In the flowchart, the 'Yes' branch from the risk-weighted materiality question feeds upward to the Medium Risk outcome and the 'No' branch to Low Risk — consistent with the extraction",
+          "severity": "wording"
+        }
+      ],
+      "verdict": "pass",
+      "summary": "All 15 source quotes appear verbatim on their cited printed pages, and the eleven inherent-risk factors match my own count: the six impact sub-criteria plus complexity and automation on p.47, and the three illustrative Figure 2.4.2 criteria on p.49. The Figure 2.4.3 matrix is complete at 9 cells, the axis labels match the print, and critically the high-inherent/Best Practice cell is correctly kept as the dual-valued 'Medium Risk/High Risk'; the always-high note and the 'fail to meet minimums do not proceed' note are both captured verbatim and correctly attributed. The two entries I placed in factual_errors are cross-checks that turned out consistent with the page, not defects — no genuine discrepancies or in-scope omissions were found."
+    },
+    "definitions": {
+      "quote_checks": [
+        {
+          "item": "ai_definition",
+          "cited_page": 13,
+          "quote": "AI learns and/or infers from inputs to generate output such as estimates, predictions, content, summaries, recommendations, or decisions.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "in_scope_examples[0] Linear or logistic regression models",
+          "cited_page": 13,
+          "quote": "A non-exhaustive list of examples of technologies that are included in this scope of AI are: Linear or logistic regression models.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": "Text appears across the lead-in sentence and the first bullet; wording matches."
+        },
+        {
+          "item": "in_scope_examples[1] Machine learning models",
+          "cited_page": 13,
+          "quote": "Models using machine learning and its derivative techniques such as deep learning, transformers (LLMs), and diffusion models.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "in_scope_examples[2] Computer vision models",
+          "cited_page": 13,
+          "quote": "Computer vision models, including optical character recognition features that use computer vision models.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "in_scope_examples[3] Virtual assistants",
+          "cited_page": 13,
+          "quote": "Virtual assistants based on language models.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "in_scope_examples[4] Agent and agentic systems",
+          "cited_page": 13,
+          "quote": "Agent and agentic systems that use language models and other AI tools.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "out_of_scope_examples[0] Traditional rule-based software",
+          "cited_page": 13,
+          "quote": "A non-exhaustive list of examples of technologies that would not be included are: Traditional rule-based software.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": "Lead-in sentence plus first bullet; wording matches."
+        },
+        {
+          "item": "out_of_scope_examples[1] Macros and deterministic automations",
+          "cited_page": 13,
+          "quote": "Macros and other deterministic automations, including some types of Robotic Process Automation (RPA).",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "out_of_scope_examples[2] Chatbots menu/rules-based",
+          "cited_page": 13,
+          "quote": "Chatbots that are menu-based or rules-based, such as those using keyword identification.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "out_of_scope_examples[3] Pre-defined data processing logic",
+          "cited_page": 13,
+          "quote": "Pre-defined data processing logic.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "out_of_scope_examples[4] Calculators or tools",
+          "cited_page": 13,
+          "quote": "Calculators or tools whose outputs are solely based on predefined programming logic or rules would not be regarded as AI",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "out_of_scope_examples[5] Non-AI functionalities of a larger system",
+          "cited_page": 15,
+          "quote": "would apply only to those outputs or behaviours of the system which are affected or influenced by its AI components",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "terms: Model",
+          "cited_page": 15,
+          "quote": "An AI model, which is a mathematical or logical representation mapping inputs to outputs, is the foundation of modern AI technology.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "terms: System",
+          "cited_page": 15,
+          "quote": "An AI system includes an AI model as well as other software components that allow models to be used in real-world applications.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "terms: Use Case",
+          "cited_page": 15,
+          "quote": "An AI use case is the specific, real-world context in which an AI system is intentionally used.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "terms: AI governance and risk management",
+          "cited_page": 14,
+          "quote": "AI governance and risk management are, together, a set of interdisciplinary activities for: Managing AI-specific risks posed to the enterprise",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": "Spans the lead-in and the first numbered item; wording matches."
+        },
+        {
+          "item": "terms: AI-specific risks",
+          "cited_page": 8,
+          "quote": "AI-specific risks – new or enhanced risks arising from AI use that go beyond those of traditional software use",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "terms: Considerations",
+          "cited_page": 9,
+          "quote": "The Handbook is made up of 17 Considerations. These are the operative unit of the Handbook",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "terms: Practices",
+          "cited_page": 9,
+          "quote": "Under each Consideration are one or more Practices. These are specific actions",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "terms: Executives",
+          "cited_page": 9,
+          "quote": "Executives: Decision-makers and leaders.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "terms: Builders",
+          "cited_page": 9,
+          "quote": "Builders: Software developers, data engineers, data scientists, AI practitioners, systems integrators, and other technical specialists",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "terms: Custodians",
+          "cited_page": 9,
+          "quote": "Custodians: Employees in oversight, governance, enablement, and risk management roles in an FI",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "terms: Use Case Owners",
+          "cited_page": 9,
+          "quote": "Use Case Owners: Employees who are accountable for an AI use case.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "terms: Business Users",
+          "cited_page": 9,
+          "quote": "Business Users: Employees who use or apply AI use cases in the course of their business responsibilities.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "terms: MindForge AI Lifecycle",
+          "cited_page": 16,
+          "quote": "The AI lifecycle consists of five stages: Use Case Context and Design. Data Acquisition and Processing.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": "Lead-in plus first two bullets; wording matches."
+        },
+        {
+          "item": "abs_top_risks[0]",
+          "cited_page": 8,
+          "quote": "highlighted ten \"top risks\", which were a particular focus: Unrepresentative or biased data inputs.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "abs_top_risks[1]",
+          "cited_page": 8,
+          "quote": "Toxic and offensive outputs.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "abs_top_risks[2]",
+          "cited_page": 8,
+          "quote": "Lack of AI risk awareness.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "abs_top_risks[3]",
+          "cited_page": 8,
+          "quote": "Lack of use case, data and model governance.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "abs_top_risks[4]",
+          "cited_page": 8,
+          "quote": "Inadequate human oversight.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "abs_top_risks[5]",
+          "cited_page": 8,
+          "quote": "Inadequate feedback and recourse mechanisms.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "abs_top_risks[6]",
+          "cited_page": 8,
+          "quote": "Hallucination/ Fabrication/ Confabulation.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "abs_top_risks[7]",
+          "cited_page": 8,
+          "quote": "Overconfidence.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "abs_top_risks[8]",
+          "cited_page": 8,
+          "quote": "Insufficient model accuracy/ soundness.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "abs_top_risks[9]",
+          "cited_page": 8,
+          "quote": "Model degradation from unexpected use.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        }
+      ],
+      "missing_rows": [],
+      "out_of_scope_observations": [
+        "Figure 1.1.3 (AI Model, System, and Use Case, p.14) and Figure 1.1.4 (AI Lifecycle, p.16) are diagrams; the schema has no figure-transcription field, though the lifecycle stage sub-labels (e.g. 'Assessment and alignment', 'Production deployment of the use case') carry definitional content that could be worth capturing.",
+        "Figure 1.1.1 (Structure of Each Handbook Section, p.10) and Figure 1.1.2 (FEAT/Veritas/MindForge timeline, p.12) are not captured; the FEAT/Veritas relationship is only summarised in scope_notes.",
+        "The handbook notes the glossary (Appendix A) defines Traditional AI, Gen AI and Agentic AI (p.15) — those definitions are not on these pages, and the extraction correctly did not invent them.",
+        "Footnotes 4-6 on p.13 (OECD definition alignment, breadth of scope, meaning of 'inputs') qualify the AI definition; only footnote 4's content is partly reflected."
+      ],
+      "unreadable_figures": [],
+      "verifier_counted_rows": 34,
+      "extracted_rows": 34,
+      "factual_errors": [],
+      "verdict": "pass",
+      "summary": "All 34 in-scope items (1 AI definition, 5 in-scope examples, 4 explicit out-of-scope examples plus 2 reasonable inferred exclusions, 13 defined terms, 10 ABS top risks) match the pages, and every source quote was located verbatim on the printed page cited. The five in-scope and four out-of-scope technology bullets on printed p.13 are complete, and the ABS ten top risks on p.8 are reproduced in the printed order. No factual discrepancies or illegible figures; the only gap worth considering is that the two diagrams (Figures 1.1.3 and 1.1.4) carry definitional labels the schema has nowhere to record."
+    },
+    "oversight_modes": {
+      "quote_checks": [
+        {
+          "item": "modes / human_in_the_loop",
+          "cited_page": 70,
+          "quote": "Human in the Loop: Where an employee retains full control of the use case and either approves or executes actions at crucial points in operation",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "modes / human_over_the_loop",
+          "cited_page": 70,
+          "quote": "Human over the Loop: The AI use case produces outputs or actions where an employee has the option to modify or overrule its outputs",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "modes / human_out_of_the_loop",
+          "cited_page": 71,
+          "quote": "Human out of the Loop: The AI use case produces outputs without direct involvement from an employee",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "sampling_methodologies / Targeted High-Frequency Review",
+          "cited_page": 103,
+          "quote": "High-frequency reviews are conducted more frequently, using a representative sample of outputs.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "sampling_methodologies / Lower-Frequency Review",
+          "cited_page": 103,
+          "quote": "Human reviews can be done less frequently on a representative sample of the AI's output",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "sampling_methodologies / Threshold-Based Review",
+          "cited_page": 103,
+          "quote": "Threshold-based reviews do not involve human oversight in the course of normal operation",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "monitoring_practices / Post-deployment monitoring plan",
+          "cited_page": 93,
+          "quote": "Define a post-deployment monitoring plan performance metrics and thresholds to be tracked as part of the monitoring process",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "monitoring_practices / Near miss / early warning tracking",
+          "cited_page": 93,
+          "quote": "FIs can consider tracking near misses, early warnings, and other cases where metrics approach thresholds",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "monitoring_practices / Designated monitoring accountabilities",
+          "cited_page": 93,
+          "quote": "Designate accountabilities to individuals and teams to carry out post-deployment monitoring activities.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "monitoring_practices / ITSM Incident and Problem Management integration",
+          "cited_page": 93,
+          "quote": "incorporating risk and incident monitoring and response into existing IT Service Management (ITSM) processes",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "monitoring_practices / Ongoing monitoring and reporting of metrics",
+          "cited_page": 99,
+          "quote": "Ensure the correct implementation of the use case's monitoring plan as defined prior to deployment.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "monitoring_practices / Red/amber/green dashboard",
+          "cited_page": 99,
+          "quote": "a \"red/amber/green\" dashboard. This \"traffic light\" approach can straightforwardly communicate when a use case has had a breach",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "monitoring_practices / Logging of monitoring results",
+          "cited_page": 100,
+          "quote": "It is important to thoroughly log the results of monitoring and to track both incidents and escalations",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "monitoring_practices / Data quality, drift and third-party data monitoring",
+          "cited_page": 100,
+          "quote": "Monitor data quality, drift, and risk indicators at a frequency and depth proportionate to the use case's risk materiality.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "monitoring_practices / Use case team periodic self-checks",
+          "cited_page": 101,
+          "quote": "Ensure that the use case team periodically performs self-checks to monitor for changes to key aspects of the use case",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "monitoring_practices / Periodic post-deployment AI-specific reviews",
+          "cited_page": 101,
+          "quote": "Conduct periodic AI-specific reviews on the use case after deployment, with the frequency and intensity of reviews based on key risk-related factors.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "monitoring_practices / Human oversight operationalisation",
+          "cited_page": 102,
+          "quote": "Implement an appropriate and proportionate degree of human oversight as part of the use case's post-deployment usage and monitoring.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "monitoring_practices / End user feedback channels",
+          "cited_page": 103,
+          "quote": "provide avenues, such as a feedback or contact form for end users to seek support, raise concerns, contest outcomes",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "monitoring_practices / Security monitoring of unstructured inputs/outputs",
+          "cited_page": 104,
+          "quote": "Adopt a risk-based approach for the ongoing monitoring of unstructured inputs to or outputs from Gen AI",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "monitoring_practices / Enhanced monitoring for dynamic AI",
+          "cited_page": 105,
+          "quote": "enhanced data quality checks, drift detection, and more stringent performance monitoring with tighter notification thresholds",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "monitoring_practices / Compensating monitoring where third-party change notification is absent",
+          "cited_page": 106,
+          "quote": "an increased frequency of reviews or an enhanced level of post-deployment monitoring, to mitigate the risks",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "interruption_controls / Kill switch (deactivation)",
+          "cited_page": 93,
+          "quote": "a kill switch to deactivate the use case, ensuring that further harm will not take place while an issue is investigated",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "interruption_controls / Rollback to a previous stable version",
+          "cited_page": 93,
+          "quote": "such as rollback options to revert to a previous, stable version of the model",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "interruption_controls / Third-party contingency planning",
+          "cited_page": 93,
+          "quote": "planning for service interruptions, performance degradations, or support discontinuation",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "interruption_controls / Escalation process on threshold breach",
+          "cited_page": 93,
+          "quote": "the frequency of monitoring, and the escalation process if thresholds are exceeded",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "interruption_controls / Phased rollout failure criteria",
+          "cited_page": 94,
+          "quote": "Clear success and failure criteria (the latter of which could trigger deactivation) for each phase",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "interruption_controls / Incident response mechanisms",
+          "cited_page": 99,
+          "quote": "implement response mechanisms (such as roll-backs to previous versions or kill switches) when necessary",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "interruption_controls / Escalation of changes by the use case team",
+          "cited_page": 101,
+          "quote": "take the necessary steps to address the risks of those changes or may escalate the issue to a relevant party",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "interruption_controls / Threshold-triggered human review",
+          "cited_page": 102,
+          "quote": "when automated monitoring detects a potential breach, human review can be triggered to determine the seriousness",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "interruption_controls / Escalation to a human agent / human recourse",
+          "cited_page": 103,
+          "quote": "a chatbot may provide an option to connect the user to a human agent if it is unable to address the user's needs",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "interruption_controls / Input/output filtering safeguards",
+          "cited_page": 104,
+          "quote": "flagging and blocking inappropriate, confidential, or adversarial inputs or outputs",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "interruption_controls / Feedback-triggered alerts",
+          "cited_page": 104,
+          "quote": "triggering alerts when the proportion of negative feedback increases beyond a threshold or trend",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "interruption_controls / Go/no-go checkpoint and tollgates",
+          "cited_page": 71,
+          "quote": "individual risk type owners evaluate AI-relevant risks within their areas, recommend mitigation strategies as needed, or reject a given use case",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        }
+      ],
+      "missing_rows": [],
+      "out_of_scope_observations": [
+        "Julius Baer Illustration 3.1.1 (p.71) and Illustration 3.4.1 (p.97), and DBS Illustration 3.5.1 (pp.106-107) contain firm-specific case-study detail (tollgates, AI literacy training, DBS-GPT monitoring/change control) that is only partially reflected in the extraction; the schema has no dedicated place for case studies.",
+        "Deployment Practice 2 (phased rollout types: pilots, parallel testing, A/B and canary deployments, p.94) and Practice 4 (pre-deployment documentation/approvals, p.96) are substantive deployment practices not captured as monitoring or interruption controls.",
+        "Consideration 15 change-management practices (version control, material vs non-material modification, third-party change notification, pp.105-106) are largely out of the monitoring/interruption remit apart from the two rows captured.",
+        "Practice 3 on user training and Practice 6 wording about human recourse on p.103 include further detail (online portals, hotlines, in-branch support) beyond the captured summaries."
+      ],
+      "unreadable_figures": [],
+      "verifier_counted_rows": 3,
+      "extracted_rows": 3,
+      "factual_errors": [],
+      "verdict": "pass",
+      "summary": "All three human-oversight modes (pp.70-71) and all three rows of Table 3.5.1 (p.103) are present, correctly named, and their definitions/sample-risk columns match the page cell for cell. Every source quote I checked appears verbatim on its cited printed page, including the trickier split-across-columns table quotes. The monitoring and interruption-control lists are thorough and accurate; the only gaps are case-study and change-management detail that falls outside the stated remit, noted as out-of-scope observations."
+    },
+    "guardrails": {
+      "quote_checks": [
+        {
+          "item": "Algorithm re-selection",
+          "cited_page": 153,
+          "quote": "The practice of selecting a different training algorithm that performs better, ceteris paribus, on fairness criteria.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Decision threshold adjustment",
+          "cited_page": 153,
+          "quote": "Adjustment of the decision thresholds for different groups to ensure that each group receives fair treatment.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Hyperparameter tuning",
+          "cited_page": 153,
+          "quote": "common hyperparameters are temperature, which represents a model's \"creativity\"",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Input/output filtering",
+          "cited_page": 153,
+          "quote": "The addition of filters to a Gen AI use case to detect biased or toxic content.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "In-processing techniques",
+          "cited_page": 153,
+          "quote": "These include adversarial debiasing, reductions grid search, automatic hyperparameter tuning",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Model customisation",
+          "cited_page": 153,
+          "quote": "Model customisation in pretrained models, especially Gen AI, refers to fine-tuning and reinforcement learning.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Model separation",
+          "cited_page": 154,
+          "quote": "The demarcation of different models for handling different types of uses",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Post-processing techniques",
+          "cited_page": 154,
+          "quote": "The modification of model outputs to improve AI performance on fairness characteristics.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Prompt design",
+          "cited_page": 154,
+          "quote": "The addition of instructions to user prompts. These can include instructions to represent groups fairly",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Algorithm selection for power efficiency",
+          "cited_page": 154,
+          "quote": "AI training algorithms can have significantly different power requirements for certain types of tasks.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Conduct an ethical design assessment in onboarding",
+          "cited_page": 154,
+          "quote": "When onboarding systems or models, FIs can assess the extent to which their design, functioning, and use supports enterprise values",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Test prioritisation",
+          "cited_page": 154,
+          "quote": "FIs can prioritise the sequence of tests that are performed on an AI to improve the efficiency",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Content Moderation",
+          "cited_page": 154,
+          "quote": "FIs can assess the outputs of a Gen AI system for ethical compliance before sharing them with the user.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Use of pre-trained models",
+          "cited_page": 155,
+          "quote": "By leveraging pre-trained or pre-tuned AI models, FIs can limit or completely avoid the requirement",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Chain-of-thought prompting",
+          "cited_page": 155,
+          "quote": "LLMs can, through grounding or prompting, be induced to produce outputs in a stepwise fashion.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Confidence scoring",
+          "cited_page": 155,
+          "quote": "Perplexity is a common measure of confidence for NLP and is especially useful in LLMs.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Counterfactual explanations",
+          "cited_page": 155,
+          "quote": "Counterfactual explanations test how AI might behave under different input conditions",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Inherent interpretability",
+          "cited_page": 155,
+          "quote": "Models built using decision trees, decision sets, or rule-based classifiers are also considered inherently interpretable.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Interpretability constraints",
+          "cited_page": 155,
+          "quote": "AI with interpretability constraints are systems whose characteristics have been modified to improve their interpretability",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Post hoc interpretability techniques",
+          "cited_page": 155,
+          "quote": "Post-hoc interpretability techniques support the analysis of black box models by attempting to assess how an output was created.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Retrieval-augmented generation",
+          "cited_page": 156,
+          "quote": "Retrieval-augmented generation (RAG) architecture supplements an LLM with other components that provide it with sources",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "System prompt design",
+          "cited_page": 156,
+          "quote": "These can include instructions to reject prompts where the system cannot produce a satisfactory answer",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Programmable conversation controls",
+          "cited_page": 156,
+          "quote": "Rule-based frameworks can be used to define explicit boundaries for multi-turn conversations",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "AI onboarding using domain data",
+          "cited_page": 156,
+          "quote": "Testing that focuses on performance on domain data, such as by testing the AI against internal data",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Fine-tuning",
+          "cited_page": 156,
+          "quote": "Fine-tuning is a resource-efficient method for adjusting system performance characteristics and introducing domain-specific data",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Input filtering",
+          "cited_page": 156,
+          "quote": "Gen AI use cases can be vulnerable to the ingestion of low-quality or malicious data",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Model calibration",
+          "cited_page": 157,
+          "quote": "Calibration in Gen AI is an approach to system architecture which involves re-running the model repeatedly",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": "Text is hyphenated across a line break ('re-\\nrunning'); acceptable."
+        },
+        {
+          "item": "Modular architecture",
+          "cited_page": 157,
+          "quote": "Stability can be improved by adopting a modular architecture with discrete tasks performed by individual models",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Reinforcement learning",
+          "cited_page": 157,
+          "quote": "scoring by a human is Reinforcement Learning with Human Feedback, RLHF",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Robustness testing",
+          "cited_page": 157,
+          "quote": "Testing an AI against a range of input types, including by deliberately selecting noisy input data",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Small model selection",
+          "cited_page": 157,
+          "quote": "Smaller foundation models in Gen AI use cases have been observed to demonstrate improved stability and reliability",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Weight regularisation and normalisation",
+          "cited_page": 157,
+          "quote": "Potential causes of instability or data drift in neural network-based use cases include overfitting or low rates of convergence.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Synthetic evaluation datasets",
+          "cited_page": 157,
+          "quote": "Generating controlled datasets with known properties can facilitate testing and validation for AI use cases.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Jailbreak detection",
+          "cited_page": 158,
+          "quote": "See \"input filtering\" under \"Robustness and Stability\".",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Penetration testing",
+          "cited_page": 158,
+          "quote": "Penetration testing, often referred to as \"pen testing,\" is a proactive security assessment",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Red teaming",
+          "cited_page": 158,
+          "quote": "Red Teaming is an advanced security testing process where ethical hackers simulate real-world cyberattacks",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Role-based access controls",
+          "cited_page": 158,
+          "quote": "access management mechanisms that restrict system permissions based on a user's job role within an organisation",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Vulnerability assessment",
+          "cited_page": 158,
+          "quote": "Vulnerability assessments are conducted to evaluate and prioritise security risks in software, applications, and networks.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "interpretability_typology: Inherent interpretability",
+          "cited_page": 155,
+          "quote": "Some types of models, especially those with low dimensionality or that create outputs as a weighted sum of inputs",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "interpretability_typology: Interpretability constraints",
+          "cited_page": 155,
+          "quote": "Interpretability constraints include rule-based reasoning or measures to sparsify neural networks.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "interpretability_typology: Post hoc interpretability techniques",
+          "cited_page": 155,
+          "quote": "Such techniques consist of building surrogate models, generating Shapley values, or assessing deep learning models",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        }
+      ],
+      "missing_rows": [],
+      "out_of_scope_observations": [
+        "The introductory prose on printed page 153 (definition of guardrails, reference to the International AI Safety Report 2025 and OWASP) is not captured in any field; the schema has no place for the appendix preamble.",
+        "Several guardrails cross-reference other entries (e.g. 'Content Moderation' refers to 'input/output filtering' under 'Fairness & Bias'; 'Jailbreak detection' refers to 'input filtering' under 'Robustness and Stability'). There is no explicit cross-reference field, though the text is preserved inside the descriptions."
+      ],
+      "unreadable_figures": [],
+      "verifier_counted_rows": 38,
+      "extracted_rows": 38,
+      "factual_errors": [
+        {
+          "item": "Dimension assigned to 'Retrieval-augmented generation', 'System prompt design' and 'Programmable conversation controls'",
+          "printed_page": 156,
+          "extracted_value": "dimension: \"Transparency\"",
+          "page_value": "These three rows appear on printed page 156 above the 'Robustness and Stability' section header; the running text at the top of page 156 places them after the heading 'Robustness and Stability'. The rows in fact belong to the Transparency section, which the page layout confirms (the 'Robustness and Stability' banner appears below them), so the extraction's assignment matches the rendered page.",
+          "severity": "wording"
+        },
+        {
+          "item": "Ordering of Robustness and Stability rows",
+          "printed_page": 157,
+          "extracted_value": "Model calibration, Modular architecture, Reinforcement learning, Robustness testing, Small model selection, Weight regularisation and normalisation, Synthetic evaluation datasets",
+          "page_value": "Page 157 as laid out reads: Model calibration, Modular architecture, Reinforcement learning, Robustness testing, Small model selection, Weight regularisation and normalisation, Synthetic evaluation datasets",
+          "severity": "ordering"
+        }
+      ],
+      "verdict": "pass",
+      "summary": "All 38 guardrail rows across printed pages 153-158 are present, with descriptions, AI-type labels and dimension groupings matching the pages; the three interpretability entries (inherent, constrained, post-hoc) are captured in the typology and tagged on the corresponding guardrails. Every source quote was located verbatim on its cited printed page. The two entries flagged in factual_errors are non-substantive (a layout/sequence note); no genuine contradictions or omissions were found, and the appendix preamble prose is the only page content left uncaptured, which is outside the stated scope."
+    },
+    "considerations": {
+      "quote_checks": [
+        {
+          "item": "Consideration 1",
+          "cited_page": 159,
+          "quote": "Consideration 1. Ensure that an AI governance and risk management operating model is clearly defined",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C1 IP1",
+          "cited_page": 159,
+          "quote": "Embed additional responsibilities for AI governance and risk management, as required",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C1 IP2",
+          "cited_page": 159,
+          "quote": "operational governance functions have clear roles and responsibilities assigned to operationalise",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C1 IP3",
+          "cited_page": 159,
+          "quote": "existing governance processes, forums, assets, and tools are updated to effectively enable",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C1 IP4",
+          "cited_page": 159,
+          "quote": "sufficient operating effectiveness and horizon-scanning measures are in place to monitor",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Consideration 2",
+          "cited_page": 159,
+          "quote": "Consideration 2. Ensure that governance documents define key AI-related concepts, processes, and responsibilities",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C2 IP1",
+          "cited_page": 159,
+          "quote": "Ensure robust conceptual foundations for AI governance and risk management by establishing AI principles",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C2 IP2",
+          "cited_page": 159,
+          "quote": "effectively institutionalised throughout the FI’s governance documents, and that a process is in place",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Consideration 3",
+          "cited_page": 159,
+          "quote": "Consideration 3. Enhance the organisational risk framework and risk appetite to include enterprise risks",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C3 IP1",
+          "cited_page": 159,
+          "quote": "Identify the new or enhanced risks of AI that are relevant to the enterprise",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C3 IP2",
+          "cited_page": 159,
+          "quote": "Assess existing enterprise risk controls for their fitness in addressing AI-specific enterprise risks",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C3 IP3",
+          "cited_page": 160,
+          "quote": "key risk indicators (KRIs) are in place to measure AI-specific risks",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C3 IP4",
+          "cited_page": 160,
+          "quote": "effective monitoring is in place to identify AI-specific risk events or breaches of KRI thresholds",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Consideration 4",
+          "cited_page": 160,
+          "quote": "Consideration 4. Uplift existing procurement and third-party risk management activities",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C4 IP1",
+          "cited_page": 160,
+          "quote": "a proportionate level of disclosure to seek from third party providers of AI products and services",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C4 IP2",
+          "cited_page": 160,
+          "quote": "evaluated at appropriate points in procurement, onboarding, and throughout the post-procurement lifecycle",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C4 IP3",
+          "cited_page": 160,
+          "quote": "Identify new or modified AI components or features in third party products and services",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C4 IP4",
+          "cited_page": 160,
+          "quote": "Consider whether contracts and licenses with third parties providing AI products and services",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C4 IP5",
+          "cited_page": 160,
+          "quote": "teams with AI-specific legal, technical, and risk-management skills are involved in procurement",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Consideration 5",
+          "cited_page": 160,
+          "quote": "Consideration 5. Ensure that a framework is in place to manage the risks of each AI use case",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C5 IP1",
+          "cited_page": 160,
+          "quote": "Define levels of risk materiality for AI use cases based on criteria relevant to the FI’s context",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C5 IP2",
+          "cited_page": 160,
+          "quote": "assess the inherent risk materiality of AI use cases at the appropriate lifecycle stage",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C5 IP3",
+          "cited_page": 160,
+          "quote": "evaluate the residual risk materiality of AI use cases prior to deployment",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C5 IP4",
+          "cited_page": 161,
+          "quote": "Identify, uplift, or create controls to be applied to each AI use case",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C5 IP5",
+          "cited_page": 161,
+          "quote": "Define an approach for conducting an AI-specific review of AI use cases prior to deployment",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C5 IP6",
+          "cited_page": 161,
+          "quote": "reviews of AI use cases are conducted periodically post-deployment",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Consideration 6",
+          "cited_page": 161,
+          "quote": "Consideration 6. Ensure that core AI-specific information on AI use cases is recorded in an inventory",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C6 IP1",
+          "cited_page": 161,
+          "quote": "Ensure that a form of AI inventory, designed in consideration of existing inventory systems",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C6 IP2",
+          "cited_page": 161,
+          "quote": "the AI inventory is well-maintained and kept up to date",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Consideration 7",
+          "cited_page": 161,
+          "quote": "Consideration 7. Assess the AI use case to ensure that the intended use is compatible",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C7 IP1",
+          "cited_page": 161,
+          "quote": "Establish ownership for the AI use case and ensure alignment with organisational standards",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C7 IP2",
+          "cited_page": 161,
+          "quote": "Perform an inherent risk materiality assessment to determine the risk tiering",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C7 IP3",
+          "cited_page": 161,
+          "quote": "Capture AI use case-related information in an AI inventory to enable transparency",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C7 IP4",
+          "cited_page": 161,
+          "quote": "Design the AI use case to operate with a proportionate and practical level of human oversight",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Consideration 8",
+          "cited_page": 161,
+          "quote": "Consideration 8. Evaluate whether the intended use of data in the AI use case is compatible",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C8 IP1",
+          "cited_page": 161,
+          "quote": "the use of data complies with ethical standards, regulatory requirements, and organisational policies",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C8 IP2",
+          "cited_page": 161,
+          "quote": "any third-party data complies with intellectual property rules, contractual obligations, and licensing rights",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Consideration 9",
+          "cited_page": 162,
+          "quote": "Consideration 9. Adopt appropriate data management practices that address risks and limitations",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C9 IP1",
+          "cited_page": 162,
+          "quote": "Ensure that data used for the AI use case is fit for purpose",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C9 IP2",
+          "cited_page": 162,
+          "quote": "Justify the use of personal attributes in the AI use case",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C9 IP3",
+          "cited_page": 162,
+          "quote": "Document metadata and data sources related to the AI use case",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C9 IP4",
+          "cited_page": 162,
+          "quote": "appropriate data access controls are implemented based on the nature of selected AI use case",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C9 IP5",
+          "cited_page": 162,
+          "quote": "Establish clear ownership of any derived or transformed data",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C9 IP6",
+          "cited_page": 162,
+          "quote": "Identify and mitigate bias in training and test datasets",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Consideration 10",
+          "cited_page": 162,
+          "quote": "Consideration 10. Evaluate incremental AI-specific risks as part of the onboarding",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C10 IP1",
+          "cited_page": 162,
+          "quote": "Conduct relevant use case-specific relevant due diligence during third-party AI onboarding",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Consideration 11",
+          "cited_page": 162,
+          "quote": "Consideration 11. Ensure that the AI use case is built with appropriate guardrails",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C11 IP1",
+          "cited_page": 162,
+          "quote": "Assess and select algorithms or features for the AI use case by considering its objectives and risks",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C11 IP2",
+          "cited_page": 162,
+          "quote": "Identify and implement appropriate guardrails and controls during the development of AI use cases",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C11 IP3",
+          "cited_page": 162,
+          "quote": "Define use case-specific risk-related metrics for assessing the AI use case for risks",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C11 IP4",
+          "cited_page": 162,
+          "quote": "Evaluate and calibrate transparency measures based on the use case’s risk materiality",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C11 IP5",
+          "cited_page": 162,
+          "quote": "Document key aspects of the AI build process, including data handling",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Consideration 12",
+          "cited_page": 163,
+          "quote": "Consideration 12. Conduct thorough testing and review prior to deployment",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C12 IP1",
+          "cited_page": 163,
+          "quote": "Ensure that Builders conduct appropriate AI risk self-checks during development",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C12 IP2",
+          "cited_page": 163,
+          "quote": "Conduct an AI-specific review based on use case risk materiality prior to deployment",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Consideration 13",
+          "cited_page": 163,
+          "quote": "Consideration 13. Develop monitoring and contingency plans for the use case prior to its deployment",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C13 IP1",
+          "cited_page": 163,
+          "quote": "In conjunction with other monitoring activities, ensure that a monitoring plan and safeguards/contingency measures",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C13 IP2",
+          "cited_page": 163,
+          "quote": "Consider the need for a phased rollout to manage the AI use case’s risks",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C13 IP3",
+          "cited_page": 163,
+          "quote": "Engage and equip users with targeted training and use case-specific resources",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C13 IP4",
+          "cited_page": 163,
+          "quote": "Ensure that the AI use case is appropriately documented, that appropriate security and governance practices",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Consideration 14",
+          "cited_page": 163,
+          "quote": "Consideration 14. Conduct ongoing monitoring of the AI use case and its usage",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C14 IP1",
+          "cited_page": 163,
+          "quote": "Periodically monitor and report on use case metrics related to AI risks, guardrail effectiveness",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C14 IP2",
+          "cited_page": 163,
+          "quote": "Monitor and report on the quality, drift, and third-party risks",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C14 IP3",
+          "cited_page": 163,
+          "quote": "Conduct periodic checks for changes to key aspects of the AI use case over time",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C14 IP4",
+          "cited_page": 163,
+          "quote": "Conduct periodic AI-specific reviews after deployment to assess emerging post-deployment risks",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C14 IP5",
+          "cited_page": 163,
+          "quote": "the use case is operationalised with an appropriate degree of human oversight",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C14 IP6",
+          "cited_page": 164,
+          "quote": "Provide end users with avenues to enquire, give feedback, or request a review on AI decisions",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C14 IP7",
+          "cited_page": 164,
+          "quote": "proportionate monitoring and analysis are in place to safeguard against security risks",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Consideration 15",
+          "cited_page": 164,
+          "quote": "Consideration 15. Capture changes to AI use cases or their components to maintain traceability",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C15 IP1",
+          "cited_page": 164,
+          "quote": "Establish AI change management process to ensure that changes to in-house or third-party use cases",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Consideration 16",
+          "cited_page": 164,
+          "quote": "Consideration 16. Consideration 16.    Ensure that practices are in place to equip employees",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": "Page does duplicate 'Consideration 16.' with extra spacing; wording matches apart from whitespace."
+        },
+        {
+          "item": "C16 IP1",
+          "cited_page": 164,
+          "quote": "employees in relevant roles have the skills that they require to identify, mitigate, and track AI risks",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C16 IP2",
+          "cited_page": 164,
+          "quote": "learning and literacy activities are sufficient to equip current and future employees",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C16 IP3",
+          "cited_page": 164,
+          "quote": "practices, programmes, and policies related to culture and conduct are sufficient to foster a healthy AI culture",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C16 IP4",
+          "cited_page": 164,
+          "quote": "involve a sufficiently representative and interdisciplinary group of employees",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Consideration 17",
+          "cited_page": 164,
+          "quote": "Consideration 17. Support AI deployment by ensuring that supporting infrastructure is fit for purpose",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "C17 IP1",
+          "cited_page": 164,
+          "quote": "the FI’s AI-related infrastructure is suitable for managing scalability, availability, and security risks",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        }
+      ],
+      "missing_rows": [],
+      "out_of_scope_observations": [
+        "The page 164 Consideration 16 text contains a duplicated 'Consideration 16.' label in the source document itself; the extraction preserved it in the title field, which may need cleaning downstream.",
+        "The checklist checkbox graphics carry no data and were correctly ignored."
+      ],
+      "unreadable_figures": [],
+      "verifier_counted_rows": 73,
+      "extracted_rows": 73,
+      "factual_errors": [],
+      "verdict": "pass",
+      "summary": "All 17 Considerations and all 56 Implementation Practices printed on pages 159-164 are present, correctly numbered, assigned to the right Consideration and transcribed verbatim (including the source document's own oddities, e.g. the duplicated 'Consideration 16.' label and the double full stop at the end of C16 IP4). Every source quote was located verbatim on its cited printed page. Note the extraction's total_practices_counted of 56 matches my own count of practices (73 total rows = 17 considerations + 56 practices)."
+    },
+    "agentic": {
+      "quote_checks": [
+        {
+          "item": "agentic_risk_factors: Interpretability",
+          "cited_page": 119,
+          "quote": "The technical complexity of agentic systems – which can orchestrate numerous AI agents",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "agentic_risk_factors: Misalignment and controllability",
+          "cited_page": 119,
+          "quote": "Alignment with human intentions is a well-known existing challenge for AI.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "agentic_risk_factors: Emergent behaviours",
+          "cited_page": 119,
+          "quote": "emergent behaviours from systems of individually performant agents could lead to unintended or undesirable outputs",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "agentic_risk_factors: Cascading or correlated errors",
+          "cited_page": 119,
+          "quote": "the number of points of failure increases non-linearly",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "agentic_risk_factors: Ability to take actions",
+          "cited_page": 120,
+          "quote": "Agentic systems with high degrees of autonomy pose increased risks of unintended harms.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "agentic_risk_factors: Cybersecurity",
+          "cited_page": 120,
+          "quote": "the large attack surface of highly interconnected systems, enhances the risk of intrusions or privacy violations",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "agentic_risk_factors: Accountability and ownership",
+          "cited_page": 120,
+          "quote": "may create new challenges around identifying ownership and assigning responsibility for impacts",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "agentic_risk_factors: Testing and risk assessment",
+          "cited_page": 120,
+          "quote": "root cause analysis is made more difficult by the number of independent components in the system",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "agentic_risk_factors: Governance scalability",
+          "cited_page": 120,
+          "quote": "FIs may find it challenging to effectively oversee Agentic AI over the long term",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "agentic_risk_factors: Inbound risks from customer AI agents",
+          "cited_page": 120,
+          "quote": "such as those introduces when customers use AI agents to interact with an FI",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "agentic_risk_factors: Complexity or \"agenticness\"",
+          "cited_page": 121,
+          "quote": "weight complexity or \"agenticness\" as a factor in their risk assessments",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "agentic_risk_factors: Multi-agent security challenges",
+          "cited_page": 122,
+          "quote": "injections into shared memory functions, attacks on data in transit between agents",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "accountability_source",
+          "cited_page": 121,
+          "quote": "it is most effective to assign final accountability for an AI agent's actions to the party that had the most control over that action",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": "Matches page text apart from the typographic apostrophe in \"agent's\"."
+        },
+        {
+          "item": "never_delegate_examples: Authorising financial transactions",
+          "cited_page": 121,
+          "quote": "some actions may be too risky to delegate to AI under any circumstances, such as authorising financial transactions",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "never_delegate_examples: Making employment decisions",
+          "cited_page": 121,
+          "quote": "too risky to delegate to AI under any circumstances, such as authorising financial transactions or making employment decisions",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "interruption_controls: Least privilege",
+          "cited_page": 121,
+          "quote": "giving agentic systems the lowest possible level of privilege for their use case",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "interruption_controls: Secure-by-design screening and resets",
+          "cited_page": 121,
+          "quote": "robust screening of inbound data, data handed off between agents, and with frequent resets of agent sessions",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "interruption_controls: Restrictive data access limits",
+          "cited_page": 122,
+          "quote": "Restrictive, carefully designed data access limits on agents can mitigate against malicious attacks or data leakages.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "interruption_controls: Grounding instructions",
+          "cited_page": 122,
+          "quote": "they should avoid certain types of action (such as spending money) unless specifically prompted to do so",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "interruption_controls: Traceability and logging",
+          "cited_page": 122,
+          "quote": "robust and searchable logging and the capability to trace erroneous or harmful outputs back",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "interruption_controls: Kill switches",
+          "cited_page": 122,
+          "quote": "Kill switches and other forms of \"interruption\" can be especially useful, if proportionate to risk materiality",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "interruption_controls: Timeouts",
+          "cited_page": 122,
+          "quote": "\"timeouts\", which pause or restart agents that have been running for an extended period of time",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "interruption_controls: Phased rollouts",
+          "cited_page": 122,
+          "quote": "Phased rollouts and pilot deployments are particularly useful when using Agentic AI",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "interruption_controls: Automated monitoring",
+          "cited_page": 123,
+          "quote": "FIs can consider the value of automated monitoring, or even monitoring performed by dedicated AI agents",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "interruption_controls: Human-in-the-loop with distributed approvals",
+          "cited_page": 123,
+          "quote": "FIs can consider distributed approvals (such as by employees operating the agent)",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "tool_access_risks: Tool access",
+          "cited_page": 120,
+          "quote": "Tool access is one of the most important vectors of risk for agentic systems",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "tool_access_risks: Internet/attack surface",
+          "cited_page": 120,
+          "quote": "Agentic systems frequently interact with other services or the open internet",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "tool_access_risks: Hijacking by malicious actors",
+          "cited_page": 120,
+          "quote": "enhance their risk of being hijacked by malicious actors to perform actions without detection",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "tool_access_risks: Potential attack surfaces",
+          "cited_page": 121,
+          "quote": "the use case's potential attack surfaces, such as agents with internet access",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "tool_access_risks: Malicious instructions via internet",
+          "cited_page": 121,
+          "quote": "scenarios where an AI agent accesses the internet and receives malicious instructions",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "tool_access_risks: Sensitive information passed between agents",
+          "cited_page": 122,
+          "quote": "whether sensitive information could be passed between agents in a multi-agent system",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "tool_access_risks: Anomalous tool usage",
+          "cited_page": 123,
+          "quote": "Tools that experience anomalous or inappropriate usage, such as spikes in activity",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "risk_sources: Erroneous actions",
+          "cited_page": 124,
+          "quote": "The framework identifies five key sources of risk to the enterprise from Agentic AI:",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "risk_sources: Unauthorised actions",
+          "cited_page": 124,
+          "quote": "2. Unauthorised actions.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "risk_sources: Biased or unfair actions",
+          "cited_page": 124,
+          "quote": "3. Biased or unfair actions.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "risk_sources: Data breaches",
+          "cited_page": 124,
+          "quote": "4. Data breaches.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "risk_sources: Disruption to connected systems",
+          "cited_page": 124,
+          "quote": "5. Disruption to connected systems.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "framework_dimensions: Assess and bound the risks upfront",
+          "cited_page": 124,
+          "quote": "It also proposes four key dimensions for enterprises to manage Agentic AI risks:",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "framework_dimensions: Make humans meaningfully accountable",
+          "cited_page": 124,
+          "quote": "2. Make humans meaningfully accountable.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "framework_dimensions: Implement technical controls and processes",
+          "cited_page": 124,
+          "quote": "3. Implement technical controls and processes.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "framework_dimensions: Enable end-user responsibility",
+          "cited_page": 124,
+          "quote": "4. Enable end-user responsibility.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "gen_ai_vs_agentic: Autonomy / classification",
+          "cited_page": 117,
+          "quote": "Gen AI systems like RAG-based chatbots are not typically referred to as Agentic AI due to their relatively low levels of autonomy.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "gen_ai_vs_agentic: Architecture figure",
+          "cited_page": 118,
+          "quote": "Figure 5.0.1: Stylised Comparison of Gen AI and Agentic AI Architectures",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "gen_ai_vs_agentic: Scope of tasks",
+          "cited_page": 118,
+          "quote": "a substantial maturation of Gen AI, which was primarily constrained to content creation, summary, or retrieval tasks",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "gen_ai_vs_agentic: Reactive vs proactive",
+          "cited_page": 118,
+          "quote": "Where Gen AI systems were primarily reactive in nature, agentic systems have the potential to be proactive",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "gen_ai_vs_agentic: Context retention",
+          "cited_page": 118,
+          "quote": "take on broader and more complex tasks without losing context, which is otherwise a major limiting factor for LLM utility",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "gen_ai_vs_agentic: Errors and hallucinations",
+          "cited_page": 119,
+          "quote": "the introduction of multi-step reasoning processes or built-in error checking gives agentic systems a greater potential to identify and catch their own errors",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "gen_ai_vs_agentic: Materiality/complexity of workflows",
+          "cited_page": 119,
+          "quote": "well-suited to tackling more complex, higher-materiality workflows than prior AI architectures could",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "gen_ai_vs_agentic: Validation approach",
+          "cited_page": 121,
+          "quote": "Agentic AI accelerates a shift away from traditional model validation and towards assessments of systems in the context of their use cases.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "gen_ai_vs_agentic: Data governance",
+          "cited_page": 122,
+          "quote": "Agentic AI increases the importance of dynamic data governance – focused on real-time oversight of",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        }
+      ],
+      "missing_rows": [],
+      "out_of_scope_observations": [
+        "Page 117 lists competing academic characterisations of \"agenticness\" (underspecification, directness of impact, goal-directedness, long-term planning; autonomy and goal complexity; etc.) — a definitional taxonomy the schema has no field for.",
+        "Pages 121 and 122 contain governance/process guidance beyond interruption controls (AI inventory of reusable agents, agent \"certification\", build-your-own-bot inventorying, ReAct/CoT task decomposition), which is not captured by any field.",
+        "Page 123–124 'Conclusion and Next Steps' items (Ongoing Evolution, Training and Education, Industry Toolkits, Ecosystem Development) are outside the schema.",
+        "Footnotes 24 and 25 cite external resources (OWASP Top 10 for agentic AI, OWASP Multi-Agentic System Threat Modelling Guide, IBM whitepaper) that could be relevant to a framework/reference field."
+      ],
+      "unreadable_figures": [],
+      "verifier_counted_rows": 43,
+      "extracted_rows": 43,
+      "factual_errors": [
+        {
+          "item": "framework_dimensions / risk_sources section attribution",
+          "printed_page": 124,
+          "extracted_value": "section: \"Conclusion and Next Steps (Ecosystem Development textbox)\"",
+          "page_value": "The IMDA framework textbox is a standalone shaded box following the Ecosystem Development paragraphs; it is not part of Ecosystem Development.",
+          "severity": "wording"
+        }
+      ],
+      "verdict": "pass",
+      "summary": "All 50 cited quotes were located verbatim (allowing for typographic apostrophes/dashes) on the printed pages cited, and the in-scope item counts match: 12 agentic risk factors (9 bulleted challenges plus inbound customer-agent risk, agenticness weighting and multi-agent security), 2 never-delegate activities, 10 interruption/constraint controls, 7 tool-access/attack-surface items, the IMDA framework with its 5 risk sources and 4 dimensions in correct order, and 9 Gen AI vs agentic comparisons including the Figure 5.0.1 transcription, which matches the figure's boxes and labels. The only nit is a section label describing the IMDA textbox as part of \\\"Ecosystem Development\\\"; the box is a separate callout, which does not change meaning. Several adjacent topics (agenticness taxonomies on p.117, inventory/certification guidance on p.121, OWASP/IBM footnote references) fall outside the schema and may be worth a field if wanted."
+    },
+    "illustrations": {
+      "quote_checks": [
+        {
+          "item": "Illustration 2.1.1 (Income Insurance)",
+          "cited_page": 25,
+          "quote": "an initiative was undertaken in 2023 to update Model Risk policy, making AI Governance part of the enterprise Model Risk Management framework",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Illustration 2.3.1 (Standard Chartered Bank)",
+          "cited_page": 44,
+          "quote": "Inclusion of RAI Principles-based requirements into third-party vendor contracts, with the capability for customisation where required.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Illustration 2.4.1 (Prudential)",
+          "cited_page": 57,
+          "quote": "All AI use cases undergo a pre-deployment review based on risk materiality, conducted by independent domain experts.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Illustration 2.4.2 (UOB)",
+          "cited_page": 58,
+          "quote": "anchored by a risk materiality assessment that informs the level of oversight and review required for AI models",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Illustration 3.1.1 (Julius Baer)",
+          "cited_page": 71,
+          "quote": "Julius Baer has established a two-stage tollgate process to ensure safe, trustworthy and effective development",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Illustration 3.2.1 (DBS)",
+          "cited_page": 79,
+          "quote": "DBS-GPT's data quality was validated rigorously through performance evaluations using a golden set of questions and answers",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": "Page uses a typographic apostrophe (DBS-GPT\"'s\"); otherwise verbatim."
+        },
+        {
+          "item": "Illustration 3.3.1 (Julius Baer)",
+          "cited_page": 91,
+          "quote": "Julius Baer has established six guiding principles for the responsible use of AI across the organisation.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Illustration 3.4.1 (Julius Baer)",
+          "cited_page": 97,
+          "quote": "a mandatory e-learning for all staff was introduced, which focuses on key AI and Gen AI concepts",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        },
+        {
+          "item": "Illustration 3.5.1 (DBS)",
+          "cited_page": 106,
+          "quote": "A dashboard tracks usage patterns and performance results, enabling proactive interventions.",
+          "found_on_cited_page": true,
+          "found_on_page": null,
+          "note": null
+        }
+      ],
+      "missing_rows": [],
+      "out_of_scope_observations": [
+        "Printed page 26 carries Figures 2.2.1 (organisation-level vs use case-specific AI risks) and 2.2.2 (steps in risk management); pages 72, 80, 92, 98 carry the AI lifecycle figures (3.2.1, 3.3.1, 3.4.1, 3.5.1) and page 45 carries Table 2.4.1 - none of these are illustrations, so correctly omitted.",
+        "Page 92 also contains 'Consideration 13' and 'Practice 1', which belong to a different extractor's scope.",
+        "Page 57 contains a shaded tip box on monitoring adverse external developments; it is guidance prose, not an institution illustration."
+      ],
+      "unreadable_figures": [],
+      "verifier_counted_rows": 9,
+      "extracted_rows": 9,
+      "factual_errors": [],
+      "verdict": "pass",
+      "summary": "All nine illustrations on these pages (2.1.1 Income, 2.3.1 Standard Chartered, 2.4.1 Prudential incl. its continuation on p.58, 2.4.2 UOB incl. its continuation on p.59, 3.1.1 / 3.3.1 / 3.4.1 Julius Baer, 3.2.1 and 3.5.1 DBS incl. the p.107 continuation) are captured, with no illustration omitted. Every cited quote appears verbatim on its cited printed page, and the summaries and practice lists match the page text without embellishment; the continuation pages were correctly folded into the parent illustrations. Non-illustration content (lifecycle figures, Table 2.4.1, Consideration 13) was properly excluded."
+    }
+  },
+  "usage": {
+    "input_tokens": 82543,
+    "output_tokens": 34285,
+    "cache_creation_input_tokens": 239013,
+    "cache_read_input_tokens": 0,
+    "calls": 8,
+    "latency_ms": 345450,
+    "estimated_cost_usd": 2.7637
+  }
+}

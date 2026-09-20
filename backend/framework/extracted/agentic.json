@@ -1,0 +1,505 @@
+{
+  "extractor": "agentic",
+  "model": "claude-opus-5",
+  "extracted_at": "2026-09-20T09:26:02+00:00",
+  "pdf_pages": "124-132",
+  "printed_pages": "117-125",
+  "requests": 1,
+  "attempts": 1,
+  "attempt_log": [
+    {
+      "attempt": 1,
+      "problems": [],
+      "output_tokens": 7734,
+      "latency_ms": 80948
+    }
+  ],
+  "validation_problems": [],
+  "warnings": [],
+  "usage": {
+    "input_tokens": 479,
+    "output_tokens": 7734,
+    "cache_creation_input_tokens": 49314,
+    "cache_read_input_tokens": 0,
+    "calls": 2,
+    "latency_ms": 80948,
+    "estimated_cost_usd": 0.504
+  },
+  "data": {
+    "agentic_risk_factors": [
+      {
+        "factor": "Interpretability",
+        "description": "The technical complexity of agentic systems, which can orchestrate numerous AI agents each powered by a \"black box\" AI model, can make it harder to interpret their behaviours and decisions.",
+        "source": {
+          "page": 119,
+          "section": "Select New Challenges and Potential Risks of Agentic AI",
+          "quote": "The technical complexity of agentic systems – which can orchestrate numerous AI agents"
+        }
+      },
+      {
+        "factor": "Misalignment and controllability",
+        "description": "Alignment with human intentions is a well-known existing challenge for AI; the complexity of agentic architectures and their use for more complex tasks over longer time horizons makes alignment more challenging.",
+        "source": {
+          "page": 119,
+          "section": "Select New Challenges and Potential Risks of Agentic AI",
+          "quote": "Alignment with human intentions is a well-known existing challenge for AI."
+        }
+      },
+      {
+        "factor": "Emergent behaviours",
+        "description": "Complex interactions between components, especially between different agents, are difficult to predict; even where individual agents behave within acceptable parameters, emergent behaviours could lead to unintended or undesirable outputs.",
+        "source": {
+          "page": 119,
+          "section": "Select New Challenges and Potential Risks of Agentic AI",
+          "quote": "emergent behaviours from systems of individually performant agents could lead to unintended or undesirable outputs"
+        }
+      },
+      {
+        "factor": "Cascading or correlated errors",
+        "description": "In complex agentic systems, especially those with multiple interconnected agents, the number of points of failure increases non-linearly, and errors in one agent or component could cause unpredictable or unwanted behaviour overall.",
+        "source": {
+          "page": 119,
+          "section": "Select New Challenges and Potential Risks of Agentic AI",
+          "quote": "the number of points of failure increases non-linearly"
+        }
+      },
+      {
+        "factor": "Ability to take actions",
+        "description": "Agentic systems are characterised by high levels of autonomy, including the ability to take actions that impact the digital and physical environment (such as executing actions in other software); high degrees of autonomy pose increased risks of unintended harms.",
+        "source": {
+          "page": 120,
+          "section": "Select New Challenges and Potential Risks of Agentic AI",
+          "quote": "Agentic systems with high degrees of autonomy pose increased risks of unintended harms."
+        }
+      },
+      {
+        "factor": "Cybersecurity",
+        "description": "Agentic systems frequently interact with other services or the open internet and collect large quantities of user and enterprise data; data replication between components and the large attack surface of interconnected systems enhances the risk of intrusions or privacy violations, and autonomous action enhances the risk of hijacking by malicious actors without detection.",
+        "source": {
+          "page": 120,
+          "section": "Select New Challenges and Potential Risks of Agentic AI",
+          "quote": "the large attack surface of highly interconnected systems, enhances the risk of intrusions or privacy violations"
+        }
+      },
+      {
+        "factor": "Accountability and ownership",
+        "description": "Agentic AI, especially systems with extensive user-managed components, may create new challenges around identifying ownership and assigning responsibility for impacts.",
+        "source": {
+          "page": 120,
+          "section": "Select New Challenges and Potential Risks of Agentic AI",
+          "quote": "may create new challenges around identifying ownership and assigning responsibility for impacts"
+        }
+      },
+      {
+        "factor": "Testing and risk assessment",
+        "description": "The additional complexity and many interconnected components make it harder to comprehensively identify risks or test behaviours, and make root cause analysis after incidents more difficult.",
+        "source": {
+          "page": 120,
+          "section": "Select New Challenges and Potential Risks of Agentic AI",
+          "quote": "root cause analysis is made more difficult by the number of independent components in the system"
+        }
+      },
+      {
+        "factor": "Governance scalability",
+        "description": "Agentic AI can increase the number of individual AI models and systems in an FI's ecosystem; without enabling infrastructure and a robust, scalable, automated governance framework, effective long-term oversight is challenging.",
+        "source": {
+          "page": 120,
+          "section": "Select New Challenges and Potential Risks of Agentic AI",
+          "quote": "FIs may find it challenging to effectively oversee Agentic AI over the long term"
+        }
+      },
+      {
+        "factor": "Inbound risks from customer AI agents",
+        "description": "Beyond the Handbook's scope, general adoption and acceleration of Agentic AI can introduce further inbound risks, such as when customers use AI agents to interact with an FI.",
+        "source": {
+          "page": 120,
+          "section": "Select New Challenges and Potential Risks of Agentic AI",
+          "quote": "such as those introduces when customers use AI agents to interact with an FI"
+        }
+      },
+      {
+        "factor": "Complexity or \"agenticness\" as a risk assessment factor",
+        "description": "FIs can weight complexity or \"agenticness\" as a factor in risk assessments; more complex systems can require more extensive controls.",
+        "source": {
+          "page": 121,
+          "section": "2.4",
+          "quote": "weight complexity or \"agenticness\" as a factor in their risk assessments"
+        }
+      },
+      {
+        "factor": "Multi-agent security challenges",
+        "description": "Security challenges include injections into shared memory functions, attacks on data in transit between agents, and denial-of-service-style attacks introducing infinite loops between agents.",
+        "source": {
+          "page": 122,
+          "section": "3.3",
+          "quote": "injections into shared memory functions, attacks on data in transit between agents"
+        }
+      }
+    ],
+    "accountability_principle": "In general, it is most effective to assign final accountability for an AI agent's actions to the party that had the most control over that action – creating an effective incentive to use that degree of control to ensure that the agentic system behaves as intended.",
+    "accountability_source": {
+      "page": 121,
+      "quote": "it is most effective to assign final accountability for an AI agent's actions to the party that had the most control over that action"
+    },
+    "never_delegate_examples": [
+      {
+        "activity": "Authorising financial transactions",
+        "why": "Some actions may be too risky to delegate to AI under any circumstances.",
+        "source": {
+          "page": 121,
+          "section": "2.4",
+          "quote": "some actions may be too risky to delegate to AI under any circumstances, such as authorising financial transactions"
+        }
+      },
+      {
+        "activity": "Making employment decisions",
+        "why": "Some actions may be too risky to delegate to AI under any circumstances.",
+        "source": {
+          "page": 121,
+          "section": "2.4",
+          "quote": "too risky to delegate to AI under any circumstances, such as authorising financial transactions or making employment decisions"
+        }
+      }
+    ],
+    "interruption_controls": [
+      {
+        "control": "Least privilege / restricted tool and data access",
+        "description": "Restricting privileges, tool and data access, and capabilities of an agentic system; giving agentic systems the lowest possible level of privilege for their use case and making privileges more restrictive for individual components, such as allowing only one specialised agent to access sensitive data or the internet.",
+        "source": {
+          "page": 121,
+          "section": "3.1",
+          "quote": "giving agentic systems the lowest possible level of privilege for their use case"
+        }
+      },
+      {
+        "control": "Secure-by-design screening and frequent session resets",
+        "description": "Robust screening of inbound data and of data handed off between agents, with frequent resets of agent sessions, to counter risk vectors such as agents receiving malicious instructions from the internet.",
+        "source": {
+          "page": 121,
+          "section": "3.1",
+          "quote": "robust screening of inbound data, data handed off between agents, and with frequent resets of agent sessions"
+        }
+      },
+      {
+        "control": "Restrictive data access limits",
+        "description": "Restrictive, carefully designed data access limits on agents to mitigate malicious attacks or data leakages, plus minimising data that interacts with the agentic system.",
+        "source": {
+          "page": 122,
+          "section": "3.2",
+          "quote": "Restrictive, carefully designed data access limits on agents can mitigate against malicious attacks or data leakages."
+        }
+      },
+      {
+        "control": "Grounding instructions to avoid certain actions",
+        "description": "Grounding AI agents with useful context, such as intended purpose or instructions to avoid certain types of action (such as spending money) unless specifically prompted.",
+        "source": {
+          "page": 122,
+          "section": "3.3",
+          "quote": "they should avoid certain types of action (such as spending money) unless specifically prompted to do so"
+        }
+      },
+      {
+        "control": "Traceability and logging",
+        "description": "Robust and searchable logging and the capability to trace erroneous or harmful outputs back through the system to their initial point of failure.",
+        "source": {
+          "page": 122,
+          "section": "3.3",
+          "quote": "robust and searchable logging and the capability to trace erroneous or harmful outputs back"
+        }
+      },
+      {
+        "control": "Kill switches and other forms of \"interruption\"",
+        "description": "Used, proportionate to risk materiality, to stop Agentic AI systems that could take unintended or harmful actions such as spending money, issuing communications, or other hard-to-reverse behaviours; can be given to individual users or automated so harmful actions are promptly identified and blocked.",
+        "source": {
+          "page": 122,
+          "section": "3.4",
+          "quote": "Kill switches and other forms of \"interruption\" can be especially useful, if proportionate to risk materiality"
+        }
+      },
+      {
+        "control": "Timeouts",
+        "description": "A prominent interruption feature that pauses or restarts agents that have been running for an extended period of time, to limit expense and improve alignment on complex tasks.",
+        "source": {
+          "page": 122,
+          "section": "3.4",
+          "quote": "\"timeouts\", which pause or restart agents that have been running for an extended period of time"
+        }
+      },
+      {
+        "control": "Phased rollouts and pilot deployments",
+        "description": "Limited initial rollouts enable FIs to identify emergent behaviours and other complex failure modes that testing may not uncover.",
+        "source": {
+          "page": 122,
+          "section": "3.4",
+          "quote": "Phased rollouts and pilot deployments are particularly useful when using Agentic AI"
+        }
+      },
+      {
+        "control": "Automated monitoring / monitoring agents",
+        "description": "Automated monitoring, or monitoring performed by dedicated AI agents, for unexpected behaviours; the monitoring agent itself must be robustly tested. Includes monitoring data ingress/egress for prompt injection or data leakage and monitoring usage of connected tools for anomalous activity.",
+        "source": {
+          "page": 123,
+          "section": "3.5",
+          "quote": "FIs can consider the value of automated monitoring, or even monitoring performed by dedicated AI agents"
+        }
+      },
+      {
+        "control": "Human-in-the-loop review with distributed approvals",
+        "description": "Human-in-the-loop review as a guardrail for certain types of risky actions, with distributed approvals (such as by employees operating the agent) to make human review practical at scale.",
+        "source": {
+          "page": 123,
+          "section": "3.5",
+          "quote": "FIs can consider distributed approvals (such as by employees operating the agent)"
+        }
+      }
+    ],
+    "tool_access_risks": [
+      {
+        "factor": "Tool access",
+        "description": "Tool access is one of the most important vectors of risk for agentic systems; the potential impact of connected tools is a key consideration in determining the riskiness of an Agentic AI use case.",
+        "source": {
+          "page": 120,
+          "section": "Select New Challenges and Potential Risks of Agentic AI",
+          "quote": "Tool access is one of the most important vectors of risk for agentic systems"
+        }
+      },
+      {
+        "factor": "Internet and external service interaction / attack surface",
+        "description": "Agentic systems frequently interact with other services or the open internet and collect large quantities of user and enterprise data; replication of data between components and the large attack surface of highly interconnected systems enhances risk of intrusions or privacy violations.",
+        "source": {
+          "page": 120,
+          "section": "Select New Challenges and Potential Risks of Agentic AI",
+          "quote": "Agentic systems frequently interact with other services or the open internet"
+        }
+      },
+      {
+        "factor": "Hijacking by malicious actors",
+        "description": "The ability of Agentic AI to take actions autonomously without a human's direct involvement enhances the risk of being hijacked by malicious actors to perform actions without detection.",
+        "source": {
+          "page": 120,
+          "section": "Select New Challenges and Potential Risks of Agentic AI",
+          "quote": "enhance their risk of being hijacked by malicious actors to perform actions without detection"
+        }
+      },
+      {
+        "factor": "Potential attack surfaces, such as agents with internet access",
+        "description": "Use case risk assessments should consider Agentic AI-specific factors, especially the tools the agentic system will have access to and the use case's potential attack surfaces, such as agents with internet access.",
+        "source": {
+          "page": 121,
+          "section": "2.4",
+          "quote": "the use case's potential attack surfaces, such as agents with internet access"
+        }
+      },
+      {
+        "factor": "Malicious instructions received via internet access",
+        "description": "A key risk vector is scenarios where an AI agent accesses the internet and receives malicious instructions; systems should be secure-by-design with screening of inbound data and data handed off between agents.",
+        "source": {
+          "page": 121,
+          "section": "3.1",
+          "quote": "scenarios where an AI agent accesses the internet and receives malicious instructions"
+        }
+      },
+      {
+        "factor": "Sensitive information passed between agents",
+        "description": "When assessing data risks, FIs can consider whether sensitive information could be passed between agents in a multi-agent system, risking leakage.",
+        "source": {
+          "page": 122,
+          "section": "3.2",
+          "quote": "whether sensitive information could be passed between agents in a multi-agent system"
+        }
+      },
+      {
+        "factor": "Anomalous tool usage",
+        "description": "Tools connected to agentic systems that experience anomalous or inappropriate usage, such as spikes in activity or attempts to access sensitive data, can indicate an agentic system is compromised or malfunctioning.",
+        "source": {
+          "page": 123,
+          "section": "3.5",
+          "quote": "Tools that experience anomalous or inappropriate usage, such as spikes in activity"
+        }
+      }
+    ],
+    "unreadable_items": [],
+    "framework_name": "Model AI Governance Framework for Agentic AI (IMDA, Singapore)",
+    "risk_sources": [
+      {
+        "name": "Erroneous actions",
+        "description": "A key source of risk to the enterprise from Agentic AI identified by the framework.",
+        "source": {
+          "page": 124,
+          "section": "Conclusion and Next Steps (Ecosystem Development textbox)",
+          "quote": "The framework identifies five key sources of risk to the enterprise from Agentic AI:"
+        }
+      },
+      {
+        "name": "Unauthorised actions",
+        "description": "A key source of risk to the enterprise from Agentic AI identified by the framework.",
+        "source": {
+          "page": 124,
+          "section": "Conclusion and Next Steps (Ecosystem Development textbox)",
+          "quote": "2. Unauthorised actions."
+        }
+      },
+      {
+        "name": "Biased or unfair actions",
+        "description": "A key source of risk to the enterprise from Agentic AI identified by the framework.",
+        "source": {
+          "page": 124,
+          "section": "Conclusion and Next Steps (Ecosystem Development textbox)",
+          "quote": "3. Biased or unfair actions."
+        }
+      },
+      {
+        "name": "Data breaches",
+        "description": "A key source of risk to the enterprise from Agentic AI identified by the framework.",
+        "source": {
+          "page": 124,
+          "section": "Conclusion and Next Steps (Ecosystem Development textbox)",
+          "quote": "4. Data breaches."
+        }
+      },
+      {
+        "name": "Disruption to connected systems",
+        "description": "A key source of risk to the enterprise from Agentic AI identified by the framework.",
+        "source": {
+          "page": 124,
+          "section": "Conclusion and Next Steps (Ecosystem Development textbox)",
+          "quote": "5. Disruption to connected systems."
+        }
+      }
+    ],
+    "framework_dimensions": [
+      {
+        "name": "Assess and bound the risks upfront",
+        "description": "A key dimension proposed for enterprises to manage Agentic AI risks.",
+        "source": {
+          "page": 124,
+          "section": "Conclusion and Next Steps (Ecosystem Development textbox)",
+          "quote": "It also proposes four key dimensions for enterprises to manage Agentic AI risks:"
+        }
+      },
+      {
+        "name": "Make humans meaningfully accountable",
+        "description": "A key dimension proposed for enterprises to manage Agentic AI risks.",
+        "source": {
+          "page": 124,
+          "section": "Conclusion and Next Steps (Ecosystem Development textbox)",
+          "quote": "2. Make humans meaningfully accountable."
+        }
+      },
+      {
+        "name": "Implement technical controls and processes",
+        "description": "A key dimension proposed for enterprises to manage Agentic AI risks.",
+        "source": {
+          "page": 124,
+          "section": "Conclusion and Next Steps (Ecosystem Development textbox)",
+          "quote": "3. Implement technical controls and processes."
+        }
+      },
+      {
+        "name": "Enable end-user responsibility",
+        "description": "A key dimension proposed for enterprises to manage Agentic AI risks.",
+        "source": {
+          "page": 124,
+          "section": "Conclusion and Next Steps (Ecosystem Development textbox)",
+          "quote": "4. Enable end-user responsibility."
+        }
+      }
+    ],
+    "gen_ai_vs_agentic": [
+      {
+        "aspect": "Autonomy / classification as agentic",
+        "gen_ai": "Gen AI systems like RAG-based chatbots are not typically referred to as Agentic AI due to their relatively low levels of autonomy.",
+        "agentic_ai": "Agentic AI describes systems that include components for making plans and for taking action, often involving tools that interact with their environment.",
+        "source": {
+          "page": 117,
+          "section": "Characteristics of Agentic AI",
+          "quote": "Gen AI systems like RAG-based chatbots are not typically referred to as Agentic AI due to their relatively low levels of autonomy."
+        }
+      },
+      {
+        "aspect": "Architecture (stylised comparison figure)",
+        "gen_ai": "Non-Agentic AI: Gen AI with Retrieval-Augmented Generation (RAG) – an LLM chatbot with basic retrieval capabilities from a static knowledge base (user prompt/response, search/summary of knowledge base).",
+        "agentic_ai": "Agentic AI: a single agent with reasoning capability (LLM-based agent with reasoning and structured actions, using internal workflows for planning, action, memory and tools), and multiple agents collaborating and delegating (a generalist agent orchestrating specialist, supervisor and learning agents for end-to-end automation); characterised by more autonomy, more planning, more independent action and more complex capabilities.",
+        "source": {
+          "page": 118,
+          "section": "Figure 5.0.1",
+          "quote": "Figure 5.0.1: Stylised Comparison of Gen AI and Agentic AI Architectures"
+        }
+      },
+      {
+        "aspect": "Scope of tasks / business value",
+        "gen_ai": "Gen AI was primarily constrained to content creation, summary, or retrieval tasks.",
+        "agentic_ai": "Agentic AI can take complex, multi-step actions, creating plans from high-level natural language directions and executing them using connected tools; it can undertake tasks that could never before be automated, representing a substantial maturation of Gen AI.",
+        "source": {
+          "page": 118,
+          "section": "Business Potential of Agentic AI",
+          "quote": "a substantial maturation of Gen AI, which was primarily constrained to content creation, summary, or retrieval tasks"
+        }
+      },
+      {
+        "aspect": "Reactive vs proactive behaviour",
+        "gen_ai": "Gen AI systems were primarily reactive in nature, relying on users to take actions on their advice.",
+        "agentic_ai": "Agentic systems have the potential to be proactive, to effect real-world states directly, and to offload tasks not well-suited to AI to other software tools (e.g. passing mathematical tasks to a traditional calculator).",
+        "source": {
+          "page": 118,
+          "section": "Business Potential of Agentic AI",
+          "quote": "Where Gen AI systems were primarily reactive in nature, agentic systems have the potential to be proactive"
+        }
+      },
+      {
+        "aspect": "Context retention on complex tasks",
+        "gen_ai": "Losing context on broader and more complex tasks is a major limiting factor for LLM utility.",
+        "agentic_ai": "Agentic systems can, through their memory and planning functions, take on broader and more complex tasks without losing context.",
+        "source": {
+          "page": 118,
+          "section": "Business Potential of Agentic AI",
+          "quote": "take on broader and more complex tasks without losing context, which is otherwise a major limiting factor for LLM utility"
+        }
+      },
+      {
+        "aspect": "Errors and hallucinations / risk mitigation",
+        "gen_ai": "A known challenge in business adoption of Gen AI is its tendency to commit errors or outright hallucinate information, which can make it risky for critical use cases.",
+        "agentic_ai": "While errors and hallucinations also occur, multi-step reasoning processes or built-in error checking give agentic systems greater potential to catch their own errors, and their multiple steps and components lend themselves to guardrail modules (PII screening, toxicity detection, fact-checking).",
+        "source": {
+          "page": 119,
+          "section": "Business Potential of Agentic AI",
+          "quote": "the introduction of multi-step reasoning processes or built-in error checking gives agentic systems a greater potential to identify and catch their own errors"
+        }
+      },
+      {
+        "aspect": "Materiality/complexity of workflows suited to the technology",
+        "gen_ai": "Prior AI architectures could tackle less complex, lower-materiality workflows.",
+        "agentic_ai": "Agentic systems are currently well-suited to tackling more complex, higher-materiality workflows than prior AI architectures could.",
+        "source": {
+          "page": 119,
+          "section": "Business Potential of Agentic AI",
+          "quote": "well-suited to tackling more complex, higher-materiality workflows than prior AI architectures could"
+        }
+      },
+      {
+        "aspect": "Validation and risk assessment approach",
+        "gen_ai": "Traditional model validation focused on the model.",
+        "agentic_ai": "Agentic AI accelerates a shift away from traditional model validation towards assessments of systems in the context of their use cases, because challenges arise in interactions between components and between agents.",
+        "source": {
+          "page": 121,
+          "section": "2.4",
+          "quote": "Agentic AI accelerates a shift away from traditional model validation and towards assessments of systems in the context of their use cases."
+        }
+      },
+      {
+        "aspect": "Data governance",
+        "gen_ai": "Static, point-in-time data governance.",
+        "agentic_ai": "Agentic AI increases the importance of dynamic data governance focused on real-time oversight of how agentic systems access and use data.",
+        "source": {
+          "page": 122,
+          "section": "3.2",
+          "quote": "Agentic AI increases the importance of dynamic data governance – focused on real-time oversight of"
+        }
+      }
+    ],
+    "_passes": [
+      "risks",
+      "framework"
+    ]
+  }
+}

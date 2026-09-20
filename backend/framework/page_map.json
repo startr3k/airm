@@ -1,0 +1,789 @@
+{
+  "page_map_version": 1,
+  "pdf_path": "docs/MindForge AI Risk Management Operationalisation Handbook.pdf",
+  "pdf_sha256": "c5055bacf114b7413b476ba0f3e8366a74c39fa7f049cfae7318615665f16486",
+  "pdf_physical_pages": 173,
+  "model": "claude-opus-5",
+  "effort": "high",
+  "extracted_at": "2026-09-20T08:23:00+00:00",
+  "document": {
+    "title": "AI Risk Management: Operationalisation Handbook",
+    "subtitle": null,
+    "publisher": "The MindForge Consortium",
+    "publication_date": "January 2026",
+    "edition_or_version": null,
+    "highest_printed_page_in_contents": 165
+  },
+  "calibration": {
+    "printed_to_pdf_offset": 7,
+    "constant": true,
+    "offsets_seen": [
+      7
+    ],
+    "probes": [
+      {
+        "pdf_page": 26,
+        "printed_page": 19,
+        "offset": 7,
+        "running_header": "1.2 Define Responsibilities for AI Oversight",
+        "first_heading": null,
+        "snippet": "Management is typically responsible for AI-related enablers like talent, culture, and infrastructure (see Subsections 4.1 and 4.2).', ...)"
+      },
+      {
+        "pdf_page": 61,
+        "printed_page": 54,
+        "offset": 7,
+        "running_header": "2.4 Enhance Use Case-Level AI Risk Management",
+        "first_heading": null,
+        "snippet": "The list below is a non-exhaustive set of criteria for FIs to consider in AI-specific reviews."
+      },
+      {
+        "pdf_page": 95,
+        "printed_page": 88,
+        "offset": 7,
+        "running_header": "3.3 Onboarding, Build, and Review",
+        "first_heading": "Figure 3.3.3: Illustration of AI Specific Disclosure & User Transparency Messages",
+        "snippet": "AI-Generated Investment Advisor. What are some financial products I can consider investing in to support myself in retirement?"
+      },
+      {
+        "pdf_page": 130,
+        "printed_page": 123,
+        "offset": 7,
+        "running_header": "Future Perspectives",
+        "first_heading": "3.5: Monitoring, Usage, and Change Management",
+        "snippet": "Because of their complexity, monitoring is especially important in managing Agentic AI systems for unexpected behaviours;"
+      },
+      {
+        "pdf_page": 159,
+        "printed_page": 152,
+        "offset": 7,
+        "running_header": "Library of AI Metrics",
+        "first_heading": "Metric",
+        "snippet": "Node count The number of online serving nodes for a feature store. Offline storage write for streaming write"
+      }
+    ],
+    "anchor_checks": [
+      {
+        "reason": "Illustration 2.3.1 (from list of illustrations)",
+        "expected_printed_page": 44,
+        "pdf_page": 51,
+        "observed_printed_page": 44,
+        "match": true,
+        "first_heading": "Illustration 2.3.1: Standard Chartered Bank: AI Risk Management in Third Party Solutions",
+        "snippet": "Identification: We have identified the various areas of entry into the organisation and have introduced control gates"
+      },
+      {
+        "reason": "Appendix B start (from contents)",
+        "expected_printed_page": 131,
+        "pdf_page": 138,
+        "observed_printed_page": 131,
+        "match": true,
+        "first_heading": "B. MindForge AI Risk Taxonomy",
+        "snippet": "The consortium defined and endorsed a risk taxonomy as part of Phase 1 of Project MindForge."
+      },
+      {
+        "reason": "Figure 2.4.3 (from list of figures)",
+        "expected_printed_page": 51,
+        "pdf_page": 58,
+        "observed_printed_page": 51,
+        "match": true,
+        "first_heading": "Figure 2.4.3: Illustrative Approach to Residual Risk Materiality Assessment Based on Inherent Risk Materiality",
+        "snippet": "Figure 2.4.3 illustrates one potential approach to doing so. In this example, for a use case"
+      }
+    ],
+    "all_anchors_matched": true,
+    "formula": "pdf_page = printed_page + printed_to_pdf_offset"
+  },
+  "sections": [
+    {
+      "section_id": null,
+      "title": "Introduction",
+      "kind": "front_matter",
+      "level": 2,
+      "printed_start": 2,
+      "printed_end": 3,
+      "pdf_start": 9,
+      "pdf_end": 10
+    },
+    {
+      "section_id": null,
+      "title": "Acknowledgements",
+      "kind": "front_matter",
+      "level": 2,
+      "printed_start": 4,
+      "printed_end": 7,
+      "pdf_start": 11,
+      "pdf_end": 14
+    },
+    {
+      "section_id": "1",
+      "title": "Scope & AI Oversight",
+      "kind": "section",
+      "level": 2,
+      "printed_start": 8,
+      "printed_end": 21,
+      "pdf_start": 15,
+      "pdf_end": 28
+    },
+    {
+      "section_id": "1.1",
+      "title": "Scope and Application",
+      "kind": "subsection",
+      "level": 3,
+      "printed_start": 8,
+      "printed_end": 16,
+      "pdf_start": 15,
+      "pdf_end": 23
+    },
+    {
+      "section_id": "1.2",
+      "title": "Define Responsibilities for AI Oversight",
+      "kind": "subsection",
+      "level": 3,
+      "printed_start": 17,
+      "printed_end": 21,
+      "pdf_start": 24,
+      "pdf_end": 28
+    },
+    {
+      "section_id": null,
+      "title": "Consideration 1",
+      "kind": "subsection",
+      "level": 4,
+      "printed_start": 18,
+      "printed_end": 21,
+      "pdf_start": 25,
+      "pdf_end": 28
+    },
+    {
+      "section_id": "2",
+      "title": "AI Risk Management",
+      "kind": "section",
+      "level": 2,
+      "printed_start": 22,
+      "printed_end": 67,
+      "pdf_start": 29,
+      "pdf_end": 74
+    },
+    {
+      "section_id": "2.1",
+      "title": "Ensure Effective AI-Related Policies, Procedures, and Standards",
+      "kind": "subsection",
+      "level": 3,
+      "printed_start": 22,
+      "printed_end": 25,
+      "pdf_start": 29,
+      "pdf_end": 32
+    },
+    {
+      "section_id": null,
+      "title": "Consideration 2",
+      "kind": "subsection",
+      "level": 4,
+      "printed_start": 22,
+      "printed_end": 25,
+      "pdf_start": 29,
+      "pdf_end": 32
+    },
+    {
+      "section_id": "2.2",
+      "title": "Enhance Organisation-Level Risk Management",
+      "kind": "subsection",
+      "level": 3,
+      "printed_start": 26,
+      "printed_end": 32,
+      "pdf_start": 33,
+      "pdf_end": 39
+    },
+    {
+      "section_id": null,
+      "title": "Consideration 3",
+      "kind": "subsection",
+      "level": 4,
+      "printed_start": 27,
+      "printed_end": 32,
+      "pdf_start": 34,
+      "pdf_end": 39
+    },
+    {
+      "section_id": "2.3",
+      "title": "Uplift Practices for Managing Third Party AI Risks",
+      "kind": "subsection",
+      "level": 3,
+      "printed_start": 33,
+      "printed_end": 44,
+      "pdf_start": 40,
+      "pdf_end": 51
+    },
+    {
+      "section_id": null,
+      "title": "Consideration 4",
+      "kind": "subsection",
+      "level": 4,
+      "printed_start": 36,
+      "printed_end": 44,
+      "pdf_start": 43,
+      "pdf_end": 51
+    },
+    {
+      "section_id": "2.4",
+      "title": "Enhance Use Case-Level AI Risk Management",
+      "kind": "subsection",
+      "level": 3,
+      "printed_start": 45,
+      "printed_end": 59,
+      "pdf_start": 52,
+      "pdf_end": 66
+    },
+    {
+      "section_id": null,
+      "title": "Consideration 5",
+      "kind": "subsection",
+      "level": 4,
+      "printed_start": 47,
+      "printed_end": 59,
+      "pdf_start": 54,
+      "pdf_end": 66
+    },
+    {
+      "section_id": "2.5",
+      "title": "Ensure AI Inventory Capabilities",
+      "kind": "subsection",
+      "level": 3,
+      "printed_start": 60,
+      "printed_end": 67,
+      "pdf_start": 67,
+      "pdf_end": 74
+    },
+    {
+      "section_id": null,
+      "title": "Consideration 6",
+      "kind": "subsection",
+      "level": 4,
+      "printed_start": 61,
+      "printed_end": 67,
+      "pdf_start": 68,
+      "pdf_end": 74
+    },
+    {
+      "section_id": "3",
+      "title": "AI Lifecycle Management",
+      "kind": "section",
+      "level": 2,
+      "printed_start": 68,
+      "printed_end": 107,
+      "pdf_start": 75,
+      "pdf_end": 114
+    },
+    {
+      "section_id": "3.1",
+      "title": "Use Case Context and Design",
+      "kind": "subsection",
+      "level": 3,
+      "printed_start": 68,
+      "printed_end": 71,
+      "pdf_start": 75,
+      "pdf_end": 78
+    },
+    {
+      "section_id": null,
+      "title": "Consideration 7",
+      "kind": "subsection",
+      "level": 4,
+      "printed_start": 68,
+      "printed_end": 71,
+      "pdf_start": 75,
+      "pdf_end": 78
+    },
+    {
+      "section_id": "3.2",
+      "title": "Data Acquisition and Processing",
+      "kind": "subsection",
+      "level": 3,
+      "printed_start": 72,
+      "printed_end": 79,
+      "pdf_start": 79,
+      "pdf_end": 86
+    },
+    {
+      "section_id": null,
+      "title": "Consideration 8",
+      "kind": "subsection",
+      "level": 4,
+      "printed_start": 73,
+      "printed_end": 73,
+      "pdf_start": 80,
+      "pdf_end": 80
+    },
+    {
+      "section_id": null,
+      "title": "Consideration 9",
+      "kind": "subsection",
+      "level": 4,
+      "printed_start": 74,
+      "printed_end": 79,
+      "pdf_start": 81,
+      "pdf_end": 86
+    },
+    {
+      "section_id": "3.3",
+      "title": "Onboarding, Build, and Review",
+      "kind": "subsection",
+      "level": 3,
+      "printed_start": 80,
+      "printed_end": 91,
+      "pdf_start": 87,
+      "pdf_end": 98
+    },
+    {
+      "section_id": null,
+      "title": "Consideration 10",
+      "kind": "subsection",
+      "level": 4,
+      "printed_start": 82,
+      "printed_end": 82,
+      "pdf_start": 89,
+      "pdf_end": 89
+    },
+    {
+      "section_id": null,
+      "title": "Consideration 11",
+      "kind": "subsection",
+      "level": 4,
+      "printed_start": 83,
+      "printed_end": 88,
+      "pdf_start": 90,
+      "pdf_end": 95
+    },
+    {
+      "section_id": null,
+      "title": "Consideration 12",
+      "kind": "subsection",
+      "level": 4,
+      "printed_start": 89,
+      "printed_end": 91,
+      "pdf_start": 96,
+      "pdf_end": 98
+    },
+    {
+      "section_id": "3.4",
+      "title": "Deployment",
+      "kind": "subsection",
+      "level": 3,
+      "printed_start": 92,
+      "printed_end": 97,
+      "pdf_start": 99,
+      "pdf_end": 104
+    },
+    {
+      "section_id": null,
+      "title": "Consideration 13",
+      "kind": "subsection",
+      "level": 4,
+      "printed_start": 92,
+      "printed_end": 97,
+      "pdf_start": 99,
+      "pdf_end": 104
+    },
+    {
+      "section_id": "3.5",
+      "title": "Usage, Monitoring, and Change Management",
+      "kind": "subsection",
+      "level": 3,
+      "printed_start": 98,
+      "printed_end": 107,
+      "pdf_start": 105,
+      "pdf_end": 114
+    },
+    {
+      "section_id": null,
+      "title": "Consideration 14",
+      "kind": "subsection",
+      "level": 4,
+      "printed_start": 99,
+      "printed_end": 104,
+      "pdf_start": 106,
+      "pdf_end": 111
+    },
+    {
+      "section_id": null,
+      "title": "Consideration 15",
+      "kind": "subsection",
+      "level": 4,
+      "printed_start": 105,
+      "printed_end": 107,
+      "pdf_start": 112,
+      "pdf_end": 114
+    },
+    {
+      "section_id": "4",
+      "title": "Enablers",
+      "kind": "section",
+      "level": 2,
+      "printed_start": 108,
+      "printed_end": 116,
+      "pdf_start": 115,
+      "pdf_end": 123
+    },
+    {
+      "section_id": "4.1",
+      "title": "Enable AI Governance with Skills, Knowledge, and Culture",
+      "kind": "subsection",
+      "level": 3,
+      "printed_start": 108,
+      "printed_end": 114,
+      "pdf_start": 115,
+      "pdf_end": 121
+    },
+    {
+      "section_id": null,
+      "title": "Consideration 16",
+      "kind": "subsection",
+      "level": 4,
+      "printed_start": 108,
+      "printed_end": 114,
+      "pdf_start": 115,
+      "pdf_end": 121
+    },
+    {
+      "section_id": "4.2",
+      "title": "Manage AI Infrastructure",
+      "kind": "subsection",
+      "level": 3,
+      "printed_start": 115,
+      "printed_end": 116,
+      "pdf_start": 122,
+      "pdf_end": 123
+    },
+    {
+      "section_id": null,
+      "title": "Consideration 17",
+      "kind": "subsection",
+      "level": 4,
+      "printed_start": 115,
+      "printed_end": 116,
+      "pdf_start": 122,
+      "pdf_end": 123
+    },
+    {
+      "section_id": null,
+      "title": "Future Perspectives",
+      "kind": "section",
+      "level": 2,
+      "printed_start": 117,
+      "printed_end": 125,
+      "pdf_start": 124,
+      "pdf_end": 132
+    },
+    {
+      "section_id": "A",
+      "title": "Glossary of Terms",
+      "kind": "appendix",
+      "level": 2,
+      "printed_start": 126,
+      "printed_end": 130,
+      "pdf_start": 133,
+      "pdf_end": 137
+    },
+    {
+      "section_id": "B",
+      "title": "MindForge AI Risk Taxonomy",
+      "kind": "appendix",
+      "level": 2,
+      "printed_start": 131,
+      "printed_end": 138,
+      "pdf_start": 138,
+      "pdf_end": 145
+    },
+    {
+      "section_id": "C",
+      "title": "Relevant Global AI Governance Frameworks",
+      "kind": "appendix",
+      "level": 2,
+      "printed_start": 139,
+      "printed_end": 140,
+      "pdf_start": 146,
+      "pdf_end": 147
+    },
+    {
+      "section_id": "D",
+      "title": "References to Key Local AI Governance Frameworks",
+      "kind": "appendix",
+      "level": 2,
+      "printed_start": 141,
+      "printed_end": 144,
+      "pdf_start": 148,
+      "pdf_end": 151
+    },
+    {
+      "section_id": "E",
+      "title": "AI Card Template",
+      "kind": "appendix",
+      "level": 2,
+      "printed_start": 145,
+      "printed_end": 146,
+      "pdf_start": 152,
+      "pdf_end": 153
+    },
+    {
+      "section_id": "F",
+      "title": "Library of AI Metrics",
+      "kind": "appendix",
+      "level": 2,
+      "printed_start": 147,
+      "printed_end": 152,
+      "pdf_start": 154,
+      "pdf_end": 159
+    },
+    {
+      "section_id": "G",
+      "title": "Library of AI Guardrails",
+      "kind": "appendix",
+      "level": 2,
+      "printed_start": 153,
+      "printed_end": 158,
+      "pdf_start": 160,
+      "pdf_end": 165
+    },
+    {
+      "section_id": "H",
+      "title": "MindForge AI Risk Management Checklist",
+      "kind": "appendix",
+      "level": 2,
+      "printed_start": 159,
+      "printed_end": 164,
+      "pdf_start": 166,
+      "pdf_end": 171
+    },
+    {
+      "section_id": null,
+      "title": "Works Cited",
+      "kind": "back_matter",
+      "level": 2,
+      "printed_start": 165,
+      "printed_end": 165,
+      "pdf_start": 172,
+      "pdf_end": 172
+    }
+  ],
+  "figures": [
+    {
+      "label": "Figure 0.0.1",
+      "caption": "MindForge AI Risk Management and Governance Framework",
+      "printed_page": 7
+    },
+    {
+      "label": "Figure 1.1.1",
+      "caption": "Structure of Each Handbook Section",
+      "printed_page": 10
+    },
+    {
+      "label": "Figure 1.1.2",
+      "caption": "Diagram of FEAT, Veritas, and MindForge",
+      "printed_page": 12
+    },
+    {
+      "label": "Figure 1.1.3",
+      "caption": "AI Model, System, and Use Case",
+      "printed_page": 14
+    },
+    {
+      "label": "Figure 1.1.4",
+      "caption": "AI Lifecycle",
+      "printed_page": 16
+    },
+    {
+      "label": "Figure 1.2.1",
+      "caption": "Stylised View of the Enterprise and Related Handbook Subsections",
+      "printed_page": 17
+    },
+    {
+      "label": "Figure 2.2.1",
+      "caption": "Organisation-Level and Use Case-Specific AI Risks",
+      "printed_page": 26
+    },
+    {
+      "label": "Figure 2.2.2",
+      "caption": "Illustration of the Steps in Risk Management",
+      "printed_page": 26
+    },
+    {
+      "label": "Figure 2.2.3",
+      "caption": "Approaches to Taxonomising Organisation-Level AI Risk",
+      "printed_page": 28
+    },
+    {
+      "label": "Figure 2.2.4",
+      "caption": "Illustration of Organisation-Level AI Process Exception Tracking for Risk Management",
+      "printed_page": 32
+    },
+    {
+      "label": "Figure 2.3.1",
+      "caption": "Stylised View of Select Pre- and Post-Procurement AI Risk Mitigations",
+      "printed_page": 40
+    },
+    {
+      "label": "Figure 2.4.1",
+      "caption": "Illustration of the AI Risk Management Approach",
+      "printed_page": 46
+    },
+    {
+      "label": "Figure 2.4.2",
+      "caption": "Illustrative Inherent AI Risk Materiality Assessment Methods",
+      "printed_page": 49
+    },
+    {
+      "label": "Figure 2.4.3",
+      "caption": "Illustrative Approach to Residual Risk Materiality Assessment Based on Inherent Risk Materiality",
+      "printed_page": 51
+    },
+    {
+      "label": "Figure 2.4.4",
+      "caption": "Illustration of an AI Control Library",
+      "printed_page": 52
+    },
+    {
+      "label": "Figure 2.4.5",
+      "caption": "Varying Depth and Autonomy of AI-Specific Review",
+      "printed_page": 54
+    },
+    {
+      "label": "Figure 2.5.1",
+      "caption": "Core Attributes of an Effective AI Inventory",
+      "printed_page": 62
+    },
+    {
+      "label": "Figure 3.1.1",
+      "caption": "Use Case Context and Design in the AI Lifecycle",
+      "printed_page": 68
+    },
+    {
+      "label": "Figure 3.2.1",
+      "caption": "Data Acquisition and Processing in the AI Lifecycle",
+      "printed_page": 72
+    },
+    {
+      "label": "Figure 3.3.1",
+      "caption": "Onboarding, Build, and Review in the AI Lifecycle",
+      "printed_page": 80
+    },
+    {
+      "label": "Figure 3.3.2",
+      "caption": "Illustrative Relationship Between Onboarding, Build, and Review",
+      "printed_page": 81
+    },
+    {
+      "label": "Figure 3.3.3",
+      "caption": "Illustration of AI Specific Disclosure & User Transparency Messages",
+      "printed_page": 88
+    },
+    {
+      "label": "Figure 3.4.1",
+      "caption": "Deployment in the AI Lifecycle",
+      "printed_page": 92
+    },
+    {
+      "label": "Figure 3.5.1",
+      "caption": "Usage, Monitoring, and Change Management in the AI Lifecycle",
+      "printed_page": 98
+    },
+    {
+      "label": "Figure 4.1.1",
+      "caption": "Illustration of Approved Usage of Specific AI Systems or Models",
+      "printed_page": 113
+    },
+    {
+      "label": "Figure 5.0.1",
+      "caption": "Stylised Comparison of Gen AI and Agentic AI Architectures",
+      "printed_page": 118
+    }
+  ],
+  "tables": [
+    {
+      "label": "Table 2.3.1",
+      "caption": "Open-Source Deployment Types for AI Models",
+      "printed_page": 35
+    },
+    {
+      "label": "Table 2.4.1",
+      "caption": "Comparison of Risk Management for AI Types",
+      "printed_page": 45
+    },
+    {
+      "label": "Table 2.5.1",
+      "caption": "Key Attributes and Justifications for an AI Inventory",
+      "printed_page": 63
+    },
+    {
+      "label": "Table 3.5.1",
+      "caption": "Sampling Methodologies for Post-Deployment Human Over-The-Loop Oversight",
+      "printed_page": 103
+    },
+    {
+      "label": "Table 4.1.1",
+      "caption": "Typical Additional AI Governance and Risk Management Skills Associated with Key Roles",
+      "printed_page": 109
+    },
+    {
+      "label": "Table 4.1.2",
+      "caption": "Typical Additional AI Governance and Risk Management Knowledge Required by AI Governance and Risk Management Roles",
+      "printed_page": 111
+    }
+  ],
+  "illustrations": [
+    {
+      "label": "Illustration 2.1.1",
+      "caption": "Income Insurance: Integrating AI Governance with Risk Policy",
+      "printed_page": 25
+    },
+    {
+      "label": "Illustration 2.3.1",
+      "caption": "Standard Chartered Bank: AI Risk Management in Third Party Solutions",
+      "printed_page": 44
+    },
+    {
+      "label": "Illustration 2.4.1",
+      "caption": "Risk Materiality Assessment and AI Specific Governance: Prudential Perspective",
+      "printed_page": 57
+    },
+    {
+      "label": "Illustration 2.4.2",
+      "caption": "UOB's Approach to Risk Materiality Assessment and AI-Specific Review",
+      "printed_page": 58
+    },
+    {
+      "label": "Illustration 3.1.1",
+      "caption": "Julius Baer's Two-Stage Toll Gate Process for AI Use Case Governance",
+      "printed_page": 71
+    },
+    {
+      "label": "Illustration 3.2.1",
+      "caption": "AI Data Acquisition and Processing at DBS",
+      "printed_page": 79
+    },
+    {
+      "label": "Illustration 3.3.1",
+      "caption": "Principle-Based AI Risk Oversight at Julius Baer",
+      "printed_page": 91
+    },
+    {
+      "label": "Illustration 3.4.1",
+      "caption": "Julius Baer's Tiered Approach to AI Literacy and Risk Awareness",
+      "printed_page": 97
+    },
+    {
+      "label": "Illustration 3.5.1",
+      "caption": "AI Usage, Monitoring, and Change Management at DBS",
+      "printed_page": 106
+    }
+  ],
+  "usage": {
+    "input_tokens": 21634,
+    "output_tokens": 6018,
+    "cache_creation_input_tokens": 30169,
+    "cache_read_input_tokens": 0,
+    "calls": 3,
+    "latency_ms": 76543,
+    "estimated_cost_usd": 0.4472
+  }
+}

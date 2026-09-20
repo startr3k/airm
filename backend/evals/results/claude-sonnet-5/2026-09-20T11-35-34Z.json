@@ -1,0 +1,2796 @@
+{
+  "run_id": "2026-09-20T11-35-34Z",
+  "model": "claude-sonnet-5",
+  "effort": "medium",
+  "n": 3,
+  "cases": 10,
+  "started_at": "2026-09-20T11:35:34.638076+00:00",
+  "duration_s": 560.6,
+  "pack_version": 1,
+  "pdf_sha256": "c5055bacf114b7413b476ba0f3e8366a74c39fa7f049cfae7318615665f16486",
+  "prompt_sha256": "1317182c091e1aacdf8af8bb2b4e7d632e4d6671dae8ac95812dff122c8dfbd2",
+  "tool_sha256": "e0a75ff5ddc248a0855c45aebf095daf01dbf7e6a70a5c04d9256b30ae171d52",
+  "gold_sha256": "6a3c74c06d7c4fed340bf1208df162096761ccb8754006096a77e708cfaf1781",
+  "summary": {
+    "runs": 30,
+    "runs_ok": 30,
+    "runs_errored": 0,
+    "retries": 5,
+    "overall_accuracy": 0.9940476190476191,
+    "checks_graded": 168,
+    "field_accuracy": {
+      "ai_in_scope": {
+        "passed": 30,
+        "graded": 30,
+        "accuracy": 1.0
+      },
+      "ai_type": {
+        "passed": 24,
+        "graded": 24,
+        "accuracy": 1.0
+      },
+      "inherent_risk_tier": {
+        "passed": 26,
+        "graded": 27,
+        "accuracy": 0.9629629629629629
+      },
+      "tier_within_tolerance": {
+        "passed": 27,
+        "graded": 27,
+        "accuracy": 1.0
+      },
+      "recommended_oversight_mode": {
+        "passed": 24,
+        "graded": 24,
+        "accuracy": 1.0
+      },
+      "confidence_calibrated": {
+        "passed": 3,
+        "graded": 3,
+        "accuracy": 1.0
+      },
+      "agentic_analysis": {
+        "passed": 30,
+        "graded": 30,
+        "accuracy": 1.0
+      },
+      "risk_analysis_withheld": {
+        "passed": 3,
+        "graded": 3,
+        "accuracy": 1.0
+      }
+    },
+    "recall": {
+      "dimension_floors": {
+        "matched": 57,
+        "expected": 57,
+        "recall": 1.0
+      },
+      "top_10_flags": {
+        "matched": 27,
+        "expected": 30,
+        "recall": 0.9
+      },
+      "considerations": {
+        "matched": 53,
+        "expected": 57,
+        "recall": 0.9298245614035088
+      },
+      "policy_rules": {
+        "matched": 6,
+        "expected": 6,
+        "recall": 1.0
+      }
+    },
+    "tier_consistency": {
+      "mean_modal_agreement": 0.9666666666666666,
+      "unanimous_cases": 9,
+      "cases": {
+        "internal-policy-rag": {
+          "tiers": [
+            "low",
+            "low",
+            "low"
+          ],
+          "modal_agreement": 1.0,
+          "unanimous": true
+        },
+        "rpa-invoice-reconciliation": {
+          "tiers": [
+            "low",
+            "low",
+            "low"
+          ],
+          "modal_agreement": 1.0,
+          "unanimous": true
+        },
+        "underspecified-login-invoice": {
+          "tiers": [
+            "medium",
+            "medium",
+            "medium"
+          ],
+          "modal_agreement": 1.0,
+          "unanimous": true
+        },
+        "credit-underwriting": {
+          "tiers": [
+            "high",
+            "high",
+            "high"
+          ],
+          "modal_agreement": 1.0,
+          "unanimous": true
+        },
+        "cv-screening-shortlist": {
+          "tiers": [
+            "high",
+            "high",
+            "high"
+          ],
+          "modal_agreement": 1.0,
+          "unanimous": true
+        },
+        "agentic-rm-assistant": {
+          "tiers": [
+            "high",
+            "high",
+            "high"
+          ],
+          "modal_agreement": 1.0,
+          "unanimous": true
+        },
+        "vendor-procurement-copilot": {
+          "tiers": [
+            "high",
+            "medium",
+            "medium"
+          ],
+          "modal_agreement": 0.6666666666666666,
+          "unanimous": false
+        },
+        "biometric-onboarding": {
+          "tiers": [
+            "high",
+            "high",
+            "high"
+          ],
+          "modal_agreement": 1.0,
+          "unanimous": true
+        },
+        "marketing-copy-generator": {
+          "tiers": [
+            "medium",
+            "medium",
+            "medium"
+          ],
+          "modal_agreement": 1.0,
+          "unanimous": true
+        },
+        "autonomous-refund-chatbot": {
+          "tiers": [
+            "high",
+            "high",
+            "high"
+          ],
+          "modal_agreement": 1.0,
+          "unanimous": true
+        }
+      }
+    },
+    "tier_confusion": {
+      "low": {
+        "low": 3
+      },
+      "medium": {
+        "medium": 8,
+        "high": 1
+      },
+      "high": {
+        "high": 15
+      }
+    },
+    "latency_ms": {
+      "mean": 32312,
+      "p50": 31856,
+      "p95": 45961,
+      "min": 11864,
+      "max": 77370
+    },
+    "cost_usd": {
+      "total": 0.9643,
+      "per_assessment": 0.03214
+    },
+    "tokens": {
+      "input": 12645,
+      "output": 88204,
+      "cache_read": 284820,
+      "cache_hit_rate": 1.0
+    },
+    "per_case": [
+      {
+        "case_id": "internal-policy-rag",
+        "title": "Internal HR/IT policy assistant (RAG)",
+        "tests": "The floor of the scale: an in-scope Gen AI tool that must NOT be inflated above low.",
+        "runs": 3,
+        "errors": 0,
+        "checks_passed": 18,
+        "checks_graded": 18,
+        "pass_rate": 1.0,
+        "expected_tier": "low",
+        "tiers": [
+          "low",
+          "low",
+          "low"
+        ],
+        "model_tiers": [
+          "low",
+          "low",
+          "low"
+        ],
+        "failed_fields": {},
+        "missing": [
+          "Hallucination/ Fabrication/ Confabulation"
+        ]
+      },
+      {
+        "case_id": "rpa-invoice-reconciliation",
+        "title": "Rule-based invoice reconciliation bot marketed as AI",
+        "tests": "Out of scope under Section 1.1 despite being sold internally as 'AI-powered'. Reads the mechanism, not the label.",
+        "runs": 3,
+        "errors": 0,
+        "checks_passed": 9,
+        "checks_graded": 9,
+        "pass_rate": 1.0,
+        "expected_tier": null,
+        "tiers": [
+          "low",
+          "low",
+          "low"
+        ],
+        "model_tiers": [
+          "low",
+          "low",
+          "low"
+        ],
+        "failed_fields": {},
+        "missing": []
+      },
+      {
+        "case_id": "underspecified-login-invoice",
+        "title": "One-line request with almost no detail",
+        "tests": "Calibration under missing information: must not claim high confidence from a single sentence.",
+        "runs": 3,
+        "errors": 0,
+        "checks_passed": 15,
+        "checks_graded": 15,
+        "pass_rate": 1.0,
+        "expected_tier": "medium",
+        "tiers": [
+          "medium",
+          "medium",
+          "medium"
+        ],
+        "model_tiers": [
+          "medium",
+          "medium",
+          "medium"
+        ],
+        "failed_fields": {},
+        "missing": []
+      },
+      {
+        "case_id": "credit-underwriting",
+        "title": "Personal loan underwriting model",
+        "tests": "The handbook's own example of a use case that stays high; human review of declines must not lower the INHERENT tier.",
+        "runs": 3,
+        "errors": 0,
+        "checks_passed": 18,
+        "checks_graded": 18,
+        "pass_rate": 1.0,
+        "expected_tier": "high",
+        "tiers": [
+          "high",
+          "high",
+          "high"
+        ],
+        "model_tiers": [
+          "high",
+          "high",
+          "high"
+        ],
+        "failed_fields": {},
+        "missing": [
+          "Adverse or inappropriate impact to individuals and groups",
+          "Consideration 5",
+          "Unrepresentative or biased data inputs"
+        ]
+      },
+      {
+        "case_id": "cv-screening-shortlist",
+        "title": "LLM CV screening for a graduate programme",
+        "tests": "Deliberately downplayed ('never rejects anyone outright'). The employment floor must hold the final tier at high.",
+        "runs": 3,
+        "errors": 0,
+        "checks_passed": 18,
+        "checks_graded": 18,
+        "pass_rate": 1.0,
+        "expected_tier": "high",
+        "tiers": [
+          "high",
+          "high",
+          "high"
+        ],
+        "model_tiers": [
+          "medium",
+          "high",
+          "medium"
+        ],
+        "failed_fields": {},
+        "missing": []
+      },
+      {
+        "case_id": "agentic-rm-assistant",
+        "title": "Multi-agent relationship-manager assistant with trade execution",
+        "tests": "Agentic compounding: tool access, irreversibility, and the never-delegate boundary.",
+        "runs": 3,
+        "errors": 0,
+        "checks_passed": 18,
+        "checks_graded": 18,
+        "pass_rate": 1.0,
+        "expected_tier": "high",
+        "tiers": [
+          "high",
+          "high",
+          "high"
+        ],
+        "model_tiers": [
+          "high",
+          "high",
+          "high"
+        ],
+        "failed_fields": {},
+        "missing": [
+          "Consideration 5"
+        ]
+      },
+      {
+        "case_id": "vendor-procurement-copilot",
+        "title": "Vendor-embedded AI feature in a procurement platform",
+        "tests": "Third-party onboarding: Considerations 4 and 10 are the discriminator, and opacity should not read as low risk.",
+        "runs": 3,
+        "errors": 0,
+        "checks_passed": 17,
+        "checks_graded": 18,
+        "pass_rate": 0.9444444444444444,
+        "expected_tier": "medium",
+        "tiers": [
+          "high",
+          "medium",
+          "medium"
+        ],
+        "model_tiers": [
+          "high",
+          "medium",
+          "medium"
+        ],
+        "failed_fields": {
+          "inherent_risk_tier": 1
+        },
+        "missing": []
+      },
+      {
+        "case_id": "biometric-onboarding",
+        "title": "Face matching and liveness at digital account opening",
+        "tests": "Biometric identification: personal-data and fairness dimensions must all rate high.",
+        "runs": 3,
+        "errors": 0,
+        "checks_passed": 18,
+        "checks_graded": 18,
+        "pass_rate": 1.0,
+        "expected_tier": "high",
+        "tiers": [
+          "high",
+          "high",
+          "high"
+        ],
+        "model_tiers": [
+          "high",
+          "high",
+          "high"
+        ],
+        "failed_fields": {},
+        "missing": []
+      },
+      {
+        "case_id": "marketing-copy-generator",
+        "title": "Campaign copy drafting with editorial approval",
+        "tests": "The middle of the scale: reputational and content risk without decisions about individuals.",
+        "runs": 3,
+        "errors": 0,
+        "checks_passed": 18,
+        "checks_graded": 18,
+        "pass_rate": 1.0,
+        "expected_tier": "medium",
+        "tiers": [
+          "medium",
+          "medium",
+          "medium"
+        ],
+        "model_tiers": [
+          "medium",
+          "medium",
+          "medium"
+        ],
+        "failed_fields": {},
+        "missing": []
+      },
+      {
+        "case_id": "autonomous-refund-chatbot",
+        "title": "Customer-facing chatbot that issues refunds unaided",
+        "tests": "Autonomous customer-facing money movement: oversight mode must not be human out of the loop.",
+        "runs": 3,
+        "errors": 0,
+        "checks_passed": 18,
+        "checks_graded": 18,
+        "pass_rate": 1.0,
+        "expected_tier": "high",
+        "tiers": [
+          "high",
+          "high",
+          "high"
+        ],
+        "model_tiers": [
+          "high",
+          "high",
+          "high"
+        ],
+        "failed_fields": {},
+        "missing": []
+      }
+    ],
+    "errors": [],
+    "errors_by_kind": {}
+  },
+  "runs": [
+    {
+      "case_id": "internal-policy-rag",
+      "run": 1,
+      "error": null,
+      "error_kind": null,
+      "attempts": 1,
+      "tier": "low",
+      "model_tier": "low",
+      "policy_rules_fired": [],
+      "latency_ms": 45961,
+      "cost_usd": 0.027369,
+      "input_tokens": 420,
+      "output_tokens": 2463,
+      "cache_read_tokens": 9494,
+      "checks": [
+        {
+          "field": "ai_in_scope",
+          "passed": true,
+          "expected": true,
+          "actual": true
+        },
+        {
+          "field": "ai_type",
+          "passed": true,
+          "expected": "gen_ai",
+          "actual": "gen_ai"
+        },
+        {
+          "field": "inherent_risk_tier",
+          "passed": true,
+          "expected": "low",
+          "actual": "low"
+        },
+        {
+          "field": "tier_within_tolerance",
+          "passed": true,
+          "expected": [
+            "low"
+          ],
+          "actual": "low"
+        },
+        {
+          "field": "recommended_oversight_mode",
+          "passed": true,
+          "expected": [
+            "human_over_the_loop",
+            "human_in_the_loop"
+          ],
+          "actual": "human_over_the_loop"
+        },
+        {
+          "field": "agentic_analysis",
+          "passed": true,
+          "expected": "absent",
+          "actual": "absent"
+        }
+      ],
+      "recalls": {
+        "dimension_floors": {
+          "matched": 2,
+          "expected": 2,
+          "missing": []
+        },
+        "top_10_flags": {
+          "matched": 0,
+          "expected": 1,
+          "missing": [
+            "Hallucination/ Fabrication/ Confabulation"
+          ]
+        },
+        "considerations": {
+          "matched": 2,
+          "expected": 2,
+          "missing": []
+        },
+        "policy_rules": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        }
+      }
+    },
+    {
+      "case_id": "rpa-invoice-reconciliation",
+      "run": 1,
+      "error": null,
+      "error_kind": null,
+      "attempts": 1,
+      "tier": "low",
+      "model_tier": "low",
+      "policy_rules_fired": [
+        "out_of_scope_short_circuit"
+      ],
+      "latency_ms": 14066,
+      "cost_usd": 0.016833,
+      "input_tokens": 467,
+      "output_tokens": 1400,
+      "cache_read_tokens": 9494,
+      "checks": [
+        {
+          "field": "ai_in_scope",
+          "passed": true,
+          "expected": false,
+          "actual": false
+        },
+        {
+          "field": "agentic_analysis",
+          "passed": true,
+          "expected": "absent",
+          "actual": "absent"
+        },
+        {
+          "field": "risk_analysis_withheld",
+          "passed": true,
+          "expected": "withheld",
+          "actual": "withheld"
+        }
+      ],
+      "recalls": {
+        "dimension_floors": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        },
+        "top_10_flags": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        },
+        "considerations": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        },
+        "policy_rules": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        }
+      }
+    },
+    {
+      "case_id": "underspecified-login-invoice",
+      "run": 1,
+      "error": null,
+      "error_kind": null,
+      "attempts": 1,
+      "tier": "medium",
+      "model_tier": "medium",
+      "policy_rules_fired": [],
+      "latency_ms": 31069,
+      "cost_usd": 0.029411,
+      "input_tokens": 331,
+      "output_tokens": 2685,
+      "cache_read_tokens": 9494,
+      "checks": [
+        {
+          "field": "ai_in_scope",
+          "passed": true,
+          "expected": true,
+          "actual": true
+        },
+        {
+          "field": "inherent_risk_tier",
+          "passed": true,
+          "expected": "medium",
+          "actual": "medium"
+        },
+        {
+          "field": "tier_within_tolerance",
+          "passed": true,
+          "expected": [
+            "low",
+            "medium"
+          ],
+          "actual": "medium"
+        },
+        {
+          "field": "confidence_calibrated",
+          "passed": true,
+          "expected": "<= medium",
+          "actual": "low"
+        },
+        {
+          "field": "agentic_analysis",
+          "passed": true,
+          "expected": "absent",
+          "actual": "absent"
+        }
+      ],
+      "recalls": {
+        "dimension_floors": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        },
+        "top_10_flags": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        },
+        "considerations": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        },
+        "policy_rules": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        }
+      }
+    },
+    {
+      "case_id": "credit-underwriting",
+      "run": 1,
+      "error": null,
+      "error_kind": null,
+      "attempts": 1,
+      "tier": "high",
+      "model_tier": "high",
+      "policy_rules_fired": [],
+      "latency_ms": 31273,
+      "cost_usd": 0.032179,
+      "input_tokens": 405,
+      "output_tokens": 2947,
+      "cache_read_tokens": 9494,
+      "checks": [
+        {
+          "field": "ai_in_scope",
+          "passed": true,
+          "expected": true,
+          "actual": true
+        },
+        {
+          "field": "ai_type",
+          "passed": true,
+          "expected": "traditional",
+          "actual": "traditional"
+        },
+        {
+          "field": "inherent_risk_tier",
+          "passed": true,
+          "expected": "high",
+          "actual": "high"
+        },
+        {
+          "field": "tier_within_tolerance",
+          "passed": true,
+          "expected": [
+            "high"
+          ],
+          "actual": "high"
+        },
+        {
+          "field": "recommended_oversight_mode",
+          "passed": true,
+          "expected": [
+            "human_in_the_loop"
+          ],
+          "actual": "human_in_the_loop"
+        },
+        {
+          "field": "agentic_analysis",
+          "passed": true,
+          "expected": "absent",
+          "actual": "absent"
+        }
+      ],
+      "recalls": {
+        "dimension_floors": {
+          "matched": 3,
+          "expected": 3,
+          "missing": []
+        },
+        "top_10_flags": {
+          "matched": 2,
+          "expected": 2,
+          "missing": []
+        },
+        "considerations": {
+          "matched": 2,
+          "expected": 3,
+          "missing": [
+            "Consideration 5"
+          ]
+        },
+        "policy_rules": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        }
+      }
+    },
+    {
+      "case_id": "cv-screening-shortlist",
+      "run": 1,
+      "error": null,
+      "error_kind": null,
+      "attempts": 1,
+      "tier": "high",
+      "model_tier": "medium",
+      "policy_rules_fired": [
+        "high_risk_domain_floor"
+      ],
+      "latency_ms": 33843,
+      "cost_usd": 0.035793,
+      "input_tokens": 437,
+      "output_tokens": 3302,
+      "cache_read_tokens": 9494,
+      "checks": [
+        {
+          "field": "ai_in_scope",
+          "passed": true,
+          "expected": true,
+          "actual": true
+        },
+        {
+          "field": "ai_type",
+          "passed": true,
+          "expected": "gen_ai",
+          "actual": "gen_ai"
+        },
+        {
+          "field": "inherent_risk_tier",
+          "passed": true,
+          "expected": "high",
+          "actual": "high"
+        },
+        {
+          "field": "tier_within_tolerance",
+          "passed": true,
+          "expected": [
+            "high"
+          ],
+          "actual": "high"
+        },
+        {
+          "field": "recommended_oversight_mode",
+          "passed": true,
+          "expected": [
+            "human_in_the_loop",
+            "human_over_the_loop"
+          ],
+          "actual": "human_in_the_loop"
+        },
+        {
+          "field": "agentic_analysis",
+          "passed": true,
+          "expected": "absent",
+          "actual": "absent"
+        }
+      ],
+      "recalls": {
+        "dimension_floors": {
+          "matched": 2,
+          "expected": 2,
+          "missing": []
+        },
+        "top_10_flags": {
+          "matched": 1,
+          "expected": 1,
+          "missing": []
+        },
+        "considerations": {
+          "matched": 2,
+          "expected": 2,
+          "missing": []
+        },
+        "policy_rules": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        }
+      }
+    },
+    {
+      "case_id": "agentic-rm-assistant",
+      "run": 1,
+      "error": null,
+      "error_kind": null,
+      "attempts": 1,
+      "tier": "high",
+      "model_tier": "high",
+      "policy_rules_fired": [
+        "never_delegate_flag"
+      ],
+      "latency_ms": 36492,
+      "cost_usd": 0.040831,
+      "input_tokens": 446,
+      "output_tokens": 3804,
+      "cache_read_tokens": 9494,
+      "checks": [
+        {
+          "field": "ai_in_scope",
+          "passed": true,
+          "expected": true,
+          "actual": true
+        },
+        {
+          "field": "ai_type",
+          "passed": true,
+          "expected": "agentic",
+          "actual": "agentic"
+        },
+        {
+          "field": "inherent_risk_tier",
+          "passed": true,
+          "expected": "high",
+          "actual": "high"
+        },
+        {
+          "field": "tier_within_tolerance",
+          "passed": true,
+          "expected": [
+            "high"
+          ],
+          "actual": "high"
+        },
+        {
+          "field": "recommended_oversight_mode",
+          "passed": true,
+          "expected": [
+            "human_in_the_loop"
+          ],
+          "actual": "human_in_the_loop"
+        },
+        {
+          "field": "agentic_analysis",
+          "passed": true,
+          "expected": "present",
+          "actual": "present"
+        }
+      ],
+      "recalls": {
+        "dimension_floors": {
+          "matched": 3,
+          "expected": 3,
+          "missing": []
+        },
+        "top_10_flags": {
+          "matched": 1,
+          "expected": 1,
+          "missing": []
+        },
+        "considerations": {
+          "matched": 3,
+          "expected": 3,
+          "missing": []
+        },
+        "policy_rules": {
+          "matched": 1,
+          "expected": 1,
+          "missing": []
+        }
+      }
+    },
+    {
+      "case_id": "vendor-procurement-copilot",
+      "run": 1,
+      "error": null,
+      "error_kind": null,
+      "attempts": 1,
+      "tier": "high",
+      "model_tier": "high",
+      "policy_rules_fired": [],
+      "latency_ms": 34170,
+      "cost_usd": 0.037737,
+      "input_tokens": 444,
+      "output_tokens": 3495,
+      "cache_read_tokens": 9494,
+      "checks": [
+        {
+          "field": "ai_in_scope",
+          "passed": true,
+          "expected": true,
+          "actual": true
+        },
+        {
+          "field": "ai_type",
+          "passed": true,
+          "expected": "gen_ai",
+          "actual": "gen_ai"
+        },
+        {
+          "field": "inherent_risk_tier",
+          "passed": false,
+          "expected": "medium",
+          "actual": "high"
+        },
+        {
+          "field": "tier_within_tolerance",
+          "passed": true,
+          "expected": [
+            "medium",
+            "high"
+          ],
+          "actual": "high"
+        },
+        {
+          "field": "recommended_oversight_mode",
+          "passed": true,
+          "expected": [
+            "human_over_the_loop",
+            "human_in_the_loop"
+          ],
+          "actual": "human_in_the_loop"
+        },
+        {
+          "field": "agentic_analysis",
+          "passed": true,
+          "expected": "absent",
+          "actual": "absent"
+        }
+      ],
+      "recalls": {
+        "dimension_floors": {
+          "matched": 2,
+          "expected": 2,
+          "missing": []
+        },
+        "top_10_flags": {
+          "matched": 1,
+          "expected": 1,
+          "missing": []
+        },
+        "considerations": {
+          "matched": 2,
+          "expected": 2,
+          "missing": []
+        },
+        "policy_rules": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        }
+      }
+    },
+    {
+      "case_id": "biometric-onboarding",
+      "run": 1,
+      "error": null,
+      "error_kind": null,
+      "attempts": 1,
+      "tier": "high",
+      "model_tier": "high",
+      "policy_rules_fired": [],
+      "latency_ms": 33538,
+      "cost_usd": 0.035765,
+      "input_tokens": 418,
+      "output_tokens": 3303,
+      "cache_read_tokens": 9494,
+      "checks": [
+        {
+          "field": "ai_in_scope",
+          "passed": true,
+          "expected": true,
+          "actual": true
+        },
+        {
+          "field": "ai_type",
+          "passed": true,
+          "expected": "traditional",
+          "actual": "traditional"
+        },
+        {
+          "field": "inherent_risk_tier",
+          "passed": true,
+          "expected": "high",
+          "actual": "high"
+        },
+        {
+          "field": "tier_within_tolerance",
+          "passed": true,
+          "expected": [
+            "high"
+          ],
+          "actual": "high"
+        },
+        {
+          "field": "recommended_oversight_mode",
+          "passed": true,
+          "expected": [
+            "human_in_the_loop",
+            "human_over_the_loop"
+          ],
+          "actual": "human_in_the_loop"
+        },
+        {
+          "field": "agentic_analysis",
+          "passed": true,
+          "expected": "absent",
+          "actual": "absent"
+        }
+      ],
+      "recalls": {
+        "dimension_floors": {
+          "matched": 3,
+          "expected": 3,
+          "missing": []
+        },
+        "top_10_flags": {
+          "matched": 1,
+          "expected": 1,
+          "missing": []
+        },
+        "considerations": {
+          "matched": 2,
+          "expected": 2,
+          "missing": []
+        },
+        "policy_rules": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        }
+      }
+    },
+    {
+      "case_id": "marketing-copy-generator",
+      "run": 1,
+      "error": null,
+      "error_kind": null,
+      "attempts": 1,
+      "tier": "medium",
+      "model_tier": "medium",
+      "policy_rules_fired": [],
+      "latency_ms": 27236,
+      "cost_usd": 0.030571,
+      "input_tokens": 406,
+      "output_tokens": 2786,
+      "cache_read_tokens": 9494,
+      "checks": [
+        {
+          "field": "ai_in_scope",
+          "passed": true,
+          "expected": true,
+          "actual": true
+        },
+        {
+          "field": "ai_type",
+          "passed": true,
+          "expected": "gen_ai",
+          "actual": "gen_ai"
+        },
+        {
+          "field": "inherent_risk_tier",
+          "passed": true,
+          "expected": "medium",
+          "actual": "medium"
+        },
+        {
+          "field": "tier_within_tolerance",
+          "passed": true,
+          "expected": [
+            "low",
+            "medium"
+          ],
+          "actual": "medium"
+        },
+        {
+          "field": "recommended_oversight_mode",
+          "passed": true,
+          "expected": [
+            "human_in_the_loop"
+          ],
+          "actual": "human_in_the_loop"
+        },
+        {
+          "field": "agentic_analysis",
+          "passed": true,
+          "expected": "absent",
+          "actual": "absent"
+        }
+      ],
+      "recalls": {
+        "dimension_floors": {
+          "matched": 2,
+          "expected": 2,
+          "missing": []
+        },
+        "top_10_flags": {
+          "matched": 1,
+          "expected": 1,
+          "missing": []
+        },
+        "considerations": {
+          "matched": 2,
+          "expected": 2,
+          "missing": []
+        },
+        "policy_rules": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        }
+      }
+    },
+    {
+      "case_id": "autonomous-refund-chatbot",
+      "run": 1,
+      "error": null,
+      "error_kind": null,
+      "attempts": 2,
+      "tier": "high",
+      "model_tier": "high",
+      "policy_rules_fired": [
+        "never_delegate_flag"
+      ],
+      "latency_ms": 38436,
+      "cost_usd": 0.040151,
+      "input_tokens": 441,
+      "output_tokens": 3737,
+      "cache_read_tokens": 9494,
+      "checks": [
+        {
+          "field": "ai_in_scope",
+          "passed": true,
+          "expected": true,
+          "actual": true
+        },
+        {
+          "field": "ai_type",
+          "passed": true,
+          "expected": "agentic",
+          "actual": "agentic"
+        },
+        {
+          "field": "inherent_risk_tier",
+          "passed": true,
+          "expected": "high",
+          "actual": "high"
+        },
+        {
+          "field": "tier_within_tolerance",
+          "passed": true,
+          "expected": [
+            "high"
+          ],
+          "actual": "high"
+        },
+        {
+          "field": "recommended_oversight_mode",
+          "passed": true,
+          "expected": [
+            "human_in_the_loop",
+            "human_over_the_loop"
+          ],
+          "actual": "human_in_the_loop"
+        },
+        {
+          "field": "agentic_analysis",
+          "passed": true,
+          "expected": "present",
+          "actual": "present"
+        }
+      ],
+      "recalls": {
+        "dimension_floors": {
+          "matched": 2,
+          "expected": 2,
+          "missing": []
+        },
+        "top_10_flags": {
+          "matched": 2,
+          "expected": 2,
+          "missing": []
+        },
+        "considerations": {
+          "matched": 3,
+          "expected": 3,
+          "missing": []
+        },
+        "policy_rules": {
+          "matched": 1,
+          "expected": 1,
+          "missing": []
+        }
+      }
+    },
+    {
+      "case_id": "internal-policy-rag",
+      "run": 2,
+      "error": null,
+      "error_kind": null,
+      "attempts": 1,
+      "tier": "low",
+      "model_tier": "low",
+      "policy_rules_fired": [],
+      "latency_ms": 23630,
+      "cost_usd": 0.026519,
+      "input_tokens": 420,
+      "output_tokens": 2378,
+      "cache_read_tokens": 9494,
+      "checks": [
+        {
+          "field": "ai_in_scope",
+          "passed": true,
+          "expected": true,
+          "actual": true
+        },
+        {
+          "field": "ai_type",
+          "passed": true,
+          "expected": "gen_ai",
+          "actual": "gen_ai"
+        },
+        {
+          "field": "inherent_risk_tier",
+          "passed": true,
+          "expected": "low",
+          "actual": "low"
+        },
+        {
+          "field": "tier_within_tolerance",
+          "passed": true,
+          "expected": [
+            "low"
+          ],
+          "actual": "low"
+        },
+        {
+          "field": "recommended_oversight_mode",
+          "passed": true,
+          "expected": [
+            "human_over_the_loop",
+            "human_in_the_loop"
+          ],
+          "actual": "human_over_the_loop"
+        },
+        {
+          "field": "agentic_analysis",
+          "passed": true,
+          "expected": "absent",
+          "actual": "absent"
+        }
+      ],
+      "recalls": {
+        "dimension_floors": {
+          "matched": 2,
+          "expected": 2,
+          "missing": []
+        },
+        "top_10_flags": {
+          "matched": 1,
+          "expected": 1,
+          "missing": []
+        },
+        "considerations": {
+          "matched": 2,
+          "expected": 2,
+          "missing": []
+        },
+        "policy_rules": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        }
+      }
+    },
+    {
+      "case_id": "rpa-invoice-reconciliation",
+      "run": 2,
+      "error": null,
+      "error_kind": null,
+      "attempts": 1,
+      "tier": "low",
+      "model_tier": "low",
+      "policy_rules_fired": [
+        "out_of_scope_short_circuit"
+      ],
+      "latency_ms": 12740,
+      "cost_usd": 0.015923,
+      "input_tokens": 467,
+      "output_tokens": 1309,
+      "cache_read_tokens": 9494,
+      "checks": [
+        {
+          "field": "ai_in_scope",
+          "passed": true,
+          "expected": false,
+          "actual": false
+        },
+        {
+          "field": "agentic_analysis",
+          "passed": true,
+          "expected": "absent",
+          "actual": "absent"
+        },
+        {
+          "field": "risk_analysis_withheld",
+          "passed": true,
+          "expected": "withheld",
+          "actual": "withheld"
+        }
+      ],
+      "recalls": {
+        "dimension_floors": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        },
+        "top_10_flags": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        },
+        "considerations": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        },
+        "policy_rules": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        }
+      }
+    },
+    {
+      "case_id": "underspecified-login-invoice",
+      "run": 2,
+      "error": null,
+      "error_kind": null,
+      "attempts": 1,
+      "tier": "medium",
+      "model_tier": "medium",
+      "policy_rules_fired": [],
+      "latency_ms": 32015,
+      "cost_usd": 0.030041,
+      "input_tokens": 331,
+      "output_tokens": 2748,
+      "cache_read_tokens": 9494,
+      "checks": [
+        {
+          "field": "ai_in_scope",
+          "passed": true,
+          "expected": true,
+          "actual": true
+        },
+        {
+          "field": "inherent_risk_tier",
+          "passed": true,
+          "expected": "medium",
+          "actual": "medium"
+        },
+        {
+          "field": "tier_within_tolerance",
+          "passed": true,
+          "expected": [
+            "low",
+            "medium"
+          ],
+          "actual": "medium"
+        },
+        {
+          "field": "confidence_calibrated",
+          "passed": true,
+          "expected": "<= medium",
+          "actual": "low"
+        },
+        {
+          "field": "agentic_analysis",
+          "passed": true,
+          "expected": "absent",
+          "actual": "absent"
+        }
+      ],
+      "recalls": {
+        "dimension_floors": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        },
+        "top_10_flags": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        },
+        "considerations": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        },
+        "policy_rules": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        }
+      }
+    },
+    {
+      "case_id": "credit-underwriting",
+      "run": 2,
+      "error": null,
+      "error_kind": null,
+      "attempts": 1,
+      "tier": "high",
+      "model_tier": "high",
+      "policy_rules_fired": [],
+      "latency_ms": 31856,
+      "cost_usd": 0.032539,
+      "input_tokens": 405,
+      "output_tokens": 2983,
+      "cache_read_tokens": 9494,
+      "checks": [
+        {
+          "field": "ai_in_scope",
+          "passed": true,
+          "expected": true,
+          "actual": true
+        },
+        {
+          "field": "ai_type",
+          "passed": true,
+          "expected": "traditional",
+          "actual": "traditional"
+        },
+        {
+          "field": "inherent_risk_tier",
+          "passed": true,
+          "expected": "high",
+          "actual": "high"
+        },
+        {
+          "field": "tier_within_tolerance",
+          "passed": true,
+          "expected": [
+            "high"
+          ],
+          "actual": "high"
+        },
+        {
+          "field": "recommended_oversight_mode",
+          "passed": true,
+          "expected": [
+            "human_in_the_loop"
+          ],
+          "actual": "human_in_the_loop"
+        },
+        {
+          "field": "agentic_analysis",
+          "passed": true,
+          "expected": "absent",
+          "actual": "absent"
+        }
+      ],
+      "recalls": {
+        "dimension_floors": {
+          "matched": 3,
+          "expected": 3,
+          "missing": []
+        },
+        "top_10_flags": {
+          "matched": 2,
+          "expected": 2,
+          "missing": []
+        },
+        "considerations": {
+          "matched": 2,
+          "expected": 3,
+          "missing": [
+            "Consideration 5"
+          ]
+        },
+        "policy_rules": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        }
+      }
+    },
+    {
+      "case_id": "cv-screening-shortlist",
+      "run": 2,
+      "error": null,
+      "error_kind": null,
+      "attempts": 1,
+      "tier": "high",
+      "model_tier": "high",
+      "policy_rules_fired": [],
+      "latency_ms": 77370,
+      "cost_usd": 0.039133,
+      "input_tokens": 437,
+      "output_tokens": 3636,
+      "cache_read_tokens": 9494,
+      "checks": [
+        {
+          "field": "ai_in_scope",
+          "passed": true,
+          "expected": true,
+          "actual": true
+        },
+        {
+          "field": "ai_type",
+          "passed": true,
+          "expected": "gen_ai",
+          "actual": "gen_ai"
+        },
+        {
+          "field": "inherent_risk_tier",
+          "passed": true,
+          "expected": "high",
+          "actual": "high"
+        },
+        {
+          "field": "tier_within_tolerance",
+          "passed": true,
+          "expected": [
+            "high"
+          ],
+          "actual": "high"
+        },
+        {
+          "field": "recommended_oversight_mode",
+          "passed": true,
+          "expected": [
+            "human_in_the_loop",
+            "human_over_the_loop"
+          ],
+          "actual": "human_in_the_loop"
+        },
+        {
+          "field": "agentic_analysis",
+          "passed": true,
+          "expected": "absent",
+          "actual": "absent"
+        }
+      ],
+      "recalls": {
+        "dimension_floors": {
+          "matched": 2,
+          "expected": 2,
+          "missing": []
+        },
+        "top_10_flags": {
+          "matched": 1,
+          "expected": 1,
+          "missing": []
+        },
+        "considerations": {
+          "matched": 2,
+          "expected": 2,
+          "missing": []
+        },
+        "policy_rules": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        }
+      }
+    },
+    {
+      "case_id": "agentic-rm-assistant",
+      "run": 2,
+      "error": null,
+      "error_kind": null,
+      "attempts": 1,
+      "tier": "high",
+      "model_tier": "high",
+      "policy_rules_fired": [
+        "never_delegate_flag"
+      ],
+      "latency_ms": 35325,
+      "cost_usd": 0.038841,
+      "input_tokens": 446,
+      "output_tokens": 3605,
+      "cache_read_tokens": 9494,
+      "checks": [
+        {
+          "field": "ai_in_scope",
+          "passed": true,
+          "expected": true,
+          "actual": true
+        },
+        {
+          "field": "ai_type",
+          "passed": true,
+          "expected": "agentic",
+          "actual": "agentic"
+        },
+        {
+          "field": "inherent_risk_tier",
+          "passed": true,
+          "expected": "high",
+          "actual": "high"
+        },
+        {
+          "field": "tier_within_tolerance",
+          "passed": true,
+          "expected": [
+            "high"
+          ],
+          "actual": "high"
+        },
+        {
+          "field": "recommended_oversight_mode",
+          "passed": true,
+          "expected": [
+            "human_in_the_loop"
+          ],
+          "actual": "human_in_the_loop"
+        },
+        {
+          "field": "agentic_analysis",
+          "passed": true,
+          "expected": "present",
+          "actual": "present"
+        }
+      ],
+      "recalls": {
+        "dimension_floors": {
+          "matched": 3,
+          "expected": 3,
+          "missing": []
+        },
+        "top_10_flags": {
+          "matched": 1,
+          "expected": 1,
+          "missing": []
+        },
+        "considerations": {
+          "matched": 2,
+          "expected": 3,
+          "missing": [
+            "Consideration 5"
+          ]
+        },
+        "policy_rules": {
+          "matched": 1,
+          "expected": 1,
+          "missing": []
+        }
+      }
+    },
+    {
+      "case_id": "vendor-procurement-copilot",
+      "run": 2,
+      "error": null,
+      "error_kind": null,
+      "attempts": 1,
+      "tier": "medium",
+      "model_tier": "medium",
+      "policy_rules_fired": [],
+      "latency_ms": 30975,
+      "cost_usd": 0.034727,
+      "input_tokens": 444,
+      "output_tokens": 3194,
+      "cache_read_tokens": 9494,
+      "checks": [
+        {
+          "field": "ai_in_scope",
+          "passed": true,
+          "expected": true,
+          "actual": true
+        },
+        {
+          "field": "ai_type",
+          "passed": true,
+          "expected": "gen_ai",
+          "actual": "gen_ai"
+        },
+        {
+          "field": "inherent_risk_tier",
+          "passed": true,
+          "expected": "medium",
+          "actual": "medium"
+        },
+        {
+          "field": "tier_within_tolerance",
+          "passed": true,
+          "expected": [
+            "medium",
+            "high"
+          ],
+          "actual": "medium"
+        },
+        {
+          "field": "recommended_oversight_mode",
+          "passed": true,
+          "expected": [
+            "human_over_the_loop",
+            "human_in_the_loop"
+          ],
+          "actual": "human_in_the_loop"
+        },
+        {
+          "field": "agentic_analysis",
+          "passed": true,
+          "expected": "absent",
+          "actual": "absent"
+        }
+      ],
+      "recalls": {
+        "dimension_floors": {
+          "matched": 2,
+          "expected": 2,
+          "missing": []
+        },
+        "top_10_flags": {
+          "matched": 1,
+          "expected": 1,
+          "missing": []
+        },
+        "considerations": {
+          "matched": 2,
+          "expected": 2,
+          "missing": []
+        },
+        "policy_rules": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        }
+      }
+    },
+    {
+      "case_id": "biometric-onboarding",
+      "run": 2,
+      "error": null,
+      "error_kind": null,
+      "attempts": 1,
+      "tier": "high",
+      "model_tier": "high",
+      "policy_rules_fired": [],
+      "latency_ms": 29304,
+      "cost_usd": 0.032555,
+      "input_tokens": 418,
+      "output_tokens": 2982,
+      "cache_read_tokens": 9494,
+      "checks": [
+        {
+          "field": "ai_in_scope",
+          "passed": true,
+          "expected": true,
+          "actual": true
+        },
+        {
+          "field": "ai_type",
+          "passed": true,
+          "expected": "traditional",
+          "actual": "traditional"
+        },
+        {
+          "field": "inherent_risk_tier",
+          "passed": true,
+          "expected": "high",
+          "actual": "high"
+        },
+        {
+          "field": "tier_within_tolerance",
+          "passed": true,
+          "expected": [
+            "high"
+          ],
+          "actual": "high"
+        },
+        {
+          "field": "recommended_oversight_mode",
+          "passed": true,
+          "expected": [
+            "human_in_the_loop",
+            "human_over_the_loop"
+          ],
+          "actual": "human_in_the_loop"
+        },
+        {
+          "field": "agentic_analysis",
+          "passed": true,
+          "expected": "absent",
+          "actual": "absent"
+        }
+      ],
+      "recalls": {
+        "dimension_floors": {
+          "matched": 3,
+          "expected": 3,
+          "missing": []
+        },
+        "top_10_flags": {
+          "matched": 1,
+          "expected": 1,
+          "missing": []
+        },
+        "considerations": {
+          "matched": 2,
+          "expected": 2,
+          "missing": []
+        },
+        "policy_rules": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        }
+      }
+    },
+    {
+      "case_id": "marketing-copy-generator",
+      "run": 2,
+      "error": null,
+      "error_kind": null,
+      "attempts": 1,
+      "tier": "medium",
+      "model_tier": "medium",
+      "policy_rules_fired": [],
+      "latency_ms": 27316,
+      "cost_usd": 0.029911,
+      "input_tokens": 406,
+      "output_tokens": 2720,
+      "cache_read_tokens": 9494,
+      "checks": [
+        {
+          "field": "ai_in_scope",
+          "passed": true,
+          "expected": true,
+          "actual": true
+        },
+        {
+          "field": "ai_type",
+          "passed": true,
+          "expected": "gen_ai",
+          "actual": "gen_ai"
+        },
+        {
+          "field": "inherent_risk_tier",
+          "passed": true,
+          "expected": "medium",
+          "actual": "medium"
+        },
+        {
+          "field": "tier_within_tolerance",
+          "passed": true,
+          "expected": [
+            "low",
+            "medium"
+          ],
+          "actual": "medium"
+        },
+        {
+          "field": "recommended_oversight_mode",
+          "passed": true,
+          "expected": [
+            "human_in_the_loop"
+          ],
+          "actual": "human_in_the_loop"
+        },
+        {
+          "field": "agentic_analysis",
+          "passed": true,
+          "expected": "absent",
+          "actual": "absent"
+        }
+      ],
+      "recalls": {
+        "dimension_floors": {
+          "matched": 2,
+          "expected": 2,
+          "missing": []
+        },
+        "top_10_flags": {
+          "matched": 1,
+          "expected": 1,
+          "missing": []
+        },
+        "considerations": {
+          "matched": 2,
+          "expected": 2,
+          "missing": []
+        },
+        "policy_rules": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        }
+      }
+    },
+    {
+      "case_id": "autonomous-refund-chatbot",
+      "run": 2,
+      "error": null,
+      "error_kind": null,
+      "attempts": 1,
+      "tier": "high",
+      "model_tier": "high",
+      "policy_rules_fired": [
+        "never_delegate_flag"
+      ],
+      "latency_ms": 45673,
+      "cost_usd": 0.045081,
+      "input_tokens": 441,
+      "output_tokens": 4230,
+      "cache_read_tokens": 9494,
+      "checks": [
+        {
+          "field": "ai_in_scope",
+          "passed": true,
+          "expected": true,
+          "actual": true
+        },
+        {
+          "field": "ai_type",
+          "passed": true,
+          "expected": "agentic",
+          "actual": "agentic"
+        },
+        {
+          "field": "inherent_risk_tier",
+          "passed": true,
+          "expected": "high",
+          "actual": "high"
+        },
+        {
+          "field": "tier_within_tolerance",
+          "passed": true,
+          "expected": [
+            "high"
+          ],
+          "actual": "high"
+        },
+        {
+          "field": "recommended_oversight_mode",
+          "passed": true,
+          "expected": [
+            "human_in_the_loop",
+            "human_over_the_loop"
+          ],
+          "actual": "human_in_the_loop"
+        },
+        {
+          "field": "agentic_analysis",
+          "passed": true,
+          "expected": "present",
+          "actual": "present"
+        }
+      ],
+      "recalls": {
+        "dimension_floors": {
+          "matched": 2,
+          "expected": 2,
+          "missing": []
+        },
+        "top_10_flags": {
+          "matched": 2,
+          "expected": 2,
+          "missing": []
+        },
+        "considerations": {
+          "matched": 3,
+          "expected": 3,
+          "missing": []
+        },
+        "policy_rules": {
+          "matched": 1,
+          "expected": 1,
+          "missing": []
+        }
+      }
+    },
+    {
+      "case_id": "internal-policy-rag",
+      "run": 3,
+      "error": null,
+      "error_kind": null,
+      "attempts": 1,
+      "tier": "low",
+      "model_tier": "low",
+      "policy_rules_fired": [],
+      "latency_ms": 23103,
+      "cost_usd": 0.026899,
+      "input_tokens": 420,
+      "output_tokens": 2416,
+      "cache_read_tokens": 9494,
+      "checks": [
+        {
+          "field": "ai_in_scope",
+          "passed": true,
+          "expected": true,
+          "actual": true
+        },
+        {
+          "field": "ai_type",
+          "passed": true,
+          "expected": "gen_ai",
+          "actual": "gen_ai"
+        },
+        {
+          "field": "inherent_risk_tier",
+          "passed": true,
+          "expected": "low",
+          "actual": "low"
+        },
+        {
+          "field": "tier_within_tolerance",
+          "passed": true,
+          "expected": [
+            "low"
+          ],
+          "actual": "low"
+        },
+        {
+          "field": "recommended_oversight_mode",
+          "passed": true,
+          "expected": [
+            "human_over_the_loop",
+            "human_in_the_loop"
+          ],
+          "actual": "human_over_the_loop"
+        },
+        {
+          "field": "agentic_analysis",
+          "passed": true,
+          "expected": "absent",
+          "actual": "absent"
+        }
+      ],
+      "recalls": {
+        "dimension_floors": {
+          "matched": 2,
+          "expected": 2,
+          "missing": []
+        },
+        "top_10_flags": {
+          "matched": 1,
+          "expected": 1,
+          "missing": []
+        },
+        "considerations": {
+          "matched": 2,
+          "expected": 2,
+          "missing": []
+        },
+        "policy_rules": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        }
+      }
+    },
+    {
+      "case_id": "rpa-invoice-reconciliation",
+      "run": 3,
+      "error": null,
+      "error_kind": null,
+      "attempts": 1,
+      "tier": "low",
+      "model_tier": "low",
+      "policy_rules_fired": [
+        "out_of_scope_short_circuit"
+      ],
+      "latency_ms": 11864,
+      "cost_usd": 0.015363,
+      "input_tokens": 467,
+      "output_tokens": 1253,
+      "cache_read_tokens": 9494,
+      "checks": [
+        {
+          "field": "ai_in_scope",
+          "passed": true,
+          "expected": false,
+          "actual": false
+        },
+        {
+          "field": "agentic_analysis",
+          "passed": true,
+          "expected": "absent",
+          "actual": "absent"
+        },
+        {
+          "field": "risk_analysis_withheld",
+          "passed": true,
+          "expected": "withheld",
+          "actual": "withheld"
+        }
+      ],
+      "recalls": {
+        "dimension_floors": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        },
+        "top_10_flags": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        },
+        "considerations": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        },
+        "policy_rules": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        }
+      }
+    },
+    {
+      "case_id": "underspecified-login-invoice",
+      "run": 3,
+      "error": null,
+      "error_kind": null,
+      "attempts": 1,
+      "tier": "medium",
+      "model_tier": "medium",
+      "policy_rules_fired": [],
+      "latency_ms": 32733,
+      "cost_usd": 0.028451,
+      "input_tokens": 331,
+      "output_tokens": 2589,
+      "cache_read_tokens": 9494,
+      "checks": [
+        {
+          "field": "ai_in_scope",
+          "passed": true,
+          "expected": true,
+          "actual": true
+        },
+        {
+          "field": "inherent_risk_tier",
+          "passed": true,
+          "expected": "medium",
+          "actual": "medium"
+        },
+        {
+          "field": "tier_within_tolerance",
+          "passed": true,
+          "expected": [
+            "low",
+            "medium"
+          ],
+          "actual": "medium"
+        },
+        {
+          "field": "confidence_calibrated",
+          "passed": true,
+          "expected": "<= medium",
+          "actual": "low"
+        },
+        {
+          "field": "agentic_analysis",
+          "passed": true,
+          "expected": "absent",
+          "actual": "absent"
+        }
+      ],
+      "recalls": {
+        "dimension_floors": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        },
+        "top_10_flags": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        },
+        "considerations": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        },
+        "policy_rules": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        }
+      }
+    },
+    {
+      "case_id": "credit-underwriting",
+      "run": 3,
+      "error": null,
+      "error_kind": null,
+      "attempts": 2,
+      "tier": "high",
+      "model_tier": "high",
+      "policy_rules_fired": [],
+      "latency_ms": 26693,
+      "cost_usd": 0.024689,
+      "input_tokens": 405,
+      "output_tokens": 2198,
+      "cache_read_tokens": 9494,
+      "checks": [
+        {
+          "field": "ai_in_scope",
+          "passed": true,
+          "expected": true,
+          "actual": true
+        },
+        {
+          "field": "ai_type",
+          "passed": true,
+          "expected": "traditional",
+          "actual": "traditional"
+        },
+        {
+          "field": "inherent_risk_tier",
+          "passed": true,
+          "expected": "high",
+          "actual": "high"
+        },
+        {
+          "field": "tier_within_tolerance",
+          "passed": true,
+          "expected": [
+            "high"
+          ],
+          "actual": "high"
+        },
+        {
+          "field": "recommended_oversight_mode",
+          "passed": true,
+          "expected": [
+            "human_in_the_loop"
+          ],
+          "actual": "human_in_the_loop"
+        },
+        {
+          "field": "agentic_analysis",
+          "passed": true,
+          "expected": "absent",
+          "actual": "absent"
+        }
+      ],
+      "recalls": {
+        "dimension_floors": {
+          "matched": 3,
+          "expected": 3,
+          "missing": []
+        },
+        "top_10_flags": {
+          "matched": 0,
+          "expected": 2,
+          "missing": [
+            "Unrepresentative or biased data inputs",
+            "Adverse or inappropriate impact to individuals and groups"
+          ]
+        },
+        "considerations": {
+          "matched": 2,
+          "expected": 3,
+          "missing": [
+            "Consideration 5"
+          ]
+        },
+        "policy_rules": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        }
+      }
+    },
+    {
+      "case_id": "cv-screening-shortlist",
+      "run": 3,
+      "error": null,
+      "error_kind": null,
+      "attempts": 1,
+      "tier": "high",
+      "model_tier": "medium",
+      "policy_rules_fired": [
+        "high_risk_domain_floor"
+      ],
+      "latency_ms": 33487,
+      "cost_usd": 0.034663,
+      "input_tokens": 437,
+      "output_tokens": 3189,
+      "cache_read_tokens": 9494,
+      "checks": [
+        {
+          "field": "ai_in_scope",
+          "passed": true,
+          "expected": true,
+          "actual": true
+        },
+        {
+          "field": "ai_type",
+          "passed": true,
+          "expected": "gen_ai",
+          "actual": "gen_ai"
+        },
+        {
+          "field": "inherent_risk_tier",
+          "passed": true,
+          "expected": "high",
+          "actual": "high"
+        },
+        {
+          "field": "tier_within_tolerance",
+          "passed": true,
+          "expected": [
+            "high"
+          ],
+          "actual": "high"
+        },
+        {
+          "field": "recommended_oversight_mode",
+          "passed": true,
+          "expected": [
+            "human_in_the_loop",
+            "human_over_the_loop"
+          ],
+          "actual": "human_in_the_loop"
+        },
+        {
+          "field": "agentic_analysis",
+          "passed": true,
+          "expected": "absent",
+          "actual": "absent"
+        }
+      ],
+      "recalls": {
+        "dimension_floors": {
+          "matched": 2,
+          "expected": 2,
+          "missing": []
+        },
+        "top_10_flags": {
+          "matched": 1,
+          "expected": 1,
+          "missing": []
+        },
+        "considerations": {
+          "matched": 2,
+          "expected": 2,
+          "missing": []
+        },
+        "policy_rules": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        }
+      }
+    },
+    {
+      "case_id": "agentic-rm-assistant",
+      "run": 3,
+      "error": null,
+      "error_kind": null,
+      "attempts": 1,
+      "tier": "high",
+      "model_tier": "high",
+      "policy_rules_fired": [
+        "never_delegate_flag"
+      ],
+      "latency_ms": 38089,
+      "cost_usd": 0.042461,
+      "input_tokens": 446,
+      "output_tokens": 3967,
+      "cache_read_tokens": 9494,
+      "checks": [
+        {
+          "field": "ai_in_scope",
+          "passed": true,
+          "expected": true,
+          "actual": true
+        },
+        {
+          "field": "ai_type",
+          "passed": true,
+          "expected": "agentic",
+          "actual": "agentic"
+        },
+        {
+          "field": "inherent_risk_tier",
+          "passed": true,
+          "expected": "high",
+          "actual": "high"
+        },
+        {
+          "field": "tier_within_tolerance",
+          "passed": true,
+          "expected": [
+            "high"
+          ],
+          "actual": "high"
+        },
+        {
+          "field": "recommended_oversight_mode",
+          "passed": true,
+          "expected": [
+            "human_in_the_loop"
+          ],
+          "actual": "human_in_the_loop"
+        },
+        {
+          "field": "agentic_analysis",
+          "passed": true,
+          "expected": "present",
+          "actual": "present"
+        }
+      ],
+      "recalls": {
+        "dimension_floors": {
+          "matched": 3,
+          "expected": 3,
+          "missing": []
+        },
+        "top_10_flags": {
+          "matched": 1,
+          "expected": 1,
+          "missing": []
+        },
+        "considerations": {
+          "matched": 3,
+          "expected": 3,
+          "missing": []
+        },
+        "policy_rules": {
+          "matched": 1,
+          "expected": 1,
+          "missing": []
+        }
+      }
+    },
+    {
+      "case_id": "vendor-procurement-copilot",
+      "run": 3,
+      "error": null,
+      "error_kind": null,
+      "attempts": 1,
+      "tier": "medium",
+      "model_tier": "medium",
+      "policy_rules_fired": [],
+      "latency_ms": 31142,
+      "cost_usd": 0.033897,
+      "input_tokens": 444,
+      "output_tokens": 3111,
+      "cache_read_tokens": 9494,
+      "checks": [
+        {
+          "field": "ai_in_scope",
+          "passed": true,
+          "expected": true,
+          "actual": true
+        },
+        {
+          "field": "ai_type",
+          "passed": true,
+          "expected": "gen_ai",
+          "actual": "gen_ai"
+        },
+        {
+          "field": "inherent_risk_tier",
+          "passed": true,
+          "expected": "medium",
+          "actual": "medium"
+        },
+        {
+          "field": "tier_within_tolerance",
+          "passed": true,
+          "expected": [
+            "medium",
+            "high"
+          ],
+          "actual": "medium"
+        },
+        {
+          "field": "recommended_oversight_mode",
+          "passed": true,
+          "expected": [
+            "human_over_the_loop",
+            "human_in_the_loop"
+          ],
+          "actual": "human_in_the_loop"
+        },
+        {
+          "field": "agentic_analysis",
+          "passed": true,
+          "expected": "absent",
+          "actual": "absent"
+        }
+      ],
+      "recalls": {
+        "dimension_floors": {
+          "matched": 2,
+          "expected": 2,
+          "missing": []
+        },
+        "top_10_flags": {
+          "matched": 1,
+          "expected": 1,
+          "missing": []
+        },
+        "considerations": {
+          "matched": 2,
+          "expected": 2,
+          "missing": []
+        },
+        "policy_rules": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        }
+      }
+    },
+    {
+      "case_id": "biometric-onboarding",
+      "run": 3,
+      "error": null,
+      "error_kind": null,
+      "attempts": 1,
+      "tier": "high",
+      "model_tier": "high",
+      "policy_rules_fired": [],
+      "latency_ms": 33506,
+      "cost_usd": 0.033715,
+      "input_tokens": 418,
+      "output_tokens": 3098,
+      "cache_read_tokens": 9494,
+      "checks": [
+        {
+          "field": "ai_in_scope",
+          "passed": true,
+          "expected": true,
+          "actual": true
+        },
+        {
+          "field": "ai_type",
+          "passed": true,
+          "expected": "traditional",
+          "actual": "traditional"
+        },
+        {
+          "field": "inherent_risk_tier",
+          "passed": true,
+          "expected": "high",
+          "actual": "high"
+        },
+        {
+          "field": "tier_within_tolerance",
+          "passed": true,
+          "expected": [
+            "high"
+          ],
+          "actual": "high"
+        },
+        {
+          "field": "recommended_oversight_mode",
+          "passed": true,
+          "expected": [
+            "human_in_the_loop",
+            "human_over_the_loop"
+          ],
+          "actual": "human_in_the_loop"
+        },
+        {
+          "field": "agentic_analysis",
+          "passed": true,
+          "expected": "absent",
+          "actual": "absent"
+        }
+      ],
+      "recalls": {
+        "dimension_floors": {
+          "matched": 3,
+          "expected": 3,
+          "missing": []
+        },
+        "top_10_flags": {
+          "matched": 1,
+          "expected": 1,
+          "missing": []
+        },
+        "considerations": {
+          "matched": 2,
+          "expected": 2,
+          "missing": []
+        },
+        "policy_rules": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        }
+      }
+    },
+    {
+      "case_id": "marketing-copy-generator",
+      "run": 3,
+      "error": null,
+      "error_kind": null,
+      "attempts": 2,
+      "tier": "medium",
+      "model_tier": "medium",
+      "policy_rules_fired": [],
+      "latency_ms": 25752,
+      "cost_usd": 0.029841,
+      "input_tokens": 406,
+      "output_tokens": 2713,
+      "cache_read_tokens": 9494,
+      "checks": [
+        {
+          "field": "ai_in_scope",
+          "passed": true,
+          "expected": true,
+          "actual": true
+        },
+        {
+          "field": "ai_type",
+          "passed": true,
+          "expected": "gen_ai",
+          "actual": "gen_ai"
+        },
+        {
+          "field": "inherent_risk_tier",
+          "passed": true,
+          "expected": "medium",
+          "actual": "medium"
+        },
+        {
+          "field": "tier_within_tolerance",
+          "passed": true,
+          "expected": [
+            "low",
+            "medium"
+          ],
+          "actual": "medium"
+        },
+        {
+          "field": "recommended_oversight_mode",
+          "passed": true,
+          "expected": [
+            "human_in_the_loop"
+          ],
+          "actual": "human_in_the_loop"
+        },
+        {
+          "field": "agentic_analysis",
+          "passed": true,
+          "expected": "absent",
+          "actual": "absent"
+        }
+      ],
+      "recalls": {
+        "dimension_floors": {
+          "matched": 2,
+          "expected": 2,
+          "missing": []
+        },
+        "top_10_flags": {
+          "matched": 1,
+          "expected": 1,
+          "missing": []
+        },
+        "considerations": {
+          "matched": 2,
+          "expected": 2,
+          "missing": []
+        },
+        "policy_rules": {
+          "matched": 0,
+          "expected": 0,
+          "missing": []
+        }
+      }
+    },
+    {
+      "case_id": "autonomous-refund-chatbot",
+      "run": 3,
+      "error": null,
+      "error_kind": null,
+      "attempts": 3,
+      "tier": "high",
+      "model_tier": "high",
+      "policy_rules_fired": [
+        "never_delegate_flag"
+      ],
+      "latency_ms": 40704,
+      "cost_usd": 0.042411,
+      "input_tokens": 441,
+      "output_tokens": 3963,
+      "cache_read_tokens": 9494,
+      "checks": [
+        {
+          "field": "ai_in_scope",
+          "passed": true,
+          "expected": true,
+          "actual": true
+        },
+        {
+          "field": "ai_type",
+          "passed": true,
+          "expected": "agentic",
+          "actual": "agentic"
+        },
+        {
+          "field": "inherent_risk_tier",
+          "passed": true,
+          "expected": "high",
+          "actual": "high"
+        },
+        {
+          "field": "tier_within_tolerance",
+          "passed": true,
+          "expected": [
+            "high"
+          ],
+          "actual": "high"
+        },
+        {
+          "field": "recommended_oversight_mode",
+          "passed": true,
+          "expected": [
+            "human_in_the_loop",
+            "human_over_the_loop"
+          ],
+          "actual": "human_in_the_loop"
+        },
+        {
+          "field": "agentic_analysis",
+          "passed": true,
+          "expected": "present",
+          "actual": "present"
+        }
+      ],
+      "recalls": {
+        "dimension_floors": {
+          "matched": 2,
+          "expected": 2,
+          "missing": []
+        },
+        "top_10_flags": {
+          "matched": 2,
+          "expected": 2,
+          "missing": []
+        },
+        "considerations": {
+          "matched": 3,
+          "expected": 3,
+          "missing": []
+        },
+        "policy_rules": {
+          "matched": 1,
+          "expected": 1,
+          "missing": []
+        }
+      }
+    }
+  ]
+}

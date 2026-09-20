@@ -1,0 +1,285 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mindforge.local/pack.schema.json",
+  "title": "MindForge framework pack",
+  "description": "The versioned, offline artefact the assessor and the API read at runtime. Built by mindforge_assess.ingest.build_pack from verified extractions; the handbook PDF is never read at request time.",
+  "type": "object",
+  "required": ["pack_version", "provenance", "definitions", "materiality", "dimensions", "oversight_modes", "monitoring", "metrics", "guardrails", "considerations", "agentic", "illustrations"],
+  "additionalProperties": false,
+  "$defs": {
+    "source": {
+      "type": "object",
+      "required": ["page", "section", "quote"],
+      "additionalProperties": false,
+      "properties": {
+        "page": {"type": "integer", "minimum": 1, "description": "PRINTED page number, as a reader sees it in the footer."},
+        "section": {"type": "string"},
+        "quote": {"type": "string", "minLength": 1}
+      }
+    },
+    "item_id": {"type": "string", "pattern": "^[a-z_]+:[a-z0-9-]+$"},
+    "rating": {"enum": ["low", "medium", "high"]},
+    "sourced_item": {
+      "type": "object",
+      "required": ["item_id", "source"],
+      "properties": {
+        "item_id": {"$ref": "#/$defs/item_id"},
+        "source": {"$ref": "#/$defs/source"}
+      }
+    }
+  },
+  "properties": {
+    "pack_version": {"const": 1},
+    "provenance": {
+      "type": "object",
+      "required": ["pdf_sha256", "pdf_filename", "pdf_physical_pages", "model", "extracted_at", "page_map_version", "printed_to_pdf_offset", "extractors", "completeness"],
+      "properties": {
+        "pdf_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "pdf_filename": {"type": "string"},
+        "pdf_physical_pages": {"type": "integer", "minimum": 1},
+        "document": {"type": "object"},
+        "model": {"type": "string"},
+        "extracted_at": {"type": "string"},
+        "built_at": {"type": "string"},
+        "page_map_version": {"type": "integer"},
+        "printed_to_pdf_offset": {"type": "integer", "description": "pdf_page = printed_page + offset"},
+        "extractors": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "printed_pages", "model", "extracted_at"],
+            "properties": {
+              "name": {"type": "string"},
+              "printed_pages": {"type": "string"},
+              "pdf_pages": {"type": "string"},
+              "model": {"type": "string"},
+              "extracted_at": {"type": "string"},
+              "attempts": {"type": "integer"},
+              "requests": {"type": "integer"},
+              "usage": {"type": "object"}
+            }
+          }
+        },
+        "verification": {
+          "type": "object",
+          "properties": {
+            "verified_at": {"type": "string"},
+            "model": {"type": "string"},
+            "blocking_failures": {"type": "integer", "minimum": 0},
+            "summaries": {"type": "array", "items": {"type": "object"}}
+          }
+        },
+        "ingestion_usage": {"type": "object"},
+        "completeness": {
+          "type": "object",
+          "required": ["expected", "present", "missing"],
+          "properties": {
+            "expected": {"type": "array", "items": {"type": "string"}},
+            "present": {"type": "array", "items": {"type": "string"}},
+            "missing": {"type": "array", "items": {"type": "string"}},
+            "partial": {"type": "boolean"}
+          }
+        }
+      }
+    },
+    "definitions": {
+      "type": "object",
+      "properties": {
+        "ai_definition": {"type": ["object", "null"]},
+        "in_scope_examples": {"type": "array"},
+        "out_of_scope_examples": {"type": "array"},
+        "terms": {"type": "array"},
+        "abs_top_risks": {"type": "array"},
+        "scope_notes": {"type": "array"}
+      }
+    },
+    "materiality": {
+      "type": "object",
+      "required": ["factors", "tiers", "matrix"],
+      "properties": {
+        "factors": {
+          "type": "array",
+          "items": {
+            "allOf": [{"$ref": "#/$defs/sourced_item"}],
+            "required": ["item_id", "factor", "description", "source"],
+            "properties": {
+              "factor": {"type": "string"},
+              "description": {"type": "string"},
+              "sub_criteria": {"type": "array", "items": {"type": "string"}},
+              "low_guidance": {"type": ["string", "null"]},
+              "medium_guidance": {"type": ["string", "null"]},
+              "high_guidance": {"type": ["string", "null"]}
+            }
+          }
+        },
+        "tiers": {"type": "array", "items": {"type": "object", "required": ["tier", "definition"], "properties": {"tier": {"$ref": "#/$defs/rating"}}}},
+        "tiering_method": {"type": ["string", "null"]},
+        "residual_risk_logic": {"type": ["string", "null"]},
+        "agentic_or_genai_factors": {"type": "array", "items": {"type": "string"}},
+        "matrix": {
+          "type": "object",
+          "required": ["label", "cells"],
+          "properties": {
+            "label": {"type": "string"},
+            "caption": {"type": "string"},
+            "axis_inherent_values": {"type": "array", "items": {"type": "string"}},
+            "axis_evaluation_values": {"type": "array", "items": {"type": "string"}},
+            "cells": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "required": ["inherent_tier", "evaluation_result", "residual_label", "residual_tiers"],
+                "properties": {
+                  "inherent_tier": {"$ref": "#/$defs/rating"},
+                  "evaluation_result": {"type": "string"},
+                  "residual_label": {"type": "string"},
+                  "residual_tiers": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/rating"}},
+                  "note": {"type": ["string", "null"]}
+                }
+              }
+            },
+            "always_high_note": {"type": ["string", "null"]},
+            "always_high_note_applies_to": {"type": ["string", "null"]},
+            "failure_to_meet_minimum_note": {"type": ["string", "null"]},
+            "source": {"$ref": "#/$defs/source"}
+          }
+        }
+      }
+    },
+    "dimensions": {
+      "type": "array",
+      "items": {
+        "allOf": [{"$ref": "#/$defs/sourced_item"}],
+        "required": ["item_id", "dimension", "risks", "source"],
+        "properties": {
+          "dimension": {"enum": ["Fairness & Bias", "Ethics", "Accountability & Governance", "Transparency", "Legal & Regulatory", "Robustness & Stability", "Cyber & Data Security"]},
+          "printed_name": {"type": "string"},
+          "definition": {"type": ["string", "null"]},
+          "risks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["name", "description", "source"],
+              "properties": {
+                "name": {"type": "string"},
+                "description": {"type": "string"},
+                "ai_specific_elements": {"type": ["string", "null"]},
+                "secondary_dimensions": {"type": "array", "items": {"type": "string"}},
+                "lifecycle_stages": {"type": "array", "items": {"type": "string"}},
+                "is_abs_top_10": {"type": ["boolean", "null"]},
+                "source": {"$ref": "#/$defs/source"}
+              }
+            }
+          }
+        }
+      }
+    },
+    "oversight_modes": {
+      "type": "array",
+      "items": {
+        "allOf": [{"$ref": "#/$defs/sourced_item"}],
+        "required": ["item_id", "mode", "definition", "source"],
+        "properties": {
+          "mode": {"enum": ["human_in_the_loop", "human_over_the_loop", "human_out_of_the_loop"]},
+          "printed_name": {"type": "string"},
+          "definition": {"type": "string"},
+          "when_appropriate": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "monitoring": {
+      "type": "object",
+      "properties": {
+        "sampling_methodologies": {"type": "array"},
+        "sampling_table_label": {"type": ["string", "null"]},
+        "monitoring_practices": {"type": "array"},
+        "interruption_controls": {"type": "array"},
+        "selection_guidance": {"type": ["string", "null"]}
+      }
+    },
+    "metrics": {
+      "type": "array",
+      "items": {
+        "allOf": [{"$ref": "#/$defs/sourced_item"}],
+        "required": ["item_id", "name", "definition", "source"],
+        "properties": {
+          "name": {"type": "string"},
+          "definition": {"type": "string"},
+          "formula": {"type": ["string", "null"]},
+          "ai_types": {"type": "array", "items": {"type": "string"}},
+          "dimension": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "guardrails": {
+      "type": "array",
+      "items": {
+        "allOf": [{"$ref": "#/$defs/sourced_item"}],
+        "required": ["item_id", "name", "description", "source"],
+        "properties": {
+          "name": {"type": "string"},
+          "description": {"type": "string"},
+          "ai_types": {"type": "array", "items": {"type": "string"}},
+          "interpretability_type": {"type": ["string", "null"]},
+          "dimension": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "interpretability_typology": {"type": "array"},
+    "considerations": {
+      "type": "array",
+      "items": {
+        "allOf": [{"$ref": "#/$defs/sourced_item"}],
+        "required": ["item_id", "number", "title", "implementation_practices", "source"],
+        "properties": {
+          "number": {"type": "integer", "minimum": 1, "maximum": 17},
+          "title": {"type": "string"},
+          "handbook_section": {"type": ["string", "null"]},
+          "implementation_practices": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["text", "source"],
+              "properties": {
+                "reference": {"type": ["string", "null"]},
+                "text": {"type": "string"},
+                "source": {"$ref": "#/$defs/source"}
+              }
+            }
+          }
+        }
+      }
+    },
+    "agentic": {
+      "type": "object",
+      "properties": {
+        "agentic_risk_factors": {"type": "array"},
+        "accountability_principle": {"type": ["string", "null"]},
+        "accountability_source": {"type": ["object", "null"]},
+        "never_delegate_examples": {"type": "array"},
+        "interruption_controls": {"type": "array"},
+        "tool_access_risks": {"type": "array"},
+        "framework_name": {"type": ["string", "null"]},
+        "risk_sources": {"type": "array"},
+        "framework_dimensions": {"type": "array"},
+        "gen_ai_vs_agentic": {"type": "array"}
+      }
+    },
+    "illustrations": {
+      "type": "array",
+      "items": {
+        "allOf": [{"$ref": "#/$defs/sourced_item"}],
+        "required": ["item_id", "label", "institution", "summary", "source"],
+        "properties": {
+          "label": {"type": "string"},
+          "institution": {"type": "string"},
+          "title": {"type": "string"},
+          "summary": {"type": "string"},
+          "practices": {"type": "array", "items": {"type": "string"}},
+          "handbook_topics": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    }
+  }
+}

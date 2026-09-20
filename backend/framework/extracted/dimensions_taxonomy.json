@@ -1,0 +1,981 @@
+{
+  "extractor": "dimensions_taxonomy",
+  "model": "claude-opus-5",
+  "extracted_at": "2026-09-20T08:42:29+00:00",
+  "pdf_pages": "138-145",
+  "printed_pages": "131-138",
+  "requests": 1,
+  "attempts": 1,
+  "attempt_log": [
+    {
+      "attempt": 1,
+      "problems": [],
+      "output_tokens": 12079,
+      "latency_ms": 114369
+    }
+  ],
+  "validation_problems": [],
+  "warnings": [
+    "model could not read: Page 132 text layer lists lifecycle stage names in a different order (Data Acquisition and Processing first) than the rendered table image (Use Case Context and Design as 1); the rendered table order was used."
+  ],
+  "usage": {
+    "input_tokens": 561,
+    "output_tokens": 12079,
+    "cache_creation_input_tokens": 24072,
+    "cache_read_input_tokens": 0,
+    "calls": 1,
+    "latency_ms": 114369,
+    "estimated_cost_usd": 0.4552
+  },
+  "data": {
+    "dimensions": [
+      {
+        "dimension": "Fairness & Bias",
+        "printed_name": "Fairness & Bias",
+        "definition": null,
+        "risks": [
+          {
+            "name": "Unrepresentative or biased data inputs",
+            "description": "Data is biased against, or unevenly represents, certain individuals or groups of individuals, which can produce biased model outputs.",
+            "ai_specific_elements": "Risk applies to AI as well as non-AI models.",
+            "secondary_dimensions": [
+              "Robustness & Stability"
+            ],
+            "lifecycle_stages": [
+              "2",
+              "3"
+            ],
+            "is_abs_top_10": true,
+            "source": {
+              "page": 133,
+              "section": "Appendix B",
+              "quote": "Data is biased against, or unevenly represents, certain individuals or groups of individuals"
+            }
+          },
+          {
+            "name": "Adverse or inappropriate impact to individuals and groups",
+            "description": "Models generate outputs that can be detrimental or inappropriate for individuals or groups.",
+            "ai_specific_elements": "AI has the potential to adversely impact different individuals or social groups in complex ways that go beyond traditional modelling considerations around data representativeness; this can include a range of types of differential treatment, exclusion, or the perpetuation of stereotypes.",
+            "secondary_dimensions": [],
+            "lifecycle_stages": [
+              "5"
+            ],
+            "is_abs_top_10": true,
+            "source": {
+              "page": 133,
+              "section": "Appendix B",
+              "quote": "Models generate outputs that can be detrimental or inappropriate for individuals or groups."
+            }
+          }
+        ],
+        "source": {
+          "page": 133,
+          "section": "Appendix B",
+          "quote": "Fairness & Bias Unrepresentative or biased data inputs"
+        }
+      },
+      {
+        "dimension": "Ethics",
+        "printed_name": "Ethics",
+        "definition": null,
+        "risks": [
+          {
+            "name": "Value misalignment",
+            "description": "Gen AI services, outputs and/or uses do not align with corporate or societal values.",
+            "ai_specific_elements": "AI's non-deterministic behaviour and the autonomy it often operates with significantly enhance the risk that tools may not be aligned with the FI's intentions.",
+            "secondary_dimensions": [],
+            "lifecycle_stages": [
+              "1"
+            ],
+            "is_abs_top_10": false,
+            "source": {
+              "page": 133,
+              "section": "Appendix B",
+              "quote": "Gen AI services, outputs and/or uses do not align with corporate or societal values."
+            }
+          },
+          {
+            "name": "Environmental sustainability impact",
+            "description": "Environmental impact of running LLMs, especially increased carbon emissions which impact the corporate social responsibility and ESG outcomes for the organisation.",
+            "ai_specific_elements": "The significant environmental impact of large-scale AI operations, especially those associated with Gen AI, enhance existing risks around the environmental footprint of IT operations.",
+            "secondary_dimensions": [],
+            "lifecycle_stages": [
+              "1",
+              "3",
+              "5"
+            ],
+            "is_abs_top_10": false,
+            "source": {
+              "page": 133,
+              "section": "Appendix B",
+              "quote": "Environmental impact of running LLMs, especially increased carbon emissions"
+            }
+          },
+          {
+            "name": "Dark patterns",
+            "description": "Generation of synthetically created deceptive or manipulative content that may trick or mislead users into taking certain actions without fully understanding the consequences (example, nudging children towards certain content or services).",
+            "ai_specific_elements": "AI's capability to behave with a degree of autonomy and to, in some cases, interact with customers (directly or indirectly) creates new risks of unintentional behavioural manipulation.",
+            "secondary_dimensions": [],
+            "lifecycle_stages": [
+              "3",
+              "5"
+            ],
+            "is_abs_top_10": false,
+            "source": {
+              "page": 133,
+              "section": "Appendix B",
+              "quote": "Generation of synthetically created deceptive or manipulative content that may trick or mislead users"
+            }
+          },
+          {
+            "name": "Toxic and offensive outputs",
+            "description": "Outputs produced contain harmful, offensive, hateful, discriminatory, violent, racist, sexist or nudity-related information.",
+            "ai_specific_elements": "The potential toxicity in AI-generated content presents new risks around harm to the FI's reputation or its clients.",
+            "secondary_dimensions": [
+              "Legal & Regulatory",
+              "Cyber & Data Security"
+            ],
+            "lifecycle_stages": [
+              "3",
+              "5"
+            ],
+            "is_abs_top_10": true,
+            "source": {
+              "page": 133,
+              "section": "Appendix B",
+              "quote": "Outputs produced contain harmful, offensive, hateful, discriminatory, violent, racist, sexist or nudity-related information."
+            }
+          }
+        ],
+        "source": {
+          "page": 133,
+          "section": "Appendix B",
+          "quote": "Ethics Value misalignment"
+        }
+      },
+      {
+        "dimension": "Accountability & Governance",
+        "printed_name": "Accountability & Governance",
+        "definition": null,
+        "risks": [
+          {
+            "name": "Lack of AI risk awareness",
+            "description": "Insufficient education or reskilling resulting in undertrained resources lacking awareness of the unique risks involved with Gen AI. Also, over-reliance on Gen AI can lead to an erroneous, biased, or misleading outputs being accepted without adequate scrutiny. The disposition of Gen AI to produce outputs that are not easily interpretable or verifiable amplifies this risk. This reliance can compromise the quality and integrity of decision-making processes, as well as erode trust in institutional operations.",
+            "ai_specific_elements": "AI presents unique risks to an FI and, especially in the case of Gen AI, may directly impact more employees. The potential for misuse when employees are not aware of the specific risks of AI is an enhanced risk.",
+            "secondary_dimensions": [],
+            "lifecycle_stages": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5"
+            ],
+            "is_abs_top_10": true,
+            "source": {
+              "page": 133,
+              "section": "Appendix B",
+              "quote": "Insufficient education or reskilling resulting in undertrained resources lacking awareness of the unique risks"
+            }
+          },
+          {
+            "name": "Lack of third-party accountability",
+            "description": "Organisation has limited control or oversight over the development, modification and decision-making process for Gen AI models/services from third-party providers.",
+            "ai_specific_elements": "AI can often require a greater reliance on third-party vendors than traditional software. Especially when using Gen AI, the complexity and non-determinism of AI systems can enhance existing risks around holding vendors accountable for the performance of their models.",
+            "secondary_dimensions": [],
+            "lifecycle_stages": [
+              "3",
+              "5"
+            ],
+            "is_abs_top_10": false,
+            "source": {
+              "page": 134,
+              "section": "Appendix B",
+              "quote": "Organisation has limited control or oversight over the development, modification and decision-making process"
+            }
+          },
+          {
+            "name": "Lack of use case, data and model governance",
+            "description": "Failure to implement and enforce principles, guidelines, protocols and controls to proactively manage risks, and ensure traceability and responsibility in cases of undesirable outcomes.",
+            "ai_specific_elements": "Risk applies to AI as well as non-AI software.",
+            "secondary_dimensions": [],
+            "lifecycle_stages": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5"
+            ],
+            "is_abs_top_10": true,
+            "source": {
+              "page": 134,
+              "section": "Appendix B",
+              "quote": "Failure to implement and enforce principles, guidelines, protocols and controls to proactively manage risks"
+            }
+          },
+          {
+            "name": "Inadequate human oversight",
+            "description": "Insufficient human-in-the-loop or oversight, limiting recourse to human correction or intervention in the event of a failure or when generating content with risk levels requiring human validation.",
+            "ai_specific_elements": "AI has significant capabilities for automated or independent action, beyond those of traditional models or software. The importance of enhanced human oversight of AI and scrutiny of AI-made decisions is an enhanced risk.",
+            "secondary_dimensions": [],
+            "lifecycle_stages": [
+              "3",
+              "5"
+            ],
+            "is_abs_top_10": true,
+            "source": {
+              "page": 134,
+              "section": "Appendix B",
+              "quote": "Insufficient human-in-the-loop or oversight, limiting recourse to human correction or intervention"
+            }
+          },
+          {
+            "name": "Inadequate feedback and recourse mechanisms",
+            "description": "No mechanism to provide feedback or seek recourse for those impacted by harmful or biased outputs, and no consequence for the system's developers or owners for any negative outcomes.",
+            "ai_specific_elements": "Risk applies to AI as well as non-AI software.",
+            "secondary_dimensions": [],
+            "lifecycle_stages": [
+              "5"
+            ],
+            "is_abs_top_10": true,
+            "source": {
+              "page": 134,
+              "section": "Appendix B",
+              "quote": "No mechanism to provide feedback or seek recourse for those impacted by harmful or biased outputs"
+            }
+          }
+        ],
+        "source": {
+          "page": 133,
+          "section": "Appendix B",
+          "quote": "Accountability & Governance Lack of AI risk awareness"
+        }
+      },
+      {
+        "dimension": "Transparency",
+        "printed_name": "Transparency",
+        "definition": null,
+        "risks": [
+          {
+            "name": "Unclear output accuracy",
+            "description": "The level of accuracy needed for the proposed Gen AI use case outcome is not clear and cannot be validated.",
+            "ai_specific_elements": "Traditional AI shares existing modelling risks around accuracy. Gen AI and other AI that produce unstructured outputs, however, create a new risk that output accuracy will be challenging to determine.",
+            "secondary_dimensions": [],
+            "lifecycle_stages": [
+              "3",
+              "4",
+              "5"
+            ],
+            "is_abs_top_10": false,
+            "source": {
+              "page": 134,
+              "section": "Appendix B",
+              "quote": "The level of accuracy needed for the proposed Gen AI use case outcome is not clear"
+            }
+          },
+          {
+            "name": "Unclear provenance for training/test data",
+            "description": "The data used to train and test the model cannot be convincingly and comprehensively traced, presenting challenges for audit, disclosure, and potentially compliance, as well as posing the risk of the FI not having the right to use the data.",
+            "ai_specific_elements": "AI models, especially large ones sourced from open-source providers or third-party providers, can present an enhanced risk of having been trained on data of unclear provenance.",
+            "secondary_dimensions": [
+              "Legal & Regulatory"
+            ],
+            "lifecycle_stages": [
+              "2"
+            ],
+            "is_abs_top_10": false,
+            "source": {
+              "page": 134,
+              "section": "Appendix B",
+              "quote": "The data used to train and test the model cannot be convincingly and comprehensively traced"
+            }
+          },
+          {
+            "name": "Lack of explainability",
+            "description": "Challenge of understanding how the Gen AI modelling techniques influence model behaviour and outputs.",
+            "ai_specific_elements": "AI's non-deterministic outputs, especially in \"black box models\", can create a new risk around the inability to justify or explain outputs.",
+            "secondary_dimensions": [],
+            "lifecycle_stages": [
+              "3",
+              "5"
+            ],
+            "is_abs_top_10": false,
+            "source": {
+              "page": 134,
+              "section": "Appendix B",
+              "quote": "Challenge of understanding how the Gen AI modelling techniques influence model behaviour and outputs."
+            }
+          },
+          {
+            "name": "Anthropomorphism",
+            "description": "The characteristic of Gen AI to mimic human characteristics in its output, enhancing the risk that users may find the outputs of Gen AI inappropriately convincing or may easily come under the impression that they are interacting with a human instead of a machine.",
+            "ai_specific_elements": "The capability of some AI systems, especially Gen AI, to behave in a way that simulates human behaviour is a new risk of AI use.",
+            "secondary_dimensions": [
+              "Cyber & Data Security"
+            ],
+            "lifecycle_stages": [
+              "5"
+            ],
+            "is_abs_top_10": false,
+            "source": {
+              "page": 134,
+              "section": "Appendix B",
+              "quote": "The characteristic of Gen AI to mimic human characteristics in its output"
+            }
+          }
+        ],
+        "source": {
+          "page": 134,
+          "section": "Appendix B",
+          "quote": "Transparency Unclear output accuracy"
+        }
+      },
+      {
+        "dimension": "Legal & Regulatory",
+        "printed_name": "Legal & Regulatory",
+        "definition": null,
+        "risks": [
+          {
+            "name": "Inability to ensure location compliance for model hosting and data processing",
+            "description": "Inability to ensure adherence to FM hosting and data processing regulations that mandate the storage and processing of data within specific geographic boundaries or jurisdictions",
+            "ai_specific_elements": "Risk applies to AI as well as non-AI software.",
+            "secondary_dimensions": [],
+            "lifecycle_stages": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5"
+            ],
+            "is_abs_top_10": false,
+            "source": {
+              "page": 135,
+              "section": "Appendix B",
+              "quote": "Inability to ensure adherence to FM hosting and data processing regulations"
+            }
+          },
+          {
+            "name": "Unclear data ownership",
+            "description": "Ownership of data used to train the Gen AI model and data created by the Gen AI model is unclear, leading to additional legal, commercial and privacy risks.",
+            "ai_specific_elements": "AI models trained on data sourced on the internet – especially AI models trained by third parties whose training data may be ambiguous – can introduce new risks around data ownership and IP.",
+            "secondary_dimensions": [],
+            "lifecycle_stages": [
+              "2"
+            ],
+            "is_abs_top_10": false,
+            "source": {
+              "page": 135,
+              "section": "Appendix B",
+              "quote": "Ownership of data used to train the Gen AI model and data created by the Gen AI model is unclear"
+            }
+          },
+          {
+            "name": "Unauthorised data transfer and storage",
+            "description": "Data is transported and stored on unauthorised systems as per the licensing terms or organisational policies.",
+            "ai_specific_elements": "Risk applies to AI as well as non-AI software.",
+            "secondary_dimensions": [],
+            "lifecycle_stages": [
+              "3",
+              "5"
+            ],
+            "is_abs_top_10": false,
+            "source": {
+              "page": 135,
+              "section": "Appendix B",
+              "quote": "Data is transported and stored on unauthorised systems as per the licensing terms"
+            }
+          },
+          {
+            "name": "Breach or misalignment with regulatory or organisational standards",
+            "description": "The model and its outputs fail to meet legal or regulatory requirements, organisational practices or values in how the business operates.",
+            "ai_specific_elements": "Risk applies to AI as well as non-AI software.",
+            "secondary_dimensions": [
+              "Fairness & Bias",
+              "Ethics"
+            ],
+            "lifecycle_stages": [
+              "2",
+              "3",
+              "4",
+              "5"
+            ],
+            "is_abs_top_10": false,
+            "source": {
+              "page": 135,
+              "section": "Appendix B",
+              "quote": "The model and its outputs fail to meet legal or regulatory requirements"
+            }
+          },
+          {
+            "name": "IP infringement",
+            "description": "Data provided as input to a Gen AI system or product is used to create an output/content that violates IP rights owned by another individual, organisation, or entity.",
+            "ai_specific_elements": "Gen AI systems with the ability to produce content introduce new risks around infringing on third-party IP.",
+            "secondary_dimensions": [],
+            "lifecycle_stages": [
+              "3",
+              "5"
+            ],
+            "is_abs_top_10": false,
+            "source": {
+              "page": 135,
+              "section": "Appendix B",
+              "quote": "Data provided as input to a Gen AI system or product is used to create an output/content"
+            }
+          },
+          {
+            "name": "Unavailability of IP protection",
+            "description": "The outputs of Gen AI built on FMs are not afforded IP protection such as copyright or trademarks due to a lack of legal clarity over IP protection for AI-generated content.",
+            "ai_specific_elements": "Gen AI systems with the ability to produce content face new risks around the protection of that content, which may be unavailable in some jurisdictions.",
+            "secondary_dimensions": [],
+            "lifecycle_stages": [
+              "3",
+              "5"
+            ],
+            "is_abs_top_10": false,
+            "source": {
+              "page": 135,
+              "section": "Appendix B",
+              "quote": "The outputs of Gen AI built on FMs are not afforded IP protection such as copyright"
+            }
+          },
+          {
+            "name": "Inadequate privacy protection",
+            "description": "Inadequate protection of or originally misclassified data that can result in the processing and use of personal or sensitive data, which lacks legal or ethical justification.",
+            "ai_specific_elements": "Risk applies to AI as well as non-AI software.",
+            "secondary_dimensions": [
+              "Fairness & Bias",
+              "Ethics"
+            ],
+            "lifecycle_stages": [
+              "2",
+              "3",
+              "4",
+              "5"
+            ],
+            "is_abs_top_10": false,
+            "source": {
+              "page": 135,
+              "section": "Appendix B",
+              "quote": "Inadequate protection of or originally misclassified data that can result in the processing"
+            }
+          },
+          {
+            "name": "Unclear data retention and deletion",
+            "description": "Lack of clarity on the policy around retention of personal, sensitive, or confidential data of data subjects.",
+            "ai_specific_elements": "The extent to which AI models are trained on large and diverse datasets – especially the models powering Gen AI systems – can enhance the risk of failing to observe data retention rules.",
+            "secondary_dimensions": [
+              "Ethics"
+            ],
+            "lifecycle_stages": [
+              "2",
+              "3"
+            ],
+            "is_abs_top_10": false,
+            "source": {
+              "page": 135,
+              "section": "Appendix B",
+              "quote": "Lack of clarity on the policy around retention of personal, sensitive, or confidential data"
+            }
+          }
+        ],
+        "source": {
+          "page": 135,
+          "section": "Appendix B",
+          "quote": "Legal & Regulatory Inability to ensure location compliance"
+        }
+      },
+      {
+        "dimension": "Robustness & Stability",
+        "printed_name": "Robustness & Stability",
+        "definition": null,
+        "risks": [
+          {
+            "name": "Hallucination/ Fabrication/ Confabulation",
+            "description": "The models produce outputs that are not grounded on any source content or convincingly contradict the source content due to lack of understanding of real-world views. This can have an adverse impact on social groups or may constitute grounds for libel. They may also misinform, mislead, or negatively impact users and reduce user or public faith in the reliability of AI systems.",
+            "ai_specific_elements": "Gen AI's capability to generate factually incorrect information is a new risk of the technology.",
+            "secondary_dimensions": [
+              "Fairness & Bias",
+              "Ethics",
+              "Legal & Regulatory"
+            ],
+            "lifecycle_stages": [
+              "3",
+              "5"
+            ],
+            "is_abs_top_10": true,
+            "source": {
+              "page": 136,
+              "section": "Appendix B",
+              "quote": "The models produce outputs that are not grounded on any source content"
+            }
+          },
+          {
+            "name": "Overconfidence",
+            "description": "The characteristic of Gen AI models to produce convincing outputs that do not properly account for the complexity, uncertainty, or contradiction in their sources. This leads to the potential to present false information as factual, or uncertain information as clear. Presenting this information in such a way interferes with the ability of users to review using their judgement.",
+            "ai_specific_elements": "Gen AI's tendency, without proper controls, to present information or decisions without properly qualifying its confidence in its predictions is a new risk.",
+            "secondary_dimensions": [
+              "Fairness & Bias",
+              "Transparency"
+            ],
+            "lifecycle_stages": [
+              "3",
+              "5"
+            ],
+            "is_abs_top_10": true,
+            "source": {
+              "page": 136,
+              "section": "Appendix B",
+              "quote": "The characteristic of Gen AI models to produce convincing outputs that do not properly account"
+            }
+          },
+          {
+            "name": "Training data or inputs not fit for purpose",
+            "description": "Training data used in model is not representative of the geographical and cultural context where the model will be used or not aligned to the system's intended goal, leading to incorrect outputs or conclusion.",
+            "ai_specific_elements": "Risk applies to AI as well as non-AI models.",
+            "secondary_dimensions": [
+              "Fairness & Bias"
+            ],
+            "lifecycle_stages": [
+              "3",
+              "5"
+            ],
+            "is_abs_top_10": false,
+            "source": {
+              "page": 136,
+              "section": "Appendix B",
+              "quote": "Training data used in model is not representative of the geographical and cultural context"
+            }
+          },
+          {
+            "name": "Lack of continuous monitoring",
+            "description": "Absence of ongoing and systematic surveillance on how Gen AI systems are performing, how they are utilised, and on various parties to ensure they are in accordance with intended purposes, ethical guidelines and regulatory requirements.",
+            "ai_specific_elements": "Risk applies to AI as well as non-AI models.",
+            "secondary_dimensions": [],
+            "lifecycle_stages": [
+              "3",
+              "4",
+              "5"
+            ],
+            "is_abs_top_10": false,
+            "source": {
+              "page": 136,
+              "section": "Appendix B",
+              "quote": "Absence of ongoing and systematic surveillance on how Gen AI systems are performing"
+            }
+          },
+          {
+            "name": "Insufficient data quality",
+            "description": "Low-quality or noisy data used for training could result in poor model performance, increased debugging efforts, and higher development costs. Likewise, extensive use of synthetic data could result in data sets underexposed to noise and real-world complexity which might lead to reduced model performance when exposed to real-life data.",
+            "ai_specific_elements": "Risk applies to AI as well as non-AI models.",
+            "secondary_dimensions": [],
+            "lifecycle_stages": [
+              "1",
+              "2"
+            ],
+            "is_abs_top_10": false,
+            "source": {
+              "page": 136,
+              "section": "Appendix B",
+              "quote": "Low-quality or noisy data used for training could result in poor model performance"
+            }
+          },
+          {
+            "name": "Model staleness",
+            "description": "Data used to train the model becomes outdated and irrelevant due to changes in its statistical properties over time, leading to the model developing ingrained biases, reduced accuracy and performance.",
+            "ai_specific_elements": "While model staleness is an existing model risk, the large, unstructured, and sometimes ambiguous datasets used in AI – especially in Gen AI – make model staleness challenging to measure.",
+            "secondary_dimensions": [],
+            "lifecycle_stages": [
+              "5"
+            ],
+            "is_abs_top_10": false,
+            "source": {
+              "page": 136,
+              "section": "Appendix B",
+              "quote": "Data used to train the model becomes outdated and irrelevant due to changes in its statistical properties"
+            }
+          },
+          {
+            "name": "Insufficient model accuracy/ soundness",
+            "description": "The model outputs are inaccurate or does not meet the performance thresholds required to ensure fit for purpose.",
+            "ai_specific_elements": "Risk applies to AI as well as non-AI models.",
+            "secondary_dimensions": [],
+            "lifecycle_stages": [
+              "3",
+              "4",
+              "5"
+            ],
+            "is_abs_top_10": true,
+            "source": {
+              "page": 137,
+              "section": "Appendix B",
+              "quote": "The model outputs are inaccurate or does not meet the performance thresholds required"
+            }
+          },
+          {
+            "name": "Model degradation from unexpected use",
+            "description": "A wider range of unexpected usage patterns due to the broad capabilities of Gen AI models create outcome instability or unexpected failure modes.",
+            "ai_specific_elements": "The use of AI systems that continuously learn or evolve, especially when those are Gen AI systems whose users have the opportunity to interact directly with the system through prompting, enhances model degradation risks if user interactions are unexpected.",
+            "secondary_dimensions": [],
+            "lifecycle_stages": [
+              "3",
+              "4",
+              "5"
+            ],
+            "is_abs_top_10": true,
+            "source": {
+              "page": 137,
+              "section": "Appendix B",
+              "quote": "A wider range of unexpected usage patterns due to the broad capabilities of Gen AI models"
+            }
+          },
+          {
+            "name": "Inadequate operational resilience",
+            "description": "Operational resilience or service continuity plans increase in complexity due to the broad set of services and capabilities of Gen AI.",
+            "ai_specific_elements": "Risk applies to AI as well as non-AI software.",
+            "secondary_dimensions": [],
+            "lifecycle_stages": [
+              "4",
+              "5"
+            ],
+            "is_abs_top_10": false,
+            "source": {
+              "page": 137,
+              "section": "Appendix B",
+              "quote": "Operational resilience or service continuity plans increase in complexity due to the broad set of services"
+            }
+          },
+          {
+            "name": "Unmet architectural requirements",
+            "description": "Inadequate architectural requirements due to technology, cost or people constraints, leading to technical debt and hindering the scalability, robustness and long-term viability of the Gen AI system.",
+            "ai_specific_elements": "Risk applies to AI as well as non-AI software.",
+            "secondary_dimensions": [],
+            "lifecycle_stages": [
+              "3",
+              "4",
+              "5"
+            ],
+            "is_abs_top_10": false,
+            "source": {
+              "page": 137,
+              "section": "Appendix B",
+              "quote": "Inadequate architectural requirements due to technology, cost or people constraints, leading to technical debt"
+            }
+          },
+          {
+            "name": "Lack of reproducibility",
+            "description": "Models that have the same parameters and identical inputs may generate different outputs. This causes challenges to reproduce a specific output and determine the accuracy in the variations of the output.",
+            "ai_specific_elements": "AI's non-deterministic characteristics, which impact the reproduction of outputs or model states, can enhance existing risks around the accuracy or validity of results.",
+            "secondary_dimensions": [],
+            "lifecycle_stages": [
+              "5"
+            ],
+            "is_abs_top_10": false,
+            "source": {
+              "page": 137,
+              "section": "Appendix B",
+              "quote": "Models that have the same parameters and identical inputs may generate different outputs."
+            }
+          }
+        ],
+        "source": {
+          "page": 136,
+          "section": "Appendix B",
+          "quote": "Robustness & Stability Hallucination/ Fabrication/ Confabulation"
+        }
+      },
+      {
+        "dimension": "Cyber & Data Security",
+        "printed_name": "Cyber and Data Security",
+        "definition": null,
+        "risks": [
+          {
+            "name": "Unintentional inappropriate or illegal use",
+            "description": "Consumers or employees use Gen AI for inappropriate or illegal activities unintentionally with liability remaining with the FI.",
+            "ai_specific_elements": "AI systems that directly interact with users, especially Gen AI systems, enhance conduct risks by presenting additional opportunities for misuse.",
+            "secondary_dimensions": [],
+            "lifecycle_stages": [
+              "5"
+            ],
+            "is_abs_top_10": false,
+            "source": {
+              "page": 137,
+              "section": "Appendix B",
+              "quote": "Consumers or employees use Gen AI for inappropriate or illegal activities unintentionally"
+            }
+          },
+          {
+            "name": "Data poisoning",
+            "description": "Deliberate manipulation of the model by a malicious actor, either through the introduction of malicious data at the point of initial training or during the course of use. This can lead to security vulnerabilities or inaccurate and harmful outputs.",
+            "ai_specific_elements": "The use of AI systems that continuously learn or evolve, especially when those are Gen AI systems where users have the opportunity to interact directly with the system through prompting, enhances adversarial manipulation risks through data poisoning.",
+            "secondary_dimensions": [],
+            "lifecycle_stages": [
+              "2",
+              "3",
+              "4",
+              "5"
+            ],
+            "is_abs_top_10": false,
+            "source": {
+              "page": 137,
+              "section": "Appendix B",
+              "quote": "Deliberate manipulation of the model by a malicious actor, either through the introduction of malicious data"
+            }
+          },
+          {
+            "name": "Adversarial model manipulation",
+            "description": "Deliberate manipulation of a Gen AI system's behaviour by a malicious party with access to its FM. This can lead to undesirable or unpredictable behaviour, including inaccurate or harmful outputs.",
+            "ai_specific_elements": "The use of AI systems that continuously learn or evolve, especially when those are Gen AI systems where users have the opportunity to interact directly with the system through prompting, enhances adversarial manipulation risks.",
+            "secondary_dimensions": [],
+            "lifecycle_stages": [
+              "3",
+              "5"
+            ],
+            "is_abs_top_10": false,
+            "source": {
+              "page": 137,
+              "section": "Appendix B",
+              "quote": "Deliberate manipulation of a Gen AI system's behaviour by a malicious party with access to its FM."
+            }
+          },
+          {
+            "name": "Prompt injection",
+            "description": "The use of carefully designed prompts to encourage a Gen AI system to circumvent its programmed guardrails or filters. This type of attack, if successful, allows malicious actors to generate content that an FI explicitly sought to disallow. Prompt injection attacks designed to reveal sensitive or confidential information fall under \"model inference attacks\" below.",
+            "ai_specific_elements": "Prompt injection is a new risk for FIs that use Gen AI systems.",
+            "secondary_dimensions": [],
+            "lifecycle_stages": [
+              "3",
+              "5"
+            ],
+            "is_abs_top_10": false,
+            "source": {
+              "page": 138,
+              "section": "Appendix B",
+              "quote": "The use of carefully designed prompts to encourage a Gen AI system to circumvent its programmed guardrails"
+            }
+          },
+          {
+            "name": "Re-identification",
+            "description": "Possibility of de-identified records/ data being able to be re-identified mostly with malicious intent. This risk is related to \"model inference attacks\" (below) but is distinct in that it refers to data released in the normal course of operations, whereas model inference attacks imply the use of deliberately designed inputs.",
+            "ai_specific_elements": "Risk applies to AI as well as non-AI models.",
+            "secondary_dimensions": [],
+            "lifecycle_stages": [
+              "5"
+            ],
+            "is_abs_top_10": false,
+            "source": {
+              "page": 138,
+              "section": "Appendix B",
+              "quote": "Possibility of de-identified records/ data being able to be re-identified mostly with malicious intent."
+            }
+          },
+          {
+            "name": "Data leakage",
+            "description": "Model outputs or the model development/ training/fine-tuning process inadvertently reveal sensitive, confidential or personal data to an unauthorised user. This can occur unwittingly – when innocuous prompts produce sensitive outputs – or through prompt injection, where malicious prompts deliberately seek to evade controls and force the release of sensitive information.",
+            "ai_specific_elements": "AI systems that directly interact with users, especially Gen AI systems that take in user-generated prompts, can enhance the risk of data leakage.",
+            "secondary_dimensions": [],
+            "lifecycle_stages": [
+              "2",
+              "3",
+              "4",
+              "5"
+            ],
+            "is_abs_top_10": false,
+            "source": {
+              "page": 138,
+              "section": "Appendix B",
+              "quote": "Model outputs or the model development/ training/fine-tuning process inadvertently reveal sensitive, confidential or personal data"
+            }
+          },
+          {
+            "name": "Model inference attacks",
+            "description": "Inference attacks including submitting carefully crafted input and analysing the corresponding output to reveal the membership, attributes or features about individuals in the training datasets increase in severity due to model's ability to respond to natural language prompts and the fact that Gen AI models often have larger attack surfaces.",
+            "ai_specific_elements": "AI systems that directly interact with users, especially Gen AI systems, enhance the risk that sophisticated users can conduct model inference attacks.",
+            "secondary_dimensions": [],
+            "lifecycle_stages": [
+              "5"
+            ],
+            "is_abs_top_10": false,
+            "source": {
+              "page": 138,
+              "section": "Appendix B",
+              "quote": "Inference attacks including submitting carefully crafted input and analysing the corresponding output"
+            }
+          }
+        ],
+        "source": {
+          "page": 137,
+          "section": "Appendix B",
+          "quote": "Cyber and Data Security Unintentional inappropriate or illegal use"
+        }
+      }
+    ],
+    "table_columns": [
+      "Risk Dimension",
+      "Risks Pertinent to Each Dimension",
+      "Risk Definition",
+      "Secondary Dimensions Impacted",
+      "Lifecycle Stages Impacted",
+      "ABS Top Risk",
+      "AI-Specific Element to Risk"
+    ],
+    "abs_top_10_risks": [
+      "Unrepresentative or biased data inputs",
+      "Adverse or inappropriate impact to individuals and groups",
+      "Toxic and offensive outputs",
+      "Lack of AI risk awareness",
+      "Lack of use case, data and model governance",
+      "Inadequate human oversight",
+      "Inadequate feedback and recourse mechanisms",
+      "Hallucination/ Fabrication/ Confabulation",
+      "Overconfidence",
+      "Insufficient model accuracy/ soundness",
+      "Model degradation from unexpected use"
+    ],
+    "dimension_renaming": [
+      {
+        "current_title": "Fairness & Bias",
+        "former_title": null,
+        "source": {
+          "page": 131,
+          "section": "Appendix B",
+          "quote": "Risk Dimensions in MindForge Phase 2 Former Titles of Risk Dimensions in MindForge Phase 1, If Different"
+        }
+      },
+      {
+        "current_title": "Ethics",
+        "former_title": "Ethics & Impact",
+        "source": {
+          "page": 131,
+          "section": "Appendix B",
+          "quote": "Ethics Ethics & Impact"
+        }
+      },
+      {
+        "current_title": "Accountability & Governance",
+        "former_title": null,
+        "source": {
+          "page": 131,
+          "section": "Appendix B",
+          "quote": "Accountability & Governance"
+        }
+      },
+      {
+        "current_title": "Transparency",
+        "former_title": "Transparency & Explainability",
+        "source": {
+          "page": 131,
+          "section": "Appendix B",
+          "quote": "Transparency Transparency & Explainability"
+        }
+      },
+      {
+        "current_title": "Legal & Regulatory",
+        "former_title": null,
+        "source": {
+          "page": 131,
+          "section": "Appendix B",
+          "quote": "Legal & Regulatory"
+        }
+      },
+      {
+        "current_title": "Robustness & Stability",
+        "former_title": "Monitoring & Stability",
+        "source": {
+          "page": 131,
+          "section": "Appendix B",
+          "quote": "Robustness & Stability Monitoring & Stability"
+        }
+      },
+      {
+        "current_title": "Cyber & Data Security",
+        "former_title": null,
+        "source": {
+          "page": 131,
+          "section": "Appendix B",
+          "quote": "Cyber & Data Security"
+        }
+      }
+    ],
+    "risk_changes": [
+      {
+        "risk_name": "Lack of use case, data and model governance",
+        "change": "Name revised from \"Lack of use case and model governance\".",
+        "source": {
+          "page": 132,
+          "section": "Appendix B",
+          "quote": "Name revised from \"Lack of use case and model governance\"."
+        }
+      },
+      {
+        "risk_name": "Lack of AI risk awareness",
+        "change": "Definition and name revised.",
+        "source": {
+          "page": 132,
+          "section": "Appendix B",
+          "quote": "Lack of AI risk awareness Definition and name revised."
+        }
+      },
+      {
+        "risk_name": "Lack of explainability",
+        "change": "Definition revised.",
+        "source": {
+          "page": 132,
+          "section": "Appendix B",
+          "quote": "Transparency & Explainability Lack of explainability Definition revised."
+        }
+      },
+      {
+        "risk_name": "Insufficient data quality",
+        "change": "Definition revised.",
+        "source": {
+          "page": 132,
+          "section": "Appendix B",
+          "quote": "Monitoring & Stability Insufficient data quality Definition revised."
+        }
+      },
+      {
+        "risk_name": "Unmet architectural requirements",
+        "change": "Definition revised.",
+        "source": {
+          "page": 132,
+          "section": "Appendix B",
+          "quote": "Unmet architectural requirements Definition revised."
+        }
+      },
+      {
+        "risk_name": "Lack of reproducibility",
+        "change": "Additional risk added as part of Phase 2.",
+        "source": {
+          "page": 132,
+          "section": "Appendix B",
+          "quote": "Lack of reproducibility Additional risk added as part of Phase 2."
+        }
+      }
+    ],
+    "lifecycle_stage_legend": [
+      {
+        "number": 1,
+        "name": "Use Case Context and Design"
+      },
+      {
+        "number": 2,
+        "name": "Data Acquisition and Processing"
+      },
+      {
+        "number": 3,
+        "name": "Onboarding, Build, and Review"
+      },
+      {
+        "number": 4,
+        "name": "Deployment"
+      },
+      {
+        "number": 5,
+        "name": "Usage, Monitoring, and Change Management"
+      }
+    ],
+    "total_risk_rows_counted": 41,
+    "unreadable_items": [
+      "Page 132 text layer lists lifecycle stage names in a different order (Data Acquisition and Processing first) than the rendered table image (Use Case Context and Design as 1); the rendered table order was used."
+    ]
+  }
+}

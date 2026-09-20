@@ -1,0 +1,779 @@
+{
+  "extractor": "considerations",
+  "model": "claude-opus-5",
+  "extracted_at": "2026-09-20T09:30:26+00:00",
+  "pdf_pages": "166-171",
+  "printed_pages": "159-164",
+  "requests": 1,
+  "attempts": 1,
+  "attempt_log": [
+    {
+      "attempt": 1,
+      "problems": [],
+      "output_tokens": 9595,
+      "latency_ms": 80675
+    }
+  ],
+  "validation_problems": [],
+  "warnings": [],
+  "usage": {
+    "input_tokens": 246,
+    "output_tokens": 9595,
+    "cache_creation_input_tokens": 16030,
+    "cache_read_input_tokens": 0,
+    "calls": 1,
+    "latency_ms": 80675,
+    "estimated_cost_usd": 0.3413
+  },
+  "data": {
+    "considerations": [
+      {
+        "number": 1,
+        "title": "Ensure that an AI governance and risk management operating model is clearly defined by leveraging and, as needed, uplifting the roles and capabilities of existing enterprise functions including relevant roles from the Board, Senior Management, and operational governance, with sufficient operating effectiveness measures in place to support them. (1.2)",
+        "handbook_section": "1.2",
+        "implementation_practices": [
+          {
+            "reference": "1",
+            "text": "Embed additional responsibilities for AI governance and risk management, as required, in relevant Board and Senior Management roles.",
+            "source": {
+              "page": 159,
+              "section": "Appendix H",
+              "quote": "Embed additional responsibilities for AI governance and risk management, as required"
+            }
+          },
+          {
+            "reference": "2",
+            "text": "Ensure that operational governance functions have clear roles and responsibilities assigned to operationalise AI governance and risk management activities across the enterprise.",
+            "source": {
+              "page": 159,
+              "section": "Appendix H",
+              "quote": "operational governance functions have clear roles and responsibilities assigned to operationalise"
+            }
+          },
+          {
+            "reference": "3",
+            "text": "Ensure that existing governance processes, forums, assets, and tools are updated to effectively enable AI governance and risk management.",
+            "source": {
+              "page": 159,
+              "section": "Appendix H",
+              "quote": "existing governance processes, forums, assets, and tools are updated to effectively enable"
+            }
+          },
+          {
+            "reference": "4",
+            "text": "Ensure that sufficient operating effectiveness and horizon-scanning measures are in place to monitor and improve the AI governance and risk management operating model over time.",
+            "source": {
+              "page": 159,
+              "section": "Appendix H",
+              "quote": "sufficient operating effectiveness and horizon-scanning measures are in place to monitor"
+            }
+          }
+        ],
+        "source": {
+          "page": 159,
+          "section": "Appendix H",
+          "quote": "Consideration 1. Ensure that an AI governance and risk management operating model is clearly defined"
+        }
+      },
+      {
+        "number": 2,
+        "title": "Ensure that governance documents define key AI-related concepts, processes, and responsibilities, and that they remain up-to-date and effective in supporting all aspects of the FI’s approach to AI governance and risk management (2.1).",
+        "handbook_section": "2.1",
+        "implementation_practices": [
+          {
+            "reference": "1",
+            "text": "Ensure robust conceptual foundations for AI governance and risk management by establishing AI principles, defining key AI-related concepts, establishing frameworks for effective AI identification, and continuously improving these foundations over time as necessary.",
+            "source": {
+              "page": 159,
+              "section": "Appendix H",
+              "quote": "Ensure robust conceptual foundations for AI governance and risk management by establishing AI principles"
+            }
+          },
+          {
+            "reference": "2",
+            "text": "Ensure that all aspects of AI governance and risk management are effectively institutionalised throughout the FI’s governance documents, and that a process is in place to periodically review and reassess them.",
+            "source": {
+              "page": 159,
+              "section": "Appendix H",
+              "quote": "effectively institutionalised throughout the FI’s governance documents, and that a process is in place"
+            }
+          }
+        ],
+        "source": {
+          "page": 159,
+          "section": "Appendix H",
+          "quote": "Consideration 2. Ensure that governance documents define key AI-related concepts, processes, and responsibilities"
+        }
+      },
+      {
+        "number": 3,
+        "title": "Enhance the organisational risk framework and risk appetite to include enterprise risks, strategies, and key risk indicators (KRIs) that track, monitor, and mitigate AI-specific risks (2.2).",
+        "handbook_section": "2.2",
+        "implementation_practices": [
+          {
+            "reference": "1",
+            "text": "Identify the new or enhanced risks of AI that are relevant to the enterprise and ensure that the enterprise risk taxonomy effectively captures them.",
+            "source": {
+              "page": 159,
+              "section": "Appendix H",
+              "quote": "Identify the new or enhanced risks of AI that are relevant to the enterprise"
+            }
+          },
+          {
+            "reference": "2",
+            "text": "Assess existing enterprise risk controls for their fitness in addressing AI-specific enterprise risks, and uplift those controls where gaps exist.",
+            "source": {
+              "page": 159,
+              "section": "Appendix H",
+              "quote": "Assess existing enterprise risk controls for their fitness in addressing AI-specific enterprise risks"
+            }
+          },
+          {
+            "reference": "3",
+            "text": "Ensure that key risk indicators (KRIs) are in place to measure AI-specific risks and that relevant incidents, issues, or risk events are appropriately tracked and managed.",
+            "source": {
+              "page": 160,
+              "section": "Appendix H",
+              "quote": "key risk indicators (KRIs) are in place to measure AI-specific risks"
+            }
+          },
+          {
+            "reference": "4",
+            "text": "Ensure that effective monitoring is in place to identify AI-specific risk events or breaches of KRI thresholds to a degree proportionate to the FI’s risk appetite.",
+            "source": {
+              "page": 160,
+              "section": "Appendix H",
+              "quote": "effective monitoring is in place to identify AI-specific risk events or breaches of KRI thresholds"
+            }
+          }
+        ],
+        "source": {
+          "page": 159,
+          "section": "Appendix H",
+          "quote": "Consideration 3. Enhance the organisational risk framework and risk appetite to include enterprise risks"
+        }
+      },
+      {
+        "number": 4,
+        "title": "Uplift existing procurement and third-party risk management activities to address AI-specific risks, including disclosure templates, vendor assessment and procurement practices, change detection and notification, contracting practices, and ensure that teams have access to relevant expertise in AI (2.3).",
+        "handbook_section": "2.3",
+        "implementation_practices": [
+          {
+            "reference": "1",
+            "text": "Define, based on relevant AI-specific risks, a proportionate level of disclosure to seek from third party providers of AI products and services, and a process for assessing disclosures.",
+            "source": {
+              "page": 160,
+              "section": "Appendix H",
+              "quote": "a proportionate level of disclosure to seek from third party providers of AI products and services"
+            }
+          },
+          {
+            "reference": "2",
+            "text": "Ensure that processes and capabilities are in place for AI-specific risks to be evaluated at appropriate points in procurement, onboarding, and throughout the post-procurement lifecycle.",
+            "source": {
+              "page": 160,
+              "section": "Appendix H",
+              "quote": "evaluated at appropriate points in procurement, onboarding, and throughout the post-procurement lifecycle"
+            }
+          },
+          {
+            "reference": "3",
+            "text": "Identify new or modified AI components or features in third party products and services already introduced into the FI’s technology ecosystem.",
+            "source": {
+              "page": 160,
+              "section": "Appendix H",
+              "quote": "Identify new or modified AI components or features in third party products and services"
+            }
+          },
+          {
+            "reference": "4",
+            "text": "Consider whether contracts and licenses with third parties providing AI products and services are sufficient to clearly address AI-specific risks.",
+            "source": {
+              "page": 160,
+              "section": "Appendix H",
+              "quote": "Consider whether contracts and licenses with third parties providing AI products and services"
+            }
+          },
+          {
+            "reference": "5",
+            "text": "Ensure that teams with AI-specific legal, technical, and risk-management skills are involved in procurement, contracting, onboarding, or other third-party risk management activities as appropriate.",
+            "source": {
+              "page": 160,
+              "section": "Appendix H",
+              "quote": "teams with AI-specific legal, technical, and risk-management skills are involved in procurement"
+            }
+          }
+        ],
+        "source": {
+          "page": 160,
+          "section": "Appendix H",
+          "quote": "Consideration 4. Uplift existing procurement and third-party risk management activities"
+        }
+      },
+      {
+        "number": 5,
+        "title": "Ensure that a framework is in place to manage the risks of each AI use case. This includes defining a risk materiality assessment approach, implementing a framework for inherent and residual AI risk assessments, applying controls that are commensurate with the risks identified, and conducting pre- and post-deployment AI-specific reviews as appropriate (2.4).",
+        "handbook_section": "2.4",
+        "implementation_practices": [
+          {
+            "reference": "1",
+            "text": "Define levels of risk materiality for AI use cases based on criteria relevant to the FI’s context.",
+            "source": {
+              "page": 160,
+              "section": "Appendix H",
+              "quote": "Define levels of risk materiality for AI use cases based on criteria relevant to the FI’s context"
+            }
+          },
+          {
+            "reference": "2",
+            "text": "Define a process to assess the inherent risk materiality of AI use cases at the appropriate lifecycle stage, considering the fundamental characteristics of each use case.",
+            "source": {
+              "page": 160,
+              "section": "Appendix H",
+              "quote": "assess the inherent risk materiality of AI use cases at the appropriate lifecycle stage"
+            }
+          },
+          {
+            "reference": "3",
+            "text": "Define a process to evaluate the residual risk materiality of AI use cases prior to deployment, considering the established controls and guardrails.",
+            "source": {
+              "page": 160,
+              "section": "Appendix H",
+              "quote": "evaluate the residual risk materiality of AI use cases prior to deployment"
+            }
+          },
+          {
+            "reference": "4",
+            "text": "Identify, uplift, or create controls to be applied to each AI use case based on its risks and risk materiality.",
+            "source": {
+              "page": 161,
+              "section": "Appendix H",
+              "quote": "Identify, uplift, or create controls to be applied to each AI use case"
+            }
+          },
+          {
+            "reference": "5",
+            "text": "Define an approach for conducting an AI-specific review of AI use cases prior to deployment, confirming the risks identified, the use case’s risk materiality, and the appropriateness of risk mitigations.",
+            "source": {
+              "page": 161,
+              "section": "Appendix H",
+              "quote": "Define an approach for conducting an AI-specific review of AI use cases prior to deployment"
+            }
+          },
+          {
+            "reference": "6",
+            "text": "Ensure that AI-specific reviews of AI use cases are conducted periodically post-deployment, with their frequency based on factors including the risk materiality of the AI use case.",
+            "source": {
+              "page": 161,
+              "section": "Appendix H",
+              "quote": "reviews of AI use cases are conducted periodically post-deployment"
+            }
+          }
+        ],
+        "source": {
+          "page": 160,
+          "section": "Appendix H",
+          "quote": "Consideration 5. Ensure that a framework is in place to manage the risks of each AI use case"
+        }
+      },
+      {
+        "number": 6,
+        "title": "Ensure that core AI-specific information on AI use cases is recorded in an inventory and ensure that a process is in place to maintain the AI inventory, so that information about new, updated, or decommissioned AI use cases is reflected accurately (2.5).",
+        "handbook_section": "2.5",
+        "implementation_practices": [
+          {
+            "reference": "1",
+            "text": "Ensure that a form of AI inventory, designed in consideration of existing inventory systems and practices to be suitable and proportionate for the FI’s context, is in place to capture a core set of AI-specific information on AI use cases.",
+            "source": {
+              "page": 161,
+              "section": "Appendix H",
+              "quote": "Ensure that a form of AI inventory, designed in consideration of existing inventory systems"
+            }
+          },
+          {
+            "reference": "2",
+            "text": "Ensure that processes are in place and that roles and responsibilities are defined such that the AI inventory is well-maintained and kept up to date.",
+            "source": {
+              "page": 161,
+              "section": "Appendix H",
+              "quote": "the AI inventory is well-maintained and kept up to date"
+            }
+          }
+        ],
+        "source": {
+          "page": 161,
+          "section": "Appendix H",
+          "quote": "Consideration 6. Ensure that core AI-specific information on AI use cases is recorded in an inventory"
+        }
+      },
+      {
+        "number": 7,
+        "title": "Assess the AI use case to ensure that the intended use is compatible with ethical, regulatory, and organisational standards, and determine the level of governance to be applied to the use case based on its inherent or expected risk materiality (3.1).",
+        "handbook_section": "3.1",
+        "implementation_practices": [
+          {
+            "reference": "1",
+            "text": "Establish ownership for the AI use case and ensure alignment with organisational standards and values for ethical and responsible AI use.",
+            "source": {
+              "page": 161,
+              "section": "Appendix H",
+              "quote": "Establish ownership for the AI use case and ensure alignment with organisational standards"
+            }
+          },
+          {
+            "reference": "2",
+            "text": "Perform an inherent risk materiality assessment to determine the risk tiering of the AI use case and to guide proportionate governance efforts.",
+            "source": {
+              "page": 161,
+              "section": "Appendix H",
+              "quote": "Perform an inherent risk materiality assessment to determine the risk tiering"
+            }
+          },
+          {
+            "reference": "3",
+            "text": "Capture AI use case-related information in an AI inventory to enable transparency and support risk management.",
+            "source": {
+              "page": 161,
+              "section": "Appendix H",
+              "quote": "Capture AI use case-related information in an AI inventory to enable transparency"
+            }
+          },
+          {
+            "reference": "4",
+            "text": "Design the AI use case to operate with a proportionate and practical level of human oversight.",
+            "source": {
+              "page": 161,
+              "section": "Appendix H",
+              "quote": "Design the AI use case to operate with a proportionate and practical level of human oversight"
+            }
+          }
+        ],
+        "source": {
+          "page": 161,
+          "section": "Appendix H",
+          "quote": "Consideration 7. Assess the AI use case to ensure that the intended use is compatible"
+        }
+      },
+      {
+        "number": 8,
+        "title": "Evaluate whether the intended use of data in the AI use case is compatible with ethical, regulatory, and organisational standards (3.2).",
+        "handbook_section": "3.2",
+        "implementation_practices": [
+          {
+            "reference": "1",
+            "text": "Ensure that the use of data complies with ethical standards, regulatory requirements, and organisational policies or standards.",
+            "source": {
+              "page": 161,
+              "section": "Appendix H",
+              "quote": "the use of data complies with ethical standards, regulatory requirements, and organisational policies"
+            }
+          },
+          {
+            "reference": "2",
+            "text": "Ensure that the use of any third-party data complies with intellectual property rules, contractual obligations, and licensing rights.",
+            "source": {
+              "page": 161,
+              "section": "Appendix H",
+              "quote": "any third-party data complies with intellectual property rules, contractual obligations, and licensing rights"
+            }
+          }
+        ],
+        "source": {
+          "page": 161,
+          "section": "Appendix H",
+          "quote": "Consideration 8. Evaluate whether the intended use of data in the AI use case is compatible"
+        }
+      },
+      {
+        "number": 9,
+        "title": "Adopt appropriate data management practices that address risks and limitations when processing data for AI use cases (3.2).",
+        "handbook_section": "3.2",
+        "implementation_practices": [
+          {
+            "reference": "1",
+            "text": "Ensure that data used for the AI use case is fit for purpose.",
+            "source": {
+              "page": 162,
+              "section": "Appendix H",
+              "quote": "Ensure that data used for the AI use case is fit for purpose"
+            }
+          },
+          {
+            "reference": "2",
+            "text": "Justify the use of personal attributes in the AI use case.",
+            "source": {
+              "page": 162,
+              "section": "Appendix H",
+              "quote": "Justify the use of personal attributes in the AI use case"
+            }
+          },
+          {
+            "reference": "3",
+            "text": "Document metadata and data sources related to the AI use case in accordance with organisational data management policies and regulatory expectations.",
+            "source": {
+              "page": 162,
+              "section": "Appendix H",
+              "quote": "Document metadata and data sources related to the AI use case"
+            }
+          },
+          {
+            "reference": "4",
+            "text": "Ensure that appropriate data access controls are implemented based on the nature of selected AI use case.",
+            "source": {
+              "page": 162,
+              "section": "Appendix H",
+              "quote": "appropriate data access controls are implemented based on the nature of selected AI use case"
+            }
+          },
+          {
+            "reference": "5",
+            "text": "Establish clear ownership of any derived or transformed data to be used in the AI use case.",
+            "source": {
+              "page": 162,
+              "section": "Appendix H",
+              "quote": "Establish clear ownership of any derived or transformed data"
+            }
+          },
+          {
+            "reference": "6",
+            "text": "Identify and mitigate bias in training and test datasets.",
+            "source": {
+              "page": 162,
+              "section": "Appendix H",
+              "quote": "Identify and mitigate bias in training and test datasets"
+            }
+          }
+        ],
+        "source": {
+          "page": 162,
+          "section": "Appendix H",
+          "quote": "Consideration 9. Adopt appropriate data management practices that address risks and limitations"
+        }
+      },
+      {
+        "number": 10,
+        "title": "Evaluate incremental AI-specific risks as part of the onboarding of third-party AI products and services within an AI use case (3.3).",
+        "handbook_section": "3.3",
+        "implementation_practices": [
+          {
+            "reference": "1",
+            "text": "Conduct relevant use case-specific relevant due diligence during third-party AI onboarding, in line with organisational standards, to manage the risks of a third-party AI product or service.",
+            "source": {
+              "page": 162,
+              "section": "Appendix H",
+              "quote": "Conduct relevant use case-specific relevant due diligence during third-party AI onboarding"
+            }
+          }
+        ],
+        "source": {
+          "page": 162,
+          "section": "Appendix H",
+          "quote": "Consideration 10. Evaluate incremental AI-specific risks as part of the onboarding"
+        }
+      },
+      {
+        "number": 11,
+        "title": "Ensure that the AI use case is built with appropriate guardrails and relevant metrics for effective performance and risk management (3.3).",
+        "handbook_section": "3.3",
+        "implementation_practices": [
+          {
+            "reference": "1",
+            "text": "Assess and select algorithms or features for the AI use case by considering its objectives and risks, including fairness, explainability, performance objectives, implementation complexity, and computational efficiency.",
+            "source": {
+              "page": 162,
+              "section": "Appendix H",
+              "quote": "Assess and select algorithms or features for the AI use case by considering its objectives and risks"
+            }
+          },
+          {
+            "reference": "2",
+            "text": "Identify and implement appropriate guardrails and controls during the development of AI use cases proportionately to the level and nature of the associated risks, to effectively manage and mitigate potential risks.",
+            "source": {
+              "page": 162,
+              "section": "Appendix H",
+              "quote": "Identify and implement appropriate guardrails and controls during the development of AI use cases"
+            }
+          },
+          {
+            "reference": "3",
+            "text": "Define use case-specific risk-related metrics for assessing the AI use case for risks.",
+            "source": {
+              "page": 162,
+              "section": "Appendix H",
+              "quote": "Define use case-specific risk-related metrics for assessing the AI use case for risks"
+            }
+          },
+          {
+            "reference": "4",
+            "text": "Evaluate and calibrate transparency measures based on the use case’s risk materiality, degree of autonomy, and intended users, implementing proportionate design features and disclosures to support responsible and informed use.",
+            "source": {
+              "page": 162,
+              "section": "Appendix H",
+              "quote": "Evaluate and calibrate transparency measures based on the use case’s risk materiality"
+            }
+          },
+          {
+            "reference": "5",
+            "text": "Document key aspects of the AI build process, including data handling, model training and selection, and evaluation decisions to enable auditability and reproducibility.",
+            "source": {
+              "page": 162,
+              "section": "Appendix H",
+              "quote": "Document key aspects of the AI build process, including data handling"
+            }
+          }
+        ],
+        "source": {
+          "page": 162,
+          "section": "Appendix H",
+          "quote": "Consideration 11. Ensure that the AI use case is built with appropriate guardrails"
+        }
+      },
+      {
+        "number": 12,
+        "title": "Conduct thorough testing and review prior to deployment to assess AI-specific risks and ensure that appropriate guardrails, controls, and governance have been observed (3.3).",
+        "handbook_section": "3.3",
+        "implementation_practices": [
+          {
+            "reference": "1",
+            "text": "Ensure that Builders conduct appropriate AI risk self-checks during development to test use case performance, verify the effectiveness of risk management activities, and identify and mitigate issues early in the development process.",
+            "source": {
+              "page": 163,
+              "section": "Appendix H",
+              "quote": "Ensure that Builders conduct appropriate AI risk self-checks during development"
+            }
+          },
+          {
+            "reference": "2",
+            "text": "Conduct an AI-specific review based on use case risk materiality prior to deployment to ensure that potential risks are identified and mitigated.",
+            "source": {
+              "page": 163,
+              "section": "Appendix H",
+              "quote": "Conduct an AI-specific review based on use case risk materiality prior to deployment"
+            }
+          }
+        ],
+        "source": {
+          "page": 163,
+          "section": "Appendix H",
+          "quote": "Consideration 12. Conduct thorough testing and review prior to deployment"
+        }
+      },
+      {
+        "number": 13,
+        "title": "Develop monitoring and contingency plans for the use case prior to its deployment, and consider risk-informed deployment options (3.4).",
+        "handbook_section": "3.4",
+        "implementation_practices": [
+          {
+            "reference": "1",
+            "text": "In conjunction with other monitoring activities, ensure that a monitoring plan and safeguards/contingency measures are in place, along with the designation of an appropriate accountable person to address AI risks detected in monitoring.",
+            "source": {
+              "page": 163,
+              "section": "Appendix H",
+              "quote": "In conjunction with other monitoring activities, ensure that a monitoring plan and safeguards/contingency measures"
+            }
+          },
+          {
+            "reference": "2",
+            "text": "Consider the need for a phased rollout to manage the AI use case’s risks and progressively validate the use case’s performance prior to full deployment.",
+            "source": {
+              "page": 163,
+              "section": "Appendix H",
+              "quote": "Consider the need for a phased rollout to manage the AI use case’s risks"
+            }
+          },
+          {
+            "reference": "3",
+            "text": "Engage and equip users with targeted training and use case-specific resources to support responsible use and effective oversight.",
+            "source": {
+              "page": 163,
+              "section": "Appendix H",
+              "quote": "Engage and equip users with targeted training and use case-specific resources"
+            }
+          },
+          {
+            "reference": "4",
+            "text": "Ensure that the AI use case is appropriately documented, that appropriate security and governance practices are applied, that relevant data retention is provided for, and that relevant approvals are obtained before deploying to production.",
+            "source": {
+              "page": 163,
+              "section": "Appendix H",
+              "quote": "Ensure that the AI use case is appropriately documented, that appropriate security and governance practices"
+            }
+          }
+        ],
+        "source": {
+          "page": 163,
+          "section": "Appendix H",
+          "quote": "Consideration 13. Develop monitoring and contingency plans for the use case prior to its deployment"
+        }
+      },
+      {
+        "number": 14,
+        "title": "Conduct ongoing monitoring of the AI use case and its usage to ensure that it remains fit for purpose over time (3.5).",
+        "handbook_section": "3.5",
+        "implementation_practices": [
+          {
+            "reference": "1",
+            "text": "Periodically monitor and report on use case metrics related to AI risks, guardrail effectiveness, and changes in the use case’s operating environment, as necessary and at a proportionate intensity and frequency, and address any issues identified.",
+            "source": {
+              "page": 163,
+              "section": "Appendix H",
+              "quote": "Periodically monitor and report on use case metrics related to AI risks, guardrail effectiveness"
+            }
+          },
+          {
+            "reference": "2",
+            "text": "Monitor and report on the quality, drift, and third-party risks associated with the use case’s input and training data in an ongoing fashion, as necessary, after deployment.",
+            "source": {
+              "page": 163,
+              "section": "Appendix H",
+              "quote": "Monitor and report on the quality, drift, and third-party risks"
+            }
+          },
+          {
+            "reference": "3",
+            "text": "Conduct periodic checks for changes to key aspects of the AI use case over time, including risk materiality, scope of usage, and key risks.",
+            "source": {
+              "page": 163,
+              "section": "Appendix H",
+              "quote": "Conduct periodic checks for changes to key aspects of the AI use case over time"
+            }
+          },
+          {
+            "reference": "4",
+            "text": "Conduct periodic AI-specific reviews after deployment to assess emerging post-deployment risks.",
+            "source": {
+              "page": 163,
+              "section": "Appendix H",
+              "quote": "Conduct periodic AI-specific reviews after deployment to assess emerging post-deployment risks"
+            }
+          },
+          {
+            "reference": "5",
+            "text": "Ensure that the use case is operationalised with an appropriate degree of human oversight proportionate to its risk materiality or purpose.",
+            "source": {
+              "page": 163,
+              "section": "Appendix H",
+              "quote": "the use case is operationalised with an appropriate degree of human oversight"
+            }
+          },
+          {
+            "reference": "6",
+            "text": "Provide end users with avenues to enquire, give feedback, or request a review on AI decisions, where applicable, to support continuous improvement and build user trust.",
+            "source": {
+              "page": 164,
+              "section": "Appendix H",
+              "quote": "Provide end users with avenues to enquire, give feedback, or request a review on AI decisions"
+            }
+          },
+          {
+            "reference": "7",
+            "text": "Ensure that proportionate monitoring and analysis are in place to safeguard against security risks during system usage.",
+            "source": {
+              "page": 164,
+              "section": "Appendix H",
+              "quote": "proportionate monitoring and analysis are in place to safeguard against security risks"
+            }
+          }
+        ],
+        "source": {
+          "page": 163,
+          "section": "Appendix H",
+          "quote": "Consideration 14. Conduct ongoing monitoring of the AI use case and its usage"
+        }
+      },
+      {
+        "number": 15,
+        "title": "Capture changes to AI use cases or their components to maintain traceability and ensure that changes with a material impact on risk are reviewed and approved through an effective change management process (3.5).",
+        "handbook_section": "3.5",
+        "implementation_practices": [
+          {
+            "reference": "1",
+            "text": "Establish AI change management process to ensure that changes to in-house or third-party use cases are appropriately tracked, reviewed, and approved before implementation.",
+            "source": {
+              "page": 164,
+              "section": "Appendix H",
+              "quote": "Establish AI change management process to ensure that changes to in-house or third-party use cases"
+            }
+          }
+        ],
+        "source": {
+          "page": 164,
+          "section": "Appendix H",
+          "quote": "Consideration 15. Capture changes to AI use cases or their components to maintain traceability"
+        }
+      },
+      {
+        "number": 16,
+        "title": "Consideration 16.    Ensure that practices are in place to equip employees with the necessary AI governance and risk management skills, knowledge, and AI culture, while ensuring that teams involved in AI governance and risk management function are sufficiently representative",
+        "handbook_section": null,
+        "implementation_practices": [
+          {
+            "reference": "1",
+            "text": "Ensure that employees in relevant roles have the skills that they require to identify, mitigate, and track AI risks throughout the AI lifecycle.",
+            "source": {
+              "page": 164,
+              "section": "Appendix H",
+              "quote": "employees in relevant roles have the skills that they require to identify, mitigate, and track AI risks"
+            }
+          },
+          {
+            "reference": "2",
+            "text": "Ensure that learning and literacy activities are sufficient to equip current and future employees with knowledge on AI capabilities, risks, and responsibilities appropriate to their roles in managing AI risk.",
+            "source": {
+              "page": 164,
+              "section": "Appendix H",
+              "quote": "learning and literacy activities are sufficient to equip current and future employees"
+            }
+          },
+          {
+            "reference": "3",
+            "text": "Ensure that practices, programmes, and policies related to culture and conduct are sufficient to foster a healthy AI culture around responsible, ethical, and safe AI use for current and future employees.",
+            "source": {
+              "page": 164,
+              "section": "Appendix H",
+              "quote": "practices, programmes, and policies related to culture and conduct are sufficient to foster a healthy AI culture"
+            }
+          },
+          {
+            "reference": "4",
+            "text": "Ensure that AI governance and risk management activities involve a sufficiently representative and interdisciplinary group of employees who can effectively represent a range of perspectives on AI’s risks and impacts..",
+            "source": {
+              "page": 164,
+              "section": "Appendix H",
+              "quote": "involve a sufficiently representative and interdisciplinary group of employees"
+            }
+          }
+        ],
+        "source": {
+          "page": 164,
+          "section": "Appendix H",
+          "quote": "Consideration 16. Consideration 16.    Ensure that practices are in place to equip employees"
+        }
+      },
+      {
+        "number": 17,
+        "title": "Support AI deployment by ensuring that supporting infrastructure is fit for purpose",
+        "handbook_section": null,
+        "implementation_practices": [
+          {
+            "reference": "1",
+            "text": "Ensure that the FI’s AI-related infrastructure is suitable for managing scalability, availability, and security risks posed by the FI’s use of AI.",
+            "source": {
+              "page": 164,
+              "section": "Appendix H",
+              "quote": "the FI’s AI-related infrastructure is suitable for managing scalability, availability, and security risks"
+            }
+          }
+        ],
+        "source": {
+          "page": 164,
+          "section": "Appendix H",
+          "quote": "Consideration 17. Support AI deployment by ensuring that supporting infrastructure is fit for purpose"
+        }
+      }
+    ],
+    "total_considerations_counted": 17,
+    "total_practices_counted": 56,
+    "unreadable_items": []
+  }
+}

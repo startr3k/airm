@@ -1,0 +1,292 @@
+{
+  "extractor": "illustrations",
+  "model": "claude-opus-5",
+  "extracted_at": "2026-09-20T09:27:10+00:00",
+  "pdf_pages": "32-33, 51-52, 64-66, 78-79, 86-87, 98-99, 104-105, 113-114",
+  "printed_pages": "25-26, 44-45, 57-59, 71-72, 79-80, 91-92, 97-98, 106-107",
+  "requests": 1,
+  "attempts": 1,
+  "attempt_log": [
+    {
+      "attempt": 1,
+      "problems": [],
+      "output_tokens": 7123,
+      "latency_ms": 68181
+    }
+  ],
+  "validation_problems": [],
+  "warnings": [],
+  "usage": {
+    "input_tokens": 223,
+    "output_tokens": 7123,
+    "cache_creation_input_tokens": 40471,
+    "cache_read_input_tokens": 0,
+    "calls": 1,
+    "latency_ms": 68181,
+    "estimated_cost_usd": 0.4321
+  },
+  "data": {
+    "illustrations": [
+      {
+        "label": "Illustration 2.1.1",
+        "institution": "Income Insurance",
+        "title": "Income Insurance: Integrating AI Governance with Risk Policy",
+        "summary": "Prior to 2023, Income Insurance conducted FEAT (Fairness, Ethics, Accountability and Transparency) assessments on AI models in line with MAS guidelines, but separately from enterprise Model Risk Management. In 2023 it updated its Model Risk policy so that AI Governance became part of the enterprise Model Risk Management framework, with the Risk Management Function first assessing the materiality of all models and use cases using an updated scoring system. Risk then triggers FEAT assessments where a model or use case is deemed AIDA, guided by an enterprise definition of AI that is routinely reviewed and was updated in late 2023 to incorporate Gen AI. FEAT assessments are conducted by the AI Governance team with model and use case owners using a standard checklist (plus an enhanced checklist for high-materiality cases), with results stored in a centralised model register, and FEAT guidelines were made part of corporate policy alongside mandatory annual AI Governance training and attestation for AIDA model owners and developers.",
+        "practices": [
+          "FEAT assessments conducted on AI models in line with MAS guidelines",
+          "Updated Model Risk policy in 2023 to make AI Governance part of the enterprise Model Risk Management framework",
+          "Risk Management Function evaluates all models and use cases to establish materiality first, using an updated materiality scoring system",
+          "Risk triggers FEAT assessments where the model or use case is deemed AIDA (Artificial Intelligence and Data Analytics)",
+          "Enterprise definition of AI established and routinely reviewed; updated in late 2023 to incorporate Gen AI",
+          "FEAT assessments conducted by the AI Governance team with model and use case owners using a risk-based approach and a standard FEAT checklist template",
+          "Enhanced checklist used for high-materiality models and use cases",
+          "All assessment information stored in a centralised model register",
+          "FEAT Principle guidelines and assessment templates formally included in corporate policy documentation",
+          "Mandatory annual AI Governance training for all AIDA model owners and developers, coupled with attestation that FEAT Principles are understood and adhered to"
+        ],
+        "handbook_topics": [
+          "AI-related policies, procedures, and standards",
+          "integrating AI governance into enterprise model risk management",
+          "risk materiality assessment",
+          "AI inventories/model registers",
+          "AI training and culture"
+        ],
+        "source": {
+          "page": 25,
+          "section": "2.1",
+          "quote": "an initiative was undertaken in 2023 to update Model Risk policy, making AI Governance part of the enterprise Model Risk Management framework"
+        }
+      },
+      {
+        "label": "Illustration 2.3.1",
+        "institution": "Standard Chartered Bank",
+        "title": "Standard Chartered Bank: AI Risk Management in Third Party Solutions",
+        "summary": "Standard Chartered manages AI risk in third party solutions across the vendor lifecycle. It has identified the various entry points of AI into the organisation and introduced control gates with identification tools and a mandatory requirement to record entries in the Global AI Inventory. Contracts with third-party vendors embed Responsible AI (RAI) Principles-based requirements (customisable where required) and pre-change transparency declaration requirements, and the bank scans for AI capabilities introduced through patches. Solution risk assessments are weighted by vendor type and solution, and periodic reviews of performance with the vendor are mandatory.",
+        "practices": [
+          "Identified areas of entry of AI into the organisation and introduced control gates with identification tools",
+          "Mandatory requirement for entries into the Global AI Inventory",
+          "Inclusion of RAI Principles-based requirements in third-party vendor contracts, customisable where required",
+          "Solution risk assessments weighted by vendor type and solution",
+          "Pre-change transparency declaration requirements incorporated within contracts",
+          "Scanning for inclusion of AI capabilities introduced through patches",
+          "Mandatory periodic reviews of vendor performance"
+        ],
+        "handbook_topics": [
+          "third party AI risk",
+          "vendor contracting and indemnity",
+          "AI inventory",
+          "change management",
+          "ongoing monitoring of third parties"
+        ],
+        "source": {
+          "page": 44,
+          "section": "2.3",
+          "quote": "Inclusion of RAI Principles-based requirements into third-party vendor contracts, with the capability for customisation where required."
+        }
+      },
+      {
+        "label": "Illustration 2.4.1",
+        "institution": "Prudential",
+        "title": "Risk Materiality Assessment and AI Specific Governance: Prudential Perspective",
+        "summary": "Prudential's AI governance framework is risk-based and aligned with its 8 AI Ethics Principles, applying risk-based assessments to both in-house built and third party solutions. All AI use cases undergo a pre-deployment review based on risk materiality, conducted by independent domain experts and covering at minimum legal, security, privacy, regulatory and ethical compliance, with higher-risk cases subject to more rigorous evaluation. Post-deployment reviews are conducted regularly, with frequency and depth based on risk materiality and taking account of time since last review, regulatory changes, system or use case updates, and incidents. The illustration also gives a fictional example of an AI system supporting health insurance claims assessment, rated moderate risk, with controls including human oversight, decision logging, data loss protection/masking/encryption, periodic model validation and retraining, and a review process covering risk materiality reassessment, model performance, thresholds, guardrail effectiveness, and periodic recertifications by risk tier.",
+        "practices": [
+          "Risk-based AI governance framework aligned with Prudential's 8 AI Ethics Principles",
+          "Risk-based assessments applied to both inhouse-built and 3rd party solutions",
+          "Pre-deployment review of all AI use cases based on risk materiality, conducted by independent domain experts",
+          "Minimum pre-deployment assessment of legal, security, privacy, regulatory and ethical compliance, with more rigorous evaluation for higher-risk cases",
+          "Regular post-deployment reviews with frequency and depth based on risk materiality, considering time since last review, regulatory changes, system/use case updates and incidents",
+          "Fictional AI-assisted insurance claims use case rated moderate risk due to its supplementary role",
+          "Human oversight for manual intervention; decision logging for auditability and explainability",
+          "Protection of sensitive data via Data Loss Protection, masking, and encryption",
+          "Periodic model validation and retraining to ensure claim quality",
+          "Review process covering reassessment of risk materiality, model performance (e.g. false positives/negatives), validation against agreed thresholds, guardrail effectiveness, and periodic recertifications determined by the AI system's risk tier"
+        ],
+        "handbook_topics": [
+          "use case-level AI risk management",
+          "risk materiality assessment",
+          "pre-deployment and post-deployment AI-specific review",
+          "human oversight",
+          "data protection controls"
+        ],
+        "source": {
+          "page": 57,
+          "section": "2.4",
+          "quote": "All AI use cases undergo a pre-deployment review based on risk materiality, conducted by independent domain experts."
+        }
+      },
+      {
+        "label": "Illustration 2.4.2",
+        "institution": "UOB",
+        "title": "UOB's Approach to Risk Materiality Assessment and AI-Specific Review",
+        "summary": "UOB uses a structured, risk-based AI governance framework anchored by a risk materiality assessment that evaluates both the likelihood and potential severity of harm an AI model could pose to the bank and its stakeholders. Each AI model receives a high or low materiality rating via a weighted scoring methodology combining quantitative thresholds and qualitative judgment, and is also categorised by intended use (e.g. risk management, regulatory reporting); together these determine the depth of review, its independence, and the responsible governance team. High-materiality models used for regulatory purposes get independent validation by specialised teams while lower-materiality systems may receive proportionate peer review, with reviewers in all cases excluded from the development process. Reviews cover technical and ethical dimensions such as conceptual soundness, regulatory compliance, fairness, explainability and performance, documented using structured templates in a centralised AI registry, and the framework is kept under continuous review as technologies such as Gen AI evolve.",
+        "practices": [
+          "Risk materiality assessment evaluating likelihood and potential severity of harm to the bank and stakeholders including customers, employees and broader society",
+          "High or low materiality rating assigned via a weighted scoring methodology using quantitative thresholds and qualitative judgment",
+          "Categorisation of AI models by intended use (e.g. risk management, regulatory reporting)",
+          "Materiality rating plus use classification determines depth of review, independence of review, and responsible governance team",
+          "Separate assessment and tiering of each use case where a model is used across multiple scenarios",
+          "Independent validation by specialised teams for high-materiality models used for regulatory purposes",
+          "Proportionate peer review for lower-materiality systems",
+          "Reviewers must not have been involved in development, to ensure objectivity and effective challenge",
+          "Review scope covering conceptual soundness, regulatory compliance, fairness, explainability and performance",
+          "Assessments documented using structured templates and recorded in a centralised AI registry",
+          "Continuous review of governance practices to keep pace with Gen AI and other evolving technologies"
+        ],
+        "handbook_topics": [
+          "risk materiality assessment",
+          "AI-specific review and independent validation",
+          "use case-level AI risk management",
+          "AI registry/documentation",
+          "adaptive governance frameworks"
+        ],
+        "source": {
+          "page": 58,
+          "section": "2.4",
+          "quote": "anchored by a risk materiality assessment that informs the level of oversight and review required for AI models"
+        }
+      },
+      {
+        "label": "Illustration 3.1.1",
+        "institution": "Julius Baer",
+        "title": "Julius Baer's Two-Stage Toll Gate Process for AI Use Case Governance",
+        "summary": "Julius Baer runs a two-stage tollgate process, overseen by its cross-functional Responsible Artificial Intelligence Council (RAIC), to govern the development, deployment and use of AI. The first tollgate sits at the end of the ideation phase, where a short assessment eliminates cases prohibited by the EU AI Act and identifies potential high-risk use cases, which matters given Julius Baer's global operations. The second tollgate occurs at the end of the development stage at the latest, where the RAIC conducts a holistic AI risk assessment before production deployment and, using a risk-based classification, determines the stringency of the assessment process, degree of controls, oversight requirements and reassessment frequencies. AI-specific risks have been integrated into existing risk definitions, and individual risk type owners evaluate AI-relevant risks in their areas, recommending mitigations or rejecting a use case, with the aim of stopping out-of-appetite use cases early and governing the rest efficiently.",
+        "practices": [
+          "Two-stage tollgate process for AI use cases overseen by the cross-functional Responsible Artificial Intelligence Council (RAIC)",
+          "First tollgate at the end of ideation: short assessment eliminating use cases prohibited by the EU AI Act and identifying potential high-risk use cases",
+          "Second tollgate at the end of development at the latest: holistic AI risk assessment by the RAIC prior to production deployment",
+          "Risk-based classification of use cases determining stringency of the AI Risk Assessment Process, degree of controls, oversight requirements, and reassessment frequencies",
+          "Integration of AI-specific risks into existing risk definitions",
+          "Individual risk type owners evaluate AI-relevant risks in their areas, recommend mitigation strategies, or reject a use case",
+          "Early stopping of use cases outside risk appetite to optimise time to deployment and drive re-use"
+        ],
+        "handbook_topics": [
+          "use case context and design",
+          "stage-gate AI use case governance",
+          "regulatory alignment (EU AI Act)",
+          "risk appetite",
+          "risk-based classification of use cases"
+        ],
+        "source": {
+          "page": 71,
+          "section": "3.1",
+          "quote": "Julius Baer has established a two-stage tollgate process to ensure safe, trustworthy and effective development"
+        }
+      },
+      {
+        "label": "Illustration 3.2.1",
+        "institution": "DBS",
+        "title": "AI Data Acquisition and Processing at DBS",
+        "summary": "DBS applies safeguards during data acquisition and processing as part of its holistic Responsible Data Use (RDU) framework, including approval checks and data management controls to uphold regulatory considerations and data standards. For DBS-GPT, an internal Gen AI assistant for content generation, information retrieval and workflow automation, the project was evaluated by a cross-functional Responsible AI taskforce and approved by the RDU Committee, with rollout to core markets outside Singapore also requiring approval from each location's legal & compliance team and data council. Data controls included reminders not to enter data violating bank policies or contractual obligations, data access controls, and clear ownership of derived data such as the retrieval index. Metadata and data sources were documented through established data onboarding processes, and data quality was validated through performance evaluations using a golden set of questions and answers, with domain experts involved in performance testing to mitigate unintended bias.",
+        "practices": [
+          "Safeguards for data acquisition and processing embedded in DBS' Responsible Data Use (RDU) framework",
+          "Cross-functional Responsible AI (RAI) taskforce evaluation and RDU Committee approval before deployment of DBS-GPT",
+          "Additional approvals from each location's legal & compliance team and data council for rollout to core markets outside Singapore",
+          "Reminders to users not to enter secret data or third-party licensed data that would violate policies, standards or contractual obligations",
+          "Data access controls to minimise unauthorised access and misuse",
+          "Clear ownership maintained for derived data such as the index used for retrieval and question-answering",
+          "Documentation of metadata and data sources (data domain, ownership, source system) through established data onboarding processes",
+          "Data quality validation via performance evaluations using a golden set of questions and answers",
+          "Working with domain experts during performance testing to proactively mitigate unintended bias in outputs"
+        ],
+        "handbook_topics": [
+          "data acquisition and processing",
+          "data security and access controls",
+          "data transparency and traceability",
+          "data quality and bias mitigation",
+          "approval and governance forums"
+        ],
+        "source": {
+          "page": 79,
+          "section": "3.2",
+          "quote": "DBS-GPT's data quality was validated rigorously through performance evaluations using a golden set of questions and answers"
+        }
+      },
+      {
+        "label": "Illustration 3.3.1",
+        "institution": "Julius Baer",
+        "title": "Principle-Based AI Risk Oversight at Julius Baer",
+        "summary": "Julius Baer has established six guiding principles for responsible AI use, developed after a review of regulations applicable in its operating locations and aligned with industry best practices and corporate values. Its Responsible Artificial Intelligence Council (RAIC) has translated these principles into AI-related risks and folded them into its existing risk categorisation. At regular RAIC meetings, use case owners present proposals and risk specialists assess them for their respective risk types, then accept, request mitigation measures for, or reject the identified risks before production deployment. Use cases are monitored throughout their lifecycle, pre-RAIC use cases are re-validated against current standards, and a dedicated AI flag in the outsourcing process ensures early evaluation of AI-related risks in third-party technologies.",
+        "practices": [
+          "Six guiding principles for responsible AI use, developed after reviewing regulations in operating locations",
+          "RAIC translation of principles into AI-related risks incorporated into existing risk categorisation",
+          "Regular RAIC meetings where use case owners present proposals and risk specialists accept, request mitigations for, or reject identified risks",
+          "Evaluation completed before use cases are deployed to production, ensuring alignment with risk appetite",
+          "Continuous monitoring of use cases throughout their lifecycle",
+          "Re-validation of use cases implemented before the RAIC was established",
+          "Dedicated AI flag integrated into the outsourcing process to identify third-party AI-related red flags early"
+        ],
+        "handbook_topics": [
+          "onboarding, build and review",
+          "pre-deployment review by an independent party",
+          "responsible AI principles",
+          "third party AI risk",
+          "ongoing monitoring and re-validation"
+        ],
+        "source": {
+          "page": 91,
+          "section": "3.3",
+          "quote": "Julius Baer has established six guiding principles for the responsible use of AI across the organisation."
+        }
+      },
+      {
+        "label": "Illustration 3.4.1",
+        "institution": "Julius Baer",
+        "title": "Julius Baer's Tiered Approach to AI Literacy and Risk Awareness",
+        "summary": "Julius Baer takes a multi-faceted approach to educating employees about AI opportunities and risks, starting with a mandatory e-learning for all staff covering AI and Gen AI concepts, capabilities and limitations, the firm's Responsible AI principles, permissible use of AI under regulations, and tips for safe and ethical use. Product owners additionally deliver tailored training for their specific AI and Gen AI use cases, with scope set by factors such as use case impact, risk and user maturity. The Julius Baer Academy curates AI training resources, hosts internal and external expert-led sessions, and helps business units build customised learning packages using internal expertise or external platforms such as LinkedIn Learning or Coursera. General AI awareness is promoted through Communities of Practice presentations, intranet updates and leadership discussions including with Executive Board Members.",
+        "practices": [
+          "Mandatory AI e-learning for all staff covering AI and Gen AI concepts, capabilities, limitations, Responsible AI principles, permissible use under regulations, and safe/ethical use tips",
+          "Tailored training sessions delivered by product owners for specific AI and Gen AI use cases",
+          "Training scope set according to use case impact, risk and user maturity",
+          "Julius Baer Academy curates AI training resources and hosts internal and external expert-led sessions",
+          "Customised learning packages for business units using internal expertise or external content (LinkedIn Learning, Coursera)",
+          "General AI awareness via Communities of Practice presentations tailored to audience, intranet updates, and leadership discussions with Executive Board Members"
+        ],
+        "handbook_topics": [
+          "AI literacy and training",
+          "deployment readiness",
+          "risk awareness and culture",
+          "tiered/role-based training"
+        ],
+        "source": {
+          "page": 97,
+          "section": "3.4",
+          "quote": "a mandatory e-learning for all staff was introduced, which focuses on key AI and Gen AI concepts"
+        }
+      },
+      {
+        "label": "Illustration 3.5.1",
+        "institution": "DBS",
+        "title": "AI Usage, Monitoring, and Change Management at DBS",
+        "summary": "DBS incorporates usage, monitoring and change management practices into its Responsible Data Use (RDU) framework so that deployed AI remains safe and ethical in use, illustrated through DBS-GPT, its internal Gen AI assistant. Performance and data quality are monitored via a dashboard tracking usage patterns and performance results, in-system user feedback, infrastructure and operating environment monitoring, regular refreshes of data sources, and user flagging of data quality issues. Human oversight is built into key lifecycle stages, with domain experts reviewing outputs using curated evaluation datasets and all users able to review and give feedback on outputs, which is actively monitored and analysed. Because DBS-GPT is primarily internal, external manipulation and prompt injection risk is considered lower, but user prompts are logged for audit and investigation; changes are tested in a dedicated testing environment, documented, reviewed and approved by the product team and senior stakeholders, with peer review for major changes.",
+        "practices": [
+          "Usage, monitoring and change management practices incorporated in DBS' Responsible Data Use (RDU) framework",
+          "Dashboard tracking usage patterns and performance results to enable proactive interventions",
+          "In-system user feedback collection to identify improvement areas and emerging concerns",
+          "Monitoring of underlying infrastructure and operating environment for stability and security",
+          "Regular refreshes of data sources so information presented to users stays up to date and accurate",
+          "User flagging of potential data quality issues",
+          "Domain expert review of outputs using curated evaluation datasets during performance evaluation",
+          "Feedback mechanisms built into the system, actively monitored and analysed as a continuous feedback loop",
+          "Logging of user prompts for audit and investigation in case of misuse",
+          "Changes thoroughly tested in a dedicated testing environment before production deployment",
+          "Changes documented, reviewed and approved by the product team and relevant senior stakeholders",
+          "Peer review process for major changes to the use case"
+        ],
+        "handbook_topics": [
+          "usage, monitoring and change management",
+          "human oversight and user feedback",
+          "security monitoring and prompt injection risk",
+          "change control and peer review",
+          "data quality monitoring"
+        ],
+        "source": {
+          "page": 106,
+          "section": "3.5",
+          "quote": "A dashboard tracks usage patterns and performance results, enabling proactive interventions."
+        }
+      }
+    ],
+    "total_illustrations_counted": 9,
+    "unreadable_items": []
+  }
+}
