@@ -17,10 +17,14 @@ Every citation can be opened to the page it came from.
 Requires Python 3.11+, Node 20+, and an Anthropic API key.
 
 ```bash
+make setup                             # virtualenv, backend, and front-end deps
 cp backend/.env.example backend/.env   # then add your ANTHROPIC_API_KEY
-make venv                              # virtualenv + backend install
 make dev                               # API on :8000, front end on :5173
 ```
+
+`.venv/` and `node_modules/` are gitignored, so `make setup` is the first thing a fresh
+clone needs. Every other target checks for them and says so rather than failing on a
+missing path.
 
 The framework pack is committed, so the app runs immediately. You do **not** need the
 handbook PDF to use it — only to re-run ingestion, or to see a cited page rendered in the
